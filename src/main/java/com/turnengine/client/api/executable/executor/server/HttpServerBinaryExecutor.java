@@ -51,7 +51,7 @@ public class HttpServerBinaryExecutor extends ServerBinaryExecutor implements IH
 			writeContent(response, responseBytes);
 
 		} catch (Exception e) {
-			log.warn("", e);
+			log.warn("Error serving binary HTTP content", e);
 			throw Java.propagate(e);
 		}
 	}
