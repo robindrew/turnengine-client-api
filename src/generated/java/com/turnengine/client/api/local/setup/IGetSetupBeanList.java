@@ -1,10 +1,11 @@
 package com.turnengine.client.api.local.setup;
 
-import com.robindrew.codegenerator.api.bean.IBean;
+import com.robindrew.codegenerator.api.executable.bean.IExecutableBean;
+import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
-public interface ISetupSetScoreDivisor extends IBean, Comparable<ISetupSetScoreDivisor> {
+public interface IGetSetupBeanList extends IExecutableBean<String>, ILocalLoggedInBean<String>, Comparable<IGetSetupBeanList> {
 
-	int SERIALIZATION_ID = 6313;
+	int SERIALIZATION_ID = 6303;
 
 	/**
 	 * Returns the serialization id.
@@ -25,18 +26,6 @@ public interface ISetupSetScoreDivisor extends IBean, Comparable<ISetupSetScoreD
 	int getInstanceId();
 
 	/**
-	 * Getter for the group field.
-	 * @return the value of the group field.
-	 */
-	String getGroup();
-
-	/**
-	 * Getter for the divisor field.
-	 * @return the value of the divisor field.
-	 */
-	long getDivisor();
-
-	/**
 	 * Setter for the loginId field.
 	 * @param loginId the loginId value to set.
 	 */
@@ -47,16 +36,4 @@ public interface ISetupSetScoreDivisor extends IBean, Comparable<ISetupSetScoreD
 	 * @param instanceId the instanceId value to set.
 	 */
 	void setInstanceId(int instanceId);
-
-	/**
-	 * Setter for the group field.
-	 * @param group the group value to set.
-	 */
-	void setGroup(String group);
-
-	/**
-	 * Setter for the divisor field.
-	 * @param divisor the divisor value to set.
-	 */
-	void setDivisor(long divisor);
 }
