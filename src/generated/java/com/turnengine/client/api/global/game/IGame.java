@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IGame extends IBean, Comparable<IGame> {
 
-	int SERIALIZATION_ID = 1528;
+	int SERIALIZATION_ID = 1515;
 
 	/**
 	 * Returns the serialization id.

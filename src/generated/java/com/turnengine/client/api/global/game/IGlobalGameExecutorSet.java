@@ -34,12 +34,6 @@ public interface IGlobalGameExecutorSet extends IBeanExecutorSet, IGlobalBeanExe
 
 	IGameDefinition getGameDefinition(int instanceId);
 
-	Boolean startupGame(long loginId, int instanceId);
-
-	Boolean resetGame(long loginId, int instanceId);
-
-	Boolean shutdownGame(long loginId, int instanceId);
-
 	IGameHost newGameHost(long loginId, String name, int port);
 
 	IGameInstance getGameInstanceByNames(String gameName, String versionName, String instanceName);
@@ -53,8 +47,6 @@ public interface IGlobalGameExecutorSet extends IBeanExecutorSet, IGlobalBeanExe
 	List<IGameInstance> getGameInstancesByGameName(String gameName);
 
 	List<IGameDefinition> getGameDefinitionsByGameName(String gameName);
-
-	GameStatus getGameStatus(long loginId, int instanceId);
 
 	Boolean setGameInstanceProperty(long loginId, int instanceId, String key, String value);
 

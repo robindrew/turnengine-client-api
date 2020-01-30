@@ -107,24 +107,6 @@ public class GlobalGameExecutorSet implements IGlobalGameExecutorSet {
 	}
 
 	@Override
-	public Boolean startupGame(long loginId, int instanceId) {
-		StartupGame bean = new StartupGame(loginId, instanceId);
-		return getLocator().locateExecutor(bean).executeBean(bean);
-	}
-
-	@Override
-	public Boolean resetGame(long loginId, int instanceId) {
-		ResetGame bean = new ResetGame(loginId, instanceId);
-		return getLocator().locateExecutor(bean).executeBean(bean);
-	}
-
-	@Override
-	public Boolean shutdownGame(long loginId, int instanceId) {
-		ShutdownGame bean = new ShutdownGame(loginId, instanceId);
-		return getLocator().locateExecutor(bean).executeBean(bean);
-	}
-
-	@Override
 	public IGameHost newGameHost(long loginId, String name, int port) {
 		NewGameHost bean = new NewGameHost(loginId, name, port);
 		return getLocator().locateExecutor(bean).executeBean(bean);
@@ -163,12 +145,6 @@ public class GlobalGameExecutorSet implements IGlobalGameExecutorSet {
 	@Override
 	public List<IGameDefinition> getGameDefinitionsByGameName(String gameName) {
 		GetGameDefinitionsByGameName bean = new GetGameDefinitionsByGameName(gameName);
-		return getLocator().locateExecutor(bean).executeBean(bean);
-	}
-
-	@Override
-	public GameStatus getGameStatus(long loginId, int instanceId) {
-		GetGameStatus bean = new GetGameStatus(loginId, instanceId);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
 

@@ -1,4 +1,4 @@
-package com.turnengine.client.api.local.setup;
+package com.turnengine.client.api.local.game;
 
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -6,37 +6,33 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class SetSetupBeanList implements ISetSetupBeanList {
+public class ResetGame implements IResetGame {
 
 	/** The loginId field. */
 	private long loginId = 0l;
 	/** The instanceId field. */
 	private int instanceId = 0;
-	/** The xml field. */
-	private String xml = null;
 
 	/**
 	 * The empty constructor.
 	 */
-	public SetSetupBeanList() {
+	public ResetGame() {
 	}
 
 	/**
 	 * The fields constructor.
 	 */
-	public SetSetupBeanList(long loginId, int instanceId, String xml) {
+	public ResetGame(long loginId, int instanceId) {
 		setLoginId(loginId);
 		setInstanceId(instanceId);
-		setXml(xml);
 	}
 
 	/**
 	 * The clone constructor.
 	 */
-	public SetSetupBeanList(ISetSetupBeanList clone) {
+	public ResetGame(IResetGame clone) {
 		setLoginId(clone.getLoginId());
 		setInstanceId(clone.getInstanceId());
-		setXml(clone.getXml());
 	}
 
 	/**
@@ -67,15 +63,6 @@ public class SetSetupBeanList implements ISetSetupBeanList {
 	}
 
 	/**
-	 * Getter for the xml field.
-	 * @return the value of the xml field.
-	 */
-	@Override
-	public String getXml() {
-		return xml;
-	}
-
-	/**
 	 * Setter for the loginId field.
 	 * @param loginId the loginId value to set.
 	 */
@@ -96,30 +83,11 @@ public class SetSetupBeanList implements ISetSetupBeanList {
 		this.instanceId = instanceId;
 	}
 
-	/**
-	 * Setter for the xml field.
-	 * @param xml the xml value to set.
-	 */
-	@Override
-	public void setXml(String xml) {
-		if (xml == null) {
-			throw new NullPointerException("xml");
-		}
-		if (xml.length() < 5) {
-			throw new IllegalArgumentException("xml too short, minimum of 5 characters, value: '" + xml + "'");
-		}
-		if (xml.length() > 100000) {
-			throw new IllegalArgumentException("xml too long, maximum of 100000 characters, value: '" + xml + "'");
-		}
-		this.xml = xml;
-	}
-
 	@Override
 	public int hashCode() {
 		HashCodeBuilder builder = new HashCodeBuilder();
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getXml());
 		return builder.toHashCode();
 	}
 
@@ -141,11 +109,10 @@ public class SetSetupBeanList implements ISetSetupBeanList {
 		}
 
 		// Compare fields
-		ISetSetupBeanList that = (ISetSetupBeanList) object;
+		IResetGame that = (IResetGame) object;
 		EqualsBuilder builder = new EqualsBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getXml(), that.getXml());
 		return builder.isEquals();
 	}
 
@@ -154,16 +121,14 @@ public class SetSetupBeanList implements ISetSetupBeanList {
 		ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE);
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getXml());
 		return builder.toString();
 	}
 
 	@Override
-	public int compareTo(ISetSetupBeanList that) {
+	public int compareTo(IResetGame that) {
 		CompareToBuilder builder = new CompareToBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getXml(), that.getXml());
 		return builder.toComparison();
 	}
 }

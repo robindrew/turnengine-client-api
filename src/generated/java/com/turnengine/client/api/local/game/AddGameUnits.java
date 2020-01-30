@@ -1,4 +1,4 @@
-package com.turnengine.client.api.local.setup;
+package com.turnengine.client.api.local.game;
 
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -6,37 +6,41 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class SetSetupBeanList implements ISetSetupBeanList {
+public class AddGameUnits implements IAddGameUnits {
 
 	/** The loginId field. */
 	private long loginId = 0l;
 	/** The instanceId field. */
 	private int instanceId = 0;
-	/** The xml field. */
-	private String xml = null;
+	/** The unitId field. */
+	private int unitId = 0;
+	/** The amount field. */
+	private long amount = 0l;
 
 	/**
 	 * The empty constructor.
 	 */
-	public SetSetupBeanList() {
+	public AddGameUnits() {
 	}
 
 	/**
 	 * The fields constructor.
 	 */
-	public SetSetupBeanList(long loginId, int instanceId, String xml) {
+	public AddGameUnits(long loginId, int instanceId, int unitId, long amount) {
 		setLoginId(loginId);
 		setInstanceId(instanceId);
-		setXml(xml);
+		setUnitId(unitId);
+		setAmount(amount);
 	}
 
 	/**
 	 * The clone constructor.
 	 */
-	public SetSetupBeanList(ISetSetupBeanList clone) {
+	public AddGameUnits(IAddGameUnits clone) {
 		setLoginId(clone.getLoginId());
 		setInstanceId(clone.getInstanceId());
-		setXml(clone.getXml());
+		setUnitId(clone.getUnitId());
+		setAmount(clone.getAmount());
 	}
 
 	/**
@@ -67,12 +71,21 @@ public class SetSetupBeanList implements ISetSetupBeanList {
 	}
 
 	/**
-	 * Getter for the xml field.
-	 * @return the value of the xml field.
+	 * Getter for the unitId field.
+	 * @return the value of the unitId field.
 	 */
 	@Override
-	public String getXml() {
-		return xml;
+	public int getUnitId() {
+		return unitId;
+	}
+
+	/**
+	 * Getter for the amount field.
+	 * @return the value of the amount field.
+	 */
+	@Override
+	public long getAmount() {
+		return amount;
 	}
 
 	/**
@@ -97,21 +110,24 @@ public class SetSetupBeanList implements ISetSetupBeanList {
 	}
 
 	/**
-	 * Setter for the xml field.
-	 * @param xml the xml value to set.
+	 * Setter for the unitId field.
+	 * @param unitId the unitId value to set.
 	 */
 	@Override
-	public void setXml(String xml) {
-		if (xml == null) {
-			throw new NullPointerException("xml");
+	public void setUnitId(int unitId) {
+		if (unitId < -1) {
+			throw new IllegalArgumentException("unitId too small, minimum of -1, value: '" + unitId + "'");
 		}
-		if (xml.length() < 5) {
-			throw new IllegalArgumentException("xml too short, minimum of 5 characters, value: '" + xml + "'");
-		}
-		if (xml.length() > 100000) {
-			throw new IllegalArgumentException("xml too long, maximum of 100000 characters, value: '" + xml + "'");
-		}
-		this.xml = xml;
+		this.unitId = unitId;
+	}
+
+	/**
+	 * Setter for the amount field.
+	 * @param amount the amount value to set.
+	 */
+	@Override
+	public void setAmount(long amount) {
+		this.amount = amount;
 	}
 
 	@Override
@@ -119,7 +135,8 @@ public class SetSetupBeanList implements ISetSetupBeanList {
 		HashCodeBuilder builder = new HashCodeBuilder();
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getXml());
+		builder.append(getUnitId());
+		builder.append(getAmount());
 		return builder.toHashCode();
 	}
 
@@ -141,11 +158,12 @@ public class SetSetupBeanList implements ISetSetupBeanList {
 		}
 
 		// Compare fields
-		ISetSetupBeanList that = (ISetSetupBeanList) object;
+		IAddGameUnits that = (IAddGameUnits) object;
 		EqualsBuilder builder = new EqualsBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getXml(), that.getXml());
+		builder.append(this.getUnitId(), that.getUnitId());
+		builder.append(this.getAmount(), that.getAmount());
 		return builder.isEquals();
 	}
 
@@ -154,16 +172,18 @@ public class SetSetupBeanList implements ISetSetupBeanList {
 		ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE);
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getXml());
+		builder.append(getUnitId());
+		builder.append(getAmount());
 		return builder.toString();
 	}
 
 	@Override
-	public int compareTo(ISetSetupBeanList that) {
+	public int compareTo(IAddGameUnits that) {
 		CompareToBuilder builder = new CompareToBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getXml(), that.getXml());
+		builder.append(this.getUnitId(), that.getUnitId());
+		builder.append(this.getAmount(), that.getAmount());
 		return builder.toComparison();
 	}
 }
