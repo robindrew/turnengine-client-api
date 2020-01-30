@@ -329,34 +329,6 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		// Mappings by name
 
 		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-		objectMap.put(GetCommandStackTrace.SERIALIZATION_ID, GetCommandStackTrace.class);
-		objectMap.put(GetCommandStackTraceList.SERIALIZATION_ID, GetCommandStackTraceList.class);
-
-		// Mappings by name
-		objectMap.put("GetCommandStackTrace", GetCommandStackTrace.class);
-		objectMap.put("GetCommandStackTraceList", GetCommandStackTraceList.class);
-
-		// Mappings by id
-		objectMap.put(SendEmail.SERIALIZATION_ID, SendEmail.class);
-		objectMap.put(GetAdminHostAddress.SERIALIZATION_ID, GetAdminHostAddress.class);
-
-		// Mappings by name
-		objectMap.put("SendEmail", SendEmail.class);
-		objectMap.put("GetAdminHostAddress", GetAdminHostAddress.class);
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
 		objectMap.put(NewTranslation.SERIALIZATION_ID, NewTranslation.class);
 		objectMap.put(SetTranslation.SERIALIZATION_ID, SetTranslation.class);
 		objectMap.put(GetTranslationById.SERIALIZATION_ID, GetTranslationById.class);
@@ -369,6 +341,10 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("GetTranslationByText", GetTranslationByText.class);
 
 		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
 		objectMap.put(PostAnnouncement.SERIALIZATION_ID, PostAnnouncement.class);
 		objectMap.put(GetAnnouncementCount.SERIALIZATION_ID, GetAnnouncementCount.class);
 		objectMap.put(GetAnnouncementList.SERIALIZATION_ID, GetAnnouncementList.class);
@@ -379,576 +355,6 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("GetAnnouncementCount", GetAnnouncementCount.class);
 		objectMap.put("GetAnnouncementList", GetAnnouncementList.class);
 		objectMap.put("DeleteAnnouncement", DeleteAnnouncement.class);
-
-		// Mappings by id
-		objectMap.put(GetLocalTrace.SERIALIZATION_ID, GetLocalTrace.class);
-		objectMap.put(GetLocalTraceList.SERIALIZATION_ID, GetLocalTraceList.class);
-
-		// Mappings by name
-		objectMap.put("GetLocalTrace", GetLocalTrace.class);
-		objectMap.put("GetLocalTraceList", GetLocalTraceList.class);
-
-		// Mappings by id
-		objectMap.put(AddFaction.SERIALIZATION_ID, AddFaction.class);
-		objectMap.put(GetFactionById.SERIALIZATION_ID, GetFactionById.class);
-		objectMap.put(GetFactionByName.SERIALIZATION_ID, GetFactionByName.class);
-		objectMap.put(GetFactions.SERIALIZATION_ID, GetFactions.class);
-
-		// Mappings by name
-		objectMap.put("AddFaction", AddFaction.class);
-		objectMap.put("GetFactionById", GetFactionById.class);
-		objectMap.put("GetFactionByName", GetFactionByName.class);
-		objectMap.put("GetFactions", GetFactions.class);
-
-		// Mappings by id
-		objectMap.put(Ping.SERIALIZATION_ID, Ping.class);
-		objectMap.put(GetServiceStatus.SERIALIZATION_ID, GetServiceStatus.class);
-		objectMap.put(GetSystemStatus.SERIALIZATION_ID, GetSystemStatus.class);
-		objectMap.put(GetCommandAvailable.SERIALIZATION_ID, GetCommandAvailable.class);
-		objectMap.put(StartService.SERIALIZATION_ID, StartService.class);
-		objectMap.put(StopService.SERIALIZATION_ID, StopService.class);
-		objectMap.put(GetServiceProcessList.SERIALIZATION_ID, GetServiceProcessList.class);
-		objectMap.put(GetAvailableReleaseList.SERIALIZATION_ID, GetAvailableReleaseList.class);
-		objectMap.put(GetAvailableServiceList.SERIALIZATION_ID, GetAvailableServiceList.class);
-		objectMap.put(GetGoogleOpenIdForm.SERIALIZATION_ID, GetGoogleOpenIdForm.class);
-		objectMap.put(GetLoggedExceptions.SERIALIZATION_ID, GetLoggedExceptions.class);
-		objectMap.put(ThrowException.SERIALIZATION_ID, ThrowException.class);
-
-		// Mappings by name
-		objectMap.put("Ping", Ping.class);
-		objectMap.put("GetServiceStatus", GetServiceStatus.class);
-		objectMap.put("GetSystemStatus", GetSystemStatus.class);
-		objectMap.put("GetCommandAvailable", GetCommandAvailable.class);
-		objectMap.put("StartService", StartService.class);
-		objectMap.put("StopService", StopService.class);
-		objectMap.put("GetServiceProcessList", GetServiceProcessList.class);
-		objectMap.put("GetAvailableReleaseList", GetAvailableReleaseList.class);
-		objectMap.put("GetAvailableServiceList", GetAvailableServiceList.class);
-		objectMap.put("GetGoogleOpenIdForm", GetGoogleOpenIdForm.class);
-		objectMap.put("GetLoggedExceptions", GetLoggedExceptions.class);
-		objectMap.put("ThrowException", ThrowException.class);
-
-		// Mappings by id
-		objectMap.put(SendMail.SERIALIZATION_ID, SendMail.class);
-		objectMap.put(MakeNote.SERIALIZATION_ID, MakeNote.class);
-		objectMap.put(PostNews.SERIALIZATION_ID, PostNews.class);
-		objectMap.put(ListMessages.SERIALIZATION_ID, ListMessages.class);
-		objectMap.put(GetMessageSummary.SERIALIZATION_ID, GetMessageSummary.class);
-		objectMap.put(GetMessage.SERIALIZATION_ID, GetMessage.class);
-		objectMap.put(GetMessageCountByFormat.SERIALIZATION_ID, GetMessageCountByFormat.class);
-
-		// Mappings by name
-		objectMap.put("SendMail", SendMail.class);
-		objectMap.put("MakeNote", MakeNote.class);
-		objectMap.put("PostNews", PostNews.class);
-		objectMap.put("ListMessages", ListMessages.class);
-		objectMap.put("GetMessageSummary", GetMessageSummary.class);
-		objectMap.put("GetMessage", GetMessage.class);
-		objectMap.put("GetMessageCountByFormat", GetMessageCountByFormat.class);
-
-		// Mappings by id
-		objectMap.put(NewGame.SERIALIZATION_ID, NewGame.class);
-		objectMap.put(NewGameVersion.SERIALIZATION_ID, NewGameVersion.class);
-		objectMap.put(NewGameInstance.SERIALIZATION_ID, NewGameInstance.class);
-		objectMap.put(GetGameById.SERIALIZATION_ID, GetGameById.class);
-		objectMap.put(GetGameByName.SERIALIZATION_ID, GetGameByName.class);
-		objectMap.put(GetGameVersionById.SERIALIZATION_ID, GetGameVersionById.class);
-		objectMap.put(GetGameVersionByName.SERIALIZATION_ID, GetGameVersionByName.class);
-		objectMap.put(GetGameInstanceById.SERIALIZATION_ID, GetGameInstanceById.class);
-		objectMap.put(GetGameInstanceByName.SERIALIZATION_ID, GetGameInstanceByName.class);
-		objectMap.put(GetGames.SERIALIZATION_ID, GetGames.class);
-		objectMap.put(GetGameVersions.SERIALIZATION_ID, GetGameVersions.class);
-		objectMap.put(GetGameInstances.SERIALIZATION_ID, GetGameInstances.class);
-		objectMap.put(GetGameDefinitions.SERIALIZATION_ID, GetGameDefinitions.class);
-		objectMap.put(GetGameDefinition.SERIALIZATION_ID, GetGameDefinition.class);
-		objectMap.put(NewGameHost.SERIALIZATION_ID, NewGameHost.class);
-		objectMap.put(GetGameInstanceByNames.SERIALIZATION_ID, GetGameInstanceByNames.class);
-		objectMap.put(GetGameHostByName.SERIALIZATION_ID, GetGameHostByName.class);
-		objectMap.put(GetGameHostById.SERIALIZATION_ID, GetGameHostById.class);
-		objectMap.put(GetGameHosts.SERIALIZATION_ID, GetGameHosts.class);
-		objectMap.put(GetGameInstancesByGameName.SERIALIZATION_ID, GetGameInstancesByGameName.class);
-		objectMap.put(GetGameDefinitionsByGameName.SERIALIZATION_ID, GetGameDefinitionsByGameName.class);
-		objectMap.put(SetGameInstanceProperty.SERIALIZATION_ID, SetGameInstanceProperty.class);
-		objectMap.put(GetGameInstancePropertyList.SERIALIZATION_ID, GetGameInstancePropertyList.class);
-
-		// Mappings by name
-		objectMap.put("NewGame", NewGame.class);
-		objectMap.put("NewGameVersion", NewGameVersion.class);
-		objectMap.put("NewGameInstance", NewGameInstance.class);
-		objectMap.put("GetGameById", GetGameById.class);
-		objectMap.put("GetGameByName", GetGameByName.class);
-		objectMap.put("GetGameVersionById", GetGameVersionById.class);
-		objectMap.put("GetGameVersionByName", GetGameVersionByName.class);
-		objectMap.put("GetGameInstanceById", GetGameInstanceById.class);
-		objectMap.put("GetGameInstanceByName", GetGameInstanceByName.class);
-		objectMap.put("GetGames", GetGames.class);
-		objectMap.put("GetGameVersions", GetGameVersions.class);
-		objectMap.put("GetGameInstances", GetGameInstances.class);
-		objectMap.put("GetGameDefinitions", GetGameDefinitions.class);
-		objectMap.put("GetGameDefinition", GetGameDefinition.class);
-		objectMap.put("NewGameHost", NewGameHost.class);
-		objectMap.put("GetGameInstanceByNames", GetGameInstanceByNames.class);
-		objectMap.put("GetGameHostByName", GetGameHostByName.class);
-		objectMap.put("GetGameHostById", GetGameHostById.class);
-		objectMap.put("GetGameHosts", GetGameHosts.class);
-		objectMap.put("GetGameInstancesByGameName", GetGameInstancesByGameName.class);
-		objectMap.put("GetGameDefinitionsByGameName", GetGameDefinitionsByGameName.class);
-		objectMap.put("SetGameInstanceProperty", SetGameInstanceProperty.class);
-		objectMap.put("GetGameInstancePropertyList", GetGameInstancePropertyList.class);
-
-		// Mappings by id
-		objectMap.put(SetGameInstance.SERIALIZATION_ID, SetGameInstance.class);
-		objectMap.put(StartupGame.SERIALIZATION_ID, StartupGame.class);
-		objectMap.put(ResetGame.SERIALIZATION_ID, ResetGame.class);
-		objectMap.put(ShutdownGame.SERIALIZATION_ID, ShutdownGame.class);
-		objectMap.put(GetGameStatus.SERIALIZATION_ID, GetGameStatus.class);
-		objectMap.put(AddGameUnits.SERIALIZATION_ID, AddGameUnits.class);
-		objectMap.put(GetGameUnits.SERIALIZATION_ID, GetGameUnits.class);
-
-		// Mappings by name
-		objectMap.put("SetGameInstance", SetGameInstance.class);
-		objectMap.put("StartupGame", StartupGame.class);
-		objectMap.put("ResetGame", ResetGame.class);
-		objectMap.put("ShutdownGame", ShutdownGame.class);
-		objectMap.put("GetGameStatus", GetGameStatus.class);
-		objectMap.put("AddGameUnits", AddGameUnits.class);
-		objectMap.put("GetGameUnits", GetGameUnits.class);
-
-		// Mappings by id
-		objectMap.put(AddParentGroup.SERIALIZATION_ID, AddParentGroup.class);
-		objectMap.put(AddChildGroup.SERIALIZATION_ID, AddChildGroup.class);
-		objectMap.put(GetGroupById.SERIALIZATION_ID, GetGroupById.class);
-		objectMap.put(GetGroupByName.SERIALIZATION_ID, GetGroupByName.class);
-		objectMap.put(GetGroups.SERIALIZATION_ID, GetGroups.class);
-		objectMap.put(GetGroupListByFactionName.SERIALIZATION_ID, GetGroupListByFactionName.class);
-
-		// Mappings by name
-		objectMap.put("AddParentGroup", AddParentGroup.class);
-		objectMap.put("AddChildGroup", AddChildGroup.class);
-		objectMap.put("GetGroupById", GetGroupById.class);
-		objectMap.put("GetGroupByName", GetGroupByName.class);
-		objectMap.put("GetGroups", GetGroups.class);
-		objectMap.put("GetGroupListByFactionName", GetGroupListByFactionName.class);
-
-		// Mappings by id
-		objectMap.put(SetLocalProperty.SERIALIZATION_ID, SetLocalProperty.class);
-		objectMap.put(GetLocalProperty.SERIALIZATION_ID, GetLocalProperty.class);
-
-		// Mappings by name
-		objectMap.put("SetLocalProperty", SetLocalProperty.class);
-		objectMap.put("GetLocalProperty", GetLocalProperty.class);
-
-		// Mappings by id
-		objectMap.put(CreateForum.SERIALIZATION_ID, CreateForum.class);
-		objectMap.put(CreateForumThread.SERIALIZATION_ID, CreateForumThread.class);
-		objectMap.put(CreateForumPost.SERIALIZATION_ID, CreateForumPost.class);
-		objectMap.put(SetForumOrder.SERIALIZATION_ID, SetForumOrder.class);
-		objectMap.put(GetForumList.SERIALIZATION_ID, GetForumList.class);
-		objectMap.put(GetThreadList.SERIALIZATION_ID, GetThreadList.class);
-		objectMap.put(GetThread.SERIALIZATION_ID, GetThread.class);
-		objectMap.put(EditPost.SERIALIZATION_ID, EditPost.class);
-		objectMap.put(SetForumFlag.SERIALIZATION_ID, SetForumFlag.class);
-		objectMap.put(SetThreadFlag.SERIALIZATION_ID, SetThreadFlag.class);
-		objectMap.put(SetPostFlag.SERIALIZATION_ID, SetPostFlag.class);
-		objectMap.put(GetPostList.SERIALIZATION_ID, GetPostList.class);
-
-		// Mappings by name
-		objectMap.put("CreateForum", CreateForum.class);
-		objectMap.put("CreateForumThread", CreateForumThread.class);
-		objectMap.put("CreateForumPost", CreateForumPost.class);
-		objectMap.put("SetForumOrder", SetForumOrder.class);
-		objectMap.put("GetForumList", GetForumList.class);
-		objectMap.put("GetThreadList", GetThreadList.class);
-		objectMap.put("GetThread", GetThread.class);
-		objectMap.put("EditPost", EditPost.class);
-		objectMap.put("SetForumFlag", SetForumFlag.class);
-		objectMap.put("SetThreadFlag", SetThreadFlag.class);
-		objectMap.put("SetPostFlag", SetPostFlag.class);
-		objectMap.put("GetPostList", GetPostList.class);
-
-		// Mappings by id
-		objectMap.put(SetLocationGenerationPlugin.SERIALIZATION_ID, SetLocationGenerationPlugin.class);
-		objectMap.put(GenerateLocations.SERIALIZATION_ID, GenerateLocations.class);
-		objectMap.put(SetLocationCoordinatePlugin.SERIALIZATION_ID, SetLocationCoordinatePlugin.class);
-		objectMap.put(SetLocationsEnabled.SERIALIZATION_ID, SetLocationsEnabled.class);
-		objectMap.put(GetLocationsEnabled.SERIALIZATION_ID, GetLocationsEnabled.class);
-		objectMap.put(SetLocationSignupsEnabled.SERIALIZATION_ID, SetLocationSignupsEnabled.class);
-		objectMap.put(GetLocationSignupsEnabled.SERIALIZATION_ID, GetLocationSignupsEnabled.class);
-		objectMap.put(GetLocationList.SERIALIZATION_ID, GetLocationList.class);
-		objectMap.put(GetLocation.SERIALIZATION_ID, GetLocation.class);
-		objectMap.put(RenameLocation.SERIALIZATION_ID, RenameLocation.class);
-		objectMap.put(AddUnitsAtLocation.SERIALIZATION_ID, AddUnitsAtLocation.class);
-		objectMap.put(GetGridInfoList.SERIALIZATION_ID, GetGridInfoList.class);
-		objectMap.put(GetLocationId.SERIALIZATION_ID, GetLocationId.class);
-		objectMap.put(GetCoordinates.SERIALIZATION_ID, GetCoordinates.class);
-		objectMap.put(GetLocationCount.SERIALIZATION_ID, GetLocationCount.class);
-		objectMap.put(GetLocationSetupInfo.SERIALIZATION_ID, GetLocationSetupInfo.class);
-		objectMap.put(GetLocationCoordinatePlugin.SERIALIZATION_ID, GetLocationCoordinatePlugin.class);
-		objectMap.put(GetLocationGenerationPlugin.SERIALIZATION_ID, GetLocationGenerationPlugin.class);
-		objectMap.put(SetLocationProperty.SERIALIZATION_ID, SetLocationProperty.class);
-		objectMap.put(GetLocationPropertyList.SERIALIZATION_ID, GetLocationPropertyList.class);
-		objectMap.put(GetLocationIdsForPlayer.SERIALIZATION_ID, GetLocationIdsForPlayer.class);
-		objectMap.put(CheckRenameLocation.SERIALIZATION_ID, CheckRenameLocation.class);
-
-		// Mappings by name
-		objectMap.put("SetLocationGenerationPlugin", SetLocationGenerationPlugin.class);
-		objectMap.put("GenerateLocations", GenerateLocations.class);
-		objectMap.put("SetLocationCoordinatePlugin", SetLocationCoordinatePlugin.class);
-		objectMap.put("SetLocationsEnabled", SetLocationsEnabled.class);
-		objectMap.put("GetLocationsEnabled", GetLocationsEnabled.class);
-		objectMap.put("SetLocationSignupsEnabled", SetLocationSignupsEnabled.class);
-		objectMap.put("GetLocationSignupsEnabled", GetLocationSignupsEnabled.class);
-		objectMap.put("GetLocationList", GetLocationList.class);
-		objectMap.put("GetLocation", GetLocation.class);
-		objectMap.put("RenameLocation", RenameLocation.class);
-		objectMap.put("AddUnitsAtLocation", AddUnitsAtLocation.class);
-		objectMap.put("GetGridInfoList", GetGridInfoList.class);
-		objectMap.put("GetLocationId", GetLocationId.class);
-		objectMap.put("GetCoordinates", GetCoordinates.class);
-		objectMap.put("GetLocationCount", GetLocationCount.class);
-		objectMap.put("GetLocationSetupInfo", GetLocationSetupInfo.class);
-		objectMap.put("GetLocationCoordinatePlugin", GetLocationCoordinatePlugin.class);
-		objectMap.put("GetLocationGenerationPlugin", GetLocationGenerationPlugin.class);
-		objectMap.put("SetLocationProperty", SetLocationProperty.class);
-		objectMap.put("GetLocationPropertyList", GetLocationPropertyList.class);
-		objectMap.put("GetLocationIdsForPlayer", GetLocationIdsForPlayer.class);
-		objectMap.put("CheckRenameLocation", CheckRenameLocation.class);
-
-		// Mappings by id
-		objectMap.put(CreateAllianceForum.SERIALIZATION_ID, CreateAllianceForum.class);
-		objectMap.put(CreateAllianceForumThread.SERIALIZATION_ID, CreateAllianceForumThread.class);
-		objectMap.put(CreateAllianceForumPost.SERIALIZATION_ID, CreateAllianceForumPost.class);
-		objectMap.put(SetAllianceForumOrder.SERIALIZATION_ID, SetAllianceForumOrder.class);
-		objectMap.put(GetAllianceForumList.SERIALIZATION_ID, GetAllianceForumList.class);
-		objectMap.put(GetAllianceThreadList.SERIALIZATION_ID, GetAllianceThreadList.class);
-		objectMap.put(GetAllianceThread.SERIALIZATION_ID, GetAllianceThread.class);
-		objectMap.put(EditAlliancePost.SERIALIZATION_ID, EditAlliancePost.class);
-		objectMap.put(SetAllianceForumFlag.SERIALIZATION_ID, SetAllianceForumFlag.class);
-		objectMap.put(SetAllianceThreadFlag.SERIALIZATION_ID, SetAllianceThreadFlag.class);
-		objectMap.put(SetAlliancePostFlag.SERIALIZATION_ID, SetAlliancePostFlag.class);
-		objectMap.put(GetAlliancePostList.SERIALIZATION_ID, GetAlliancePostList.class);
-
-		// Mappings by name
-		objectMap.put("CreateAllianceForum", CreateAllianceForum.class);
-		objectMap.put("CreateAllianceForumThread", CreateAllianceForumThread.class);
-		objectMap.put("CreateAllianceForumPost", CreateAllianceForumPost.class);
-		objectMap.put("SetAllianceForumOrder", SetAllianceForumOrder.class);
-		objectMap.put("GetAllianceForumList", GetAllianceForumList.class);
-		objectMap.put("GetAllianceThreadList", GetAllianceThreadList.class);
-		objectMap.put("GetAllianceThread", GetAllianceThread.class);
-		objectMap.put("EditAlliancePost", EditAlliancePost.class);
-		objectMap.put("SetAllianceForumFlag", SetAllianceForumFlag.class);
-		objectMap.put("SetAllianceThreadFlag", SetAllianceThreadFlag.class);
-		objectMap.put("SetAlliancePostFlag", SetAlliancePostFlag.class);
-		objectMap.put("GetAlliancePostList", GetAlliancePostList.class);
-
-		// Mappings by id
-		objectMap.put(SetStorageGroup.SERIALIZATION_ID, SetStorageGroup.class);
-		objectMap.put(SetStorageItem.SERIALIZATION_ID, SetStorageItem.class);
-		objectMap.put(GetStorageGroups.SERIALIZATION_ID, GetStorageGroups.class);
-		objectMap.put(GetStorageItems.SERIALIZATION_ID, GetStorageItems.class);
-
-		// Mappings by name
-		objectMap.put("SetStorageGroup", SetStorageGroup.class);
-		objectMap.put("SetStorageItem", SetStorageItem.class);
-		objectMap.put("GetStorageGroups", GetStorageGroups.class);
-		objectMap.put("GetStorageItems", GetStorageItems.class);
-
-		// Mappings by id
-		objectMap.put(CreateMobileAtLocation.SERIALIZATION_ID, CreateMobileAtLocation.class);
-		objectMap.put(ListMobilesAtLocation.SERIALIZATION_ID, ListMobilesAtLocation.class);
-		objectMap.put(TransferUnitsToMobile.SERIALIZATION_ID, TransferUnitsToMobile.class);
-		objectMap.put(TransferUnitsFromMobile.SERIALIZATION_ID, TransferUnitsFromMobile.class);
-		objectMap.put(GetMobileList.SERIALIZATION_ID, GetMobileList.class);
-		objectMap.put(GetMobile.SERIALIZATION_ID, GetMobile.class);
-		objectMap.put(MoveMobile.SERIALIZATION_ID, MoveMobile.class);
-		objectMap.put(DestroyEmptyMobile.SERIALIZATION_ID, DestroyEmptyMobile.class);
-		objectMap.put(CreateMobileAtMobile.SERIALIZATION_ID, CreateMobileAtMobile.class);
-		objectMap.put(MoveMobileToCoordinates.SERIALIZATION_ID, MoveMobileToCoordinates.class);
-		objectMap.put(TransferUnitsBetweenMobiles.SERIALIZATION_ID, TransferUnitsBetweenMobiles.class);
-		objectMap.put(RenameMobile.SERIALIZATION_ID, RenameMobile.class);
-		objectMap.put(AddUnitsAtMobile.SERIALIZATION_ID, AddUnitsAtMobile.class);
-		objectMap.put(SetCombatPlugin.SERIALIZATION_ID, SetCombatPlugin.class);
-		objectMap.put(GetMobileSetupInfo.SERIALIZATION_ID, GetMobileSetupInfo.class);
-		objectMap.put(SetMobilesEnabled.SERIALIZATION_ID, SetMobilesEnabled.class);
-		objectMap.put(GetMobilesEnabled.SERIALIZATION_ID, GetMobilesEnabled.class);
-		objectMap.put(GetCombatPlugin.SERIALIZATION_ID, GetCombatPlugin.class);
-		objectMap.put(SetMobileProperty.SERIALIZATION_ID, SetMobileProperty.class);
-		objectMap.put(GetMobilePropertyList.SERIALIZATION_ID, GetMobilePropertyList.class);
-		objectMap.put(SetMobileMovementPlugin.SERIALIZATION_ID, SetMobileMovementPlugin.class);
-		objectMap.put(ClearMobileQueue.SERIALIZATION_ID, ClearMobileQueue.class);
-		objectMap.put(WaitMobile.SERIALIZATION_ID, WaitMobile.class);
-		objectMap.put(GetMobileQueueList.SERIALIZATION_ID, GetMobileQueueList.class);
-		objectMap.put(SetMobileWait.SERIALIZATION_ID, SetMobileWait.class);
-		objectMap.put(SetMobileMove.SERIALIZATION_ID, SetMobileMove.class);
-		objectMap.put(GetMobileIdsForPlayer.SERIALIZATION_ID, GetMobileIdsForPlayer.class);
-
-		// Mappings by name
-		objectMap.put("CreateMobileAtLocation", CreateMobileAtLocation.class);
-		objectMap.put("ListMobilesAtLocation", ListMobilesAtLocation.class);
-		objectMap.put("TransferUnitsToMobile", TransferUnitsToMobile.class);
-		objectMap.put("TransferUnitsFromMobile", TransferUnitsFromMobile.class);
-		objectMap.put("GetMobileList", GetMobileList.class);
-		objectMap.put("GetMobile", GetMobile.class);
-		objectMap.put("MoveMobile", MoveMobile.class);
-		objectMap.put("DestroyEmptyMobile", DestroyEmptyMobile.class);
-		objectMap.put("CreateMobileAtMobile", CreateMobileAtMobile.class);
-		objectMap.put("MoveMobileToCoordinates", MoveMobileToCoordinates.class);
-		objectMap.put("TransferUnitsBetweenMobiles", TransferUnitsBetweenMobiles.class);
-		objectMap.put("RenameMobile", RenameMobile.class);
-		objectMap.put("AddUnitsAtMobile", AddUnitsAtMobile.class);
-		objectMap.put("SetCombatPlugin", SetCombatPlugin.class);
-		objectMap.put("GetMobileSetupInfo", GetMobileSetupInfo.class);
-		objectMap.put("SetMobilesEnabled", SetMobilesEnabled.class);
-		objectMap.put("GetMobilesEnabled", GetMobilesEnabled.class);
-		objectMap.put("GetCombatPlugin", GetCombatPlugin.class);
-		objectMap.put("SetMobileProperty", SetMobileProperty.class);
-		objectMap.put("GetMobilePropertyList", GetMobilePropertyList.class);
-		objectMap.put("SetMobileMovementPlugin", SetMobileMovementPlugin.class);
-		objectMap.put("ClearMobileQueue", ClearMobileQueue.class);
-		objectMap.put("WaitMobile", WaitMobile.class);
-		objectMap.put("GetMobileQueueList", GetMobileQueueList.class);
-		objectMap.put("SetMobileWait", SetMobileWait.class);
-		objectMap.put("SetMobileMove", SetMobileMove.class);
-		objectMap.put("GetMobileIdsForPlayer", GetMobileIdsForPlayer.class);
-
-		// Mappings by id
-		objectMap.put(AddUpkeep.SERIALIZATION_ID, AddUpkeep.class);
-		objectMap.put(AddUpkeepCondition.SERIALIZATION_ID, AddUpkeepCondition.class);
-		objectMap.put(GetUpkeepList.SERIALIZATION_ID, GetUpkeepList.class);
-		objectMap.put(GetUpkeepConditionList.SERIALIZATION_ID, GetUpkeepConditionList.class);
-		objectMap.put(GetUpkeepAtLocation.SERIALIZATION_ID, GetUpkeepAtLocation.class);
-
-		// Mappings by name
-		objectMap.put("AddUpkeep", AddUpkeep.class);
-		objectMap.put("AddUpkeepCondition", AddUpkeepCondition.class);
-		objectMap.put("GetUpkeepList", GetUpkeepList.class);
-		objectMap.put("GetUpkeepConditionList", GetUpkeepConditionList.class);
-		objectMap.put("GetUpkeepAtLocation", GetUpkeepAtLocation.class);
-
-		// Mappings by id
-		objectMap.put(AddAction.SERIALIZATION_ID, AddAction.class);
-		objectMap.put(AddActionTarget.SERIALIZATION_ID, AddActionTarget.class);
-		objectMap.put(AddActionCondition.SERIALIZATION_ID, AddActionCondition.class);
-		objectMap.put(GetActionList.SERIALIZATION_ID, GetActionList.class);
-		objectMap.put(GetActionTargetList.SERIALIZATION_ID, GetActionTargetList.class);
-		objectMap.put(GetActionConditionList.SERIALIZATION_ID, GetActionConditionList.class);
-		objectMap.put(StartActionAtPlayer.SERIALIZATION_ID, StartActionAtPlayer.class);
-		objectMap.put(ClearActionQueuedAtPlayer.SERIALIZATION_ID, ClearActionQueuedAtPlayer.class);
-		objectMap.put(StartActionAtLocation.SERIALIZATION_ID, StartActionAtLocation.class);
-		objectMap.put(ClearActionQueuedAtLocation.SERIALIZATION_ID, ClearActionQueuedAtLocation.class);
-		objectMap.put(ListActionsAvailableAtLocation.SERIALIZATION_ID, ListActionsAvailableAtLocation.class);
-		objectMap.put(ListActionsAvailableAtPlayer.SERIALIZATION_ID, ListActionsAvailableAtPlayer.class);
-		objectMap.put(ListActionsExecutingAtLocation.SERIALIZATION_ID, ListActionsExecutingAtLocation.class);
-		objectMap.put(ListActionsExecutingAtPlayer.SERIALIZATION_ID, ListActionsExecutingAtPlayer.class);
-		objectMap.put(ListActionsQueuedAtLocation.SERIALIZATION_ID, ListActionsQueuedAtLocation.class);
-		objectMap.put(ListActionsQueuedAtPlayer.SERIALIZATION_ID, ListActionsQueuedAtPlayer.class);
-		objectMap.put(ClearActionsQueuedAtLocation.SERIALIZATION_ID, ClearActionsQueuedAtLocation.class);
-		objectMap.put(ClearActionsQueuedAtPlayer.SERIALIZATION_ID, ClearActionsQueuedAtPlayer.class);
-		objectMap.put(StartActionAtMobileToLocation.SERIALIZATION_ID, StartActionAtMobileToLocation.class);
-		objectMap.put(ListActionsAvailableAtMobile.SERIALIZATION_ID, ListActionsAvailableAtMobile.class);
-		objectMap.put(AddActionPlugin.SERIALIZATION_ID, AddActionPlugin.class);
-		objectMap.put(StartActionAtLocationToLocation.SERIALIZATION_ID, StartActionAtLocationToLocation.class);
-		objectMap.put(GetActionPlugin.SERIALIZATION_ID, GetActionPlugin.class);
-		objectMap.put(CancelActionAtPlayer.SERIALIZATION_ID, CancelActionAtPlayer.class);
-		objectMap.put(CancelActionAtLocation.SERIALIZATION_ID, CancelActionAtLocation.class);
-
-		// Mappings by name
-		objectMap.put("AddAction", AddAction.class);
-		objectMap.put("AddActionTarget", AddActionTarget.class);
-		objectMap.put("AddActionCondition", AddActionCondition.class);
-		objectMap.put("GetActionList", GetActionList.class);
-		objectMap.put("GetActionTargetList", GetActionTargetList.class);
-		objectMap.put("GetActionConditionList", GetActionConditionList.class);
-		objectMap.put("StartActionAtPlayer", StartActionAtPlayer.class);
-		objectMap.put("ClearActionQueuedAtPlayer", ClearActionQueuedAtPlayer.class);
-		objectMap.put("StartActionAtLocation", StartActionAtLocation.class);
-		objectMap.put("ClearActionQueuedAtLocation", ClearActionQueuedAtLocation.class);
-		objectMap.put("ListActionsAvailableAtLocation", ListActionsAvailableAtLocation.class);
-		objectMap.put("ListActionsAvailableAtPlayer", ListActionsAvailableAtPlayer.class);
-		objectMap.put("ListActionsExecutingAtLocation", ListActionsExecutingAtLocation.class);
-		objectMap.put("ListActionsExecutingAtPlayer", ListActionsExecutingAtPlayer.class);
-		objectMap.put("ListActionsQueuedAtLocation", ListActionsQueuedAtLocation.class);
-		objectMap.put("ListActionsQueuedAtPlayer", ListActionsQueuedAtPlayer.class);
-		objectMap.put("ClearActionsQueuedAtLocation", ClearActionsQueuedAtLocation.class);
-		objectMap.put("ClearActionsQueuedAtPlayer", ClearActionsQueuedAtPlayer.class);
-		objectMap.put("StartActionAtMobileToLocation", StartActionAtMobileToLocation.class);
-		objectMap.put("ListActionsAvailableAtMobile", ListActionsAvailableAtMobile.class);
-		objectMap.put("AddActionPlugin", AddActionPlugin.class);
-		objectMap.put("StartActionAtLocationToLocation", StartActionAtLocationToLocation.class);
-		objectMap.put("GetActionPlugin", GetActionPlugin.class);
-		objectMap.put("CancelActionAtPlayer", CancelActionAtPlayer.class);
-		objectMap.put("CancelActionAtLocation", CancelActionAtLocation.class);
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-		objectMap.put(GetAllianceCount.SERIALIZATION_ID, GetAllianceCount.class);
-		objectMap.put(GetAllianceMemberCount.SERIALIZATION_ID, GetAllianceMemberCount.class);
-		objectMap.put(GetAllianceById.SERIALIZATION_ID, GetAllianceById.class);
-		objectMap.put(GetAllianceByName.SERIALIZATION_ID, GetAllianceByName.class);
-		objectMap.put(FormAlliance.SERIALIZATION_ID, FormAlliance.class);
-		objectMap.put(DisbandAlliance.SERIALIZATION_ID, DisbandAlliance.class);
-		objectMap.put(LeaveAlliance.SERIALIZATION_ID, LeaveAlliance.class);
-		objectMap.put(InviteToJoinAlliance.SERIALIZATION_ID, InviteToJoinAlliance.class);
-		objectMap.put(RequestToJoinAlliance.SERIALIZATION_ID, RequestToJoinAlliance.class);
-		objectMap.put(KickAllianceMember.SERIALIZATION_ID, KickAllianceMember.class);
-		objectMap.put(GetInvitedToJoinAllianceList.SERIALIZATION_ID, GetInvitedToJoinAllianceList.class);
-		objectMap.put(GetAllianceInviteLimit.SERIALIZATION_ID, GetAllianceInviteLimit.class);
-		objectMap.put(SetAllianceInviteLimit.SERIALIZATION_ID, SetAllianceInviteLimit.class);
-		objectMap.put(GetAllianceMemberLimit.SERIALIZATION_ID, GetAllianceMemberLimit.class);
-		objectMap.put(SetAllianceMemberLimit.SERIALIZATION_ID, SetAllianceMemberLimit.class);
-		objectMap.put(SetAlliancesEnabled.SERIALIZATION_ID, SetAlliancesEnabled.class);
-		objectMap.put(GetAllianceList.SERIALIZATION_ID, GetAllianceList.class);
-		objectMap.put(GetAlliance.SERIALIZATION_ID, GetAlliance.class);
-		objectMap.put(GetRequestedToJoinAllianceList.SERIALIZATION_ID, GetRequestedToJoinAllianceList.class);
-		objectMap.put(InviteToJoinAllianceByName.SERIALIZATION_ID, InviteToJoinAllianceByName.class);
-		objectMap.put(RequestToJoinAllianceByName.SERIALIZATION_ID, RequestToJoinAllianceByName.class);
-		objectMap.put(SetAllianceLeaveTurns.SERIALIZATION_ID, SetAllianceLeaveTurns.class);
-		objectMap.put(GetAllianceSetupInfo.SERIALIZATION_ID, GetAllianceSetupInfo.class);
-		objectMap.put(SetAllianceProperty.SERIALIZATION_ID, SetAllianceProperty.class);
-		objectMap.put(GetAlliancePropertyList.SERIALIZATION_ID, GetAlliancePropertyList.class);
-		objectMap.put(GetAllianceScores.SERIALIZATION_ID, GetAllianceScores.class);
-		objectMap.put(SetAllianceLogo.SERIALIZATION_ID, SetAllianceLogo.class);
-		objectMap.put(GetAllianceLogo.SERIALIZATION_ID, GetAllianceLogo.class);
-		objectMap.put(GetAllianceInfo.SERIALIZATION_ID, GetAllianceInfo.class);
-
-		// Mappings by name
-		objectMap.put("GetAllianceCount", GetAllianceCount.class);
-		objectMap.put("GetAllianceMemberCount", GetAllianceMemberCount.class);
-		objectMap.put("GetAllianceById", GetAllianceById.class);
-		objectMap.put("GetAllianceByName", GetAllianceByName.class);
-		objectMap.put("FormAlliance", FormAlliance.class);
-		objectMap.put("DisbandAlliance", DisbandAlliance.class);
-		objectMap.put("LeaveAlliance", LeaveAlliance.class);
-		objectMap.put("InviteToJoinAlliance", InviteToJoinAlliance.class);
-		objectMap.put("RequestToJoinAlliance", RequestToJoinAlliance.class);
-		objectMap.put("KickAllianceMember", KickAllianceMember.class);
-		objectMap.put("GetInvitedToJoinAllianceList", GetInvitedToJoinAllianceList.class);
-		objectMap.put("GetAllianceInviteLimit", GetAllianceInviteLimit.class);
-		objectMap.put("SetAllianceInviteLimit", SetAllianceInviteLimit.class);
-		objectMap.put("GetAllianceMemberLimit", GetAllianceMemberLimit.class);
-		objectMap.put("SetAllianceMemberLimit", SetAllianceMemberLimit.class);
-		objectMap.put("SetAlliancesEnabled", SetAlliancesEnabled.class);
-		objectMap.put("GetAllianceList", GetAllianceList.class);
-		objectMap.put("GetAlliance", GetAlliance.class);
-		objectMap.put("GetRequestedToJoinAllianceList", GetRequestedToJoinAllianceList.class);
-		objectMap.put("InviteToJoinAllianceByName", InviteToJoinAllianceByName.class);
-		objectMap.put("RequestToJoinAllianceByName", RequestToJoinAllianceByName.class);
-		objectMap.put("SetAllianceLeaveTurns", SetAllianceLeaveTurns.class);
-		objectMap.put("GetAllianceSetupInfo", GetAllianceSetupInfo.class);
-		objectMap.put("SetAllianceProperty", SetAllianceProperty.class);
-		objectMap.put("GetAlliancePropertyList", GetAlliancePropertyList.class);
-		objectMap.put("GetAllianceScores", GetAllianceScores.class);
-		objectMap.put("SetAllianceLogo", SetAllianceLogo.class);
-		objectMap.put("GetAllianceLogo", GetAllianceLogo.class);
-		objectMap.put("GetAllianceInfo", GetAllianceInfo.class);
-
-		// Mappings by id
-		objectMap.put(SetUnitScore.SERIALIZATION_ID, SetUnitScore.class);
-		objectMap.put(GetUnitScore.SERIALIZATION_ID, GetUnitScore.class);
-		objectMap.put(GetUnitScores.SERIALIZATION_ID, GetUnitScores.class);
-		objectMap.put(SetScoreUpdaterGroup.SERIALIZATION_ID, SetScoreUpdaterGroup.class);
-		objectMap.put(GetRankingList.SERIALIZATION_ID, GetRankingList.class);
-		objectMap.put(GetRankingGroupList.SERIALIZATION_ID, GetRankingGroupList.class);
-		objectMap.put(GetPlayerRankingList.SERIALIZATION_ID, GetPlayerRankingList.class);
-		objectMap.put(GetAllianceRankingList.SERIALIZATION_ID, GetAllianceRankingList.class);
-		objectMap.put(SetScoreDivisor.SERIALIZATION_ID, SetScoreDivisor.class);
-		objectMap.put(GetScoreDivisor.SERIALIZATION_ID, GetScoreDivisor.class);
-
-		// Mappings by name
-		objectMap.put("SetUnitScore", SetUnitScore.class);
-		objectMap.put("GetUnitScore", GetUnitScore.class);
-		objectMap.put("GetUnitScores", GetUnitScores.class);
-		objectMap.put("SetScoreUpdaterGroup", SetScoreUpdaterGroup.class);
-		objectMap.put("GetRankingList", GetRankingList.class);
-		objectMap.put("GetRankingGroupList", GetRankingGroupList.class);
-		objectMap.put("GetPlayerRankingList", GetPlayerRankingList.class);
-		objectMap.put("GetAllianceRankingList", GetAllianceRankingList.class);
-		objectMap.put("SetScoreDivisor", SetScoreDivisor.class);
-		objectMap.put("GetScoreDivisor", GetScoreDivisor.class);
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-		objectMap.put(GetGoodsPriceListAtLocation.SERIALIZATION_ID, GetGoodsPriceListAtLocation.class);
-		objectMap.put(BuyGoodsAtLocation.SERIALIZATION_ID, BuyGoodsAtLocation.class);
-		objectMap.put(SellGoodsAtLocation.SERIALIZATION_ID, SellGoodsAtLocation.class);
-		objectMap.put(SetTradeAtLocationPlugin.SERIALIZATION_ID, SetTradeAtLocationPlugin.class);
-
-		// Mappings by name
-		objectMap.put("GetGoodsPriceListAtLocation", GetGoodsPriceListAtLocation.class);
-		objectMap.put("BuyGoodsAtLocation", BuyGoodsAtLocation.class);
-		objectMap.put("SellGoodsAtLocation", SellGoodsAtLocation.class);
-		objectMap.put("SetTradeAtLocationPlugin", SetTradeAtLocationPlugin.class);
-
-		// Mappings by id
-		objectMap.put(SetSetupBeanList.SERIALIZATION_ID, SetSetupBeanList.class);
-		objectMap.put(SetSetupBeanListFile.SERIALIZATION_ID, SetSetupBeanListFile.class);
-		objectMap.put(GetSetupBeanList.SERIALIZATION_ID, GetSetupBeanList.class);
-
-		// Mappings by name
-		objectMap.put("SetSetupBeanList", SetSetupBeanList.class);
-		objectMap.put("SetSetupBeanListFile", SetSetupBeanListFile.class);
-		objectMap.put("GetSetupBeanList", GetSetupBeanList.class);
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-		objectMap.put(GetTurnNumber.SERIALIZATION_ID, GetTurnNumber.class);
-		objectMap.put(ExecuteTurns.SERIALIZATION_ID, ExecuteTurns.class);
-		objectMap.put(SetTurnInterval.SERIALIZATION_ID, SetTurnInterval.class);
-		objectMap.put(GetTurnInterval.SERIALIZATION_ID, GetTurnInterval.class);
-		objectMap.put(SetTurnsEnabled.SERIALIZATION_ID, SetTurnsEnabled.class);
-		objectMap.put(GetTurnUpdating.SERIALIZATION_ID, GetTurnUpdating.class);
-		objectMap.put(GetNextTurnUpdateTime.SERIALIZATION_ID, GetNextTurnUpdateTime.class);
-		objectMap.put(GetTurnSummary.SERIALIZATION_ID, GetTurnSummary.class);
-		objectMap.put(GetTurns.SERIALIZATION_ID, GetTurns.class);
-		objectMap.put(GetTurnDetails.SERIALIZATION_ID, GetTurnDetails.class);
-		objectMap.put(SetTurnStartTime.SERIALIZATION_ID, SetTurnStartTime.class);
-		objectMap.put(GetTurnStartTime.SERIALIZATION_ID, GetTurnStartTime.class);
-		objectMap.put(SetTurnIntervalTime.SERIALIZATION_ID, SetTurnIntervalTime.class);
-
-		// Mappings by name
-		objectMap.put("GetTurnNumber", GetTurnNumber.class);
-		objectMap.put("ExecuteTurns", ExecuteTurns.class);
-		objectMap.put("SetTurnInterval", SetTurnInterval.class);
-		objectMap.put("GetTurnInterval", GetTurnInterval.class);
-		objectMap.put("SetTurnsEnabled", SetTurnsEnabled.class);
-		objectMap.put("GetTurnUpdating", GetTurnUpdating.class);
-		objectMap.put("GetNextTurnUpdateTime", GetNextTurnUpdateTime.class);
-		objectMap.put("GetTurnSummary", GetTurnSummary.class);
-		objectMap.put("GetTurns", GetTurns.class);
-		objectMap.put("GetTurnDetails", GetTurnDetails.class);
-		objectMap.put("SetTurnStartTime", SetTurnStartTime.class);
-		objectMap.put("GetTurnStartTime", GetTurnStartTime.class);
-		objectMap.put("SetTurnIntervalTime", SetTurnIntervalTime.class);
-
-		// Mappings by id
-
-		// Mappings by name
 
 		// Mappings by id
 		objectMap.put(SignupUser.SERIALIZATION_ID, SignupUser.class);
@@ -1017,76 +423,332 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("SetSignupUserEmail", SetSignupUserEmail.class);
 
 		// Mappings by id
+		objectMap.put(NewGame.SERIALIZATION_ID, NewGame.class);
+		objectMap.put(NewGameVersion.SERIALIZATION_ID, NewGameVersion.class);
+		objectMap.put(NewGameInstance.SERIALIZATION_ID, NewGameInstance.class);
+		objectMap.put(GetGameById.SERIALIZATION_ID, GetGameById.class);
+		objectMap.put(GetGameByName.SERIALIZATION_ID, GetGameByName.class);
+		objectMap.put(GetGameVersionById.SERIALIZATION_ID, GetGameVersionById.class);
+		objectMap.put(GetGameVersionByName.SERIALIZATION_ID, GetGameVersionByName.class);
+		objectMap.put(GetGameInstanceById.SERIALIZATION_ID, GetGameInstanceById.class);
+		objectMap.put(GetGameInstanceByName.SERIALIZATION_ID, GetGameInstanceByName.class);
+		objectMap.put(GetGames.SERIALIZATION_ID, GetGames.class);
+		objectMap.put(GetGameVersions.SERIALIZATION_ID, GetGameVersions.class);
+		objectMap.put(GetGameInstances.SERIALIZATION_ID, GetGameInstances.class);
+		objectMap.put(GetGameDefinitions.SERIALIZATION_ID, GetGameDefinitions.class);
+		objectMap.put(GetGameDefinition.SERIALIZATION_ID, GetGameDefinition.class);
+		objectMap.put(NewGameHost.SERIALIZATION_ID, NewGameHost.class);
+		objectMap.put(GetGameInstanceByNames.SERIALIZATION_ID, GetGameInstanceByNames.class);
+		objectMap.put(GetGameHostByName.SERIALIZATION_ID, GetGameHostByName.class);
+		objectMap.put(GetGameHostById.SERIALIZATION_ID, GetGameHostById.class);
+		objectMap.put(GetGameHosts.SERIALIZATION_ID, GetGameHosts.class);
+		objectMap.put(GetGameInstancesByGameName.SERIALIZATION_ID, GetGameInstancesByGameName.class);
+		objectMap.put(GetGameDefinitionsByGameName.SERIALIZATION_ID, GetGameDefinitionsByGameName.class);
+		objectMap.put(SetGameInstanceProperty.SERIALIZATION_ID, SetGameInstanceProperty.class);
+		objectMap.put(GetGameInstancePropertyList.SERIALIZATION_ID, GetGameInstancePropertyList.class);
 
 		// Mappings by name
+		objectMap.put("NewGame", NewGame.class);
+		objectMap.put("NewGameVersion", NewGameVersion.class);
+		objectMap.put("NewGameInstance", NewGameInstance.class);
+		objectMap.put("GetGameById", GetGameById.class);
+		objectMap.put("GetGameByName", GetGameByName.class);
+		objectMap.put("GetGameVersionById", GetGameVersionById.class);
+		objectMap.put("GetGameVersionByName", GetGameVersionByName.class);
+		objectMap.put("GetGameInstanceById", GetGameInstanceById.class);
+		objectMap.put("GetGameInstanceByName", GetGameInstanceByName.class);
+		objectMap.put("GetGames", GetGames.class);
+		objectMap.put("GetGameVersions", GetGameVersions.class);
+		objectMap.put("GetGameInstances", GetGameInstances.class);
+		objectMap.put("GetGameDefinitions", GetGameDefinitions.class);
+		objectMap.put("GetGameDefinition", GetGameDefinition.class);
+		objectMap.put("NewGameHost", NewGameHost.class);
+		objectMap.put("GetGameInstanceByNames", GetGameInstanceByNames.class);
+		objectMap.put("GetGameHostByName", GetGameHostByName.class);
+		objectMap.put("GetGameHostById", GetGameHostById.class);
+		objectMap.put("GetGameHosts", GetGameHosts.class);
+		objectMap.put("GetGameInstancesByGameName", GetGameInstancesByGameName.class);
+		objectMap.put("GetGameDefinitionsByGameName", GetGameDefinitionsByGameName.class);
+		objectMap.put("SetGameInstanceProperty", SetGameInstanceProperty.class);
+		objectMap.put("GetGameInstancePropertyList", GetGameInstancePropertyList.class);
+
+		// Mappings by id
+		objectMap.put(SendEmail.SERIALIZATION_ID, SendEmail.class);
+		objectMap.put(GetAdminHostAddress.SERIALIZATION_ID, GetAdminHostAddress.class);
+
+		// Mappings by name
+		objectMap.put("SendEmail", SendEmail.class);
+		objectMap.put("GetAdminHostAddress", GetAdminHostAddress.class);
+
+		// Mappings by id
+		objectMap.put(CreateForum.SERIALIZATION_ID, CreateForum.class);
+		objectMap.put(CreateForumThread.SERIALIZATION_ID, CreateForumThread.class);
+		objectMap.put(CreateForumPost.SERIALIZATION_ID, CreateForumPost.class);
+		objectMap.put(SetForumOrder.SERIALIZATION_ID, SetForumOrder.class);
+		objectMap.put(GetForumList.SERIALIZATION_ID, GetForumList.class);
+		objectMap.put(GetThreadList.SERIALIZATION_ID, GetThreadList.class);
+		objectMap.put(GetThread.SERIALIZATION_ID, GetThread.class);
+		objectMap.put(EditPost.SERIALIZATION_ID, EditPost.class);
+		objectMap.put(SetForumFlag.SERIALIZATION_ID, SetForumFlag.class);
+		objectMap.put(SetThreadFlag.SERIALIZATION_ID, SetThreadFlag.class);
+		objectMap.put(SetPostFlag.SERIALIZATION_ID, SetPostFlag.class);
+		objectMap.put(GetPostList.SERIALIZATION_ID, GetPostList.class);
+
+		// Mappings by name
+		objectMap.put("CreateForum", CreateForum.class);
+		objectMap.put("CreateForumThread", CreateForumThread.class);
+		objectMap.put("CreateForumPost", CreateForumPost.class);
+		objectMap.put("SetForumOrder", SetForumOrder.class);
+		objectMap.put("GetForumList", GetForumList.class);
+		objectMap.put("GetThreadList", GetThreadList.class);
+		objectMap.put("GetThread", GetThread.class);
+		objectMap.put("EditPost", EditPost.class);
+		objectMap.put("SetForumFlag", SetForumFlag.class);
+		objectMap.put("SetThreadFlag", SetThreadFlag.class);
+		objectMap.put("SetPostFlag", SetPostFlag.class);
+		objectMap.put("GetPostList", GetPostList.class);
 
 		// Mappings by id
 
 		// Mappings by name
 
 		// Mappings by id
+		objectMap.put(Ping.SERIALIZATION_ID, Ping.class);
+		objectMap.put(GetServiceStatus.SERIALIZATION_ID, GetServiceStatus.class);
+		objectMap.put(GetSystemStatus.SERIALIZATION_ID, GetSystemStatus.class);
+		objectMap.put(GetCommandAvailable.SERIALIZATION_ID, GetCommandAvailable.class);
+		objectMap.put(StartService.SERIALIZATION_ID, StartService.class);
+		objectMap.put(StopService.SERIALIZATION_ID, StopService.class);
+		objectMap.put(GetServiceProcessList.SERIALIZATION_ID, GetServiceProcessList.class);
+		objectMap.put(GetAvailableReleaseList.SERIALIZATION_ID, GetAvailableReleaseList.class);
+		objectMap.put(GetAvailableServiceList.SERIALIZATION_ID, GetAvailableServiceList.class);
+		objectMap.put(GetGoogleOpenIdForm.SERIALIZATION_ID, GetGoogleOpenIdForm.class);
+		objectMap.put(GetLoggedExceptions.SERIALIZATION_ID, GetLoggedExceptions.class);
+		objectMap.put(ThrowException.SERIALIZATION_ID, ThrowException.class);
 
 		// Mappings by name
+		objectMap.put("Ping", Ping.class);
+		objectMap.put("GetServiceStatus", GetServiceStatus.class);
+		objectMap.put("GetSystemStatus", GetSystemStatus.class);
+		objectMap.put("GetCommandAvailable", GetCommandAvailable.class);
+		objectMap.put("StartService", StartService.class);
+		objectMap.put("StopService", StopService.class);
+		objectMap.put("GetServiceProcessList", GetServiceProcessList.class);
+		objectMap.put("GetAvailableReleaseList", GetAvailableReleaseList.class);
+		objectMap.put("GetAvailableServiceList", GetAvailableServiceList.class);
+		objectMap.put("GetGoogleOpenIdForm", GetGoogleOpenIdForm.class);
+		objectMap.put("GetLoggedExceptions", GetLoggedExceptions.class);
+		objectMap.put("ThrowException", ThrowException.class);
+
+		// Mappings by id
+		objectMap.put(GetCommandStackTrace.SERIALIZATION_ID, GetCommandStackTrace.class);
+		objectMap.put(GetCommandStackTraceList.SERIALIZATION_ID, GetCommandStackTraceList.class);
+
+		// Mappings by name
+		objectMap.put("GetCommandStackTrace", GetCommandStackTrace.class);
+		objectMap.put("GetCommandStackTraceList", GetCommandStackTraceList.class);
+
+		// Mappings by id
+		objectMap.put(GetLocalTrace.SERIALIZATION_ID, GetLocalTrace.class);
+		objectMap.put(GetLocalTraceList.SERIALIZATION_ID, GetLocalTraceList.class);
+
+		// Mappings by name
+		objectMap.put("GetLocalTrace", GetLocalTrace.class);
+		objectMap.put("GetLocalTraceList", GetLocalTraceList.class);
+
+		// Mappings by id
+		objectMap.put(AddParentGroup.SERIALIZATION_ID, AddParentGroup.class);
+		objectMap.put(AddChildGroup.SERIALIZATION_ID, AddChildGroup.class);
+		objectMap.put(GetGroupById.SERIALIZATION_ID, GetGroupById.class);
+		objectMap.put(GetGroupByName.SERIALIZATION_ID, GetGroupByName.class);
+		objectMap.put(GetGroups.SERIALIZATION_ID, GetGroups.class);
+		objectMap.put(GetGroupListByFactionName.SERIALIZATION_ID, GetGroupListByFactionName.class);
+
+		// Mappings by name
+		objectMap.put("AddParentGroup", AddParentGroup.class);
+		objectMap.put("AddChildGroup", AddChildGroup.class);
+		objectMap.put("GetGroupById", GetGroupById.class);
+		objectMap.put("GetGroupByName", GetGroupByName.class);
+		objectMap.put("GetGroups", GetGroups.class);
+		objectMap.put("GetGroupListByFactionName", GetGroupListByFactionName.class);
 
 		// Mappings by id
 
 		// Mappings by name
 
 		// Mappings by id
+		objectMap.put(SetGameInstance.SERIALIZATION_ID, SetGameInstance.class);
+		objectMap.put(StartupGame.SERIALIZATION_ID, StartupGame.class);
+		objectMap.put(ResetGame.SERIALIZATION_ID, ResetGame.class);
+		objectMap.put(ShutdownGame.SERIALIZATION_ID, ShutdownGame.class);
+		objectMap.put(GetGameStatus.SERIALIZATION_ID, GetGameStatus.class);
+		objectMap.put(AddGameUnits.SERIALIZATION_ID, AddGameUnits.class);
+		objectMap.put(GetGameUnits.SERIALIZATION_ID, GetGameUnits.class);
 
 		// Mappings by name
+		objectMap.put("SetGameInstance", SetGameInstance.class);
+		objectMap.put("StartupGame", StartupGame.class);
+		objectMap.put("ResetGame", ResetGame.class);
+		objectMap.put("ShutdownGame", ShutdownGame.class);
+		objectMap.put("GetGameStatus", GetGameStatus.class);
+		objectMap.put("AddGameUnits", AddGameUnits.class);
+		objectMap.put("GetGameUnits", GetGameUnits.class);
 
 		// Mappings by id
+		objectMap.put(CreateAllianceForum.SERIALIZATION_ID, CreateAllianceForum.class);
+		objectMap.put(CreateAllianceForumThread.SERIALIZATION_ID, CreateAllianceForumThread.class);
+		objectMap.put(CreateAllianceForumPost.SERIALIZATION_ID, CreateAllianceForumPost.class);
+		objectMap.put(SetAllianceForumOrder.SERIALIZATION_ID, SetAllianceForumOrder.class);
+		objectMap.put(GetAllianceForumList.SERIALIZATION_ID, GetAllianceForumList.class);
+		objectMap.put(GetAllianceThreadList.SERIALIZATION_ID, GetAllianceThreadList.class);
+		objectMap.put(GetAllianceThread.SERIALIZATION_ID, GetAllianceThread.class);
+		objectMap.put(EditAlliancePost.SERIALIZATION_ID, EditAlliancePost.class);
+		objectMap.put(SetAllianceForumFlag.SERIALIZATION_ID, SetAllianceForumFlag.class);
+		objectMap.put(SetAllianceThreadFlag.SERIALIZATION_ID, SetAllianceThreadFlag.class);
+		objectMap.put(SetAlliancePostFlag.SERIALIZATION_ID, SetAlliancePostFlag.class);
+		objectMap.put(GetAlliancePostList.SERIALIZATION_ID, GetAlliancePostList.class);
 
 		// Mappings by name
+		objectMap.put("CreateAllianceForum", CreateAllianceForum.class);
+		objectMap.put("CreateAllianceForumThread", CreateAllianceForumThread.class);
+		objectMap.put("CreateAllianceForumPost", CreateAllianceForumPost.class);
+		objectMap.put("SetAllianceForumOrder", SetAllianceForumOrder.class);
+		objectMap.put("GetAllianceForumList", GetAllianceForumList.class);
+		objectMap.put("GetAllianceThreadList", GetAllianceThreadList.class);
+		objectMap.put("GetAllianceThread", GetAllianceThread.class);
+		objectMap.put("EditAlliancePost", EditAlliancePost.class);
+		objectMap.put("SetAllianceForumFlag", SetAllianceForumFlag.class);
+		objectMap.put("SetAllianceThreadFlag", SetAllianceThreadFlag.class);
+		objectMap.put("SetAlliancePostFlag", SetAlliancePostFlag.class);
+		objectMap.put("GetAlliancePostList", GetAlliancePostList.class);
 
 		// Mappings by id
+		objectMap.put(GetAllianceCount.SERIALIZATION_ID, GetAllianceCount.class);
+		objectMap.put(GetAllianceMemberCount.SERIALIZATION_ID, GetAllianceMemberCount.class);
+		objectMap.put(GetAllianceById.SERIALIZATION_ID, GetAllianceById.class);
+		objectMap.put(GetAllianceByName.SERIALIZATION_ID, GetAllianceByName.class);
+		objectMap.put(FormAlliance.SERIALIZATION_ID, FormAlliance.class);
+		objectMap.put(DisbandAlliance.SERIALIZATION_ID, DisbandAlliance.class);
+		objectMap.put(LeaveAlliance.SERIALIZATION_ID, LeaveAlliance.class);
+		objectMap.put(InviteToJoinAlliance.SERIALIZATION_ID, InviteToJoinAlliance.class);
+		objectMap.put(RequestToJoinAlliance.SERIALIZATION_ID, RequestToJoinAlliance.class);
+		objectMap.put(KickAllianceMember.SERIALIZATION_ID, KickAllianceMember.class);
+		objectMap.put(GetInvitedToJoinAllianceList.SERIALIZATION_ID, GetInvitedToJoinAllianceList.class);
+		objectMap.put(GetAllianceInviteLimit.SERIALIZATION_ID, GetAllianceInviteLimit.class);
+		objectMap.put(SetAllianceInviteLimit.SERIALIZATION_ID, SetAllianceInviteLimit.class);
+		objectMap.put(GetAllianceMemberLimit.SERIALIZATION_ID, GetAllianceMemberLimit.class);
+		objectMap.put(SetAllianceMemberLimit.SERIALIZATION_ID, SetAllianceMemberLimit.class);
+		objectMap.put(SetAlliancesEnabled.SERIALIZATION_ID, SetAlliancesEnabled.class);
+		objectMap.put(GetAllianceList.SERIALIZATION_ID, GetAllianceList.class);
+		objectMap.put(GetAlliance.SERIALIZATION_ID, GetAlliance.class);
+		objectMap.put(GetRequestedToJoinAllianceList.SERIALIZATION_ID, GetRequestedToJoinAllianceList.class);
+		objectMap.put(InviteToJoinAllianceByName.SERIALIZATION_ID, InviteToJoinAllianceByName.class);
+		objectMap.put(RequestToJoinAllianceByName.SERIALIZATION_ID, RequestToJoinAllianceByName.class);
+		objectMap.put(SetAllianceLeaveTurns.SERIALIZATION_ID, SetAllianceLeaveTurns.class);
+		objectMap.put(GetAllianceSetupInfo.SERIALIZATION_ID, GetAllianceSetupInfo.class);
+		objectMap.put(SetAllianceProperty.SERIALIZATION_ID, SetAllianceProperty.class);
+		objectMap.put(GetAlliancePropertyList.SERIALIZATION_ID, GetAlliancePropertyList.class);
+		objectMap.put(GetAllianceScores.SERIALIZATION_ID, GetAllianceScores.class);
+		objectMap.put(SetAllianceLogo.SERIALIZATION_ID, SetAllianceLogo.class);
+		objectMap.put(GetAllianceLogo.SERIALIZATION_ID, GetAllianceLogo.class);
+		objectMap.put(GetAllianceInfo.SERIALIZATION_ID, GetAllianceInfo.class);
 
 		// Mappings by name
+		objectMap.put("GetAllianceCount", GetAllianceCount.class);
+		objectMap.put("GetAllianceMemberCount", GetAllianceMemberCount.class);
+		objectMap.put("GetAllianceById", GetAllianceById.class);
+		objectMap.put("GetAllianceByName", GetAllianceByName.class);
+		objectMap.put("FormAlliance", FormAlliance.class);
+		objectMap.put("DisbandAlliance", DisbandAlliance.class);
+		objectMap.put("LeaveAlliance", LeaveAlliance.class);
+		objectMap.put("InviteToJoinAlliance", InviteToJoinAlliance.class);
+		objectMap.put("RequestToJoinAlliance", RequestToJoinAlliance.class);
+		objectMap.put("KickAllianceMember", KickAllianceMember.class);
+		objectMap.put("GetInvitedToJoinAllianceList", GetInvitedToJoinAllianceList.class);
+		objectMap.put("GetAllianceInviteLimit", GetAllianceInviteLimit.class);
+		objectMap.put("SetAllianceInviteLimit", SetAllianceInviteLimit.class);
+		objectMap.put("GetAllianceMemberLimit", GetAllianceMemberLimit.class);
+		objectMap.put("SetAllianceMemberLimit", SetAllianceMemberLimit.class);
+		objectMap.put("SetAlliancesEnabled", SetAlliancesEnabled.class);
+		objectMap.put("GetAllianceList", GetAllianceList.class);
+		objectMap.put("GetAlliance", GetAlliance.class);
+		objectMap.put("GetRequestedToJoinAllianceList", GetRequestedToJoinAllianceList.class);
+		objectMap.put("InviteToJoinAllianceByName", InviteToJoinAllianceByName.class);
+		objectMap.put("RequestToJoinAllianceByName", RequestToJoinAllianceByName.class);
+		objectMap.put("SetAllianceLeaveTurns", SetAllianceLeaveTurns.class);
+		objectMap.put("GetAllianceSetupInfo", GetAllianceSetupInfo.class);
+		objectMap.put("SetAllianceProperty", SetAllianceProperty.class);
+		objectMap.put("GetAlliancePropertyList", GetAlliancePropertyList.class);
+		objectMap.put("GetAllianceScores", GetAllianceScores.class);
+		objectMap.put("SetAllianceLogo", SetAllianceLogo.class);
+		objectMap.put("GetAllianceLogo", GetAllianceLogo.class);
+		objectMap.put("GetAllianceInfo", GetAllianceInfo.class);
 
 		// Mappings by id
+		objectMap.put(SetLocationGenerationPlugin.SERIALIZATION_ID, SetLocationGenerationPlugin.class);
+		objectMap.put(GenerateLocations.SERIALIZATION_ID, GenerateLocations.class);
+		objectMap.put(SetLocationCoordinatePlugin.SERIALIZATION_ID, SetLocationCoordinatePlugin.class);
+		objectMap.put(SetLocationsEnabled.SERIALIZATION_ID, SetLocationsEnabled.class);
+		objectMap.put(GetLocationsEnabled.SERIALIZATION_ID, GetLocationsEnabled.class);
+		objectMap.put(SetLocationSignupsEnabled.SERIALIZATION_ID, SetLocationSignupsEnabled.class);
+		objectMap.put(GetLocationSignupsEnabled.SERIALIZATION_ID, GetLocationSignupsEnabled.class);
+		objectMap.put(GetLocationList.SERIALIZATION_ID, GetLocationList.class);
+		objectMap.put(GetLocation.SERIALIZATION_ID, GetLocation.class);
+		objectMap.put(RenameLocation.SERIALIZATION_ID, RenameLocation.class);
+		objectMap.put(AddUnitsAtLocation.SERIALIZATION_ID, AddUnitsAtLocation.class);
+		objectMap.put(GetGridInfoList.SERIALIZATION_ID, GetGridInfoList.class);
+		objectMap.put(GetLocationId.SERIALIZATION_ID, GetLocationId.class);
+		objectMap.put(GetCoordinates.SERIALIZATION_ID, GetCoordinates.class);
+		objectMap.put(GetLocationCount.SERIALIZATION_ID, GetLocationCount.class);
+		objectMap.put(GetLocationSetupInfo.SERIALIZATION_ID, GetLocationSetupInfo.class);
+		objectMap.put(GetLocationCoordinatePlugin.SERIALIZATION_ID, GetLocationCoordinatePlugin.class);
+		objectMap.put(GetLocationGenerationPlugin.SERIALIZATION_ID, GetLocationGenerationPlugin.class);
+		objectMap.put(SetLocationProperty.SERIALIZATION_ID, SetLocationProperty.class);
+		objectMap.put(GetLocationPropertyList.SERIALIZATION_ID, GetLocationPropertyList.class);
+		objectMap.put(GetLocationIdsForPlayer.SERIALIZATION_ID, GetLocationIdsForPlayer.class);
+		objectMap.put(CheckRenameLocation.SERIALIZATION_ID, CheckRenameLocation.class);
 
 		// Mappings by name
+		objectMap.put("SetLocationGenerationPlugin", SetLocationGenerationPlugin.class);
+		objectMap.put("GenerateLocations", GenerateLocations.class);
+		objectMap.put("SetLocationCoordinatePlugin", SetLocationCoordinatePlugin.class);
+		objectMap.put("SetLocationsEnabled", SetLocationsEnabled.class);
+		objectMap.put("GetLocationsEnabled", GetLocationsEnabled.class);
+		objectMap.put("SetLocationSignupsEnabled", SetLocationSignupsEnabled.class);
+		objectMap.put("GetLocationSignupsEnabled", GetLocationSignupsEnabled.class);
+		objectMap.put("GetLocationList", GetLocationList.class);
+		objectMap.put("GetLocation", GetLocation.class);
+		objectMap.put("RenameLocation", RenameLocation.class);
+		objectMap.put("AddUnitsAtLocation", AddUnitsAtLocation.class);
+		objectMap.put("GetGridInfoList", GetGridInfoList.class);
+		objectMap.put("GetLocationId", GetLocationId.class);
+		objectMap.put("GetCoordinates", GetCoordinates.class);
+		objectMap.put("GetLocationCount", GetLocationCount.class);
+		objectMap.put("GetLocationSetupInfo", GetLocationSetupInfo.class);
+		objectMap.put("GetLocationCoordinatePlugin", GetLocationCoordinatePlugin.class);
+		objectMap.put("GetLocationGenerationPlugin", GetLocationGenerationPlugin.class);
+		objectMap.put("SetLocationProperty", SetLocationProperty.class);
+		objectMap.put("GetLocationPropertyList", GetLocationPropertyList.class);
+		objectMap.put("GetLocationIdsForPlayer", GetLocationIdsForPlayer.class);
+		objectMap.put("CheckRenameLocation", CheckRenameLocation.class);
 
 		// Mappings by id
+		objectMap.put(SendMail.SERIALIZATION_ID, SendMail.class);
+		objectMap.put(MakeNote.SERIALIZATION_ID, MakeNote.class);
+		objectMap.put(PostNews.SERIALIZATION_ID, PostNews.class);
+		objectMap.put(ListMessages.SERIALIZATION_ID, ListMessages.class);
+		objectMap.put(GetMessageSummary.SERIALIZATION_ID, GetMessageSummary.class);
+		objectMap.put(GetMessage.SERIALIZATION_ID, GetMessage.class);
+		objectMap.put(GetMessageCountByFormat.SERIALIZATION_ID, GetMessageCountByFormat.class);
 
 		// Mappings by name
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-		objectMap.put(AddUnit.SERIALIZATION_ID, AddUnit.class);
-		objectMap.put(GetUnitById.SERIALIZATION_ID, GetUnitById.class);
-		objectMap.put(GetUnitByName.SERIALIZATION_ID, GetUnitByName.class);
-		objectMap.put(GetUnits.SERIALIZATION_ID, GetUnits.class);
-		objectMap.put(GetUnitsByFactionId.SERIALIZATION_ID, GetUnitsByFactionId.class);
-		objectMap.put(GetUnitsByFactionName.SERIALIZATION_ID, GetUnitsByFactionName.class);
-		objectMap.put(GetUnitsByGroupId.SERIALIZATION_ID, GetUnitsByGroupId.class);
-		objectMap.put(GetUnitsByGroupName.SERIALIZATION_ID, GetUnitsByGroupName.class);
-		objectMap.put(GetAllUnitsAtPlayer.SERIALIZATION_ID, GetAllUnitsAtPlayer.class);
-		objectMap.put(GetUnitsAtPlayer.SERIALIZATION_ID, GetUnitsAtPlayer.class);
-
-		// Mappings by name
-		objectMap.put("AddUnit", AddUnit.class);
-		objectMap.put("GetUnitById", GetUnitById.class);
-		objectMap.put("GetUnitByName", GetUnitByName.class);
-		objectMap.put("GetUnits", GetUnits.class);
-		objectMap.put("GetUnitsByFactionId", GetUnitsByFactionId.class);
-		objectMap.put("GetUnitsByFactionName", GetUnitsByFactionName.class);
-		objectMap.put("GetUnitsByGroupId", GetUnitsByGroupId.class);
-		objectMap.put("GetUnitsByGroupName", GetUnitsByGroupName.class);
-		objectMap.put("GetAllUnitsAtPlayer", GetAllUnitsAtPlayer.class);
-		objectMap.put("GetUnitsAtPlayer", GetUnitsAtPlayer.class);
+		objectMap.put("SendMail", SendMail.class);
+		objectMap.put("MakeNote", MakeNote.class);
+		objectMap.put("PostNews", PostNews.class);
+		objectMap.put("ListMessages", ListMessages.class);
+		objectMap.put("GetMessageSummary", GetMessageSummary.class);
+		objectMap.put("GetMessage", GetMessage.class);
+		objectMap.put("GetMessageCountByFormat", GetMessageCountByFormat.class);
 
 		// Mappings by id
 		objectMap.put(SignupPlayer.SERIALIZATION_ID, SignupPlayer.class);
@@ -1149,6 +811,344 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("GetUserAdminInfoByPlayer", GetUserAdminInfoByPlayer.class);
 		objectMap.put("SetPlayerAvatar", SetPlayerAvatar.class);
 		objectMap.put("GetPlayerAvatar", GetPlayerAvatar.class);
+
+		// Mappings by id
+		objectMap.put(GetTurnNumber.SERIALIZATION_ID, GetTurnNumber.class);
+		objectMap.put(ExecuteTurns.SERIALIZATION_ID, ExecuteTurns.class);
+		objectMap.put(SetTurnInterval.SERIALIZATION_ID, SetTurnInterval.class);
+		objectMap.put(GetTurnInterval.SERIALIZATION_ID, GetTurnInterval.class);
+		objectMap.put(SetTurnsEnabled.SERIALIZATION_ID, SetTurnsEnabled.class);
+		objectMap.put(GetTurnUpdating.SERIALIZATION_ID, GetTurnUpdating.class);
+		objectMap.put(GetNextTurnUpdateTime.SERIALIZATION_ID, GetNextTurnUpdateTime.class);
+		objectMap.put(GetTurnSummary.SERIALIZATION_ID, GetTurnSummary.class);
+		objectMap.put(GetTurns.SERIALIZATION_ID, GetTurns.class);
+		objectMap.put(GetTurnDetails.SERIALIZATION_ID, GetTurnDetails.class);
+		objectMap.put(SetTurnStartTime.SERIALIZATION_ID, SetTurnStartTime.class);
+		objectMap.put(GetTurnStartTime.SERIALIZATION_ID, GetTurnStartTime.class);
+		objectMap.put(SetTurnIntervalTime.SERIALIZATION_ID, SetTurnIntervalTime.class);
+
+		// Mappings by name
+		objectMap.put("GetTurnNumber", GetTurnNumber.class);
+		objectMap.put("ExecuteTurns", ExecuteTurns.class);
+		objectMap.put("SetTurnInterval", SetTurnInterval.class);
+		objectMap.put("GetTurnInterval", GetTurnInterval.class);
+		objectMap.put("SetTurnsEnabled", SetTurnsEnabled.class);
+		objectMap.put("GetTurnUpdating", GetTurnUpdating.class);
+		objectMap.put("GetNextTurnUpdateTime", GetNextTurnUpdateTime.class);
+		objectMap.put("GetTurnSummary", GetTurnSummary.class);
+		objectMap.put("GetTurns", GetTurns.class);
+		objectMap.put("GetTurnDetails", GetTurnDetails.class);
+		objectMap.put("SetTurnStartTime", SetTurnStartTime.class);
+		objectMap.put("GetTurnStartTime", GetTurnStartTime.class);
+		objectMap.put("SetTurnIntervalTime", SetTurnIntervalTime.class);
+
+		// Mappings by id
+		objectMap.put(AddFaction.SERIALIZATION_ID, AddFaction.class);
+		objectMap.put(GetFactionById.SERIALIZATION_ID, GetFactionById.class);
+		objectMap.put(GetFactionByName.SERIALIZATION_ID, GetFactionByName.class);
+		objectMap.put(GetFactions.SERIALIZATION_ID, GetFactions.class);
+
+		// Mappings by name
+		objectMap.put("AddFaction", AddFaction.class);
+		objectMap.put("GetFactionById", GetFactionById.class);
+		objectMap.put("GetFactionByName", GetFactionByName.class);
+		objectMap.put("GetFactions", GetFactions.class);
+
+		// Mappings by id
+		objectMap.put(SetUnitScore.SERIALIZATION_ID, SetUnitScore.class);
+		objectMap.put(GetUnitScore.SERIALIZATION_ID, GetUnitScore.class);
+		objectMap.put(GetUnitScores.SERIALIZATION_ID, GetUnitScores.class);
+		objectMap.put(SetScoreUpdaterGroup.SERIALIZATION_ID, SetScoreUpdaterGroup.class);
+		objectMap.put(GetRankingList.SERIALIZATION_ID, GetRankingList.class);
+		objectMap.put(GetRankingGroupList.SERIALIZATION_ID, GetRankingGroupList.class);
+		objectMap.put(GetPlayerRankingList.SERIALIZATION_ID, GetPlayerRankingList.class);
+		objectMap.put(GetAllianceRankingList.SERIALIZATION_ID, GetAllianceRankingList.class);
+		objectMap.put(SetScoreDivisor.SERIALIZATION_ID, SetScoreDivisor.class);
+		objectMap.put(GetScoreDivisor.SERIALIZATION_ID, GetScoreDivisor.class);
+
+		// Mappings by name
+		objectMap.put("SetUnitScore", SetUnitScore.class);
+		objectMap.put("GetUnitScore", GetUnitScore.class);
+		objectMap.put("GetUnitScores", GetUnitScores.class);
+		objectMap.put("SetScoreUpdaterGroup", SetScoreUpdaterGroup.class);
+		objectMap.put("GetRankingList", GetRankingList.class);
+		objectMap.put("GetRankingGroupList", GetRankingGroupList.class);
+		objectMap.put("GetPlayerRankingList", GetPlayerRankingList.class);
+		objectMap.put("GetAllianceRankingList", GetAllianceRankingList.class);
+		objectMap.put("SetScoreDivisor", SetScoreDivisor.class);
+		objectMap.put("GetScoreDivisor", GetScoreDivisor.class);
+
+		// Mappings by id
+		objectMap.put(SetLocalProperty.SERIALIZATION_ID, SetLocalProperty.class);
+		objectMap.put(GetLocalProperty.SERIALIZATION_ID, GetLocalProperty.class);
+
+		// Mappings by name
+		objectMap.put("SetLocalProperty", SetLocalProperty.class);
+		objectMap.put("GetLocalProperty", GetLocalProperty.class);
+
+		// Mappings by id
+		objectMap.put(AddAction.SERIALIZATION_ID, AddAction.class);
+		objectMap.put(AddActionTarget.SERIALIZATION_ID, AddActionTarget.class);
+		objectMap.put(AddActionCondition.SERIALIZATION_ID, AddActionCondition.class);
+		objectMap.put(GetActionList.SERIALIZATION_ID, GetActionList.class);
+		objectMap.put(GetActionTargetList.SERIALIZATION_ID, GetActionTargetList.class);
+		objectMap.put(GetActionConditionList.SERIALIZATION_ID, GetActionConditionList.class);
+		objectMap.put(StartActionAtPlayer.SERIALIZATION_ID, StartActionAtPlayer.class);
+		objectMap.put(ClearActionQueuedAtPlayer.SERIALIZATION_ID, ClearActionQueuedAtPlayer.class);
+		objectMap.put(StartActionAtLocation.SERIALIZATION_ID, StartActionAtLocation.class);
+		objectMap.put(ClearActionQueuedAtLocation.SERIALIZATION_ID, ClearActionQueuedAtLocation.class);
+		objectMap.put(ListActionsAvailableAtLocation.SERIALIZATION_ID, ListActionsAvailableAtLocation.class);
+		objectMap.put(ListActionsAvailableAtPlayer.SERIALIZATION_ID, ListActionsAvailableAtPlayer.class);
+		objectMap.put(ListActionsExecutingAtLocation.SERIALIZATION_ID, ListActionsExecutingAtLocation.class);
+		objectMap.put(ListActionsExecutingAtPlayer.SERIALIZATION_ID, ListActionsExecutingAtPlayer.class);
+		objectMap.put(ListActionsQueuedAtLocation.SERIALIZATION_ID, ListActionsQueuedAtLocation.class);
+		objectMap.put(ListActionsQueuedAtPlayer.SERIALIZATION_ID, ListActionsQueuedAtPlayer.class);
+		objectMap.put(ClearActionsQueuedAtLocation.SERIALIZATION_ID, ClearActionsQueuedAtLocation.class);
+		objectMap.put(ClearActionsQueuedAtPlayer.SERIALIZATION_ID, ClearActionsQueuedAtPlayer.class);
+		objectMap.put(StartActionAtMobileToLocation.SERIALIZATION_ID, StartActionAtMobileToLocation.class);
+		objectMap.put(ListActionsAvailableAtMobile.SERIALIZATION_ID, ListActionsAvailableAtMobile.class);
+		objectMap.put(AddActionPlugin.SERIALIZATION_ID, AddActionPlugin.class);
+		objectMap.put(StartActionAtLocationToLocation.SERIALIZATION_ID, StartActionAtLocationToLocation.class);
+		objectMap.put(GetActionPlugin.SERIALIZATION_ID, GetActionPlugin.class);
+		objectMap.put(CancelActionAtPlayer.SERIALIZATION_ID, CancelActionAtPlayer.class);
+		objectMap.put(CancelActionAtLocation.SERIALIZATION_ID, CancelActionAtLocation.class);
+
+		// Mappings by name
+		objectMap.put("AddAction", AddAction.class);
+		objectMap.put("AddActionTarget", AddActionTarget.class);
+		objectMap.put("AddActionCondition", AddActionCondition.class);
+		objectMap.put("GetActionList", GetActionList.class);
+		objectMap.put("GetActionTargetList", GetActionTargetList.class);
+		objectMap.put("GetActionConditionList", GetActionConditionList.class);
+		objectMap.put("StartActionAtPlayer", StartActionAtPlayer.class);
+		objectMap.put("ClearActionQueuedAtPlayer", ClearActionQueuedAtPlayer.class);
+		objectMap.put("StartActionAtLocation", StartActionAtLocation.class);
+		objectMap.put("ClearActionQueuedAtLocation", ClearActionQueuedAtLocation.class);
+		objectMap.put("ListActionsAvailableAtLocation", ListActionsAvailableAtLocation.class);
+		objectMap.put("ListActionsAvailableAtPlayer", ListActionsAvailableAtPlayer.class);
+		objectMap.put("ListActionsExecutingAtLocation", ListActionsExecutingAtLocation.class);
+		objectMap.put("ListActionsExecutingAtPlayer", ListActionsExecutingAtPlayer.class);
+		objectMap.put("ListActionsQueuedAtLocation", ListActionsQueuedAtLocation.class);
+		objectMap.put("ListActionsQueuedAtPlayer", ListActionsQueuedAtPlayer.class);
+		objectMap.put("ClearActionsQueuedAtLocation", ClearActionsQueuedAtLocation.class);
+		objectMap.put("ClearActionsQueuedAtPlayer", ClearActionsQueuedAtPlayer.class);
+		objectMap.put("StartActionAtMobileToLocation", StartActionAtMobileToLocation.class);
+		objectMap.put("ListActionsAvailableAtMobile", ListActionsAvailableAtMobile.class);
+		objectMap.put("AddActionPlugin", AddActionPlugin.class);
+		objectMap.put("StartActionAtLocationToLocation", StartActionAtLocationToLocation.class);
+		objectMap.put("GetActionPlugin", GetActionPlugin.class);
+		objectMap.put("CancelActionAtPlayer", CancelActionAtPlayer.class);
+		objectMap.put("CancelActionAtLocation", CancelActionAtLocation.class);
+
+		// Mappings by id
+		objectMap.put(CreateMobileAtLocation.SERIALIZATION_ID, CreateMobileAtLocation.class);
+		objectMap.put(ListMobilesAtLocation.SERIALIZATION_ID, ListMobilesAtLocation.class);
+		objectMap.put(TransferUnitsToMobile.SERIALIZATION_ID, TransferUnitsToMobile.class);
+		objectMap.put(TransferUnitsFromMobile.SERIALIZATION_ID, TransferUnitsFromMobile.class);
+		objectMap.put(GetMobileList.SERIALIZATION_ID, GetMobileList.class);
+		objectMap.put(GetMobile.SERIALIZATION_ID, GetMobile.class);
+		objectMap.put(MoveMobile.SERIALIZATION_ID, MoveMobile.class);
+		objectMap.put(DestroyEmptyMobile.SERIALIZATION_ID, DestroyEmptyMobile.class);
+		objectMap.put(CreateMobileAtMobile.SERIALIZATION_ID, CreateMobileAtMobile.class);
+		objectMap.put(MoveMobileToCoordinates.SERIALIZATION_ID, MoveMobileToCoordinates.class);
+		objectMap.put(TransferUnitsBetweenMobiles.SERIALIZATION_ID, TransferUnitsBetweenMobiles.class);
+		objectMap.put(RenameMobile.SERIALIZATION_ID, RenameMobile.class);
+		objectMap.put(AddUnitsAtMobile.SERIALIZATION_ID, AddUnitsAtMobile.class);
+		objectMap.put(SetCombatPlugin.SERIALIZATION_ID, SetCombatPlugin.class);
+		objectMap.put(GetMobileSetupInfo.SERIALIZATION_ID, GetMobileSetupInfo.class);
+		objectMap.put(SetMobilesEnabled.SERIALIZATION_ID, SetMobilesEnabled.class);
+		objectMap.put(GetMobilesEnabled.SERIALIZATION_ID, GetMobilesEnabled.class);
+		objectMap.put(GetCombatPlugin.SERIALIZATION_ID, GetCombatPlugin.class);
+		objectMap.put(SetMobileProperty.SERIALIZATION_ID, SetMobileProperty.class);
+		objectMap.put(GetMobilePropertyList.SERIALIZATION_ID, GetMobilePropertyList.class);
+		objectMap.put(SetMobileMovementPlugin.SERIALIZATION_ID, SetMobileMovementPlugin.class);
+		objectMap.put(ClearMobileQueue.SERIALIZATION_ID, ClearMobileQueue.class);
+		objectMap.put(WaitMobile.SERIALIZATION_ID, WaitMobile.class);
+		objectMap.put(GetMobileQueueList.SERIALIZATION_ID, GetMobileQueueList.class);
+		objectMap.put(SetMobileWait.SERIALIZATION_ID, SetMobileWait.class);
+		objectMap.put(SetMobileMove.SERIALIZATION_ID, SetMobileMove.class);
+		objectMap.put(GetMobileIdsForPlayer.SERIALIZATION_ID, GetMobileIdsForPlayer.class);
+
+		// Mappings by name
+		objectMap.put("CreateMobileAtLocation", CreateMobileAtLocation.class);
+		objectMap.put("ListMobilesAtLocation", ListMobilesAtLocation.class);
+		objectMap.put("TransferUnitsToMobile", TransferUnitsToMobile.class);
+		objectMap.put("TransferUnitsFromMobile", TransferUnitsFromMobile.class);
+		objectMap.put("GetMobileList", GetMobileList.class);
+		objectMap.put("GetMobile", GetMobile.class);
+		objectMap.put("MoveMobile", MoveMobile.class);
+		objectMap.put("DestroyEmptyMobile", DestroyEmptyMobile.class);
+		objectMap.put("CreateMobileAtMobile", CreateMobileAtMobile.class);
+		objectMap.put("MoveMobileToCoordinates", MoveMobileToCoordinates.class);
+		objectMap.put("TransferUnitsBetweenMobiles", TransferUnitsBetweenMobiles.class);
+		objectMap.put("RenameMobile", RenameMobile.class);
+		objectMap.put("AddUnitsAtMobile", AddUnitsAtMobile.class);
+		objectMap.put("SetCombatPlugin", SetCombatPlugin.class);
+		objectMap.put("GetMobileSetupInfo", GetMobileSetupInfo.class);
+		objectMap.put("SetMobilesEnabled", SetMobilesEnabled.class);
+		objectMap.put("GetMobilesEnabled", GetMobilesEnabled.class);
+		objectMap.put("GetCombatPlugin", GetCombatPlugin.class);
+		objectMap.put("SetMobileProperty", SetMobileProperty.class);
+		objectMap.put("GetMobilePropertyList", GetMobilePropertyList.class);
+		objectMap.put("SetMobileMovementPlugin", SetMobileMovementPlugin.class);
+		objectMap.put("ClearMobileQueue", ClearMobileQueue.class);
+		objectMap.put("WaitMobile", WaitMobile.class);
+		objectMap.put("GetMobileQueueList", GetMobileQueueList.class);
+		objectMap.put("SetMobileWait", SetMobileWait.class);
+		objectMap.put("SetMobileMove", SetMobileMove.class);
+		objectMap.put("GetMobileIdsForPlayer", GetMobileIdsForPlayer.class);
+
+		// Mappings by id
+		objectMap.put(SetStorageGroup.SERIALIZATION_ID, SetStorageGroup.class);
+		objectMap.put(SetStorageItem.SERIALIZATION_ID, SetStorageItem.class);
+		objectMap.put(GetStorageGroups.SERIALIZATION_ID, GetStorageGroups.class);
+		objectMap.put(GetStorageItems.SERIALIZATION_ID, GetStorageItems.class);
+
+		// Mappings by name
+		objectMap.put("SetStorageGroup", SetStorageGroup.class);
+		objectMap.put("SetStorageItem", SetStorageItem.class);
+		objectMap.put("GetStorageGroups", GetStorageGroups.class);
+		objectMap.put("GetStorageItems", GetStorageItems.class);
+
+		// Mappings by id
+		objectMap.put(GetGoodsPriceListAtLocation.SERIALIZATION_ID, GetGoodsPriceListAtLocation.class);
+		objectMap.put(BuyGoodsAtLocation.SERIALIZATION_ID, BuyGoodsAtLocation.class);
+		objectMap.put(SellGoodsAtLocation.SERIALIZATION_ID, SellGoodsAtLocation.class);
+		objectMap.put(SetTradeAtLocationPlugin.SERIALIZATION_ID, SetTradeAtLocationPlugin.class);
+
+		// Mappings by name
+		objectMap.put("GetGoodsPriceListAtLocation", GetGoodsPriceListAtLocation.class);
+		objectMap.put("BuyGoodsAtLocation", BuyGoodsAtLocation.class);
+		objectMap.put("SellGoodsAtLocation", SellGoodsAtLocation.class);
+		objectMap.put("SetTradeAtLocationPlugin", SetTradeAtLocationPlugin.class);
+
+		// Mappings by id
+		objectMap.put(AddUnit.SERIALIZATION_ID, AddUnit.class);
+		objectMap.put(GetUnitById.SERIALIZATION_ID, GetUnitById.class);
+		objectMap.put(GetUnitByName.SERIALIZATION_ID, GetUnitByName.class);
+		objectMap.put(GetUnits.SERIALIZATION_ID, GetUnits.class);
+		objectMap.put(GetUnitsByFactionId.SERIALIZATION_ID, GetUnitsByFactionId.class);
+		objectMap.put(GetUnitsByFactionName.SERIALIZATION_ID, GetUnitsByFactionName.class);
+		objectMap.put(GetUnitsByGroupId.SERIALIZATION_ID, GetUnitsByGroupId.class);
+		objectMap.put(GetUnitsByGroupName.SERIALIZATION_ID, GetUnitsByGroupName.class);
+		objectMap.put(GetAllUnitsAtPlayer.SERIALIZATION_ID, GetAllUnitsAtPlayer.class);
+		objectMap.put(GetUnitsAtPlayer.SERIALIZATION_ID, GetUnitsAtPlayer.class);
+
+		// Mappings by name
+		objectMap.put("AddUnit", AddUnit.class);
+		objectMap.put("GetUnitById", GetUnitById.class);
+		objectMap.put("GetUnitByName", GetUnitByName.class);
+		objectMap.put("GetUnits", GetUnits.class);
+		objectMap.put("GetUnitsByFactionId", GetUnitsByFactionId.class);
+		objectMap.put("GetUnitsByFactionName", GetUnitsByFactionName.class);
+		objectMap.put("GetUnitsByGroupId", GetUnitsByGroupId.class);
+		objectMap.put("GetUnitsByGroupName", GetUnitsByGroupName.class);
+		objectMap.put("GetAllUnitsAtPlayer", GetAllUnitsAtPlayer.class);
+		objectMap.put("GetUnitsAtPlayer", GetUnitsAtPlayer.class);
+
+		// Mappings by id
+		objectMap.put(AddUpkeep.SERIALIZATION_ID, AddUpkeep.class);
+		objectMap.put(AddUpkeepCondition.SERIALIZATION_ID, AddUpkeepCondition.class);
+		objectMap.put(GetUpkeepList.SERIALIZATION_ID, GetUpkeepList.class);
+		objectMap.put(GetUpkeepConditionList.SERIALIZATION_ID, GetUpkeepConditionList.class);
+		objectMap.put(GetUpkeepAtLocation.SERIALIZATION_ID, GetUpkeepAtLocation.class);
+
+		// Mappings by name
+		objectMap.put("AddUpkeep", AddUpkeep.class);
+		objectMap.put("AddUpkeepCondition", AddUpkeepCondition.class);
+		objectMap.put("GetUpkeepList", GetUpkeepList.class);
+		objectMap.put("GetUpkeepConditionList", GetUpkeepConditionList.class);
+		objectMap.put("GetUpkeepAtLocation", GetUpkeepAtLocation.class);
+
+		// Mappings by id
+		objectMap.put(SetSetupBeanList.SERIALIZATION_ID, SetSetupBeanList.class);
+		objectMap.put(SetSetupBeanListFile.SERIALIZATION_ID, SetSetupBeanListFile.class);
+		objectMap.put(GetSetupBeanList.SERIALIZATION_ID, GetSetupBeanList.class);
+
+		// Mappings by name
+		objectMap.put("SetSetupBeanList", SetSetupBeanList.class);
+		objectMap.put("SetSetupBeanListFile", SetSetupBeanListFile.class);
+		objectMap.put("GetSetupBeanList", GetSetupBeanList.class);
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
 	}
 
 	@Override

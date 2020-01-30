@@ -23,7 +23,13 @@ public enum GameErrorCode implements IErrorCode {
 	/** The GAME_RUNNING constant. */
 	GAME_RUNNING(1509),
 	/** The GAME_NOT_RUNNING constant. */
-	GAME_NOT_RUNNING(1510);
+	GAME_NOT_RUNNING(1510),
+	/** The GAME_INSTANCE_NOT_SET constant. */
+	GAME_INSTANCE_NOT_SET(1511),
+	/** The GAME_INSTANCE_INVALID constant. */
+	GAME_INSTANCE_INVALID(1512),
+	/** The GAME_ALREADY_SETUP constant. */
+	GAME_ALREADY_SETUP(1513);
 
 	/** The id field. */
 	private final int id;
