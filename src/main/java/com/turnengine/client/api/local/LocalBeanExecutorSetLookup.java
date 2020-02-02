@@ -5,6 +5,8 @@ import com.turnengine.client.api.local.action.ILocalActionExecutorSet;
 import com.turnengine.client.api.local.action.LocalActionExecutorSet;
 import com.turnengine.client.api.local.faction.ILocalFactionExecutorSet;
 import com.turnengine.client.api.local.faction.LocalFactionExecutorSet;
+import com.turnengine.client.api.local.game.ILocalGameExecutorSet;
+import com.turnengine.client.api.local.game.LocalGameExecutorSet;
 import com.turnengine.client.api.local.group.ILocalGroupExecutorSet;
 import com.turnengine.client.api.local.group.LocalGroupExecutorSet;
 import com.turnengine.client.api.local.location.ILocalLocationExecutorSet;
@@ -37,6 +39,7 @@ public class LocalBeanExecutorSetLookup implements ILocalBeanExecutorSetLookup {
 	private final ILocalMessageExecutorSet message;
 	private final ILocalGroupExecutorSet group;
 	private final ILocalUnitExecutorSet unit;
+	private final ILocalGameExecutorSet game;
 	private final ILocalScoreExecutorSet score;
 	private final ILocalStorageExecutorSet storage;
 	private final ILocalUpkeepExecutorSet upkeep;
@@ -48,6 +51,7 @@ public class LocalBeanExecutorSetLookup implements ILocalBeanExecutorSetLookup {
 		this.faction = new LocalFactionExecutorSet(locator);
 		this.location = new LocalLocationExecutorSet(locator);
 		this.mobile = new LocalMobileExecutorSet(locator);
+		this.game = new LocalGameExecutorSet(locator);
 		this.action = new LocalActionExecutorSet(locator);
 		this.message = new LocalMessageExecutorSet(locator);
 		this.group = new LocalGroupExecutorSet(locator);
@@ -123,6 +127,11 @@ public class LocalBeanExecutorSetLookup implements ILocalBeanExecutorSetLookup {
 	@Override
 	public ILocalTradingExecutorSet getTradingSet() {
 		return trading;
+	}
+
+	@Override
+	public ILocalGameExecutorSet getGameSet() {
+		return game;
 	}
 
 }

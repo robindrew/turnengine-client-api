@@ -16,6 +16,7 @@ import com.turnengine.client.api.local.action.IActionCache;
 import com.turnengine.client.api.local.action.ILocalActionExecutorSet;
 import com.turnengine.client.api.local.faction.IFactionCache;
 import com.turnengine.client.api.local.faction.ILocalFactionExecutorSet;
+import com.turnengine.client.api.local.game.ILocalGameExecutorSet;
 import com.turnengine.client.api.local.group.IGroupCache;
 import com.turnengine.client.api.local.group.ILocalGroupExecutorSet;
 import com.turnengine.client.api.local.location.ILocalLocationExecutorSet;
@@ -51,6 +52,7 @@ public class Dependencies {
 		setDependency(ILocalFactionExecutorSet.class, lookup.getFactionSet());
 		setDependency(ILocalLocationExecutorSet.class, lookup.getLocationSet());
 		setDependency(ILocalMobileExecutorSet.class, lookup.getMobileSet());
+		setDependency(ILocalGameExecutorSet.class, lookup.getGameSet());
 		setDependency(ILocalActionExecutorSet.class, lookup.getActionSet());
 		setDependency(ILocalMessageExecutorSet.class, lookup.getMessageSet());
 		setDependency(ILocalGroupExecutorSet.class, lookup.getGroupSet());

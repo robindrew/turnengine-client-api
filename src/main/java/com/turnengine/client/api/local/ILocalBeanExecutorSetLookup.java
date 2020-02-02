@@ -2,6 +2,7 @@ package com.turnengine.client.api.local;
 
 import com.turnengine.client.api.local.action.ILocalActionExecutorSet;
 import com.turnengine.client.api.local.faction.ILocalFactionExecutorSet;
+import com.turnengine.client.api.local.game.ILocalGameExecutorSet;
 import com.turnengine.client.api.local.group.ILocalGroupExecutorSet;
 import com.turnengine.client.api.local.location.ILocalLocationExecutorSet;
 import com.turnengine.client.api.local.message.ILocalMessageExecutorSet;
@@ -23,6 +24,8 @@ public interface ILocalBeanExecutorSetLookup {
 	ILocalMobileExecutorSet getMobileSet();
 
 	ILocalActionExecutorSet getActionSet();
+
+	ILocalGameExecutorSet getGameSet();
 
 	ILocalMessageExecutorSet getMessageSet();
 

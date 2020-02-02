@@ -628,32 +628,8 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		// Mappings by name
 
 		// Mappings by id
-		objectMap.put(NewTranslation.SERIALIZATION_ID, NewTranslationReturnTypeXmlSerializer.class);
-		objectMap.put(SetTranslation.SERIALIZATION_ID, SetTranslationReturnTypeXmlSerializer.class);
-		objectMap.put(GetTranslationById.SERIALIZATION_ID, GetTranslationByIdReturnTypeXmlSerializer.class);
-		objectMap.put(GetTranslationByText.SERIALIZATION_ID, GetTranslationByTextReturnTypeXmlSerializer.class);
 
 		// Mappings by name
-		objectMap.put("NewTranslation", NewTranslationReturnTypeXmlSerializer.class);
-		objectMap.put("SetTranslation", SetTranslationReturnTypeXmlSerializer.class);
-		objectMap.put("GetTranslationById", GetTranslationByIdReturnTypeXmlSerializer.class);
-		objectMap.put("GetTranslationByText", GetTranslationByTextReturnTypeXmlSerializer.class);
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-		objectMap.put(PostAnnouncement.SERIALIZATION_ID, PostAnnouncementReturnTypeXmlSerializer.class);
-		objectMap.put(GetAnnouncementCount.SERIALIZATION_ID, GetAnnouncementCountReturnTypeXmlSerializer.class);
-		objectMap.put(GetAnnouncementList.SERIALIZATION_ID, GetAnnouncementListReturnTypeXmlSerializer.class);
-		objectMap.put(DeleteAnnouncement.SERIALIZATION_ID, DeleteAnnouncementReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("PostAnnouncement", PostAnnouncementReturnTypeXmlSerializer.class);
-		objectMap.put("GetAnnouncementCount", GetAnnouncementCountReturnTypeXmlSerializer.class);
-		objectMap.put("GetAnnouncementList", GetAnnouncementListReturnTypeXmlSerializer.class);
-		objectMap.put("DeleteAnnouncement", DeleteAnnouncementReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(SignupUser.SERIALIZATION_ID, SignupUserReturnTypeXmlSerializer.class);
@@ -722,6 +698,90 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("SetSignupUserEmail", SetSignupUserEmailReturnTypeXmlSerializer.class);
 
 		// Mappings by id
+		objectMap.put(CreateForum.SERIALIZATION_ID, CreateForumReturnTypeXmlSerializer.class);
+		objectMap.put(CreateForumThread.SERIALIZATION_ID, CreateForumThreadReturnTypeXmlSerializer.class);
+		objectMap.put(CreateForumPost.SERIALIZATION_ID, CreateForumPostReturnTypeXmlSerializer.class);
+		objectMap.put(SetForumOrder.SERIALIZATION_ID, SetForumOrderReturnTypeXmlSerializer.class);
+		objectMap.put(GetForumList.SERIALIZATION_ID, GetForumListReturnTypeXmlSerializer.class);
+		objectMap.put(GetThreadList.SERIALIZATION_ID, GetThreadListReturnTypeXmlSerializer.class);
+		objectMap.put(GetThread.SERIALIZATION_ID, GetThreadReturnTypeXmlSerializer.class);
+		objectMap.put(EditPost.SERIALIZATION_ID, EditPostReturnTypeXmlSerializer.class);
+		objectMap.put(SetForumFlag.SERIALIZATION_ID, SetForumFlagReturnTypeXmlSerializer.class);
+		objectMap.put(SetThreadFlag.SERIALIZATION_ID, SetThreadFlagReturnTypeXmlSerializer.class);
+		objectMap.put(SetPostFlag.SERIALIZATION_ID, SetPostFlagReturnTypeXmlSerializer.class);
+		objectMap.put(GetPostList.SERIALIZATION_ID, GetPostListReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("CreateForum", CreateForumReturnTypeXmlSerializer.class);
+		objectMap.put("CreateForumThread", CreateForumThreadReturnTypeXmlSerializer.class);
+		objectMap.put("CreateForumPost", CreateForumPostReturnTypeXmlSerializer.class);
+		objectMap.put("SetForumOrder", SetForumOrderReturnTypeXmlSerializer.class);
+		objectMap.put("GetForumList", GetForumListReturnTypeXmlSerializer.class);
+		objectMap.put("GetThreadList", GetThreadListReturnTypeXmlSerializer.class);
+		objectMap.put("GetThread", GetThreadReturnTypeXmlSerializer.class);
+		objectMap.put("EditPost", EditPostReturnTypeXmlSerializer.class);
+		objectMap.put("SetForumFlag", SetForumFlagReturnTypeXmlSerializer.class);
+		objectMap.put("SetThreadFlag", SetThreadFlagReturnTypeXmlSerializer.class);
+		objectMap.put("SetPostFlag", SetPostFlagReturnTypeXmlSerializer.class);
+		objectMap.put("GetPostList", GetPostListReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+		objectMap.put(Ping.SERIALIZATION_ID, PingReturnTypeXmlSerializer.class);
+		objectMap.put(GetServiceStatus.SERIALIZATION_ID, GetServiceStatusReturnTypeXmlSerializer.class);
+		objectMap.put(GetSystemStatus.SERIALIZATION_ID, GetSystemStatusReturnTypeXmlSerializer.class);
+		objectMap.put(GetCommandAvailable.SERIALIZATION_ID, GetCommandAvailableReturnTypeXmlSerializer.class);
+		objectMap.put(StartService.SERIALIZATION_ID, StartServiceReturnTypeXmlSerializer.class);
+		objectMap.put(StopService.SERIALIZATION_ID, StopServiceReturnTypeXmlSerializer.class);
+		objectMap.put(GetServiceProcessList.SERIALIZATION_ID, GetServiceProcessListReturnTypeXmlSerializer.class);
+		objectMap.put(GetAvailableReleaseList.SERIALIZATION_ID, GetAvailableReleaseListReturnTypeXmlSerializer.class);
+		objectMap.put(GetAvailableServiceList.SERIALIZATION_ID, GetAvailableServiceListReturnTypeXmlSerializer.class);
+		objectMap.put(GetGoogleOpenIdForm.SERIALIZATION_ID, GetGoogleOpenIdFormReturnTypeXmlSerializer.class);
+		objectMap.put(GetLoggedExceptions.SERIALIZATION_ID, GetLoggedExceptionsReturnTypeXmlSerializer.class);
+		objectMap.put(ThrowException.SERIALIZATION_ID, ThrowExceptionReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("Ping", PingReturnTypeXmlSerializer.class);
+		objectMap.put("GetServiceStatus", GetServiceStatusReturnTypeXmlSerializer.class);
+		objectMap.put("GetSystemStatus", GetSystemStatusReturnTypeXmlSerializer.class);
+		objectMap.put("GetCommandAvailable", GetCommandAvailableReturnTypeXmlSerializer.class);
+		objectMap.put("StartService", StartServiceReturnTypeXmlSerializer.class);
+		objectMap.put("StopService", StopServiceReturnTypeXmlSerializer.class);
+		objectMap.put("GetServiceProcessList", GetServiceProcessListReturnTypeXmlSerializer.class);
+		objectMap.put("GetAvailableReleaseList", GetAvailableReleaseListReturnTypeXmlSerializer.class);
+		objectMap.put("GetAvailableServiceList", GetAvailableServiceListReturnTypeXmlSerializer.class);
+		objectMap.put("GetGoogleOpenIdForm", GetGoogleOpenIdFormReturnTypeXmlSerializer.class);
+		objectMap.put("GetLoggedExceptions", GetLoggedExceptionsReturnTypeXmlSerializer.class);
+		objectMap.put("ThrowException", ThrowExceptionReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+		objectMap.put(SendEmail.SERIALIZATION_ID, SendEmailReturnTypeXmlSerializer.class);
+		objectMap.put(GetAdminHostAddress.SERIALIZATION_ID, GetAdminHostAddressReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("SendEmail", SendEmailReturnTypeXmlSerializer.class);
+		objectMap.put("GetAdminHostAddress", GetAdminHostAddressReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+		objectMap.put(GetCommandStackTrace.SERIALIZATION_ID, GetCommandStackTraceReturnTypeXmlSerializer.class);
+		objectMap.put(GetCommandStackTraceList.SERIALIZATION_ID, GetCommandStackTraceListReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("GetCommandStackTrace", GetCommandStackTraceReturnTypeXmlSerializer.class);
+		objectMap.put("GetCommandStackTraceList", GetCommandStackTraceListReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+		objectMap.put(NewTranslation.SERIALIZATION_ID, NewTranslationReturnTypeXmlSerializer.class);
+		objectMap.put(SetTranslation.SERIALIZATION_ID, SetTranslationReturnTypeXmlSerializer.class);
+		objectMap.put(GetTranslationById.SERIALIZATION_ID, GetTranslationByIdReturnTypeXmlSerializer.class);
+		objectMap.put(GetTranslationByText.SERIALIZATION_ID, GetTranslationByTextReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("NewTranslation", NewTranslationReturnTypeXmlSerializer.class);
+		objectMap.put("SetTranslation", SetTranslationReturnTypeXmlSerializer.class);
+		objectMap.put("GetTranslationById", GetTranslationByIdReturnTypeXmlSerializer.class);
+		objectMap.put("GetTranslationByText", GetTranslationByTextReturnTypeXmlSerializer.class);
+
+		// Mappings by id
 		objectMap.put(NewGame.SERIALIZATION_ID, NewGameReturnTypeXmlSerializer.class);
 		objectMap.put(NewGameVersion.SERIALIZATION_ID, NewGameVersionReturnTypeXmlSerializer.class);
 		objectMap.put(NewGameInstance.SERIALIZATION_ID, NewGameInstanceReturnTypeXmlSerializer.class);
@@ -772,80 +832,20 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("GetGameInstancePropertyList", GetGameInstancePropertyListReturnTypeXmlSerializer.class);
 
 		// Mappings by id
-		objectMap.put(SendEmail.SERIALIZATION_ID, SendEmailReturnTypeXmlSerializer.class);
-		objectMap.put(GetAdminHostAddress.SERIALIZATION_ID, GetAdminHostAddressReturnTypeXmlSerializer.class);
+		objectMap.put(PostAnnouncement.SERIALIZATION_ID, PostAnnouncementReturnTypeXmlSerializer.class);
+		objectMap.put(GetAnnouncementCount.SERIALIZATION_ID, GetAnnouncementCountReturnTypeXmlSerializer.class);
+		objectMap.put(GetAnnouncementList.SERIALIZATION_ID, GetAnnouncementListReturnTypeXmlSerializer.class);
+		objectMap.put(DeleteAnnouncement.SERIALIZATION_ID, DeleteAnnouncementReturnTypeXmlSerializer.class);
 
 		// Mappings by name
-		objectMap.put("SendEmail", SendEmailReturnTypeXmlSerializer.class);
-		objectMap.put("GetAdminHostAddress", GetAdminHostAddressReturnTypeXmlSerializer.class);
-
-		// Mappings by id
-		objectMap.put(CreateForum.SERIALIZATION_ID, CreateForumReturnTypeXmlSerializer.class);
-		objectMap.put(CreateForumThread.SERIALIZATION_ID, CreateForumThreadReturnTypeXmlSerializer.class);
-		objectMap.put(CreateForumPost.SERIALIZATION_ID, CreateForumPostReturnTypeXmlSerializer.class);
-		objectMap.put(SetForumOrder.SERIALIZATION_ID, SetForumOrderReturnTypeXmlSerializer.class);
-		objectMap.put(GetForumList.SERIALIZATION_ID, GetForumListReturnTypeXmlSerializer.class);
-		objectMap.put(GetThreadList.SERIALIZATION_ID, GetThreadListReturnTypeXmlSerializer.class);
-		objectMap.put(GetThread.SERIALIZATION_ID, GetThreadReturnTypeXmlSerializer.class);
-		objectMap.put(EditPost.SERIALIZATION_ID, EditPostReturnTypeXmlSerializer.class);
-		objectMap.put(SetForumFlag.SERIALIZATION_ID, SetForumFlagReturnTypeXmlSerializer.class);
-		objectMap.put(SetThreadFlag.SERIALIZATION_ID, SetThreadFlagReturnTypeXmlSerializer.class);
-		objectMap.put(SetPostFlag.SERIALIZATION_ID, SetPostFlagReturnTypeXmlSerializer.class);
-		objectMap.put(GetPostList.SERIALIZATION_ID, GetPostListReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("CreateForum", CreateForumReturnTypeXmlSerializer.class);
-		objectMap.put("CreateForumThread", CreateForumThreadReturnTypeXmlSerializer.class);
-		objectMap.put("CreateForumPost", CreateForumPostReturnTypeXmlSerializer.class);
-		objectMap.put("SetForumOrder", SetForumOrderReturnTypeXmlSerializer.class);
-		objectMap.put("GetForumList", GetForumListReturnTypeXmlSerializer.class);
-		objectMap.put("GetThreadList", GetThreadListReturnTypeXmlSerializer.class);
-		objectMap.put("GetThread", GetThreadReturnTypeXmlSerializer.class);
-		objectMap.put("EditPost", EditPostReturnTypeXmlSerializer.class);
-		objectMap.put("SetForumFlag", SetForumFlagReturnTypeXmlSerializer.class);
-		objectMap.put("SetThreadFlag", SetThreadFlagReturnTypeXmlSerializer.class);
-		objectMap.put("SetPostFlag", SetPostFlagReturnTypeXmlSerializer.class);
-		objectMap.put("GetPostList", GetPostListReturnTypeXmlSerializer.class);
+		objectMap.put("PostAnnouncement", PostAnnouncementReturnTypeXmlSerializer.class);
+		objectMap.put("GetAnnouncementCount", GetAnnouncementCountReturnTypeXmlSerializer.class);
+		objectMap.put("GetAnnouncementList", GetAnnouncementListReturnTypeXmlSerializer.class);
+		objectMap.put("DeleteAnnouncement", DeleteAnnouncementReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 
 		// Mappings by name
-
-		// Mappings by id
-		objectMap.put(Ping.SERIALIZATION_ID, PingReturnTypeXmlSerializer.class);
-		objectMap.put(GetServiceStatus.SERIALIZATION_ID, GetServiceStatusReturnTypeXmlSerializer.class);
-		objectMap.put(GetSystemStatus.SERIALIZATION_ID, GetSystemStatusReturnTypeXmlSerializer.class);
-		objectMap.put(GetCommandAvailable.SERIALIZATION_ID, GetCommandAvailableReturnTypeXmlSerializer.class);
-		objectMap.put(StartService.SERIALIZATION_ID, StartServiceReturnTypeXmlSerializer.class);
-		objectMap.put(StopService.SERIALIZATION_ID, StopServiceReturnTypeXmlSerializer.class);
-		objectMap.put(GetServiceProcessList.SERIALIZATION_ID, GetServiceProcessListReturnTypeXmlSerializer.class);
-		objectMap.put(GetAvailableReleaseList.SERIALIZATION_ID, GetAvailableReleaseListReturnTypeXmlSerializer.class);
-		objectMap.put(GetAvailableServiceList.SERIALIZATION_ID, GetAvailableServiceListReturnTypeXmlSerializer.class);
-		objectMap.put(GetGoogleOpenIdForm.SERIALIZATION_ID, GetGoogleOpenIdFormReturnTypeXmlSerializer.class);
-		objectMap.put(GetLoggedExceptions.SERIALIZATION_ID, GetLoggedExceptionsReturnTypeXmlSerializer.class);
-		objectMap.put(ThrowException.SERIALIZATION_ID, ThrowExceptionReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("Ping", PingReturnTypeXmlSerializer.class);
-		objectMap.put("GetServiceStatus", GetServiceStatusReturnTypeXmlSerializer.class);
-		objectMap.put("GetSystemStatus", GetSystemStatusReturnTypeXmlSerializer.class);
-		objectMap.put("GetCommandAvailable", GetCommandAvailableReturnTypeXmlSerializer.class);
-		objectMap.put("StartService", StartServiceReturnTypeXmlSerializer.class);
-		objectMap.put("StopService", StopServiceReturnTypeXmlSerializer.class);
-		objectMap.put("GetServiceProcessList", GetServiceProcessListReturnTypeXmlSerializer.class);
-		objectMap.put("GetAvailableReleaseList", GetAvailableReleaseListReturnTypeXmlSerializer.class);
-		objectMap.put("GetAvailableServiceList", GetAvailableServiceListReturnTypeXmlSerializer.class);
-		objectMap.put("GetGoogleOpenIdForm", GetGoogleOpenIdFormReturnTypeXmlSerializer.class);
-		objectMap.put("GetLoggedExceptions", GetLoggedExceptionsReturnTypeXmlSerializer.class);
-		objectMap.put("ThrowException", ThrowExceptionReturnTypeXmlSerializer.class);
-
-		// Mappings by id
-		objectMap.put(GetCommandStackTrace.SERIALIZATION_ID, GetCommandStackTraceReturnTypeXmlSerializer.class);
-		objectMap.put(GetCommandStackTraceList.SERIALIZATION_ID, GetCommandStackTraceListReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("GetCommandStackTrace", GetCommandStackTraceReturnTypeXmlSerializer.class);
-		objectMap.put("GetCommandStackTraceList", GetCommandStackTraceListReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(GetLocalTrace.SERIALIZATION_ID, GetLocalTraceReturnTypeXmlSerializer.class);
@@ -854,182 +854,6 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		// Mappings by name
 		objectMap.put("GetLocalTrace", GetLocalTraceReturnTypeXmlSerializer.class);
 		objectMap.put("GetLocalTraceList", GetLocalTraceListReturnTypeXmlSerializer.class);
-
-		// Mappings by id
-		objectMap.put(AddParentGroup.SERIALIZATION_ID, AddParentGroupReturnTypeXmlSerializer.class);
-		objectMap.put(AddChildGroup.SERIALIZATION_ID, AddChildGroupReturnTypeXmlSerializer.class);
-		objectMap.put(GetGroupById.SERIALIZATION_ID, GetGroupByIdReturnTypeXmlSerializer.class);
-		objectMap.put(GetGroupByName.SERIALIZATION_ID, GetGroupByNameReturnTypeXmlSerializer.class);
-		objectMap.put(GetGroups.SERIALIZATION_ID, GetGroupsReturnTypeXmlSerializer.class);
-		objectMap.put(GetGroupListByFactionName.SERIALIZATION_ID, GetGroupListByFactionNameReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("AddParentGroup", AddParentGroupReturnTypeXmlSerializer.class);
-		objectMap.put("AddChildGroup", AddChildGroupReturnTypeXmlSerializer.class);
-		objectMap.put("GetGroupById", GetGroupByIdReturnTypeXmlSerializer.class);
-		objectMap.put("GetGroupByName", GetGroupByNameReturnTypeXmlSerializer.class);
-		objectMap.put("GetGroups", GetGroupsReturnTypeXmlSerializer.class);
-		objectMap.put("GetGroupListByFactionName", GetGroupListByFactionNameReturnTypeXmlSerializer.class);
-
-		// Mappings by id
-
-		// Mappings by name
-
-		// Mappings by id
-		objectMap.put(SetGameInstance.SERIALIZATION_ID, SetGameInstanceReturnTypeXmlSerializer.class);
-		objectMap.put(StartupGame.SERIALIZATION_ID, StartupGameReturnTypeXmlSerializer.class);
-		objectMap.put(ResetGame.SERIALIZATION_ID, ResetGameReturnTypeXmlSerializer.class);
-		objectMap.put(ShutdownGame.SERIALIZATION_ID, ShutdownGameReturnTypeXmlSerializer.class);
-		objectMap.put(GetGameStatus.SERIALIZATION_ID, GetGameStatusReturnTypeXmlSerializer.class);
-		objectMap.put(AddGameUnits.SERIALIZATION_ID, AddGameUnitsReturnTypeXmlSerializer.class);
-		objectMap.put(GetGameUnits.SERIALIZATION_ID, GetGameUnitsReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("SetGameInstance", SetGameInstanceReturnTypeXmlSerializer.class);
-		objectMap.put("StartupGame", StartupGameReturnTypeXmlSerializer.class);
-		objectMap.put("ResetGame", ResetGameReturnTypeXmlSerializer.class);
-		objectMap.put("ShutdownGame", ShutdownGameReturnTypeXmlSerializer.class);
-		objectMap.put("GetGameStatus", GetGameStatusReturnTypeXmlSerializer.class);
-		objectMap.put("AddGameUnits", AddGameUnitsReturnTypeXmlSerializer.class);
-		objectMap.put("GetGameUnits", GetGameUnitsReturnTypeXmlSerializer.class);
-
-		// Mappings by id
-		objectMap.put(CreateAllianceForum.SERIALIZATION_ID, CreateAllianceForumReturnTypeXmlSerializer.class);
-		objectMap.put(CreateAllianceForumThread.SERIALIZATION_ID, CreateAllianceForumThreadReturnTypeXmlSerializer.class);
-		objectMap.put(CreateAllianceForumPost.SERIALIZATION_ID, CreateAllianceForumPostReturnTypeXmlSerializer.class);
-		objectMap.put(SetAllianceForumOrder.SERIALIZATION_ID, SetAllianceForumOrderReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceForumList.SERIALIZATION_ID, GetAllianceForumListReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceThreadList.SERIALIZATION_ID, GetAllianceThreadListReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceThread.SERIALIZATION_ID, GetAllianceThreadReturnTypeXmlSerializer.class);
-		objectMap.put(EditAlliancePost.SERIALIZATION_ID, EditAlliancePostReturnTypeXmlSerializer.class);
-		objectMap.put(SetAllianceForumFlag.SERIALIZATION_ID, SetAllianceForumFlagReturnTypeXmlSerializer.class);
-		objectMap.put(SetAllianceThreadFlag.SERIALIZATION_ID, SetAllianceThreadFlagReturnTypeXmlSerializer.class);
-		objectMap.put(SetAlliancePostFlag.SERIALIZATION_ID, SetAlliancePostFlagReturnTypeXmlSerializer.class);
-		objectMap.put(GetAlliancePostList.SERIALIZATION_ID, GetAlliancePostListReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("CreateAllianceForum", CreateAllianceForumReturnTypeXmlSerializer.class);
-		objectMap.put("CreateAllianceForumThread", CreateAllianceForumThreadReturnTypeXmlSerializer.class);
-		objectMap.put("CreateAllianceForumPost", CreateAllianceForumPostReturnTypeXmlSerializer.class);
-		objectMap.put("SetAllianceForumOrder", SetAllianceForumOrderReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceForumList", GetAllianceForumListReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceThreadList", GetAllianceThreadListReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceThread", GetAllianceThreadReturnTypeXmlSerializer.class);
-		objectMap.put("EditAlliancePost", EditAlliancePostReturnTypeXmlSerializer.class);
-		objectMap.put("SetAllianceForumFlag", SetAllianceForumFlagReturnTypeXmlSerializer.class);
-		objectMap.put("SetAllianceThreadFlag", SetAllianceThreadFlagReturnTypeXmlSerializer.class);
-		objectMap.put("SetAlliancePostFlag", SetAlliancePostFlagReturnTypeXmlSerializer.class);
-		objectMap.put("GetAlliancePostList", GetAlliancePostListReturnTypeXmlSerializer.class);
-
-		// Mappings by id
-		objectMap.put(GetAllianceCount.SERIALIZATION_ID, GetAllianceCountReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceMemberCount.SERIALIZATION_ID, GetAllianceMemberCountReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceById.SERIALIZATION_ID, GetAllianceByIdReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceByName.SERIALIZATION_ID, GetAllianceByNameReturnTypeXmlSerializer.class);
-		objectMap.put(FormAlliance.SERIALIZATION_ID, FormAllianceReturnTypeXmlSerializer.class);
-		objectMap.put(DisbandAlliance.SERIALIZATION_ID, DisbandAllianceReturnTypeXmlSerializer.class);
-		objectMap.put(LeaveAlliance.SERIALIZATION_ID, LeaveAllianceReturnTypeXmlSerializer.class);
-		objectMap.put(InviteToJoinAlliance.SERIALIZATION_ID, InviteToJoinAllianceReturnTypeXmlSerializer.class);
-		objectMap.put(RequestToJoinAlliance.SERIALIZATION_ID, RequestToJoinAllianceReturnTypeXmlSerializer.class);
-		objectMap.put(KickAllianceMember.SERIALIZATION_ID, KickAllianceMemberReturnTypeXmlSerializer.class);
-		objectMap.put(GetInvitedToJoinAllianceList.SERIALIZATION_ID, GetInvitedToJoinAllianceListReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceInviteLimit.SERIALIZATION_ID, GetAllianceInviteLimitReturnTypeXmlSerializer.class);
-		objectMap.put(SetAllianceInviteLimit.SERIALIZATION_ID, SetAllianceInviteLimitReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceMemberLimit.SERIALIZATION_ID, GetAllianceMemberLimitReturnTypeXmlSerializer.class);
-		objectMap.put(SetAllianceMemberLimit.SERIALIZATION_ID, SetAllianceMemberLimitReturnTypeXmlSerializer.class);
-		objectMap.put(SetAlliancesEnabled.SERIALIZATION_ID, SetAlliancesEnabledReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceList.SERIALIZATION_ID, GetAllianceListReturnTypeXmlSerializer.class);
-		objectMap.put(GetAlliance.SERIALIZATION_ID, GetAllianceReturnTypeXmlSerializer.class);
-		objectMap.put(GetRequestedToJoinAllianceList.SERIALIZATION_ID, GetRequestedToJoinAllianceListReturnTypeXmlSerializer.class);
-		objectMap.put(InviteToJoinAllianceByName.SERIALIZATION_ID, InviteToJoinAllianceByNameReturnTypeXmlSerializer.class);
-		objectMap.put(RequestToJoinAllianceByName.SERIALIZATION_ID, RequestToJoinAllianceByNameReturnTypeXmlSerializer.class);
-		objectMap.put(SetAllianceLeaveTurns.SERIALIZATION_ID, SetAllianceLeaveTurnsReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceSetupInfo.SERIALIZATION_ID, GetAllianceSetupInfoReturnTypeXmlSerializer.class);
-		objectMap.put(SetAllianceProperty.SERIALIZATION_ID, SetAlliancePropertyReturnTypeXmlSerializer.class);
-		objectMap.put(GetAlliancePropertyList.SERIALIZATION_ID, GetAlliancePropertyListReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceScores.SERIALIZATION_ID, GetAllianceScoresReturnTypeXmlSerializer.class);
-		objectMap.put(SetAllianceLogo.SERIALIZATION_ID, SetAllianceLogoReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceLogo.SERIALIZATION_ID, GetAllianceLogoReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceInfo.SERIALIZATION_ID, GetAllianceInfoReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("GetAllianceCount", GetAllianceCountReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceMemberCount", GetAllianceMemberCountReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceById", GetAllianceByIdReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceByName", GetAllianceByNameReturnTypeXmlSerializer.class);
-		objectMap.put("FormAlliance", FormAllianceReturnTypeXmlSerializer.class);
-		objectMap.put("DisbandAlliance", DisbandAllianceReturnTypeXmlSerializer.class);
-		objectMap.put("LeaveAlliance", LeaveAllianceReturnTypeXmlSerializer.class);
-		objectMap.put("InviteToJoinAlliance", InviteToJoinAllianceReturnTypeXmlSerializer.class);
-		objectMap.put("RequestToJoinAlliance", RequestToJoinAllianceReturnTypeXmlSerializer.class);
-		objectMap.put("KickAllianceMember", KickAllianceMemberReturnTypeXmlSerializer.class);
-		objectMap.put("GetInvitedToJoinAllianceList", GetInvitedToJoinAllianceListReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceInviteLimit", GetAllianceInviteLimitReturnTypeXmlSerializer.class);
-		objectMap.put("SetAllianceInviteLimit", SetAllianceInviteLimitReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceMemberLimit", GetAllianceMemberLimitReturnTypeXmlSerializer.class);
-		objectMap.put("SetAllianceMemberLimit", SetAllianceMemberLimitReturnTypeXmlSerializer.class);
-		objectMap.put("SetAlliancesEnabled", SetAlliancesEnabledReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceList", GetAllianceListReturnTypeXmlSerializer.class);
-		objectMap.put("GetAlliance", GetAllianceReturnTypeXmlSerializer.class);
-		objectMap.put("GetRequestedToJoinAllianceList", GetRequestedToJoinAllianceListReturnTypeXmlSerializer.class);
-		objectMap.put("InviteToJoinAllianceByName", InviteToJoinAllianceByNameReturnTypeXmlSerializer.class);
-		objectMap.put("RequestToJoinAllianceByName", RequestToJoinAllianceByNameReturnTypeXmlSerializer.class);
-		objectMap.put("SetAllianceLeaveTurns", SetAllianceLeaveTurnsReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceSetupInfo", GetAllianceSetupInfoReturnTypeXmlSerializer.class);
-		objectMap.put("SetAllianceProperty", SetAlliancePropertyReturnTypeXmlSerializer.class);
-		objectMap.put("GetAlliancePropertyList", GetAlliancePropertyListReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceScores", GetAllianceScoresReturnTypeXmlSerializer.class);
-		objectMap.put("SetAllianceLogo", SetAllianceLogoReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceLogo", GetAllianceLogoReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceInfo", GetAllianceInfoReturnTypeXmlSerializer.class);
-
-		// Mappings by id
-		objectMap.put(SetLocationGenerationPlugin.SERIALIZATION_ID, SetLocationGenerationPluginReturnTypeXmlSerializer.class);
-		objectMap.put(GenerateLocations.SERIALIZATION_ID, GenerateLocationsReturnTypeXmlSerializer.class);
-		objectMap.put(SetLocationCoordinatePlugin.SERIALIZATION_ID, SetLocationCoordinatePluginReturnTypeXmlSerializer.class);
-		objectMap.put(SetLocationsEnabled.SERIALIZATION_ID, SetLocationsEnabledReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocationsEnabled.SERIALIZATION_ID, GetLocationsEnabledReturnTypeXmlSerializer.class);
-		objectMap.put(SetLocationSignupsEnabled.SERIALIZATION_ID, SetLocationSignupsEnabledReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocationSignupsEnabled.SERIALIZATION_ID, GetLocationSignupsEnabledReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocationList.SERIALIZATION_ID, GetLocationListReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocation.SERIALIZATION_ID, GetLocationReturnTypeXmlSerializer.class);
-		objectMap.put(RenameLocation.SERIALIZATION_ID, RenameLocationReturnTypeXmlSerializer.class);
-		objectMap.put(AddUnitsAtLocation.SERIALIZATION_ID, AddUnitsAtLocationReturnTypeXmlSerializer.class);
-		objectMap.put(GetGridInfoList.SERIALIZATION_ID, GetGridInfoListReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocationId.SERIALIZATION_ID, GetLocationIdReturnTypeXmlSerializer.class);
-		objectMap.put(GetCoordinates.SERIALIZATION_ID, GetCoordinatesReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocationCount.SERIALIZATION_ID, GetLocationCountReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocationSetupInfo.SERIALIZATION_ID, GetLocationSetupInfoReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocationCoordinatePlugin.SERIALIZATION_ID, GetLocationCoordinatePluginReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocationGenerationPlugin.SERIALIZATION_ID, GetLocationGenerationPluginReturnTypeXmlSerializer.class);
-		objectMap.put(SetLocationProperty.SERIALIZATION_ID, SetLocationPropertyReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocationPropertyList.SERIALIZATION_ID, GetLocationPropertyListReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocationIdsForPlayer.SERIALIZATION_ID, GetLocationIdsForPlayerReturnTypeXmlSerializer.class);
-		objectMap.put(CheckRenameLocation.SERIALIZATION_ID, CheckRenameLocationReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("SetLocationGenerationPlugin", SetLocationGenerationPluginReturnTypeXmlSerializer.class);
-		objectMap.put("GenerateLocations", GenerateLocationsReturnTypeXmlSerializer.class);
-		objectMap.put("SetLocationCoordinatePlugin", SetLocationCoordinatePluginReturnTypeXmlSerializer.class);
-		objectMap.put("SetLocationsEnabled", SetLocationsEnabledReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocationsEnabled", GetLocationsEnabledReturnTypeXmlSerializer.class);
-		objectMap.put("SetLocationSignupsEnabled", SetLocationSignupsEnabledReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocationSignupsEnabled", GetLocationSignupsEnabledReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocationList", GetLocationListReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocation", GetLocationReturnTypeXmlSerializer.class);
-		objectMap.put("RenameLocation", RenameLocationReturnTypeXmlSerializer.class);
-		objectMap.put("AddUnitsAtLocation", AddUnitsAtLocationReturnTypeXmlSerializer.class);
-		objectMap.put("GetGridInfoList", GetGridInfoListReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocationId", GetLocationIdReturnTypeXmlSerializer.class);
-		objectMap.put("GetCoordinates", GetCoordinatesReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocationCount", GetLocationCountReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocationSetupInfo", GetLocationSetupInfoReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocationCoordinatePlugin", GetLocationCoordinatePluginReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocationGenerationPlugin", GetLocationGenerationPluginReturnTypeXmlSerializer.class);
-		objectMap.put("SetLocationProperty", SetLocationPropertyReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocationPropertyList", GetLocationPropertyListReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocationIdsForPlayer", GetLocationIdsForPlayerReturnTypeXmlSerializer.class);
-		objectMap.put("CheckRenameLocation", CheckRenameLocationReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(SendMail.SERIALIZATION_ID, SendMailReturnTypeXmlSerializer.class);
@@ -1048,6 +872,52 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("GetMessageSummary", GetMessageSummaryReturnTypeXmlSerializer.class);
 		objectMap.put("GetMessage", GetMessageReturnTypeXmlSerializer.class);
 		objectMap.put("GetMessageCountByFormat", GetMessageCountByFormatReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+
+		// Mappings by name
+
+		// Mappings by id
+		objectMap.put(SetLocalProperty.SERIALIZATION_ID, SetLocalPropertyReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocalProperty.SERIALIZATION_ID, GetLocalPropertyReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("SetLocalProperty", SetLocalPropertyReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocalProperty", GetLocalPropertyReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+		objectMap.put(AddParentGroup.SERIALIZATION_ID, AddParentGroupReturnTypeXmlSerializer.class);
+		objectMap.put(AddChildGroup.SERIALIZATION_ID, AddChildGroupReturnTypeXmlSerializer.class);
+		objectMap.put(GetGroupById.SERIALIZATION_ID, GetGroupByIdReturnTypeXmlSerializer.class);
+		objectMap.put(GetGroupByName.SERIALIZATION_ID, GetGroupByNameReturnTypeXmlSerializer.class);
+		objectMap.put(GetGroups.SERIALIZATION_ID, GetGroupsReturnTypeXmlSerializer.class);
+		objectMap.put(GetGroupListByFactionName.SERIALIZATION_ID, GetGroupListByFactionNameReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("AddParentGroup", AddParentGroupReturnTypeXmlSerializer.class);
+		objectMap.put("AddChildGroup", AddChildGroupReturnTypeXmlSerializer.class);
+		objectMap.put("GetGroupById", GetGroupByIdReturnTypeXmlSerializer.class);
+		objectMap.put("GetGroupByName", GetGroupByNameReturnTypeXmlSerializer.class);
+		objectMap.put("GetGroups", GetGroupsReturnTypeXmlSerializer.class);
+		objectMap.put("GetGroupListByFactionName", GetGroupListByFactionNameReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+		objectMap.put(SetGameInstance.SERIALIZATION_ID, SetGameInstanceReturnTypeXmlSerializer.class);
+		objectMap.put(StartupGame.SERIALIZATION_ID, StartupGameReturnTypeXmlSerializer.class);
+		objectMap.put(ResetGame.SERIALIZATION_ID, ResetGameReturnTypeXmlSerializer.class);
+		objectMap.put(ShutdownGame.SERIALIZATION_ID, ShutdownGameReturnTypeXmlSerializer.class);
+		objectMap.put(GetGameStatus.SERIALIZATION_ID, GetGameStatusReturnTypeXmlSerializer.class);
+		objectMap.put(AddGameUnits.SERIALIZATION_ID, AddGameUnitsReturnTypeXmlSerializer.class);
+		objectMap.put(GetGameUnits.SERIALIZATION_ID, GetGameUnitsReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("SetGameInstance", SetGameInstanceReturnTypeXmlSerializer.class);
+		objectMap.put("StartupGame", StartupGameReturnTypeXmlSerializer.class);
+		objectMap.put("ResetGame", ResetGameReturnTypeXmlSerializer.class);
+		objectMap.put("ShutdownGame", ShutdownGameReturnTypeXmlSerializer.class);
+		objectMap.put("GetGameStatus", GetGameStatusReturnTypeXmlSerializer.class);
+		objectMap.put("AddGameUnits", AddGameUnitsReturnTypeXmlSerializer.class);
+		objectMap.put("GetGameUnits", GetGameUnitsReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(SignupPlayer.SERIALIZATION_ID, SignupPlayerReturnTypeXmlSerializer.class);
@@ -1112,34 +982,32 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("GetPlayerAvatar", GetPlayerAvatarReturnTypeXmlSerializer.class);
 
 		// Mappings by id
-		objectMap.put(GetTurnNumber.SERIALIZATION_ID, GetTurnNumberReturnTypeXmlSerializer.class);
-		objectMap.put(ExecuteTurns.SERIALIZATION_ID, ExecuteTurnsReturnTypeXmlSerializer.class);
-		objectMap.put(SetTurnInterval.SERIALIZATION_ID, SetTurnIntervalReturnTypeXmlSerializer.class);
-		objectMap.put(GetTurnInterval.SERIALIZATION_ID, GetTurnIntervalReturnTypeXmlSerializer.class);
-		objectMap.put(SetTurnsEnabled.SERIALIZATION_ID, SetTurnsEnabledReturnTypeXmlSerializer.class);
-		objectMap.put(GetTurnUpdating.SERIALIZATION_ID, GetTurnUpdatingReturnTypeXmlSerializer.class);
-		objectMap.put(GetNextTurnUpdateTime.SERIALIZATION_ID, GetNextTurnUpdateTimeReturnTypeXmlSerializer.class);
-		objectMap.put(GetTurnSummary.SERIALIZATION_ID, GetTurnSummaryReturnTypeXmlSerializer.class);
-		objectMap.put(GetTurns.SERIALIZATION_ID, GetTurnsReturnTypeXmlSerializer.class);
-		objectMap.put(GetTurnDetails.SERIALIZATION_ID, GetTurnDetailsReturnTypeXmlSerializer.class);
-		objectMap.put(SetTurnStartTime.SERIALIZATION_ID, SetTurnStartTimeReturnTypeXmlSerializer.class);
-		objectMap.put(GetTurnStartTime.SERIALIZATION_ID, GetTurnStartTimeReturnTypeXmlSerializer.class);
-		objectMap.put(SetTurnIntervalTime.SERIALIZATION_ID, SetTurnIntervalTimeReturnTypeXmlSerializer.class);
+		objectMap.put(CreateAllianceForum.SERIALIZATION_ID, CreateAllianceForumReturnTypeXmlSerializer.class);
+		objectMap.put(CreateAllianceForumThread.SERIALIZATION_ID, CreateAllianceForumThreadReturnTypeXmlSerializer.class);
+		objectMap.put(CreateAllianceForumPost.SERIALIZATION_ID, CreateAllianceForumPostReturnTypeXmlSerializer.class);
+		objectMap.put(SetAllianceForumOrder.SERIALIZATION_ID, SetAllianceForumOrderReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceForumList.SERIALIZATION_ID, GetAllianceForumListReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceThreadList.SERIALIZATION_ID, GetAllianceThreadListReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceThread.SERIALIZATION_ID, GetAllianceThreadReturnTypeXmlSerializer.class);
+		objectMap.put(EditAlliancePost.SERIALIZATION_ID, EditAlliancePostReturnTypeXmlSerializer.class);
+		objectMap.put(SetAllianceForumFlag.SERIALIZATION_ID, SetAllianceForumFlagReturnTypeXmlSerializer.class);
+		objectMap.put(SetAllianceThreadFlag.SERIALIZATION_ID, SetAllianceThreadFlagReturnTypeXmlSerializer.class);
+		objectMap.put(SetAlliancePostFlag.SERIALIZATION_ID, SetAlliancePostFlagReturnTypeXmlSerializer.class);
+		objectMap.put(GetAlliancePostList.SERIALIZATION_ID, GetAlliancePostListReturnTypeXmlSerializer.class);
 
 		// Mappings by name
-		objectMap.put("GetTurnNumber", GetTurnNumberReturnTypeXmlSerializer.class);
-		objectMap.put("ExecuteTurns", ExecuteTurnsReturnTypeXmlSerializer.class);
-		objectMap.put("SetTurnInterval", SetTurnIntervalReturnTypeXmlSerializer.class);
-		objectMap.put("GetTurnInterval", GetTurnIntervalReturnTypeXmlSerializer.class);
-		objectMap.put("SetTurnsEnabled", SetTurnsEnabledReturnTypeXmlSerializer.class);
-		objectMap.put("GetTurnUpdating", GetTurnUpdatingReturnTypeXmlSerializer.class);
-		objectMap.put("GetNextTurnUpdateTime", GetNextTurnUpdateTimeReturnTypeXmlSerializer.class);
-		objectMap.put("GetTurnSummary", GetTurnSummaryReturnTypeXmlSerializer.class);
-		objectMap.put("GetTurns", GetTurnsReturnTypeXmlSerializer.class);
-		objectMap.put("GetTurnDetails", GetTurnDetailsReturnTypeXmlSerializer.class);
-		objectMap.put("SetTurnStartTime", SetTurnStartTimeReturnTypeXmlSerializer.class);
-		objectMap.put("GetTurnStartTime", GetTurnStartTimeReturnTypeXmlSerializer.class);
-		objectMap.put("SetTurnIntervalTime", SetTurnIntervalTimeReturnTypeXmlSerializer.class);
+		objectMap.put("CreateAllianceForum", CreateAllianceForumReturnTypeXmlSerializer.class);
+		objectMap.put("CreateAllianceForumThread", CreateAllianceForumThreadReturnTypeXmlSerializer.class);
+		objectMap.put("CreateAllianceForumPost", CreateAllianceForumPostReturnTypeXmlSerializer.class);
+		objectMap.put("SetAllianceForumOrder", SetAllianceForumOrderReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceForumList", GetAllianceForumListReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceThreadList", GetAllianceThreadListReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceThread", GetAllianceThreadReturnTypeXmlSerializer.class);
+		objectMap.put("EditAlliancePost", EditAlliancePostReturnTypeXmlSerializer.class);
+		objectMap.put("SetAllianceForumFlag", SetAllianceForumFlagReturnTypeXmlSerializer.class);
+		objectMap.put("SetAllianceThreadFlag", SetAllianceThreadFlagReturnTypeXmlSerializer.class);
+		objectMap.put("SetAlliancePostFlag", SetAlliancePostFlagReturnTypeXmlSerializer.class);
+		objectMap.put("GetAlliancePostList", GetAlliancePostListReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(AddFaction.SERIALIZATION_ID, AddFactionReturnTypeXmlSerializer.class);
@@ -1152,38 +1020,6 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("GetFactionById", GetFactionByIdReturnTypeXmlSerializer.class);
 		objectMap.put("GetFactionByName", GetFactionByNameReturnTypeXmlSerializer.class);
 		objectMap.put("GetFactions", GetFactionsReturnTypeXmlSerializer.class);
-
-		// Mappings by id
-		objectMap.put(SetUnitScore.SERIALIZATION_ID, SetUnitScoreReturnTypeXmlSerializer.class);
-		objectMap.put(GetUnitScore.SERIALIZATION_ID, GetUnitScoreReturnTypeXmlSerializer.class);
-		objectMap.put(GetUnitScores.SERIALIZATION_ID, GetUnitScoresReturnTypeXmlSerializer.class);
-		objectMap.put(SetScoreUpdaterGroup.SERIALIZATION_ID, SetScoreUpdaterGroupReturnTypeXmlSerializer.class);
-		objectMap.put(GetRankingList.SERIALIZATION_ID, GetRankingListReturnTypeXmlSerializer.class);
-		objectMap.put(GetRankingGroupList.SERIALIZATION_ID, GetRankingGroupListReturnTypeXmlSerializer.class);
-		objectMap.put(GetPlayerRankingList.SERIALIZATION_ID, GetPlayerRankingListReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllianceRankingList.SERIALIZATION_ID, GetAllianceRankingListReturnTypeXmlSerializer.class);
-		objectMap.put(SetScoreDivisor.SERIALIZATION_ID, SetScoreDivisorReturnTypeXmlSerializer.class);
-		objectMap.put(GetScoreDivisor.SERIALIZATION_ID, GetScoreDivisorReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("SetUnitScore", SetUnitScoreReturnTypeXmlSerializer.class);
-		objectMap.put("GetUnitScore", GetUnitScoreReturnTypeXmlSerializer.class);
-		objectMap.put("GetUnitScores", GetUnitScoresReturnTypeXmlSerializer.class);
-		objectMap.put("SetScoreUpdaterGroup", SetScoreUpdaterGroupReturnTypeXmlSerializer.class);
-		objectMap.put("GetRankingList", GetRankingListReturnTypeXmlSerializer.class);
-		objectMap.put("GetRankingGroupList", GetRankingGroupListReturnTypeXmlSerializer.class);
-		objectMap.put("GetPlayerRankingList", GetPlayerRankingListReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllianceRankingList", GetAllianceRankingListReturnTypeXmlSerializer.class);
-		objectMap.put("SetScoreDivisor", SetScoreDivisorReturnTypeXmlSerializer.class);
-		objectMap.put("GetScoreDivisor", GetScoreDivisorReturnTypeXmlSerializer.class);
-
-		// Mappings by id
-		objectMap.put(SetLocalProperty.SERIALIZATION_ID, SetLocalPropertyReturnTypeXmlSerializer.class);
-		objectMap.put(GetLocalProperty.SERIALIZATION_ID, GetLocalPropertyReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("SetLocalProperty", SetLocalPropertyReturnTypeXmlSerializer.class);
-		objectMap.put("GetLocalProperty", GetLocalPropertyReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(AddAction.SERIALIZATION_ID, AddActionReturnTypeXmlSerializer.class);
@@ -1310,16 +1146,72 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("GetStorageItems", GetStorageItemsReturnTypeXmlSerializer.class);
 
 		// Mappings by id
-		objectMap.put(GetGoodsPriceListAtLocation.SERIALIZATION_ID, GetGoodsPriceListAtLocationReturnTypeXmlSerializer.class);
-		objectMap.put(BuyGoodsAtLocation.SERIALIZATION_ID, BuyGoodsAtLocationReturnTypeXmlSerializer.class);
-		objectMap.put(SellGoodsAtLocation.SERIALIZATION_ID, SellGoodsAtLocationReturnTypeXmlSerializer.class);
-		objectMap.put(SetTradeAtLocationPlugin.SERIALIZATION_ID, SetTradeAtLocationPluginReturnTypeXmlSerializer.class);
+		objectMap.put(SetUnitScore.SERIALIZATION_ID, SetUnitScoreReturnTypeXmlSerializer.class);
+		objectMap.put(GetUnitScore.SERIALIZATION_ID, GetUnitScoreReturnTypeXmlSerializer.class);
+		objectMap.put(GetUnitScores.SERIALIZATION_ID, GetUnitScoresReturnTypeXmlSerializer.class);
+		objectMap.put(SetScoreUpdaterGroup.SERIALIZATION_ID, SetScoreUpdaterGroupReturnTypeXmlSerializer.class);
+		objectMap.put(GetRankingList.SERIALIZATION_ID, GetRankingListReturnTypeXmlSerializer.class);
+		objectMap.put(GetRankingGroupList.SERIALIZATION_ID, GetRankingGroupListReturnTypeXmlSerializer.class);
+		objectMap.put(GetPlayerRankingList.SERIALIZATION_ID, GetPlayerRankingListReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceRankingList.SERIALIZATION_ID, GetAllianceRankingListReturnTypeXmlSerializer.class);
+		objectMap.put(SetScoreDivisor.SERIALIZATION_ID, SetScoreDivisorReturnTypeXmlSerializer.class);
+		objectMap.put(GetScoreDivisor.SERIALIZATION_ID, GetScoreDivisorReturnTypeXmlSerializer.class);
 
 		// Mappings by name
-		objectMap.put("GetGoodsPriceListAtLocation", GetGoodsPriceListAtLocationReturnTypeXmlSerializer.class);
-		objectMap.put("BuyGoodsAtLocation", BuyGoodsAtLocationReturnTypeXmlSerializer.class);
-		objectMap.put("SellGoodsAtLocation", SellGoodsAtLocationReturnTypeXmlSerializer.class);
-		objectMap.put("SetTradeAtLocationPlugin", SetTradeAtLocationPluginReturnTypeXmlSerializer.class);
+		objectMap.put("SetUnitScore", SetUnitScoreReturnTypeXmlSerializer.class);
+		objectMap.put("GetUnitScore", GetUnitScoreReturnTypeXmlSerializer.class);
+		objectMap.put("GetUnitScores", GetUnitScoresReturnTypeXmlSerializer.class);
+		objectMap.put("SetScoreUpdaterGroup", SetScoreUpdaterGroupReturnTypeXmlSerializer.class);
+		objectMap.put("GetRankingList", GetRankingListReturnTypeXmlSerializer.class);
+		objectMap.put("GetRankingGroupList", GetRankingGroupListReturnTypeXmlSerializer.class);
+		objectMap.put("GetPlayerRankingList", GetPlayerRankingListReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceRankingList", GetAllianceRankingListReturnTypeXmlSerializer.class);
+		objectMap.put("SetScoreDivisor", SetScoreDivisorReturnTypeXmlSerializer.class);
+		objectMap.put("GetScoreDivisor", GetScoreDivisorReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+		objectMap.put(GetTurnNumber.SERIALIZATION_ID, GetTurnNumberReturnTypeXmlSerializer.class);
+		objectMap.put(ExecuteTurns.SERIALIZATION_ID, ExecuteTurnsReturnTypeXmlSerializer.class);
+		objectMap.put(SetTurnInterval.SERIALIZATION_ID, SetTurnIntervalReturnTypeXmlSerializer.class);
+		objectMap.put(GetTurnInterval.SERIALIZATION_ID, GetTurnIntervalReturnTypeXmlSerializer.class);
+		objectMap.put(SetTurnsEnabled.SERIALIZATION_ID, SetTurnsEnabledReturnTypeXmlSerializer.class);
+		objectMap.put(GetTurnUpdating.SERIALIZATION_ID, GetTurnUpdatingReturnTypeXmlSerializer.class);
+		objectMap.put(GetNextTurnUpdateTime.SERIALIZATION_ID, GetNextTurnUpdateTimeReturnTypeXmlSerializer.class);
+		objectMap.put(GetTurnSummary.SERIALIZATION_ID, GetTurnSummaryReturnTypeXmlSerializer.class);
+		objectMap.put(GetTurns.SERIALIZATION_ID, GetTurnsReturnTypeXmlSerializer.class);
+		objectMap.put(GetTurnDetails.SERIALIZATION_ID, GetTurnDetailsReturnTypeXmlSerializer.class);
+		objectMap.put(SetTurnStartTime.SERIALIZATION_ID, SetTurnStartTimeReturnTypeXmlSerializer.class);
+		objectMap.put(GetTurnStartTime.SERIALIZATION_ID, GetTurnStartTimeReturnTypeXmlSerializer.class);
+		objectMap.put(SetTurnIntervalTime.SERIALIZATION_ID, SetTurnIntervalTimeReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("GetTurnNumber", GetTurnNumberReturnTypeXmlSerializer.class);
+		objectMap.put("ExecuteTurns", ExecuteTurnsReturnTypeXmlSerializer.class);
+		objectMap.put("SetTurnInterval", SetTurnIntervalReturnTypeXmlSerializer.class);
+		objectMap.put("GetTurnInterval", GetTurnIntervalReturnTypeXmlSerializer.class);
+		objectMap.put("SetTurnsEnabled", SetTurnsEnabledReturnTypeXmlSerializer.class);
+		objectMap.put("GetTurnUpdating", GetTurnUpdatingReturnTypeXmlSerializer.class);
+		objectMap.put("GetNextTurnUpdateTime", GetNextTurnUpdateTimeReturnTypeXmlSerializer.class);
+		objectMap.put("GetTurnSummary", GetTurnSummaryReturnTypeXmlSerializer.class);
+		objectMap.put("GetTurns", GetTurnsReturnTypeXmlSerializer.class);
+		objectMap.put("GetTurnDetails", GetTurnDetailsReturnTypeXmlSerializer.class);
+		objectMap.put("SetTurnStartTime", SetTurnStartTimeReturnTypeXmlSerializer.class);
+		objectMap.put("GetTurnStartTime", GetTurnStartTimeReturnTypeXmlSerializer.class);
+		objectMap.put("SetTurnIntervalTime", SetTurnIntervalTimeReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+		objectMap.put(AddUpkeep.SERIALIZATION_ID, AddUpkeepReturnTypeXmlSerializer.class);
+		objectMap.put(AddUpkeepCondition.SERIALIZATION_ID, AddUpkeepConditionReturnTypeXmlSerializer.class);
+		objectMap.put(GetUpkeepList.SERIALIZATION_ID, GetUpkeepListReturnTypeXmlSerializer.class);
+		objectMap.put(GetUpkeepConditionList.SERIALIZATION_ID, GetUpkeepConditionListReturnTypeXmlSerializer.class);
+		objectMap.put(GetUpkeepAtLocation.SERIALIZATION_ID, GetUpkeepAtLocationReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("AddUpkeep", AddUpkeepReturnTypeXmlSerializer.class);
+		objectMap.put("AddUpkeepCondition", AddUpkeepConditionReturnTypeXmlSerializer.class);
+		objectMap.put("GetUpkeepList", GetUpkeepListReturnTypeXmlSerializer.class);
+		objectMap.put("GetUpkeepConditionList", GetUpkeepConditionListReturnTypeXmlSerializer.class);
+		objectMap.put("GetUpkeepAtLocation", GetUpkeepAtLocationReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(AddUnit.SERIALIZATION_ID, AddUnitReturnTypeXmlSerializer.class);
@@ -1346,20 +1238,6 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("GetUnitsAtPlayer", GetUnitsAtPlayerReturnTypeXmlSerializer.class);
 
 		// Mappings by id
-		objectMap.put(AddUpkeep.SERIALIZATION_ID, AddUpkeepReturnTypeXmlSerializer.class);
-		objectMap.put(AddUpkeepCondition.SERIALIZATION_ID, AddUpkeepConditionReturnTypeXmlSerializer.class);
-		objectMap.put(GetUpkeepList.SERIALIZATION_ID, GetUpkeepListReturnTypeXmlSerializer.class);
-		objectMap.put(GetUpkeepConditionList.SERIALIZATION_ID, GetUpkeepConditionListReturnTypeXmlSerializer.class);
-		objectMap.put(GetUpkeepAtLocation.SERIALIZATION_ID, GetUpkeepAtLocationReturnTypeXmlSerializer.class);
-
-		// Mappings by name
-		objectMap.put("AddUpkeep", AddUpkeepReturnTypeXmlSerializer.class);
-		objectMap.put("AddUpkeepCondition", AddUpkeepConditionReturnTypeXmlSerializer.class);
-		objectMap.put("GetUpkeepList", GetUpkeepListReturnTypeXmlSerializer.class);
-		objectMap.put("GetUpkeepConditionList", GetUpkeepConditionListReturnTypeXmlSerializer.class);
-		objectMap.put("GetUpkeepAtLocation", GetUpkeepAtLocationReturnTypeXmlSerializer.class);
-
-		// Mappings by id
 		objectMap.put(SetSetupBeanList.SERIALIZATION_ID, SetSetupBeanListReturnTypeXmlSerializer.class);
 		objectMap.put(SetSetupBeanListFile.SERIALIZATION_ID, SetSetupBeanListFileReturnTypeXmlSerializer.class);
 		objectMap.put(GetSetupBeanList.SERIALIZATION_ID, GetSetupBeanListReturnTypeXmlSerializer.class);
@@ -1368,6 +1246,128 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("SetSetupBeanList", SetSetupBeanListReturnTypeXmlSerializer.class);
 		objectMap.put("SetSetupBeanListFile", SetSetupBeanListFileReturnTypeXmlSerializer.class);
 		objectMap.put("GetSetupBeanList", GetSetupBeanListReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+		objectMap.put(GetAllianceCount.SERIALIZATION_ID, GetAllianceCountReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceMemberCount.SERIALIZATION_ID, GetAllianceMemberCountReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceById.SERIALIZATION_ID, GetAllianceByIdReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceByName.SERIALIZATION_ID, GetAllianceByNameReturnTypeXmlSerializer.class);
+		objectMap.put(FormAlliance.SERIALIZATION_ID, FormAllianceReturnTypeXmlSerializer.class);
+		objectMap.put(DisbandAlliance.SERIALIZATION_ID, DisbandAllianceReturnTypeXmlSerializer.class);
+		objectMap.put(LeaveAlliance.SERIALIZATION_ID, LeaveAllianceReturnTypeXmlSerializer.class);
+		objectMap.put(InviteToJoinAlliance.SERIALIZATION_ID, InviteToJoinAllianceReturnTypeXmlSerializer.class);
+		objectMap.put(RequestToJoinAlliance.SERIALIZATION_ID, RequestToJoinAllianceReturnTypeXmlSerializer.class);
+		objectMap.put(KickAllianceMember.SERIALIZATION_ID, KickAllianceMemberReturnTypeXmlSerializer.class);
+		objectMap.put(GetInvitedToJoinAllianceList.SERIALIZATION_ID, GetInvitedToJoinAllianceListReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceInviteLimit.SERIALIZATION_ID, GetAllianceInviteLimitReturnTypeXmlSerializer.class);
+		objectMap.put(SetAllianceInviteLimit.SERIALIZATION_ID, SetAllianceInviteLimitReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceMemberLimit.SERIALIZATION_ID, GetAllianceMemberLimitReturnTypeXmlSerializer.class);
+		objectMap.put(SetAllianceMemberLimit.SERIALIZATION_ID, SetAllianceMemberLimitReturnTypeXmlSerializer.class);
+		objectMap.put(SetAlliancesEnabled.SERIALIZATION_ID, SetAlliancesEnabledReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceList.SERIALIZATION_ID, GetAllianceListReturnTypeXmlSerializer.class);
+		objectMap.put(GetAlliance.SERIALIZATION_ID, GetAllianceReturnTypeXmlSerializer.class);
+		objectMap.put(GetRequestedToJoinAllianceList.SERIALIZATION_ID, GetRequestedToJoinAllianceListReturnTypeXmlSerializer.class);
+		objectMap.put(InviteToJoinAllianceByName.SERIALIZATION_ID, InviteToJoinAllianceByNameReturnTypeXmlSerializer.class);
+		objectMap.put(RequestToJoinAllianceByName.SERIALIZATION_ID, RequestToJoinAllianceByNameReturnTypeXmlSerializer.class);
+		objectMap.put(SetAllianceLeaveTurns.SERIALIZATION_ID, SetAllianceLeaveTurnsReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceSetupInfo.SERIALIZATION_ID, GetAllianceSetupInfoReturnTypeXmlSerializer.class);
+		objectMap.put(SetAllianceProperty.SERIALIZATION_ID, SetAlliancePropertyReturnTypeXmlSerializer.class);
+		objectMap.put(GetAlliancePropertyList.SERIALIZATION_ID, GetAlliancePropertyListReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceScores.SERIALIZATION_ID, GetAllianceScoresReturnTypeXmlSerializer.class);
+		objectMap.put(SetAllianceLogo.SERIALIZATION_ID, SetAllianceLogoReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceLogo.SERIALIZATION_ID, GetAllianceLogoReturnTypeXmlSerializer.class);
+		objectMap.put(GetAllianceInfo.SERIALIZATION_ID, GetAllianceInfoReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("GetAllianceCount", GetAllianceCountReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceMemberCount", GetAllianceMemberCountReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceById", GetAllianceByIdReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceByName", GetAllianceByNameReturnTypeXmlSerializer.class);
+		objectMap.put("FormAlliance", FormAllianceReturnTypeXmlSerializer.class);
+		objectMap.put("DisbandAlliance", DisbandAllianceReturnTypeXmlSerializer.class);
+		objectMap.put("LeaveAlliance", LeaveAllianceReturnTypeXmlSerializer.class);
+		objectMap.put("InviteToJoinAlliance", InviteToJoinAllianceReturnTypeXmlSerializer.class);
+		objectMap.put("RequestToJoinAlliance", RequestToJoinAllianceReturnTypeXmlSerializer.class);
+		objectMap.put("KickAllianceMember", KickAllianceMemberReturnTypeXmlSerializer.class);
+		objectMap.put("GetInvitedToJoinAllianceList", GetInvitedToJoinAllianceListReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceInviteLimit", GetAllianceInviteLimitReturnTypeXmlSerializer.class);
+		objectMap.put("SetAllianceInviteLimit", SetAllianceInviteLimitReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceMemberLimit", GetAllianceMemberLimitReturnTypeXmlSerializer.class);
+		objectMap.put("SetAllianceMemberLimit", SetAllianceMemberLimitReturnTypeXmlSerializer.class);
+		objectMap.put("SetAlliancesEnabled", SetAlliancesEnabledReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceList", GetAllianceListReturnTypeXmlSerializer.class);
+		objectMap.put("GetAlliance", GetAllianceReturnTypeXmlSerializer.class);
+		objectMap.put("GetRequestedToJoinAllianceList", GetRequestedToJoinAllianceListReturnTypeXmlSerializer.class);
+		objectMap.put("InviteToJoinAllianceByName", InviteToJoinAllianceByNameReturnTypeXmlSerializer.class);
+		objectMap.put("RequestToJoinAllianceByName", RequestToJoinAllianceByNameReturnTypeXmlSerializer.class);
+		objectMap.put("SetAllianceLeaveTurns", SetAllianceLeaveTurnsReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceSetupInfo", GetAllianceSetupInfoReturnTypeXmlSerializer.class);
+		objectMap.put("SetAllianceProperty", SetAlliancePropertyReturnTypeXmlSerializer.class);
+		objectMap.put("GetAlliancePropertyList", GetAlliancePropertyListReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceScores", GetAllianceScoresReturnTypeXmlSerializer.class);
+		objectMap.put("SetAllianceLogo", SetAllianceLogoReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceLogo", GetAllianceLogoReturnTypeXmlSerializer.class);
+		objectMap.put("GetAllianceInfo", GetAllianceInfoReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+		objectMap.put(GetGoodsPriceListAtLocation.SERIALIZATION_ID, GetGoodsPriceListAtLocationReturnTypeXmlSerializer.class);
+		objectMap.put(BuyGoodsAtLocation.SERIALIZATION_ID, BuyGoodsAtLocationReturnTypeXmlSerializer.class);
+		objectMap.put(SellGoodsAtLocation.SERIALIZATION_ID, SellGoodsAtLocationReturnTypeXmlSerializer.class);
+		objectMap.put(SetTradeAtLocationPlugin.SERIALIZATION_ID, SetTradeAtLocationPluginReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("GetGoodsPriceListAtLocation", GetGoodsPriceListAtLocationReturnTypeXmlSerializer.class);
+		objectMap.put("BuyGoodsAtLocation", BuyGoodsAtLocationReturnTypeXmlSerializer.class);
+		objectMap.put("SellGoodsAtLocation", SellGoodsAtLocationReturnTypeXmlSerializer.class);
+		objectMap.put("SetTradeAtLocationPlugin", SetTradeAtLocationPluginReturnTypeXmlSerializer.class);
+
+		// Mappings by id
+		objectMap.put(SetLocationGenerationPlugin.SERIALIZATION_ID, SetLocationGenerationPluginReturnTypeXmlSerializer.class);
+		objectMap.put(GenerateLocations.SERIALIZATION_ID, GenerateLocationsReturnTypeXmlSerializer.class);
+		objectMap.put(SetLocationCoordinatePlugin.SERIALIZATION_ID, SetLocationCoordinatePluginReturnTypeXmlSerializer.class);
+		objectMap.put(SetLocationsEnabled.SERIALIZATION_ID, SetLocationsEnabledReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocationsEnabled.SERIALIZATION_ID, GetLocationsEnabledReturnTypeXmlSerializer.class);
+		objectMap.put(SetLocationSignupsEnabled.SERIALIZATION_ID, SetLocationSignupsEnabledReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocationSignupsEnabled.SERIALIZATION_ID, GetLocationSignupsEnabledReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocationList.SERIALIZATION_ID, GetLocationListReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocation.SERIALIZATION_ID, GetLocationReturnTypeXmlSerializer.class);
+		objectMap.put(RenameLocation.SERIALIZATION_ID, RenameLocationReturnTypeXmlSerializer.class);
+		objectMap.put(AddUnitsAtLocation.SERIALIZATION_ID, AddUnitsAtLocationReturnTypeXmlSerializer.class);
+		objectMap.put(GetGridInfoList.SERIALIZATION_ID, GetGridInfoListReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocationId.SERIALIZATION_ID, GetLocationIdReturnTypeXmlSerializer.class);
+		objectMap.put(GetCoordinates.SERIALIZATION_ID, GetCoordinatesReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocationCount.SERIALIZATION_ID, GetLocationCountReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocationSetupInfo.SERIALIZATION_ID, GetLocationSetupInfoReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocationCoordinatePlugin.SERIALIZATION_ID, GetLocationCoordinatePluginReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocationGenerationPlugin.SERIALIZATION_ID, GetLocationGenerationPluginReturnTypeXmlSerializer.class);
+		objectMap.put(SetLocationProperty.SERIALIZATION_ID, SetLocationPropertyReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocationPropertyList.SERIALIZATION_ID, GetLocationPropertyListReturnTypeXmlSerializer.class);
+		objectMap.put(GetLocationIdsForPlayer.SERIALIZATION_ID, GetLocationIdsForPlayerReturnTypeXmlSerializer.class);
+		objectMap.put(CheckRenameLocation.SERIALIZATION_ID, CheckRenameLocationReturnTypeXmlSerializer.class);
+
+		// Mappings by name
+		objectMap.put("SetLocationGenerationPlugin", SetLocationGenerationPluginReturnTypeXmlSerializer.class);
+		objectMap.put("GenerateLocations", GenerateLocationsReturnTypeXmlSerializer.class);
+		objectMap.put("SetLocationCoordinatePlugin", SetLocationCoordinatePluginReturnTypeXmlSerializer.class);
+		objectMap.put("SetLocationsEnabled", SetLocationsEnabledReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocationsEnabled", GetLocationsEnabledReturnTypeXmlSerializer.class);
+		objectMap.put("SetLocationSignupsEnabled", SetLocationSignupsEnabledReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocationSignupsEnabled", GetLocationSignupsEnabledReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocationList", GetLocationListReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocation", GetLocationReturnTypeXmlSerializer.class);
+		objectMap.put("RenameLocation", RenameLocationReturnTypeXmlSerializer.class);
+		objectMap.put("AddUnitsAtLocation", AddUnitsAtLocationReturnTypeXmlSerializer.class);
+		objectMap.put("GetGridInfoList", GetGridInfoListReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocationId", GetLocationIdReturnTypeXmlSerializer.class);
+		objectMap.put("GetCoordinates", GetCoordinatesReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocationCount", GetLocationCountReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocationSetupInfo", GetLocationSetupInfoReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocationCoordinatePlugin", GetLocationCoordinatePluginReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocationGenerationPlugin", GetLocationGenerationPluginReturnTypeXmlSerializer.class);
+		objectMap.put("SetLocationProperty", SetLocationPropertyReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocationPropertyList", GetLocationPropertyListReturnTypeXmlSerializer.class);
+		objectMap.put("GetLocationIdsForPlayer", GetLocationIdsForPlayerReturnTypeXmlSerializer.class);
+		objectMap.put("CheckRenameLocation", CheckRenameLocationReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 
