@@ -12,6 +12,8 @@ public enum LocalConcept implements ILocalConcept {
 	ERROR(ConceptType.LOCAL),
 	/** The FACTION constant. */
 	FACTION(ConceptType.LOCAL),
+	/** The GAME constant. */
+	GAME(ConceptType.LOCAL),
 	/** The GROUP constant. */
 	GROUP(ConceptType.LOCAL),
 	/** The LOCATION constant. */
