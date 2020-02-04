@@ -38,4 +38,10 @@ public class LocalSetupExecutorSet implements ILocalSetupExecutorSet {
 		GetSetupBeanList bean = new GetSetupBeanList(loginId, instanceId);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
+
+	@Override
+	public Boolean clearSetup(long loginId, int instanceId) {
+		ClearSetup bean = new ClearSetup(loginId, instanceId);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
 }

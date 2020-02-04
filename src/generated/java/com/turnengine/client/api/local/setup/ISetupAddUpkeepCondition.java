@@ -5,7 +5,7 @@ import com.turnengine.client.api.local.creation.CreationConditionType;
 
 public interface ISetupAddUpkeepCondition extends IBean, Comparable<ISetupAddUpkeepCondition> {
 
-	int SERIALIZATION_ID = 6315;
+	int SERIALIZATION_ID = 6316;
 
 	/**
 	 * Returns the serialization id.

@@ -43,9 +43,6 @@ public class ActionDefinition implements IActionDefinition, IUnitIdContainer {
 
 	@Override
 	public IActionTarget getSource() {
-		if (source == null) {
-			throw new IllegalStateException("source not set (mandatory)");
-		}
 		return source;
 	}
 
@@ -77,6 +74,9 @@ public class ActionDefinition implements IActionDefinition, IUnitIdContainer {
 
 	@Override
 	public void setTarget(IActionTarget target) {
+		if (source == null) {
+			throw new IllegalStateException("source not set (mandatory)");
+		}
 		if (target.getId() != getAction().getId()) {
 			throw new IllegalArgumentException("target=" + target + ", action=" + getAction());
 		}

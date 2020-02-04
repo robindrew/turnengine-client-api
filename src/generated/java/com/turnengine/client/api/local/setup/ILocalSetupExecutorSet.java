@@ -10,4 +10,6 @@ public interface ILocalSetupExecutorSet extends IBeanExecutorSet, ILocalBeanExec
 	Boolean setSetupBeanListFile(long loginId, int instanceId, String filename);
 
 	String getSetupBeanList(long loginId, int instanceId);
+
+	Boolean clearSetup(long loginId, int instanceId);
 }
