@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ITurnComponent extends IBean, Comparable<ITurnComponent> {
 
-	int SERIALIZATION_ID = 6716;
+	int SERIALIZATION_ID = 6719;
 
 	/**
 	 * Returns the serialization id.

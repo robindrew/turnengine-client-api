@@ -29,7 +29,7 @@ public class TurnSummaryXmlSerializer implements IXmlSerializer<ITurnSummary> {
 	public ITurnSummary readObject(IXmlReader reader) {
 		reader.startElement(getName());
 		int param1 = reader.readInt("number");
-		TurnsEnabled param2 = reader.readObject(new EnumSerializer<TurnsEnabled>(TurnsEnabled.class, "enabled"));
+		boolean param2 = reader.readBoolean("enabled");
 		TurnUpdating param3 = reader.readObject(new EnumSerializer<TurnUpdating>(TurnUpdating.class, "updating"));
 		long param4 = reader.readLong("interval");
 		long param5 = reader.readLong("timeToNextTurn");
@@ -47,7 +47,7 @@ public class TurnSummaryXmlSerializer implements IXmlSerializer<ITurnSummary> {
 	public void writeObject(IXmlWriter writer, ITurnSummary object) {
 		writer.startElement(getName());
 		writer.writeInt("number", object.getNumber());
-		writer.writeObject(object.getEnabled(), new EnumSerializer<TurnsEnabled>(TurnsEnabled.class, "enabled"));
+		writer.writeBoolean("enabled", object.getEnabled());
 		writer.writeObject(object.getUpdating(), new EnumSerializer<TurnUpdating>(TurnUpdating.class, "updating"));
 		writer.writeLong("interval", object.getInterval());
 		writer.writeLong("timeToNextTurn", object.getTimeToNextTurn());

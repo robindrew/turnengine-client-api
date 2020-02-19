@@ -4,15 +4,15 @@ import com.robindrew.codegenerator.api.serializer.json.IJsonReader;
 import com.robindrew.codegenerator.api.serializer.json.IJsonSerializer;
 import com.robindrew.codegenerator.api.serializer.json.IJsonWriter;
 
-public class SetTurnsEnabledJsonSerializer implements IJsonSerializer<ISetTurnsEnabled> {
+public class SetTurnFinishTimeJsonSerializer implements IJsonSerializer<ISetTurnFinishTime> {
 
 	private String name;
 
-	public SetTurnsEnabledJsonSerializer() {
-		this("SetTurnsEnabled");
+	public SetTurnFinishTimeJsonSerializer() {
+		this("SetTurnFinishTime");
 	}
 
-	public SetTurnsEnabledJsonSerializer(String name) {
+	public SetTurnFinishTimeJsonSerializer(String name) {
 		this.name = name;
 	}
 
@@ -25,16 +25,16 @@ public class SetTurnsEnabledJsonSerializer implements IJsonSerializer<ISetTurnsE
 	}
 
 	@Override
-	public ISetTurnsEnabled readObject(IJsonReader reader) {
+	public ISetTurnFinishTime readObject(IJsonReader reader) {
 		throw new UnsupportedOperationException("readObject");
 	}
 
 	@Override
-	public void writeObject(IJsonWriter writer, ISetTurnsEnabled object) {
+	public void writeObject(IJsonWriter writer, ISetTurnFinishTime object) {
 		writer.openObject();
 		writer.writeLong(object.getLoginId());
 		writer.writeInt(object.getInstanceId());
-		writer.writeBoolean(object.getEnabled());
+		writer.writeLong(object.getTimestamp());
 		writer.closeObject();
 	}
 }

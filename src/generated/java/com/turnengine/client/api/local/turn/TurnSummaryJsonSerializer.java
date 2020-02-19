@@ -34,7 +34,7 @@ public class TurnSummaryJsonSerializer implements IJsonSerializer<ITurnSummary> 
 	public void writeObject(IJsonWriter writer, ITurnSummary object) {
 		writer.openObject();
 		writer.writeInt(object.getNumber());
-		writer.writeObject(object.getEnabled(), new EnumSerializer<TurnsEnabled>(TurnsEnabled.class));
+		writer.writeBoolean(object.getEnabled());
 		writer.writeObject(object.getUpdating(), new EnumSerializer<TurnUpdating>(TurnUpdating.class));
 		writer.writeLong(object.getInterval());
 		writer.writeLong(object.getTimeToNextTurn());

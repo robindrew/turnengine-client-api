@@ -5,15 +5,15 @@ import com.robindrew.codegenerator.api.serializer.xml.IXmlSerializer;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlWriter;
 import com.robindrew.codegenerator.api.serializer.xml.serializer.lang.BooleanSerializer;
 
-public class SetTurnsEnabledReturnTypeXmlSerializer implements IXmlSerializer<Boolean> {
+public class SetTurnFinishTimeReturnTypeXmlSerializer implements IXmlSerializer<Boolean> {
 
 	private String name;
 
-	public SetTurnsEnabledReturnTypeXmlSerializer() {
-		this("SetTurnsEnabledReturnType");
+	public SetTurnFinishTimeReturnTypeXmlSerializer() {
+		this("SetTurnFinishTimeReturnType");
 	}
 
-	public SetTurnsEnabledReturnTypeXmlSerializer(String name) {
+	public SetTurnFinishTimeReturnTypeXmlSerializer(String name) {
 		this.name = name;
 	}
 

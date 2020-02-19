@@ -31,6 +31,7 @@ import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
 import com.turnengine.client.api.local.storage.ILocalStorageExecutorSet;
 import com.turnengine.client.api.local.storage.IStorageCache;
 import com.turnengine.client.api.local.trading.ILocalTradingExecutorSet;
+import com.turnengine.client.api.local.turn.ILocalTurnExecutorSet;
 import com.turnengine.client.api.local.unit.ILocalUnitExecutorSet;
 import com.turnengine.client.api.local.unit.IUnitCache;
 import com.turnengine.client.api.local.upkeep.ILocalUpkeepExecutorSet;
@@ -65,6 +66,7 @@ public class Dependencies {
 		setDependency(ILocalSetupExecutorSet.class, lookup.getSetupSet());
 		setDependency(ILocalTradingExecutorSet.class, lookup.getTradingSet());
 		setDependency(ILocalPlayerExecutorSet.class, lookup.getPlayerSet());
+		setDependency(ILocalTurnExecutorSet.class, lookup.getTurnSet());
 		setDependency(ILocalBeanExecutorSetLookup.class, lookup);
 	}
 

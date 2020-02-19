@@ -6,37 +6,37 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class SetTurnsEnabled implements ISetTurnsEnabled {
+public class SetTurnFinishTime implements ISetTurnFinishTime {
 
 	/** The loginId field. */
 	private long loginId = 0l;
 	/** The instanceId field. */
 	private int instanceId = 0;
-	/** The enabled field. */
-	private boolean enabled = false;
+	/** The timestamp field. */
+	private long timestamp = 0l;
 
 	/**
 	 * The empty constructor.
 	 */
-	public SetTurnsEnabled() {
+	public SetTurnFinishTime() {
 	}
 
 	/**
 	 * The fields constructor.
 	 */
-	public SetTurnsEnabled(long loginId, int instanceId, boolean enabled) {
+	public SetTurnFinishTime(long loginId, int instanceId, long timestamp) {
 		setLoginId(loginId);
 		setInstanceId(instanceId);
-		setEnabled(enabled);
+		setTimestamp(timestamp);
 	}
 
 	/**
 	 * The clone constructor.
 	 */
-	public SetTurnsEnabled(ISetTurnsEnabled clone) {
+	public SetTurnFinishTime(ISetTurnFinishTime clone) {
 		setLoginId(clone.getLoginId());
 		setInstanceId(clone.getInstanceId());
-		setEnabled(clone.getEnabled());
+		setTimestamp(clone.getTimestamp());
 	}
 
 	/**
@@ -67,12 +67,12 @@ public class SetTurnsEnabled implements ISetTurnsEnabled {
 	}
 
 	/**
-	 * Getter for the enabled field.
-	 * @return the value of the enabled field.
+	 * Getter for the timestamp field.
+	 * @return the value of the timestamp field.
 	 */
 	@Override
-	public boolean getEnabled() {
-		return enabled;
+	public long getTimestamp() {
+		return timestamp;
 	}
 
 	/**
@@ -97,12 +97,15 @@ public class SetTurnsEnabled implements ISetTurnsEnabled {
 	}
 
 	/**
-	 * Setter for the enabled field.
-	 * @param enabled the enabled value to set.
+	 * Setter for the timestamp field.
+	 * @param timestamp the timestamp value to set.
 	 */
 	@Override
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
+	public void setTimestamp(long timestamp) {
+		if (timestamp < -1) {
+			throw new IllegalArgumentException("timestamp too small, minimum of -1, value: '" + timestamp + "'");
+		}
+		this.timestamp = timestamp;
 	}
 
 	@Override
@@ -110,7 +113,7 @@ public class SetTurnsEnabled implements ISetTurnsEnabled {
 		HashCodeBuilder builder = new HashCodeBuilder();
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getEnabled());
+		builder.append(getTimestamp());
 		return builder.toHashCode();
 	}
 
@@ -132,11 +135,11 @@ public class SetTurnsEnabled implements ISetTurnsEnabled {
 		}
 
 		// Compare fields
-		ISetTurnsEnabled that = (ISetTurnsEnabled) object;
+		ISetTurnFinishTime that = (ISetTurnFinishTime) object;
 		EqualsBuilder builder = new EqualsBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getEnabled(), that.getEnabled());
+		builder.append(this.getTimestamp(), that.getTimestamp());
 		return builder.isEquals();
 	}
 
@@ -145,16 +148,16 @@ public class SetTurnsEnabled implements ISetTurnsEnabled {
 		ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE);
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getEnabled());
+		builder.append(getTimestamp());
 		return builder.toString();
 	}
 
 	@Override
-	public int compareTo(ISetTurnsEnabled that) {
+	public int compareTo(ISetTurnFinishTime that) {
 		CompareToBuilder builder = new CompareToBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getEnabled(), that.getEnabled());
+		builder.append(this.getTimestamp(), that.getTimestamp());
 		return builder.toComparison();
 	}
 }

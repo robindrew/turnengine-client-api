@@ -19,7 +19,7 @@ public class TurnSummaryDataSerializer extends ObjectSerializer<ITurnSummary> {
 	@Override
 	public ITurnSummary readValue(IDataReader reader) throws IOException {
 		int param1 = reader.readInt();
-		TurnsEnabled param2 = reader.readObject(new EnumSerializer<TurnsEnabled>(TurnsEnabled.class, false));
+		boolean param2 = reader.readBoolean();
 		TurnUpdating param3 = reader.readObject(new EnumSerializer<TurnUpdating>(TurnUpdating.class, false));
 		long param4 = reader.readLong();
 		long param5 = reader.readLong();
@@ -33,7 +33,7 @@ public class TurnSummaryDataSerializer extends ObjectSerializer<ITurnSummary> {
 	@Override
 	public void writeValue(IDataWriter writer, ITurnSummary object) throws IOException {
 		writer.writeInt(object.getNumber());
-		writer.writeObject(object.getEnabled(), new EnumSerializer<TurnsEnabled>(TurnsEnabled.class, false));
+		writer.writeBoolean(object.getEnabled());
 		writer.writeObject(object.getUpdating(), new EnumSerializer<TurnUpdating>(TurnUpdating.class, false));
 		writer.writeLong(object.getInterval());
 		writer.writeLong(object.getTimeToNextTurn());

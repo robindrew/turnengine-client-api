@@ -2,11 +2,10 @@ package com.turnengine.client.api.local.turn;
 
 import com.robindrew.codegenerator.api.executable.bean.IExecutableBean;
 import com.turnengine.client.api.common.command.ILocalLoggedInBean;
-import com.turnengine.client.api.local.setup.ISetupBean;
 
-public interface ISetTurnsEnabled extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetTurnsEnabled> {
+public interface IGetTurnFinishTime extends IExecutableBean<Long>, ILocalLoggedInBean<Long>, Comparable<IGetTurnFinishTime> {
 
-	int SERIALIZATION_ID = 6705;
+	int SERIALIZATION_ID = 6715;
 
 	/**
 	 * Returns the serialization id.
@@ -27,12 +26,6 @@ public interface ISetTurnsEnabled extends IExecutableBean<Boolean>, ILocalLogged
 	int getInstanceId();
 
 	/**
-	 * Getter for the enabled field.
-	 * @return the value of the enabled field.
-	 */
-	boolean getEnabled();
-
-	/**
 	 * Setter for the loginId field.
 	 * @param loginId the loginId value to set.
 	 */
@@ -43,10 +36,4 @@ public interface ISetTurnsEnabled extends IExecutableBean<Boolean>, ILocalLogged
 	 * @param instanceId the instanceId value to set.
 	 */
 	void setInstanceId(int instanceId);
-
-	/**
-	 * Setter for the enabled field.
-	 * @param enabled the enabled value to set.
-	 */
-	void setEnabled(boolean enabled);
 }

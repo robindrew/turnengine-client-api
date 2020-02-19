@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface ITurnDetails extends IBean, Comparable<ITurnDetails> {
 
-	int SERIALIZATION_ID = 6717;
+	int SERIALIZATION_ID = 6720;
 
 	/**
 	 * Returns the serialization id.

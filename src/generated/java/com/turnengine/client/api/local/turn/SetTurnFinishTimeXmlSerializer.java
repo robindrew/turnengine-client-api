@@ -4,15 +4,15 @@ import com.robindrew.codegenerator.api.serializer.xml.IXmlReader;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlSerializer;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlWriter;
 
-public class SetTurnsEnabledXmlSerializer implements IXmlSerializer<ISetTurnsEnabled> {
+public class SetTurnFinishTimeXmlSerializer implements IXmlSerializer<ISetTurnFinishTime> {
 
 	private String name;
 
-	public SetTurnsEnabledXmlSerializer() {
-		this("SetTurnsEnabled");
+	public SetTurnFinishTimeXmlSerializer() {
+		this("SetTurnFinishTime");
 	}
 
-	public SetTurnsEnabledXmlSerializer(String name) {
+	public SetTurnFinishTimeXmlSerializer(String name) {
 		this.name = name;
 	}
 
@@ -25,23 +25,23 @@ public class SetTurnsEnabledXmlSerializer implements IXmlSerializer<ISetTurnsEna
 	}
 
 	@Override
-	public ISetTurnsEnabled readObject(IXmlReader reader) {
+	public ISetTurnFinishTime readObject(IXmlReader reader) {
 		reader.startElement(getName());
 		long param1 = reader.readLong("loginId");
 		int param2 = reader.readInt("instanceId");
-		boolean param3 = reader.readBoolean("enabled");
+		long param3 = reader.readLong("timestamp");
 		reader.endElement(getName());
 
 		// Create the bean
-		return new SetTurnsEnabled(param1, param2, param3);
+		return new SetTurnFinishTime(param1, param2, param3);
 	}
 
 	@Override
-	public void writeObject(IXmlWriter writer, ISetTurnsEnabled object) {
+	public void writeObject(IXmlWriter writer, ISetTurnFinishTime object) {
 		writer.startElement(getName());
 		writer.writeLong("loginId", object.getLoginId());
 		writer.writeInt("instanceId", object.getInstanceId());
-		writer.writeBoolean("enabled", object.getEnabled());
+		writer.writeLong("timestamp", object.getTimestamp());
 		writer.endElement(getName());
 	}
 }

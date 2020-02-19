@@ -48,8 +48,8 @@ public class LocalTurnExecutorSet implements ILocalTurnExecutorSet {
 	}
 
 	@Override
-	public TurnsEnabled setTurnsEnabled(long loginId, int instanceId, TurnsEnabled updating) {
-		SetTurnsEnabled bean = new SetTurnsEnabled(loginId, instanceId, updating);
+	public boolean setTurnsEnabled(long loginId, int instanceId, boolean enabled) {
+		SetTurnsEnabled bean = new SetTurnsEnabled(loginId, instanceId, enabled);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
 
@@ -98,6 +98,24 @@ public class LocalTurnExecutorSet implements ILocalTurnExecutorSet {
 	@Override
 	public long setTurnIntervalTime(long loginId, int instanceId, long interval, TimeUnit unit) {
 		SetTurnIntervalTime bean = new SetTurnIntervalTime(loginId, instanceId, interval, unit);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
+
+	@Override
+	public Boolean setTurnFinishTime(long loginId, int instanceId, long timestamp) {
+		SetTurnFinishTime bean = new SetTurnFinishTime(loginId, instanceId, timestamp);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
+
+	@Override
+	public Long getTurnFinishTime(long loginId, int instanceId) {
+		GetTurnFinishTime bean = new GetTurnFinishTime(loginId, instanceId);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
+
+	@Override
+	public Boolean getTurnsEnabled(long loginId, int instanceId) {
+		GetTurnsEnabled bean = new GetTurnsEnabled(loginId, instanceId);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
 }

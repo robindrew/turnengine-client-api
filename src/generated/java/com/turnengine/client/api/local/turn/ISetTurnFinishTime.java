@@ -4,9 +4,9 @@ import com.robindrew.codegenerator.api.executable.bean.IExecutableBean;
 import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 import com.turnengine.client.api.local.setup.ISetupBean;
 
-public interface ISetTurnsEnabled extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetTurnsEnabled> {
+public interface ISetTurnFinishTime extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetTurnFinishTime> {
 
-	int SERIALIZATION_ID = 6705;
+	int SERIALIZATION_ID = 6714;
 
 	/**
 	 * Returns the serialization id.
@@ -27,10 +27,10 @@ public interface ISetTurnsEnabled extends IExecutableBean<Boolean>, ILocalLogged
 	int getInstanceId();
 
 	/**
-	 * Getter for the enabled field.
-	 * @return the value of the enabled field.
+	 * Getter for the timestamp field.
+	 * @return the value of the timestamp field.
 	 */
-	boolean getEnabled();
+	long getTimestamp();
 
 	/**
 	 * Setter for the loginId field.
@@ -45,8 +45,8 @@ public interface ISetTurnsEnabled extends IExecutableBean<Boolean>, ILocalLogged
 	void setInstanceId(int instanceId);
 
 	/**
-	 * Setter for the enabled field.
-	 * @param enabled the enabled value to set.
+	 * Setter for the timestamp field.
+	 * @param timestamp the timestamp value to set.
 	 */
-	void setEnabled(boolean enabled);
+	void setTimestamp(long timestamp);
 }

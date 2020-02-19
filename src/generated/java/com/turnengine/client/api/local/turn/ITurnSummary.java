@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ITurnSummary extends IBean, Comparable<ITurnSummary> {
 
-	int SERIALIZATION_ID = 6714;
+	int SERIALIZATION_ID = 6717;
 
 	/**
 	 * Returns the serialization id.
@@ -22,7 +22,7 @@ public interface ITurnSummary extends IBean, Comparable<ITurnSummary> {
 	 * Getter for the enabled field.
 	 * @return the value of the enabled field.
 	 */
-	TurnsEnabled getEnabled();
+	boolean getEnabled();
 
 	/**
 	 * Getter for the updating field.
@@ -76,7 +76,7 @@ public interface ITurnSummary extends IBean, Comparable<ITurnSummary> {
 	 * Setter for the enabled field.
 	 * @param enabled the enabled value to set.
 	 */
-	void setEnabled(TurnsEnabled enabled);
+	void setEnabled(boolean enabled);
 
 	/**
 	 * Setter for the updating field.

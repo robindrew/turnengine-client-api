@@ -11,7 +11,7 @@ public class TurnSummary implements ITurnSummary {
 	/** The number field. */
 	private int number = 0;
 	/** The enabled field. */
-	private TurnsEnabled enabled = null;
+	private boolean enabled = false;
 	/** The updating field. */
 	private TurnUpdating updating = null;
 	/** The interval field. */
@@ -36,7 +36,7 @@ public class TurnSummary implements ITurnSummary {
 	/**
 	 * The fields constructor.
 	 */
-	public TurnSummary(int number, TurnsEnabled enabled, TurnUpdating updating, long interval, long timeToNextTurn, long timeOfNextTurn, long currentTime, long timeOfFirstTurn, long timeToFirstTurn) {
+	public TurnSummary(int number, boolean enabled, TurnUpdating updating, long interval, long timeToNextTurn, long timeOfNextTurn, long currentTime, long timeOfFirstTurn, long timeToFirstTurn) {
 		setNumber(number);
 		setEnabled(enabled);
 		setUpdating(updating);
@@ -86,7 +86,7 @@ public class TurnSummary implements ITurnSummary {
 	 * @return the value of the enabled field.
 	 */
 	@Override
-	public TurnsEnabled getEnabled() {
+	public boolean getEnabled() {
 		return enabled;
 	}
 
@@ -170,7 +170,7 @@ public class TurnSummary implements ITurnSummary {
 	 * @param enabled the enabled value to set.
 	 */
 	@Override
-	public void setEnabled(TurnsEnabled enabled) {
+	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
 

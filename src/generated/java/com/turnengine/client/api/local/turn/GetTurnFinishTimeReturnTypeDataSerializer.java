@@ -5,28 +5,26 @@ import com.robindrew.codegenerator.api.serializer.data.IDataWriter;
 import com.robindrew.codegenerator.api.serializer.data.serializer.ObjectSerializer;
 import java.io.IOException;
 
-public class SetTurnsEnabledReturnTypeDataSerializer extends ObjectSerializer<ISetTurnsEnabled> {
+public class GetTurnFinishTimeReturnTypeDataSerializer extends ObjectSerializer<IGetTurnFinishTime> {
 
-	public SetTurnsEnabledReturnTypeDataSerializer() {
+	public GetTurnFinishTimeReturnTypeDataSerializer() {
 		super(false);
 	}
 
-	public SetTurnsEnabledReturnTypeDataSerializer(boolean nullable) {
+	public GetTurnFinishTimeReturnTypeDataSerializer(boolean nullable) {
 		super(nullable);
 	}
 
 	@Override
-	public ISetTurnsEnabled readValue(IDataReader reader) throws IOException {
+	public IGetTurnFinishTime readValue(IDataReader reader) throws IOException {
 		long param1 = reader.readLong();
 		int param2 = reader.readInt();
-		boolean param3 = reader.readBoolean();
-		return new SetTurnsEnabled(param1, param2, param3);
+		return new GetTurnFinishTime(param1, param2);
 	}
 
 	@Override
-	public void writeValue(IDataWriter writer, ISetTurnsEnabled object) throws IOException {
+	public void writeValue(IDataWriter writer, IGetTurnFinishTime object) throws IOException {
 		writer.writeLong(object.getLoginId());
 		writer.writeInt(object.getInstanceId());
-		writer.writeBoolean(object.getEnabled());
 	}
 }

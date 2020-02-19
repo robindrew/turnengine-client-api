@@ -27,6 +27,8 @@ import com.turnengine.client.api.local.storage.ILocalStorageExecutorSet;
 import com.turnengine.client.api.local.storage.LocalStorageExecutorSet;
 import com.turnengine.client.api.local.trading.ILocalTradingExecutorSet;
 import com.turnengine.client.api.local.trading.LocalTradingExecutorSet;
+import com.turnengine.client.api.local.turn.ILocalTurnExecutorSet;
+import com.turnengine.client.api.local.turn.LocalTurnExecutorSet;
 import com.turnengine.client.api.local.unit.ILocalUnitExecutorSet;
 import com.turnengine.client.api.local.unit.LocalUnitExecutorSet;
 import com.turnengine.client.api.local.upkeep.ILocalUpkeepExecutorSet;
@@ -49,6 +51,7 @@ public class LocalBeanExecutorSetLookup implements ILocalBeanExecutorSetLookup {
 	private final ILocalSetupExecutorSet setup;
 	private final ILocalTradingExecutorSet trading;
 	private final ILocalPlayerExecutorSet player;
+	private final ILocalTurnExecutorSet turn;
 
 	public LocalBeanExecutorSetLookup(IBeanExecutorLocator locator) {
 		this.faction = new LocalFactionExecutorSet(locator);
@@ -66,6 +69,7 @@ public class LocalBeanExecutorSetLookup implements ILocalBeanExecutorSetLookup {
 		this.setup = new LocalSetupExecutorSet(locator);
 		this.trading = new LocalTradingExecutorSet(locator);
 		this.player = new LocalPlayerExecutorSet(locator);
+		this.turn = new LocalTurnExecutorSet(locator);
 	}
 
 	@Override
@@ -141,6 +145,11 @@ public class LocalBeanExecutorSetLookup implements ILocalBeanExecutorSetLookup {
 	@Override
 	public ILocalPlayerExecutorSet getPlayerSet() {
 		return player;
+	}
+
+	@Override
+	public ILocalTurnExecutorSet getTurnSet() {
+		return turn;
 	}
 
 }

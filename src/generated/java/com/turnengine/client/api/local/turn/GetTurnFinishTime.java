@@ -6,37 +6,33 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class SetTurnsEnabled implements ISetTurnsEnabled {
+public class GetTurnFinishTime implements IGetTurnFinishTime {
 
 	/** The loginId field. */
 	private long loginId = 0l;
 	/** The instanceId field. */
 	private int instanceId = 0;
-	/** The enabled field. */
-	private boolean enabled = false;
 
 	/**
 	 * The empty constructor.
 	 */
-	public SetTurnsEnabled() {
+	public GetTurnFinishTime() {
 	}
 
 	/**
 	 * The fields constructor.
 	 */
-	public SetTurnsEnabled(long loginId, int instanceId, boolean enabled) {
+	public GetTurnFinishTime(long loginId, int instanceId) {
 		setLoginId(loginId);
 		setInstanceId(instanceId);
-		setEnabled(enabled);
 	}
 
 	/**
 	 * The clone constructor.
 	 */
-	public SetTurnsEnabled(ISetTurnsEnabled clone) {
+	public GetTurnFinishTime(IGetTurnFinishTime clone) {
 		setLoginId(clone.getLoginId());
 		setInstanceId(clone.getInstanceId());
-		setEnabled(clone.getEnabled());
 	}
 
 	/**
@@ -67,15 +63,6 @@ public class SetTurnsEnabled implements ISetTurnsEnabled {
 	}
 
 	/**
-	 * Getter for the enabled field.
-	 * @return the value of the enabled field.
-	 */
-	@Override
-	public boolean getEnabled() {
-		return enabled;
-	}
-
-	/**
 	 * Setter for the loginId field.
 	 * @param loginId the loginId value to set.
 	 */
@@ -96,21 +83,11 @@ public class SetTurnsEnabled implements ISetTurnsEnabled {
 		this.instanceId = instanceId;
 	}
 
-	/**
-	 * Setter for the enabled field.
-	 * @param enabled the enabled value to set.
-	 */
-	@Override
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
-	}
-
 	@Override
 	public int hashCode() {
 		HashCodeBuilder builder = new HashCodeBuilder();
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getEnabled());
 		return builder.toHashCode();
 	}
 
@@ -132,11 +109,10 @@ public class SetTurnsEnabled implements ISetTurnsEnabled {
 		}
 
 		// Compare fields
-		ISetTurnsEnabled that = (ISetTurnsEnabled) object;
+		IGetTurnFinishTime that = (IGetTurnFinishTime) object;
 		EqualsBuilder builder = new EqualsBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getEnabled(), that.getEnabled());
 		return builder.isEquals();
 	}
 
@@ -145,16 +121,14 @@ public class SetTurnsEnabled implements ISetTurnsEnabled {
 		ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE);
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getEnabled());
 		return builder.toString();
 	}
 
 	@Override
-	public int compareTo(ISetTurnsEnabled that) {
+	public int compareTo(IGetTurnFinishTime that) {
 		CompareToBuilder builder = new CompareToBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getEnabled(), that.getEnabled());
 		return builder.toComparison();
 	}
 }

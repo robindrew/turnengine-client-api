@@ -5,15 +5,15 @@ import com.robindrew.codegenerator.api.serializer.json.IJsonSerializer;
 import com.robindrew.codegenerator.api.serializer.json.IJsonWriter;
 import com.robindrew.codegenerator.api.serializer.json.serializer.lang.BooleanSerializer;
 
-public class SetTurnsEnabledReturnTypeJsonSerializer implements IJsonSerializer<Boolean> {
+public class GetTurnsEnabledReturnTypeJsonSerializer implements IJsonSerializer<Boolean> {
 
 	private String name;
 
-	public SetTurnsEnabledReturnTypeJsonSerializer() {
-		this("SetTurnsEnabledReturnType");
+	public GetTurnsEnabledReturnTypeJsonSerializer() {
+		this("GetTurnsEnabledReturnType");
 	}
 
-	public SetTurnsEnabledReturnTypeJsonSerializer(String name) {
+	public GetTurnsEnabledReturnTypeJsonSerializer(String name) {
 		this.name = name;
 	}
 

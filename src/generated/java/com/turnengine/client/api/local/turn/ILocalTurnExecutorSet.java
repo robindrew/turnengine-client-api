@@ -15,7 +15,7 @@ public interface ILocalTurnExecutorSet extends IBeanExecutorSet, ILocalBeanExecu
 
 	long getTurnInterval(long loginId, int instanceId);
 
-	TurnsEnabled setTurnsEnabled(long loginId, int instanceId, TurnsEnabled updating);
+	boolean setTurnsEnabled(long loginId, int instanceId, boolean enabled);
 
 	TurnUpdating getTurnUpdating(long loginId, int instanceId);
 
@@ -32,4 +32,10 @@ public interface ILocalTurnExecutorSet extends IBeanExecutorSet, ILocalBeanExecu
 	Long getTurnStartTime(long loginId, int instanceId);
 
 	long setTurnIntervalTime(long loginId, int instanceId, long interval, TimeUnit unit);
+
+	Boolean setTurnFinishTime(long loginId, int instanceId, long timestamp);
+
+	Long getTurnFinishTime(long loginId, int instanceId);
+
+	Boolean getTurnsEnabled(long loginId, int instanceId);
 }
