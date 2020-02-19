@@ -22,6 +22,7 @@ import com.turnengine.client.api.local.group.ILocalGroupExecutorSet;
 import com.turnengine.client.api.local.location.ILocalLocationExecutorSet;
 import com.turnengine.client.api.local.message.ILocalMessageExecutorSet;
 import com.turnengine.client.api.local.mobile.ILocalMobileExecutorSet;
+import com.turnengine.client.api.local.player.ILocalPlayerExecutorSet;
 import com.turnengine.client.api.local.property.ILocalPropertyExecutorSet;
 import com.turnengine.client.api.local.score.ILocalScoreExecutorSet;
 import com.turnengine.client.api.local.score.IScoreCache;
@@ -63,6 +64,7 @@ public class Dependencies {
 		setDependency(ILocalPropertyExecutorSet.class, lookup.getPropertySet());
 		setDependency(ILocalSetupExecutorSet.class, lookup.getSetupSet());
 		setDependency(ILocalTradingExecutorSet.class, lookup.getTradingSet());
+		setDependency(ILocalPlayerExecutorSet.class, lookup.getPlayerSet());
 		setDependency(ILocalBeanExecutorSetLookup.class, lookup);
 	}
 

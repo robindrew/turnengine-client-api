@@ -7,6 +7,7 @@ import com.turnengine.client.api.local.group.ILocalGroupExecutorSet;
 import com.turnengine.client.api.local.location.ILocalLocationExecutorSet;
 import com.turnengine.client.api.local.message.ILocalMessageExecutorSet;
 import com.turnengine.client.api.local.mobile.ILocalMobileExecutorSet;
+import com.turnengine.client.api.local.player.ILocalPlayerExecutorSet;
 import com.turnengine.client.api.local.property.ILocalPropertyExecutorSet;
 import com.turnengine.client.api.local.score.ILocalScoreExecutorSet;
 import com.turnengine.client.api.local.setup.ILocalSetupExecutorSet;
@@ -44,5 +45,7 @@ public interface ILocalBeanExecutorSetLookup {
 	ILocalSetupExecutorSet getSetupSet();
 
 	ILocalTradingExecutorSet getTradingSet();
+
+	ILocalPlayerExecutorSet getPlayerSet();
 
 }
