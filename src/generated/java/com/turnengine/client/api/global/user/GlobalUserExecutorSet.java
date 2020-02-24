@@ -210,4 +210,10 @@ public class GlobalUserExecutorSet implements IGlobalUserExecutorSet {
 		SetSignupUserEmail bean = new SetSignupUserEmail(loginId, instanceId, subject, content);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
+
+	@Override
+	public List<IUser> getUserList(long loginId) {
+		GetUserList bean = new GetUserList(loginId);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
 }

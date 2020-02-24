@@ -70,4 +70,6 @@ public interface IGlobalUserExecutorSet extends IBeanExecutorSet, IGlobalBeanExe
 	Boolean setResetPasswordEmail(long loginId, int instanceId, String subject, String content);
 
 	Boolean setSignupUserEmail(long loginId, int instanceId, String subject, String content);
+
+	List<IUser> getUserList(long loginId);
 }

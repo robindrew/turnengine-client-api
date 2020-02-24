@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IUserSimilarity extends IBean, Comparable<IUserSimilarity> {
 
-	int SERIALIZATION_ID = 1735;
+	int SERIALIZATION_ID = 1736;
 
 	/**
 	 * Returns the serialization id.

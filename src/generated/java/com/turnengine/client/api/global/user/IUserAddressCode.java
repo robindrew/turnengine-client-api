@@ -5,7 +5,7 @@ import com.turnengine.client.api.global.admin.IAdminHostAddress;
 
 public interface IUserAddressCode extends IBean, Comparable<IUserAddressCode> {
 
-	int SERIALIZATION_ID = 1733;
+	int SERIALIZATION_ID = 1734;
 
 	/**
 	 * Returns the serialization id.

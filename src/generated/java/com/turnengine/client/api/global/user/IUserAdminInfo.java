@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface IUserAdminInfo extends IBean, Comparable<IUserAdminInfo> {
 
-	int SERIALIZATION_ID = 1734;
+	int SERIALIZATION_ID = 1735;
 
 	/**
 	 * Returns the serialization id.

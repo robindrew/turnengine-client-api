@@ -220,8 +220,8 @@ public class PlayerInfo implements IPlayerInfo {
 		if (allianceName == null) {
 			throw new NullPointerException("allianceName");
 		}
-		if (allianceName.length() < 4) {
-			throw new IllegalArgumentException("allianceName too short, minimum of 4 characters, value: '" + allianceName + "'");
+		if (allianceName.length() < 0) {
+			throw new IllegalArgumentException("allianceName too short, minimum of 0 characters, value: '" + allianceName + "'");
 		}
 		if (allianceName.length() > 40) {
 			throw new IllegalArgumentException("allianceName too long, maximum of 40 characters, value: '" + allianceName + "'");
@@ -238,8 +238,8 @@ public class PlayerInfo implements IPlayerInfo {
 		if (allianceTag == null) {
 			throw new NullPointerException("allianceTag");
 		}
-		if (allianceTag.length() < 1) {
-			throw new IllegalArgumentException("allianceTag too short, minimum of 1 characters, value: '" + allianceTag + "'");
+		if (allianceTag.length() < 0) {
+			throw new IllegalArgumentException("allianceTag too short, minimum of 0 characters, value: '" + allianceTag + "'");
 		}
 		if (allianceTag.length() > 20) {
 			throw new IllegalArgumentException("allianceTag too long, maximum of 20 characters, value: '" + allianceTag + "'");
