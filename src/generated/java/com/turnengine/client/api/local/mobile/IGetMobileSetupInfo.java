@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetMobileSetupInfo extends IExecutableBean<IMobileSetupInfo>, ILocalLoggedInBean<IMobileSetupInfo>, Comparable<IGetMobileSetupInfo> {
 
-	int SERIALIZATION_ID = 5915;
+	int SERIALIZATION_ID = 3015;
 
 	/**
 	 * Returns the serialization id.

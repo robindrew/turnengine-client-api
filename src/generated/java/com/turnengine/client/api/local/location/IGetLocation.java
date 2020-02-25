@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetLocation extends IExecutableBean<ILocation>, ILocalLoggedInBean<ILocation>, Comparable<IGetLocation> {
 
-	int SERIALIZATION_ID = 5712;
+	int SERIALIZATION_ID = 2812;
 
 	/**
 	 * Returns the serialization id.

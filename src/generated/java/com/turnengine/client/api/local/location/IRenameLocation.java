@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IRenameLocation extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IRenameLocation> {
 
-	int SERIALIZATION_ID = 5713;
+	int SERIALIZATION_ID = 2813;
 
 	/**
 	 * Returns the serialization id.

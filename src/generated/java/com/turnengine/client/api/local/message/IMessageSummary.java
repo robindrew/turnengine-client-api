@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IMessageSummary extends IBean, Comparable<IMessageSummary> {
 
-	int SERIALIZATION_ID = 5809;
+	int SERIALIZATION_ID = 2909;
 
 	/**
 	 * Returns the serialization id.

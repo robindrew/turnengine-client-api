@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface IAllianceForum extends IBean, Comparable<IAllianceForum> {
 
-	int SERIALIZATION_ID = 5214;
+	int SERIALIZATION_ID = 2214;
 
 	/**
 	 * Returns the serialization id.

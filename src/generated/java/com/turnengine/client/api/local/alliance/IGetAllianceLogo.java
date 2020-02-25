@@ -6,7 +6,7 @@ import com.turnengine.client.api.global.image.IImage;
 
 public interface IGetAllianceLogo extends IExecutableBean<IImage>, ILocalLoggedInBean<IImage>, Comparable<IGetAllianceLogo> {
 
-	int SERIALIZATION_ID = 5128;
+	int SERIALIZATION_ID = 2128;
 
 	/**
 	 * Returns the serialization id.

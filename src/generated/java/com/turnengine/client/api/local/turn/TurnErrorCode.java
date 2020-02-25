@@ -5,13 +5,13 @@ import com.robindrew.codegenerator.api.error.IErrorCode;
 public enum TurnErrorCode implements IErrorCode {
 
 	/** The TURN_UPDATING constant. */
-	TURN_UPDATING(6701),
+	TURN_UPDATING(3801),
 	/** The TURN_INTERVAL_INVALID constant. */
-	TURN_INTERVAL_INVALID(6702),
+	TURN_INTERVAL_INVALID(3802),
 	/** The TURN_START_TIME_INVALID constant. */
-	TURN_START_TIME_INVALID(6703),
+	TURN_START_TIME_INVALID(3803),
 	/** The TURN_FINISH_TIME_INVALID constant. */
-	TURN_FINISH_TIME_INVALID(6704);
+	TURN_FINISH_TIME_INVALID(3804);
 
 	/** The id field. */
 	private final int id;

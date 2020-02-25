@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetMessageSummary extends IExecutableBean<IMessageSummary>, ILocalLoggedInBean<IMessageSummary>, Comparable<IGetMessageSummary> {
 
-	int SERIALIZATION_ID = 5805;
+	int SERIALIZATION_ID = 2905;
 
 	/**
 	 * Returns the serialization id.

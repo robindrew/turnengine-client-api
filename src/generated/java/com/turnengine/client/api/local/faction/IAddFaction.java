@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface IAddFaction extends IExecutableBean<IFaction>, ILocalLoggedInBean<IFaction>, ISetupBean<IFaction>, Comparable<IAddFaction> {
 
-	int SERIALIZATION_ID = 5501;
+	int SERIALIZATION_ID = 2501;
 
 	/**
 	 * Returns the serialization id.

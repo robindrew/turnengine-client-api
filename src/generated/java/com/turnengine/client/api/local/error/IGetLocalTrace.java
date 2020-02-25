@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetLocalTrace extends IExecutableBean<ILocalTrace>, ILocalLoggedInBean<ILocalTrace>, Comparable<IGetLocalTrace> {
 
-	int SERIALIZATION_ID = 5402;
+	int SERIALIZATION_ID = 2402;
 
 	/**
 	 * Returns the serialization id.

@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetPlayerActionQueueLimit extends IExecutableBean<Integer>, ILocalLoggedInBean<Integer>, Comparable<IGetPlayerActionQueueLimit> {
 
-	int SERIALIZATION_ID = 6010;
+	int SERIALIZATION_ID = 3110;
 
 	/**
 	 * Returns the serialization id.

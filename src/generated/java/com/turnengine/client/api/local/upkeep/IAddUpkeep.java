@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface IAddUpkeep extends IExecutableBean<IUpkeep>, ILocalLoggedInBean<IUpkeep>, ISetupBean<IUpkeep>, Comparable<IAddUpkeep> {
 
-	int SERIALIZATION_ID = 6901;
+	int SERIALIZATION_ID = 4001;
 
 	/**
 	 * Returns the serialization id.

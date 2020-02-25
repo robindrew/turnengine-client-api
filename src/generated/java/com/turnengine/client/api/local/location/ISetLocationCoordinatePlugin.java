@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetLocationCoordinatePlugin extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetLocationCoordinatePlugin> {
 
-	int SERIALIZATION_ID = 5705;
+	int SERIALIZATION_ID = 2805;
 
 	/**
 	 * Returns the serialization id.

@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface ISetupRoot extends IBean, Comparable<ISetupRoot> {
 
-	int SERIALIZATION_ID = 6305;
+	int SERIALIZATION_ID = 3405;
 
 	/**
 	 * Returns the serialization id.

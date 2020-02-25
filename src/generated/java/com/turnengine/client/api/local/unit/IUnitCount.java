@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IUnitCount extends IBean, Comparable<IUnitCount> {
 
-	int SERIALIZATION_ID = 6812;
+	int SERIALIZATION_ID = 3912;
 
 	/**
 	 * Returns the serialization id.

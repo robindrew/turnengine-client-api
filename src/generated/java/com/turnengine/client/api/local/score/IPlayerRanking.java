@@ -5,7 +5,7 @@ import com.turnengine.client.api.local.player.IPlayerInfo;
 
 public interface IPlayerRanking extends IBean, Comparable<IPlayerRanking> {
 
-	int SERIALIZATION_ID = 6214;
+	int SERIALIZATION_ID = 3314;
 
 	/**
 	 * Returns the serialization id.

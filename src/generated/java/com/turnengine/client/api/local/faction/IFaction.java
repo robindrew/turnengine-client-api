@@ -5,7 +5,7 @@ import com.robindrew.codegenerator.api.identity.INamedIdentity;
 
 public interface IFaction extends IBean, INamedIdentity, Comparable<IFaction> {
 
-	int SERIALIZATION_ID = 5505;
+	int SERIALIZATION_ID = 2505;
 
 	/**
 	 * Returns the serialization id.

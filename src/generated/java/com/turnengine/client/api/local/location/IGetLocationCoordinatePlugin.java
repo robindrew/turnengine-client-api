@@ -6,7 +6,7 @@ import com.turnengine.client.api.common.plugin.IPluginDetails;
 
 public interface IGetLocationCoordinatePlugin extends IExecutableBean<IPluginDetails>, ILocalLoggedInBean<IPluginDetails>, Comparable<IGetLocationCoordinatePlugin> {
 
-	int SERIALIZATION_ID = 5720;
+	int SERIALIZATION_ID = 2820;
 
 	/**
 	 * Returns the serialization id.

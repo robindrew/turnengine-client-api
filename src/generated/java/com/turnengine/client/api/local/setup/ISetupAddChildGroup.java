@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ISetupAddChildGroup extends IBean, Comparable<ISetupAddChildGroup> {
 
-	int SERIALIZATION_ID = 6308;
+	int SERIALIZATION_ID = 3408;
 
 	/**
 	 * Returns the serialization id.

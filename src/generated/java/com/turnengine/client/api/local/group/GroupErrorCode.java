@@ -5,9 +5,9 @@ import com.robindrew.codegenerator.api.error.IErrorCode;
 public enum GroupErrorCode implements IErrorCode {
 
 	/** The GROUP_EXISTS constant. */
-	GROUP_EXISTS(5601),
+	GROUP_EXISTS(2701),
 	/** The GROUP_NOT_EXISTS constant. */
-	GROUP_NOT_EXISTS(5602);
+	GROUP_NOT_EXISTS(2702);
 
 	/** The id field. */
 	private final int id;

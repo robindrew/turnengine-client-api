@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IListMobilesAtLocation extends IExecutableBean<List<IMobile>>, ILocalLoggedInBean<List<IMobile>>, Comparable<IListMobilesAtLocation> {
 
-	int SERIALIZATION_ID = 5902;
+	int SERIALIZATION_ID = 3002;
 
 	/**
 	 * Returns the serialization id.

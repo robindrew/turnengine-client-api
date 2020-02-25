@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetTradeAtLocationPlugin extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetTradeAtLocationPlugin> {
 
-	int SERIALIZATION_ID = 6604;
+	int SERIALIZATION_ID = 3704;
 
 	/**
 	 * Returns the serialization id.

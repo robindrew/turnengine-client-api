@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IExecuteTurns extends IExecutableBean<Integer>, ILocalLoggedInBean<Integer>, Comparable<IExecuteTurns> {
 
-	int SERIALIZATION_ID = 6702;
+	int SERIALIZATION_ID = 3802;
 
 	/**
 	 * Returns the serialization id.

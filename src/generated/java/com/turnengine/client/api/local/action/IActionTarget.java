@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.unit.UnitType;
 
 public interface IActionTarget extends IBean, Comparable<IActionTarget> {
 
-	int SERIALIZATION_ID = 5027;
+	int SERIALIZATION_ID = 2027;
 
 	/**
 	 * Returns the serialization id.

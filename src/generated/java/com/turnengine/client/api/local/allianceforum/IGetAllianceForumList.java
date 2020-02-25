@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetAllianceForumList extends IExecutableBean<List<IAllianceForum>>, ILocalLoggedInBean<List<IAllianceForum>>, Comparable<IGetAllianceForumList> {
 
-	int SERIALIZATION_ID = 5205;
+	int SERIALIZATION_ID = 2205;
 
 	/**
 	 * Returns the serialization id.

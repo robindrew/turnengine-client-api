@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ITurnScore extends IBean, Comparable<ITurnScore> {
 
-	int SERIALIZATION_ID = 6216;
+	int SERIALIZATION_ID = 3316;
 
 	/**
 	 * Returns the serialization id.

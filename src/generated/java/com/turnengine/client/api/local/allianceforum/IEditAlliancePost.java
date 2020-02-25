@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IEditAlliancePost extends IExecutableBean<IAllianceForumPost>, ILocalLoggedInBean<IAllianceForumPost>, Comparable<IEditAlliancePost> {
 
-	int SERIALIZATION_ID = 5208;
+	int SERIALIZATION_ID = 2208;
 
 	/**
 	 * Returns the serialization id.

@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetAllianceSetupInfo extends IExecutableBean<IAllianceSetupInfo>, ILocalLoggedInBean<IAllianceSetupInfo>, Comparable<IGetAllianceSetupInfo> {
 
-	int SERIALIZATION_ID = 5123;
+	int SERIALIZATION_ID = 2123;
 
 	/**
 	 * Returns the serialization id.

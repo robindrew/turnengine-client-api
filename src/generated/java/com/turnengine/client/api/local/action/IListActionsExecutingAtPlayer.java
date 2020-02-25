@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IListActionsExecutingAtPlayer extends IExecutableBean<List<IActionExecuting>>, ILocalLoggedInBean<List<IActionExecuting>>, Comparable<IListActionsExecutingAtPlayer> {
 
-	int SERIALIZATION_ID = 5014;
+	int SERIALIZATION_ID = 2014;
 
 	/**
 	 * Returns the serialization id.

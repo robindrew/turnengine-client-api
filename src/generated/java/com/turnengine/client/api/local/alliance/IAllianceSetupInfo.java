@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IAllianceSetupInfo extends IBean, Comparable<IAllianceSetupInfo> {
 
-	int SERIALIZATION_ID = 5132;
+	int SERIALIZATION_ID = 2132;
 
 	/**
 	 * Returns the serialization id.

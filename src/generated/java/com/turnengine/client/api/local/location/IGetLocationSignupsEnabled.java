@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetLocationSignupsEnabled extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IGetLocationSignupsEnabled> {
 
-	int SERIALIZATION_ID = 5709;
+	int SERIALIZATION_ID = 2809;
 
 	/**
 	 * Returns the serialization id.

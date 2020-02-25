@@ -6,7 +6,7 @@ import com.turnengine.client.api.common.plugin.IPluginDetails;
 
 public interface IGetPlayerSignupPlugin extends IExecutableBean<IPluginDetails>, ILocalLoggedInBean<IPluginDetails>, Comparable<IGetPlayerSignupPlugin> {
 
-	int SERIALIZATION_ID = 6022;
+	int SERIALIZATION_ID = 3122;
 
 	/**
 	 * Returns the serialization id.

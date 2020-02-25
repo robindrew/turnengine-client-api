@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IAllianceForumPost extends IBean, Comparable<IAllianceForumPost> {
 
-	int SERIALIZATION_ID = 5216;
+	int SERIALIZATION_ID = 2216;
 
 	/**
 	 * Returns the serialization id.

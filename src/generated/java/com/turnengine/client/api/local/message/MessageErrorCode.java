@@ -5,11 +5,11 @@ import com.robindrew.codegenerator.api.error.IErrorCode;
 public enum MessageErrorCode implements IErrorCode {
 
 	/** The MESSAGE_RECIPIENT_INVALID constant. */
-	MESSAGE_RECIPIENT_INVALID(5801),
+	MESSAGE_RECIPIENT_INVALID(2901),
 	/** The MESSAGE_NOT_SENDER_OR_RECIPIENT constant. */
-	MESSAGE_NOT_SENDER_OR_RECIPIENT(5802),
+	MESSAGE_NOT_SENDER_OR_RECIPIENT(2902),
 	/** The MESSAGE_NOT_EXISTS constant. */
-	MESSAGE_NOT_EXISTS(5803);
+	MESSAGE_NOT_EXISTS(2903);
 
 	/** The id field. */
 	private final int id;

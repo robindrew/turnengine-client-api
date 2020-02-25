@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetGridInfoList extends IExecutableBean<IGridInfo>, ILocalLoggedInBean<IGridInfo>, Comparable<IGetGridInfoList> {
 
-	int SERIALIZATION_ID = 5715;
+	int SERIALIZATION_ID = 2815;
 
 	/**
 	 * Returns the serialization id.

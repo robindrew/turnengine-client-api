@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface IGrid extends IBean, Comparable<IGrid> {
 
-	int SERIALIZATION_ID = 5727;
+	int SERIALIZATION_ID = 2827;
 
 	/**
 	 * Returns the serialization id.

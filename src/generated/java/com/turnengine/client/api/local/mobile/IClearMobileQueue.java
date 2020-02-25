@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IClearMobileQueue extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IClearMobileQueue> {
 
-	int SERIALIZATION_ID = 5922;
+	int SERIALIZATION_ID = 3022;
 
 	/**
 	 * Returns the serialization id.

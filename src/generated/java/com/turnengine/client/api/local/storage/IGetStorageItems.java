@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetStorageItems extends IExecutableBean<List<IStorageItem>>, ILocalLoggedInBean<List<IStorageItem>>, Comparable<IGetStorageItems> {
 
-	int SERIALIZATION_ID = 6504;
+	int SERIALIZATION_ID = 3604;
 
 	/**
 	 * Returns the serialization id.

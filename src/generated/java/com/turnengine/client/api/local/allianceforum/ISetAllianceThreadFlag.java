@@ -6,7 +6,7 @@ import com.turnengine.client.api.global.forum.ForumFlag;
 
 public interface ISetAllianceThreadFlag extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<ISetAllianceThreadFlag> {
 
-	int SERIALIZATION_ID = 5210;
+	int SERIALIZATION_ID = 2210;
 
 	/**
 	 * Returns the serialization id.

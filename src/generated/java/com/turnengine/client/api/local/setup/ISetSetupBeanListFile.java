@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface ISetSetupBeanListFile extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<ISetSetupBeanListFile> {
 
-	int SERIALIZATION_ID = 6302;
+	int SERIALIZATION_ID = 3402;
 
 	/**
 	 * Returns the serialization id.

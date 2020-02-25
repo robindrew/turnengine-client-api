@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface IAddActionPlugin extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<IAddActionPlugin> {
 
-	int SERIALIZATION_ID = 5021;
+	int SERIALIZATION_ID = 2021;
 
 	/**
 	 * Returns the serialization id.

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetLocalTraceList extends IExecutableBean<List<ILocalTrace>>, ILocalLoggedInBean<List<ILocalTrace>>, Comparable<IGetLocalTraceList> {
 
-	int SERIALIZATION_ID = 5403;
+	int SERIALIZATION_ID = 2403;
 
 	/**
 	 * Returns the serialization id.

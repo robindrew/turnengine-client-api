@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface ISetPlayerAvatar extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<ISetPlayerAvatar> {
 
-	int SERIALIZATION_ID = 6028;
+	int SERIALIZATION_ID = 3128;
 
 	/**
 	 * Returns the serialization id.

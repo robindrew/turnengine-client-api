@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetUnitsAtPlayer extends IExecutableBean<List<IUnitCount>>, ILocalLoggedInBean<List<IUnitCount>>, Comparable<IGetUnitsAtPlayer> {
 
-	int SERIALIZATION_ID = 6810;
+	int SERIALIZATION_ID = 3910;
 
 	/**
 	 * Returns the serialization id.

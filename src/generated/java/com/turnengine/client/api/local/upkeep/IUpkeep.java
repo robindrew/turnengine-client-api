@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IUpkeep extends IBean, Comparable<IUpkeep> {
 
-	int SERIALIZATION_ID = 6906;
+	int SERIALIZATION_ID = 4006;
 
 	/**
 	 * Returns the serialization id.

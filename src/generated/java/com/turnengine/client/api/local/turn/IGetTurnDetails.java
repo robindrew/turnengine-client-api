@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetTurnDetails extends IExecutableBean<List<ITurnDetails>>, ILocalLoggedInBean<List<ITurnDetails>>, Comparable<IGetTurnDetails> {
 
-	int SERIALIZATION_ID = 6710;
+	int SERIALIZATION_ID = 3810;
 
 	/**
 	 * Returns the serialization id.

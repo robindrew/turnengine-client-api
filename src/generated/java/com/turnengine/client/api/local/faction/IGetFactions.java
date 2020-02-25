@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetFactions extends IExecutableBean<List<IFaction>>, ILocalLoggedInBean<List<IFaction>>, Comparable<IGetFactions> {
 
-	int SERIALIZATION_ID = 5504;
+	int SERIALIZATION_ID = 2504;
 
 	/**
 	 * Returns the serialization id.

@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IShutdownGame extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IShutdownGame> {
 
-	int SERIALIZATION_ID = 7004;
+	int SERIALIZATION_ID = 2604;
 
 	/**
 	 * Returns the serialization id.

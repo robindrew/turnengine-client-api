@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetRankingGroupList extends IExecutableBean<List<Integer>>, ILocalLoggedInBean<List<Integer>>, Comparable<IGetRankingGroupList> {
 
-	int SERIALIZATION_ID = 6206;
+	int SERIALIZATION_ID = 3306;
 
 	/**
 	 * Returns the serialization id.

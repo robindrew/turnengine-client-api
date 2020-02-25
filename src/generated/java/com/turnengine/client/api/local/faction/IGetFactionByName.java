@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetFactionByName extends IExecutableBean<IFaction>, ILocalLoggedInBean<IFaction>, Comparable<IGetFactionByName> {
 
-	int SERIALIZATION_ID = 5503;
+	int SERIALIZATION_ID = 2503;
 
 	/**
 	 * Returns the serialization id.

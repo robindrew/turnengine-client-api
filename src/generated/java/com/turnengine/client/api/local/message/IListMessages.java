@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IListMessages extends IExecutableBean<IMessageList>, ILocalLoggedInBean<IMessageList>, Comparable<IListMessages> {
 
-	int SERIALIZATION_ID = 5804;
+	int SERIALIZATION_ID = 2904;
 
 	/**
 	 * Returns the serialization id.

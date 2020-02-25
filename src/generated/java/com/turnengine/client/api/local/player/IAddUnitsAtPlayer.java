@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IAddUnitsAtPlayer extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IAddUnitsAtPlayer> {
 
-	int SERIALIZATION_ID = 6020;
+	int SERIALIZATION_ID = 3120;
 
 	/**
 	 * Returns the serialization id.

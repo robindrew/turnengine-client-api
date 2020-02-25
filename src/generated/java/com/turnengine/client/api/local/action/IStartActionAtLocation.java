@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IStartActionAtLocation extends IExecutableBean<IActionStatus>, ILocalLoggedInBean<IActionStatus>, Comparable<IStartActionAtLocation> {
 
-	int SERIALIZATION_ID = 5009;
+	int SERIALIZATION_ID = 2009;
 
 	/**
 	 * Returns the serialization id.

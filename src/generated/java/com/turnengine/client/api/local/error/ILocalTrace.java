@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ILocalTrace extends IBean, Comparable<ILocalTrace> {
 
-	int SERIALIZATION_ID = 5401;
+	int SERIALIZATION_ID = 2401;
 
 	/**
 	 * Returns the serialization id.

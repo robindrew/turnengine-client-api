@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IGetUpkeepAtLocation extends IExecutableBean<List<IUnitCount>>, ILocalLoggedInBean<List<IUnitCount>>, Comparable<IGetUpkeepAtLocation> {
 
-	int SERIALIZATION_ID = 6905;
+	int SERIALIZATION_ID = 4005;
 
 	/**
 	 * Returns the serialization id.

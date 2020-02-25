@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetUpkeepList extends IExecutableBean<List<IUpkeep>>, ILocalLoggedInBean<List<IUpkeep>>, Comparable<IGetUpkeepList> {
 
-	int SERIALIZATION_ID = 6903;
+	int SERIALIZATION_ID = 4003;
 
 	/**
 	 * Returns the serialization id.

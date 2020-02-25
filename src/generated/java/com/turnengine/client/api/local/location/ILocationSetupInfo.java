@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ILocationSetupInfo extends IBean, Comparable<ILocationSetupInfo> {
 
-	int SERIALIZATION_ID = 5729;
+	int SERIALIZATION_ID = 2829;
 
 	/**
 	 * Returns the serialization id.

@@ -5,9 +5,9 @@ import com.robindrew.codegenerator.api.error.IErrorCode;
 public enum UnitErrorCode implements IErrorCode {
 
 	/** The UNIT_EXISTS constant. */
-	UNIT_EXISTS(6801),
+	UNIT_EXISTS(3901),
 	/** The UNIT_NOT_EXISTS constant. */
-	UNIT_NOT_EXISTS(6802);
+	UNIT_NOT_EXISTS(3902);
 
 	/** The id field. */
 	private final int id;

@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetMobilesEnabled extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetMobilesEnabled> {
 
-	int SERIALIZATION_ID = 5916;
+	int SERIALIZATION_ID = 3016;
 
 	/**
 	 * Returns the serialization id.

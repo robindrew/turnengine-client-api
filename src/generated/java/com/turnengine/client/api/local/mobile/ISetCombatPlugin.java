@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetCombatPlugin extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetCombatPlugin> {
 
-	int SERIALIZATION_ID = 5914;
+	int SERIALIZATION_ID = 3014;
 
 	/**
 	 * Returns the serialization id.

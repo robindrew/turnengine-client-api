@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetScoreDivisor extends IExecutableBean<Long>, ILocalLoggedInBean<Long>, Comparable<IGetScoreDivisor> {
 
-	int SERIALIZATION_ID = 6210;
+	int SERIALIZATION_ID = 3310;
 
 	/**
 	 * Returns the serialization id.

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetMobileQueueList extends IExecutableBean<List<IMobileQueueItem>>, ILocalLoggedInBean<List<IMobileQueueItem>>, Comparable<IGetMobileQueueList> {
 
-	int SERIALIZATION_ID = 5924;
+	int SERIALIZATION_ID = 3024;
 
 	/**
 	 * Returns the serialization id.

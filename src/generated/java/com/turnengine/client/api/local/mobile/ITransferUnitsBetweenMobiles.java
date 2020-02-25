@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ITransferUnitsBetweenMobiles extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<ITransferUnitsBetweenMobiles> {
 
-	int SERIALIZATION_ID = 5911;
+	int SERIALIZATION_ID = 3011;
 
 	/**
 	 * Returns the serialization id.

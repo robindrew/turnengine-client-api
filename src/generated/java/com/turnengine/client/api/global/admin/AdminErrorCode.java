@@ -5,9 +5,9 @@ import com.robindrew.codegenerator.api.error.IErrorCode;
 public enum AdminErrorCode implements IErrorCode {
 
 	/** The INTERNAL_SERVER_ERROR constant. */
-	INTERNAL_SERVER_ERROR(601),
+	INTERNAL_SERVER_ERROR(1001),
 	/** The SERVER_LOCKED constant. */
-	SERVER_LOCKED(602);
+	SERVER_LOCKED(1002);
 
 	/** The id field. */
 	private final int id;

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetUpkeepConditionList extends IExecutableBean<List<IUpkeepCondition>>, ILocalLoggedInBean<List<IUpkeepCondition>>, Comparable<IGetUpkeepConditionList> {
 
-	int SERIALIZATION_ID = 6904;
+	int SERIALIZATION_ID = 4004;
 
 	/**
 	 * Returns the serialization id.

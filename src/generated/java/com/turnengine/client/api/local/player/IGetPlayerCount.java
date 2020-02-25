@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetPlayerCount extends IExecutableBean<Integer>, ILocalLoggedInBean<Integer>, Comparable<IGetPlayerCount> {
 
-	int SERIALIZATION_ID = 6012;
+	int SERIALIZATION_ID = 3112;
 
 	/**
 	 * Returns the serialization id.

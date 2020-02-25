@@ -6,7 +6,7 @@ import com.turnengine.client.api.global.user.IUserAdminInfo;
 
 public interface IGetUserAdminInfoByPlayer extends IExecutableBean<IUserAdminInfo>, ILocalLoggedInBean<IUserAdminInfo>, Comparable<IGetUserAdminInfoByPlayer> {
 
-	int SERIALIZATION_ID = 6027;
+	int SERIALIZATION_ID = 3127;
 
 	/**
 	 * Returns the serialization id.

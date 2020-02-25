@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetPlayerByUserId extends IExecutableBean<IPlayer>, ILocalLoggedInBean<IPlayer>, Comparable<IGetPlayerByUserId> {
 
-	int SERIALIZATION_ID = 6003;
+	int SERIALIZATION_ID = 3103;
 
 	/**
 	 * Returns the serialization id.

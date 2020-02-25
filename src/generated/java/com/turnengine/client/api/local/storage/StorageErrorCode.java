@@ -5,7 +5,7 @@ import com.robindrew.codegenerator.api.error.IErrorCode;
 public enum StorageErrorCode implements IErrorCode {
 
 	/** The STORAGE_INVALID constant. */
-	STORAGE_INVALID(6501);
+	STORAGE_INVALID(3601);
 
 	/** The id field. */
 	private final int id;

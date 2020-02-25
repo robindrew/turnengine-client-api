@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IGroupScore extends IBean, Comparable<IGroupScore> {
 
-	int SERIALIZATION_ID = 6212;
+	int SERIALIZATION_ID = 3312;
 
 	/**
 	 * Returns the serialization id.

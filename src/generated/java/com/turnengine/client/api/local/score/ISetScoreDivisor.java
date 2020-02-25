@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetScoreDivisor extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetScoreDivisor> {
 
-	int SERIALIZATION_ID = 6209;
+	int SERIALIZATION_ID = 3309;
 
 	/**
 	 * Returns the serialization id.

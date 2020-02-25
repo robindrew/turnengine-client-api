@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetTurnsEnabled extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetTurnsEnabled> {
 
-	int SERIALIZATION_ID = 6705;
+	int SERIALIZATION_ID = 3805;
 
 	/**
 	 * Returns the serialization id.

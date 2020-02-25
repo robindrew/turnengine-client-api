@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface IPlayer extends IBean, INamedIdentity, IPlayerData, Comparable<IPlayer> {
 
-	int SERIALIZATION_ID = 6030;
+	int SERIALIZATION_ID = 3130;
 
 	/**
 	 * Returns the serialization id.

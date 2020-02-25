@@ -5,7 +5,7 @@ import com.robindrew.codegenerator.api.identity.INamedIdentity;
 
 public interface IUnit extends IBean, INamedIdentity, Comparable<IUnit> {
 
-	int SERIALIZATION_ID = 6811;
+	int SERIALIZATION_ID = 3911;
 
 	/**
 	 * Returns the serialization id.

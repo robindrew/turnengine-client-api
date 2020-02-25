@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface IMessageList extends IBean, Comparable<IMessageList> {
 
-	int SERIALIZATION_ID = 5810;
+	int SERIALIZATION_ID = 2910;
 
 	/**
 	 * Returns the serialization id.

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetLocationList extends IExecutableBean<List<ILocation>>, ILocalLoggedInBean<List<ILocation>>, Comparable<IGetLocationList> {
 
-	int SERIALIZATION_ID = 5710;
+	int SERIALIZATION_ID = 2810;
 
 	/**
 	 * Returns the serialization id.

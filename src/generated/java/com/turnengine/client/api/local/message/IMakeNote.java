@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IMakeNote extends IExecutableBean<Integer>, ILocalLoggedInBean<Integer>, Comparable<IMakeNote> {
 
-	int SERIALIZATION_ID = 5802;
+	int SERIALIZATION_ID = 2902;
 
 	/**
 	 * Returns the serialization id.

@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public interface ISetTurnIntervalTime extends IExecutableBean<Long>, ILocalLoggedInBean<Long>, ISetupBean<Long>, Comparable<ISetTurnIntervalTime> {
 
-	int SERIALIZATION_ID = 6713;
+	int SERIALIZATION_ID = 3813;
 
 	/**
 	 * Returns the serialization id.

@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetAllianceInviteLimit extends IExecutableBean<Integer>, ILocalLoggedInBean<Integer>, Comparable<IGetAllianceInviteLimit> {
 
-	int SERIALIZATION_ID = 5112;
+	int SERIALIZATION_ID = 2112;
 
 	/**
 	 * Returns the serialization id.

@@ -5,7 +5,7 @@ import com.turnengine.client.api.local.alliance.IAllianceInfo;
 
 public interface IAllianceRanking extends IBean, Comparable<IAllianceRanking> {
 
-	int SERIALIZATION_ID = 6215;
+	int SERIALIZATION_ID = 3315;
 
 	/**
 	 * Returns the serialization id.

@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IDestroyEmptyMobile extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IDestroyEmptyMobile> {
 
-	int SERIALIZATION_ID = 5908;
+	int SERIALIZATION_ID = 3008;
 
 	/**
 	 * Returns the serialization id.

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IGameUnits extends IBean, Comparable<IGameUnits> {
 
-	int SERIALIZATION_ID = 7008;
+	int SERIALIZATION_ID = 2608;
 
 	/**
 	 * Returns the serialization id.

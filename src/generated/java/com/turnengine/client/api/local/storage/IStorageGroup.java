@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IStorageGroup extends IBean, Comparable<IStorageGroup> {
 
-	int SERIALIZATION_ID = 6505;
+	int SERIALIZATION_ID = 3605;
 
 	/**
 	 * Returns the serialization id.

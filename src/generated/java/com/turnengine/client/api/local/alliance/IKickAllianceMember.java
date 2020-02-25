@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IKickAllianceMember extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IKickAllianceMember> {
 
-	int SERIALIZATION_ID = 5110;
+	int SERIALIZATION_ID = 2110;
 
 	/**
 	 * Returns the serialization id.

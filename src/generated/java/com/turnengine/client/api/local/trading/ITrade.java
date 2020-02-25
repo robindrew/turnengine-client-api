@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ITrade extends IBean, Comparable<ITrade> {
 
-	int SERIALIZATION_ID = 6605;
+	int SERIALIZATION_ID = 3705;
 
 	/**
 	 * Returns the serialization id.

@@ -8,7 +8,7 @@ import com.turnengine.client.api.local.unit.UnitType;
 
 public interface IAddActionTarget extends IExecutableBean<IActionTarget>, ILocalLoggedInBean<IActionTarget>, ISetupBean<IActionTarget>, Comparable<IAddActionTarget> {
 
-	int SERIALIZATION_ID = 5002;
+	int SERIALIZATION_ID = 2002;
 
 	/**
 	 * Returns the serialization id.

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetUnitsByFactionId extends IExecutableBean<List<IUnit>>, ILocalLoggedInBean<List<IUnit>>, Comparable<IGetUnitsByFactionId> {
 
-	int SERIALIZATION_ID = 6805;
+	int SERIALIZATION_ID = 3905;
 
 	/**
 	 * Returns the serialization id.

@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface ISellGoodsAtLocation extends IExecutableBean<ITrade>, ILocalLoggedInBean<ITrade>, Comparable<ISellGoodsAtLocation> {
 
-	int SERIALIZATION_ID = 6603;
+	int SERIALIZATION_ID = 3703;
 
 	/**
 	 * Returns the serialization id.

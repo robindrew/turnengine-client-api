@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface IGenerateLocations extends IExecutableBean<Integer>, ILocalLoggedInBean<Integer>, ISetupBean<Integer>, Comparable<IGenerateLocations> {
 
-	int SERIALIZATION_ID = 5702;
+	int SERIALIZATION_ID = 2802;
 
 	/**
 	 * Returns the serialization id.

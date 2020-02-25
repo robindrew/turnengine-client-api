@@ -6,7 +6,7 @@ import com.turnengine.client.api.global.game.GameStatus;
 
 public interface IGetGameStatus extends IExecutableBean<GameStatus>, ILocalLoggedInBean<GameStatus>, Comparable<IGetGameStatus> {
 
-	int SERIALIZATION_ID = 7005;
+	int SERIALIZATION_ID = 2605;
 
 	/**
 	 * Returns the serialization id.

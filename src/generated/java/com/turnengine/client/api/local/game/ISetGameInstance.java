@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetGameInstance extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetGameInstance> {
 
-	int SERIALIZATION_ID = 7001;
+	int SERIALIZATION_ID = 2601;
 
 	/**
 	 * Returns the serialization id.

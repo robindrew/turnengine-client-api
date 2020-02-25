@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.score.IGroupScore;
 
 public interface IGetPlayerScore extends IExecutableBean<IGroupScore>, ILocalLoggedInBean<IGroupScore>, Comparable<IGetPlayerScore> {
 
-	int SERIALIZATION_ID = 6018;
+	int SERIALIZATION_ID = 3118;
 
 	/**
 	 * Returns the serialization id.

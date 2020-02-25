@@ -6,7 +6,7 @@ import com.turnengine.client.api.common.plugin.IPluginDetails;
 
 public interface IGetCombatPlugin extends IExecutableBean<IPluginDetails>, ILocalLoggedInBean<IPluginDetails>, Comparable<IGetCombatPlugin> {
 
-	int SERIALIZATION_ID = 5918;
+	int SERIALIZATION_ID = 3018;
 
 	/**
 	 * Returns the serialization id.

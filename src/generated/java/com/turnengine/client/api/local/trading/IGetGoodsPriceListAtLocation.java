@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetGoodsPriceListAtLocation extends IExecutableBean<List<IPrice>>, ILocalLoggedInBean<List<IPrice>>, Comparable<IGetGoodsPriceListAtLocation> {
 
-	int SERIALIZATION_ID = 6601;
+	int SERIALIZATION_ID = 3701;
 
 	/**
 	 * Returns the serialization id.

@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetAllianceMemberLimit extends IExecutableBean<Integer>, ILocalLoggedInBean<Integer>, ISetupBean<Integer>, Comparable<ISetAllianceMemberLimit> {
 
-	int SERIALIZATION_ID = 5115;
+	int SERIALIZATION_ID = 2115;
 
 	/**
 	 * Returns the serialization id.

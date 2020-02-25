@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface ISendMail extends IExecutableBean<Integer>, ILocalLoggedInBean<Integer>, Comparable<ISendMail> {
 
-	int SERIALIZATION_ID = 5801;
+	int SERIALIZATION_ID = 2901;
 
 	/**
 	 * Returns the serialization id.

@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface ICancelActionAtLocation extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<ICancelActionAtLocation> {
 
-	int SERIALIZATION_ID = 5025;
+	int SERIALIZATION_ID = 2025;
 
 	/**
 	 * Returns the serialization id.

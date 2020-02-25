@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IMoveMobileToCoordinates extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IMoveMobileToCoordinates> {
 
-	int SERIALIZATION_ID = 5910;
+	int SERIALIZATION_ID = 3010;
 
 	/**
 	 * Returns the serialization id.

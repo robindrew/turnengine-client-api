@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetMobilePropertyList extends IExecutableBean<List<IMobileProperty>>, ILocalLoggedInBean<List<IMobileProperty>>, Comparable<IGetMobilePropertyList> {
 
-	int SERIALIZATION_ID = 5920;
+	int SERIALIZATION_ID = 3020;
 
 	/**
 	 * Returns the serialization id.

@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetUnitScore extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetUnitScore> {
 
-	int SERIALIZATION_ID = 6201;
+	int SERIALIZATION_ID = 3301;
 
 	/**
 	 * Returns the serialization id.

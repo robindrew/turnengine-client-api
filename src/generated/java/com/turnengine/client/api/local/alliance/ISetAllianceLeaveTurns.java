@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetAllianceLeaveTurns extends IExecutableBean<Integer>, ILocalLoggedInBean<Integer>, ISetupBean<Integer>, Comparable<ISetAllianceLeaveTurns> {
 
-	int SERIALIZATION_ID = 5122;
+	int SERIALIZATION_ID = 2122;
 
 	/**
 	 * Returns the serialization id.

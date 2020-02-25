@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetStorageGroup extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetStorageGroup> {
 
-	int SERIALIZATION_ID = 6501;
+	int SERIALIZATION_ID = 3601;
 
 	/**
 	 * Returns the serialization id.

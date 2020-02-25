@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IGetInvitedToJoinAllianceList extends IExecutableBean<List<IPlayerInfo>>, ILocalLoggedInBean<List<IPlayerInfo>>, Comparable<IGetInvitedToJoinAllianceList> {
 
-	int SERIALIZATION_ID = 5111;
+	int SERIALIZATION_ID = 2111;
 
 	/**
 	 * Returns the serialization id.

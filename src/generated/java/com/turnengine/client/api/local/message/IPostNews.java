@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IPostNews extends IExecutableBean<Integer>, ILocalLoggedInBean<Integer>, Comparable<IPostNews> {
 
-	int SERIALIZATION_ID = 5803;
+	int SERIALIZATION_ID = 2903;
 
 	/**
 	 * Returns the serialization id.

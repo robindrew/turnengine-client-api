@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IWaitMobile extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IWaitMobile> {
 
-	int SERIALIZATION_ID = 5923;
+	int SERIALIZATION_ID = 3023;
 
 	/**
 	 * Returns the serialization id.

@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetPlayerSignupsEnabled extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IGetPlayerSignupsEnabled> {
 
-	int SERIALIZATION_ID = 6006;
+	int SERIALIZATION_ID = 3106;
 
 	/**
 	 * Returns the serialization id.

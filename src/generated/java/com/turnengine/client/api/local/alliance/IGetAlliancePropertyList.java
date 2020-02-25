@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetAlliancePropertyList extends IExecutableBean<List<IAllianceProperty>>, ILocalLoggedInBean<List<IAllianceProperty>>, Comparable<IGetAlliancePropertyList> {
 
-	int SERIALIZATION_ID = 5125;
+	int SERIALIZATION_ID = 2125;
 
 	/**
 	 * Returns the serialization id.

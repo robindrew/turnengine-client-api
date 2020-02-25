@@ -5,7 +5,7 @@ import com.turnengine.client.api.local.player.IPlayerInfo;
 
 public interface IMessage extends IBean, Comparable<IMessage> {
 
-	int SERIALIZATION_ID = 5808;
+	int SERIALIZATION_ID = 2908;
 
 	/**
 	 * Returns the serialization id.

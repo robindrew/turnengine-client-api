@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IClearActionQueuedAtPlayer extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IClearActionQueuedAtPlayer> {
 
-	int SERIALIZATION_ID = 5008;
+	int SERIALIZATION_ID = 2008;
 
 	/**
 	 * Returns the serialization id.

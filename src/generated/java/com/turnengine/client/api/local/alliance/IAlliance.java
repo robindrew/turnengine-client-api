@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface IAlliance extends IBean, INamedIdentity, Comparable<IAlliance> {
 
-	int SERIALIZATION_ID = 5130;
+	int SERIALIZATION_ID = 2130;
 
 	/**
 	 * Returns the serialization id.

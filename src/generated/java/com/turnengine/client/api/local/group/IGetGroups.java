@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetGroups extends IExecutableBean<List<IGroup>>, ILocalLoggedInBean<List<IGroup>>, Comparable<IGetGroups> {
 
-	int SERIALIZATION_ID = 5605;
+	int SERIALIZATION_ID = 2705;
 
 	/**
 	 * Returns the serialization id.

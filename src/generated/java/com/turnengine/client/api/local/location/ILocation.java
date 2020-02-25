@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface ILocation extends IBean, INamedIdentity, Comparable<ILocation> {
 
-	int SERIALIZATION_ID = 5703;
+	int SERIALIZATION_ID = 2803;
 
 	/**
 	 * Returns the serialization id.

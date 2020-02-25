@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface IAddChildGroup extends IExecutableBean<IGroup>, ILocalLoggedInBean<IGroup>, ISetupBean<IGroup>, Comparable<IAddChildGroup> {
 
-	int SERIALIZATION_ID = 5602;
+	int SERIALIZATION_ID = 2702;
 
 	/**
 	 * Returns the serialization id.

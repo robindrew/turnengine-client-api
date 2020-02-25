@@ -5,9 +5,9 @@ import com.robindrew.codegenerator.api.error.IErrorCode;
 public enum SetupErrorCode implements IErrorCode {
 
 	/** The SETUP_EMPTY constant. */
-	SETUP_EMPTY(6301),
+	SETUP_EMPTY(3401),
 	/** The SETUP_NOT_EMPTY constant. */
-	SETUP_NOT_EMPTY(6302);
+	SETUP_NOT_EMPTY(3402);
 
 	/** The id field. */
 	private final int id;

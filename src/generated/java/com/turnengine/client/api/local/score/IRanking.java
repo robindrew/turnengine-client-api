@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IRanking extends IBean, Comparable<IRanking> {
 
-	int SERIALIZATION_ID = 6213;
+	int SERIALIZATION_ID = 3313;
 
 	/**
 	 * Returns the serialization id.

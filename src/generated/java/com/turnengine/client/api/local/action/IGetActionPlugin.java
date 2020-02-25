@@ -6,7 +6,7 @@ import com.turnengine.client.api.common.plugin.IPluginDetails;
 
 public interface IGetActionPlugin extends IExecutableBean<IPluginDetails>, ILocalLoggedInBean<IPluginDetails>, Comparable<IGetActionPlugin> {
 
-	int SERIALIZATION_ID = 5023;
+	int SERIALIZATION_ID = 2023;
 
 	/**
 	 * Returns the serialization id.

@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetTurnInterval extends IExecutableBean<Long>, ILocalLoggedInBean<Long>, ISetupBean<Long>, Comparable<ISetTurnInterval> {
 
-	int SERIALIZATION_ID = 6703;
+	int SERIALIZATION_ID = 3803;
 
 	/**
 	 * Returns the serialization id.

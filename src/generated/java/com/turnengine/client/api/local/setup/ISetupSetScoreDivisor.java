@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ISetupSetScoreDivisor extends IBean, Comparable<ISetupSetScoreDivisor> {
 
-	int SERIALIZATION_ID = 6314;
+	int SERIALIZATION_ID = 3414;
 
 	/**
 	 * Returns the serialization id.

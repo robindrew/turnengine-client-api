@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ISetupAddAction extends IBean, Comparable<ISetupAddAction> {
 
-	int SERIALIZATION_ID = 6317;
+	int SERIALIZATION_ID = 3417;
 
 	/**
 	 * Returns the serialization id.

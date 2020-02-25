@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetNextTurnUpdateTime extends IExecutableBean<Long>, ILocalLoggedInBean<Long>, Comparable<IGetNextTurnUpdateTime> {
 
-	int SERIALIZATION_ID = 6707;
+	int SERIALIZATION_ID = 3807;
 
 	/**
 	 * Returns the serialization id.

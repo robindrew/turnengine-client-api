@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetAllianceThread extends IExecutableBean<IAllianceForumThread>, ILocalLoggedInBean<IAllianceForumThread>, Comparable<IGetAllianceThread> {
 
-	int SERIALIZATION_ID = 5207;
+	int SERIALIZATION_ID = 2207;
 
 	/**
 	 * Returns the serialization id.

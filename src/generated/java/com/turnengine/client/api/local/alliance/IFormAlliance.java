@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IFormAlliance extends IExecutableBean<IAlliance>, ILocalLoggedInBean<IAlliance>, Comparable<IFormAlliance> {
 
-	int SERIALIZATION_ID = 5105;
+	int SERIALIZATION_ID = 2105;
 
 	/**
 	 * Returns the serialization id.

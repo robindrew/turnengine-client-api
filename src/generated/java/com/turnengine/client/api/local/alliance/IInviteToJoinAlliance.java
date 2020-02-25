@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IInviteToJoinAlliance extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IInviteToJoinAlliance> {
 
-	int SERIALIZATION_ID = 5108;
+	int SERIALIZATION_ID = 2108;
 
 	/**
 	 * Returns the serialization id.

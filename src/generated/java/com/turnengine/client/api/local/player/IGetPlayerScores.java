@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IGetPlayerScores extends IExecutableBean<List<ITurnScore>>, ILocalLoggedInBean<List<ITurnScore>>, Comparable<IGetPlayerScores> {
 
-	int SERIALIZATION_ID = 6026;
+	int SERIALIZATION_ID = 3126;
 
 	/**
 	 * Returns the serialization id.

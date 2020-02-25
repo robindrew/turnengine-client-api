@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IPrice extends IBean, Comparable<IPrice> {
 
-	int SERIALIZATION_ID = 6606;
+	int SERIALIZATION_ID = 3706;
 
 	/**
 	 * Returns the serialization id.

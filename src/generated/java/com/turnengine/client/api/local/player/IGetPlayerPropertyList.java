@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetPlayerPropertyList extends IExecutableBean<List<IPlayerProperty>>, ILocalLoggedInBean<List<IPlayerProperty>>, Comparable<IGetPlayerPropertyList> {
 
-	int SERIALIZATION_ID = 6024;
+	int SERIALIZATION_ID = 3124;
 
 	/**
 	 * Returns the serialization id.

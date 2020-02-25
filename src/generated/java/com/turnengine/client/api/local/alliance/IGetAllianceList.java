@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetAllianceList extends IExecutableBean<List<IAlliance>>, ILocalLoggedInBean<List<IAlliance>>, Comparable<IGetAllianceList> {
 
-	int SERIALIZATION_ID = 5117;
+	int SERIALIZATION_ID = 2117;
 
 	/**
 	 * Returns the serialization id.

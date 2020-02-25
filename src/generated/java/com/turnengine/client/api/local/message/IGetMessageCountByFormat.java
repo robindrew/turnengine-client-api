@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IGetMessageCountByFormat extends IExecutableBean<Integer>, ILocalLoggedInBean<Integer>, Comparable<IGetMessageCountByFormat> {
 
-	int SERIALIZATION_ID = 5807;
+	int SERIALIZATION_ID = 2907;
 
 	/**
 	 * Returns the serialization id.

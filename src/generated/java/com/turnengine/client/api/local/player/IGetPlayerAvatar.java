@@ -6,7 +6,7 @@ import com.turnengine.client.api.global.image.IImage;
 
 public interface IGetPlayerAvatar extends IExecutableBean<IImage>, ILocalLoggedInBean<IImage>, Comparable<IGetPlayerAvatar> {
 
-	int SERIALIZATION_ID = 6029;
+	int SERIALIZATION_ID = 3129;
 
 	/**
 	 * Returns the serialization id.

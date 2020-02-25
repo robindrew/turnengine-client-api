@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface ISetMobileMovementPlugin extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, ISetupBean<Boolean>, Comparable<ISetMobileMovementPlugin> {
 
-	int SERIALIZATION_ID = 5921;
+	int SERIALIZATION_ID = 3021;
 
 	/**
 	 * Returns the serialization id.

@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ISetupSetStorageItem extends IBean, Comparable<ISetupSetStorageItem> {
 
-	int SERIALIZATION_ID = 6311;
+	int SERIALIZATION_ID = 3411;
 
 	/**
 	 * Returns the serialization id.

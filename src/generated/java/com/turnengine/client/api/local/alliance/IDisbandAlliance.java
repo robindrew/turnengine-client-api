@@ -5,7 +5,7 @@ import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
 public interface IDisbandAlliance extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IDisbandAlliance> {
 
-	int SERIALIZATION_ID = 5106;
+	int SERIALIZATION_ID = 2106;
 
 	/**
 	 * Returns the serialization id.

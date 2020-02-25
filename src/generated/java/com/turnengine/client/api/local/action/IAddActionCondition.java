@@ -7,7 +7,7 @@ import com.turnengine.client.api.local.setup.ISetupBean;
 
 public interface IAddActionCondition extends IExecutableBean<IActionCondition>, ILocalLoggedInBean<IActionCondition>, ISetupBean<IActionCondition>, Comparable<IAddActionCondition> {
 
-	int SERIALIZATION_ID = 5003;
+	int SERIALIZATION_ID = 2003;
 
 	/**
 	 * Returns the serialization id.
