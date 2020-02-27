@@ -3,7 +3,9 @@ package com.turnengine.client.api.object;
 import java.util.Collection;
 import java.util.Map;
 
-public interface IIdObjectMap<V extends IIdObject> extends Map<Integer, V> {
+import com.robindrew.codegenerator.api.identity.IIdentity;
+
+public interface IIdObjectMap<V extends IIdentity> extends Map<Integer, V> {
 
 	V get(int id);
 

@@ -2,7 +2,9 @@ package com.turnengine.client.api.object;
 
 import java.util.Map.Entry;
 
-class MapEntry<V extends IIdObject> implements Entry<Integer, V> {
+import com.robindrew.codegenerator.api.identity.IIdentity;
+
+class MapEntry<V extends IIdentity> implements Entry<Integer, V> {
 
 	private V value;
 

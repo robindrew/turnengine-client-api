@@ -2,10 +2,10 @@ package com.turnengine.client.api.local.common.simple.link;
 
 import org.simpleframework.xml.Attribute;
 
+import com.robindrew.codegenerator.api.identity.IIdentity;
 import com.turnengine.client.api.local.common.simple.SimpleTyped;
-import com.turnengine.client.api.object.IIdObject;
 
-public class SimpleLink<T extends SimpleTyped> implements IIdObject {
+public class SimpleLink<T extends SimpleTyped> implements IIdentity {
 
 	public static <T extends SimpleTyped> T get(SimpleLink<T> link) {
 		if (link == null || !link.isLinked()) {

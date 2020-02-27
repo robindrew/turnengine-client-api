@@ -1,8 +1,8 @@
 package com.turnengine.client.api.local.common.simple.link;
 
-import com.turnengine.client.api.object.IIdObject;
+import com.robindrew.codegenerator.api.identity.IIdentity;
 
-public interface ISimpleTyped extends IIdObject {
+public interface ISimpleTyped extends IIdentity {
 
 	SimpleLinkType getType();
 

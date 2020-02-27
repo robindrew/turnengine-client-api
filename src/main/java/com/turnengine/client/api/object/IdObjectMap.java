@@ -5,10 +5,12 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import com.robindrew.codegenerator.api.identity.IIdentity;
+
 import gnu.trove.map.TIntObjectMap;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
-public class IdObjectMap<V extends IIdObject> implements IIdObjectMap<V> {
+public class IdObjectMap<V extends IIdentity> implements IIdObjectMap<V> {
 
 	private final TIntObjectMap<V> map = new TIntObjectHashMap<V>();
 
@@ -43,12 +45,12 @@ public class IdObjectMap<V extends IIdObject> implements IIdObjectMap<V> {
 
 	@Override
 	public boolean containsValue(Object value) {
-		if (!(value instanceof IIdObject)) {
+		if (!(value instanceof IIdentity)) {
 			return false;
 		}
 
 		// Much faster way to check contains
-		IIdObject object = (IIdObject) value;
+		IIdentity object = (IIdentity) value;
 		int id = object.getId();
 		V existing = get(id);
 		return existing != null && existing.equals(value);
