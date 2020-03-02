@@ -47,6 +47,11 @@ public class ActionDefinition implements IActionDefinition, IUnitIdContainer {
 	}
 
 	@Override
+	public boolean hasSource() {
+		return source != null;
+	}
+
+	@Override
 	public IActionTarget getTarget() {
 		return target;
 	}

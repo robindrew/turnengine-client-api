@@ -31,7 +31,9 @@ public enum AllianceErrorCode implements IErrorCode {
 	/** The ALLIANCE_AVATAR_NOT_EXISTS constant. */
 	ALLIANCE_AVATAR_NOT_EXISTS(2113),
 	/** The ALLIANCE_MEMBER_LEAVING constant. */
-	ALLIANCE_MEMBER_LEAVING(2114);
+	ALLIANCE_MEMBER_LEAVING(2114),
+	/** The ALLIANCES_EXIST constant. */
+	ALLIANCES_EXIST(2115);
 
 	/** The id field. */
 	private final int id;

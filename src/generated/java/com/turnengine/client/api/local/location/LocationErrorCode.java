@@ -23,7 +23,9 @@ public enum LocationErrorCode implements IErrorCode {
 	/** The LOCATION_NAME_EXISTS constant. */
 	LOCATION_NAME_EXISTS(2809),
 	/** The LOCATION_COORDINATES_INVALID constant. */
-	LOCATION_COORDINATES_INVALID(2810);
+	LOCATION_COORDINATES_INVALID(2810),
+	/** The LOCATIONS_EXIST constant. */
+	LOCATIONS_EXIST(2811);
 
 	/** The id field. */
 	private final int id;

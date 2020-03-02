@@ -86,7 +86,9 @@ public class ActionCache implements IActionCache {
 	public List<IActionTarget> getTargets() {
 		List<IActionTarget> list = new ArrayList<IActionTarget>();
 		for (IActionDefinition definition : idToDefinitionMap.values()) {
-			list.add(definition.getSource());
+			if (definition.hasSource()) {
+				list.add(definition.getSource());
+			}
 			if (definition.hasTarget()) {
 				list.add(definition.getTarget());
 			}

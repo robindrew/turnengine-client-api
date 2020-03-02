@@ -27,7 +27,9 @@ public enum MobileErrorCode implements IErrorCode {
 	/** The MOBILES_NOT_AT_SAME_LOCATION constant. */
 	MOBILES_NOT_AT_SAME_LOCATION(3011),
 	/** The MOBILE_WAITING constant. */
-	MOBILE_WAITING(3012);
+	MOBILE_WAITING(3012),
+	/** The MOBILES_EXIST constant. */
+	MOBILES_EXIST(3013);
 
 	/** The id field. */
 	private final int id;

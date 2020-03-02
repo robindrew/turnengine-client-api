@@ -12,6 +12,8 @@ public interface IActionDefinition {
 
 	IActionTarget getSource();
 
+	boolean hasSource();
+
 	IActionTarget getTarget();
 
 	boolean hasTarget();

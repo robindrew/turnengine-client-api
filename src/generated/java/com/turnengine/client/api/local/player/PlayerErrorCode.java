@@ -25,7 +25,9 @@ public enum PlayerErrorCode implements IErrorCode {
 	/** The PLAYER_NOT_SIGNED_UP constant. */
 	PLAYER_NOT_SIGNED_UP(3110),
 	/** The PLAYER_ALREADY_SIGNED_UP constant. */
-	PLAYER_ALREADY_SIGNED_UP(3111);
+	PLAYER_ALREADY_SIGNED_UP(3111),
+	/** The PLAYERS_EXIST constant. */
+	PLAYERS_EXIST(3112);
 
 	/** The id field. */
 	private final int id;

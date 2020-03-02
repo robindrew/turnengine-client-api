@@ -60,12 +60,11 @@ public class NamedIdentityCache<N extends INamedIdentity> implements INamedIdent
 
 	@Override
 	public N getById(int id) {
-		for (N identity : idToIdentityMap.values()) {
-			if (identity.getId() == id) {
-				return identity;
-			}
+		N identity = idToIdentityMap.get(id);
+		if (identity == null) {
+			throw new IllegalArgumentException("element does not exist with id=" + id + " in " + idToIdentityMap);
 		}
-		throw new IllegalArgumentException("element does not exist with id=" + id + " in " + idToIdentityMap);
+		return identity;
 	}
 
 	@Override
