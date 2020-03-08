@@ -50,7 +50,7 @@ public class StorageCalculator extends Calculator implements IStorageCalculator 
 	@Override
 	public long getAmountCanAdd(IUnitList list, IUnit unit, StorageType type) {
 		if (isParent(unit)) {
-			int existing = list.getParentAmount(unit.getId());
+			long existing = list.getParentAmount(unit.getId());
 			return Integer.MAX_VALUE - existing;
 		}
 		if (list.isEmpty()) {
@@ -116,8 +116,8 @@ public class StorageCalculator extends Calculator implements IStorageCalculator 
 		}
 	}
 
-	private int getAmountCanRemoveByParent(IUnitList list, int unitId) {
-		int amount = 0;
+	private long getAmountCanRemoveByParent(IUnitList list, int unitId) {
+		long amount = 0;
 		for (IParentUnit parent : list) {
 			// Can only remove a parent WITH NO CHILDREN
 			if (parent.getUnitId() == unitId && !parent.hasChildren()) {
@@ -233,11 +233,11 @@ public class StorageCalculator extends Calculator implements IStorageCalculator 
 	}
 
 	private void addParentAmount(IUnitList list, IUnit unit, long amount) {
-		int existing = list.getParentAmount(unit.getId());
+		long existing = list.getParentAmount(unit.getId());
 		if (amount + existing > Integer.MAX_VALUE) {
 			throw new IllegalArgumentException("amount=" + amount);
 		}
-		list.addParentAmount(unit.getId(), (int) amount);
+		list.addParentAmount(unit.getId(), amount);
 	}
 
 	private void addChildAmount(IUnitList list, IUnit unit, long amount, StorageType type) {

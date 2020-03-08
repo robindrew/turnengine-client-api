@@ -38,9 +38,9 @@ public interface IUnitList extends Iterable<IParentUnit> {
 
 	void removeParentAtIndex(int index);
 
-	int getParentAmount(int unitId);
+	long getParentAmount(int unitId);
 
-	int getParentAmount(IUnit unit);
+	long getParentAmount(IUnit unit);
 
 	long getChildAmount(int unitId);
 

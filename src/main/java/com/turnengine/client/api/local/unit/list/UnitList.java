@@ -117,8 +117,8 @@ public class UnitList implements IUnitList {
 	}
 
 	@Override
-	public int getParentAmount(int unitId) {
-		int amount = 0;
+	public long getParentAmount(int unitId) {
+		long amount = 0;
 		for (IParentUnit parent : parentList) {
 			if (parent.getUnitId() == unitId) {
 				amount += parent.getAmount();
@@ -181,7 +181,7 @@ public class UnitList implements IUnitList {
 	}
 
 	@Override
-	public int getParentAmount(IUnit unit) {
+	public long getParentAmount(IUnit unit) {
 		return getParentAmount(unit.getId());
 	}
 
