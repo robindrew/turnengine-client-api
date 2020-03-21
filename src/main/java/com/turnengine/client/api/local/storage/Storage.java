@@ -108,4 +108,9 @@ public class Storage implements IStorage {
 		return ImmutableList.copyOf(groupToItemSetMap.values());
 	}
 
+	@Override
+	public String toString() {
+		return "Storage[" + unitId + "," + getDefinitions() + "]";
+	}
+
 }
