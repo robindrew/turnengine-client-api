@@ -22,6 +22,7 @@ import com.turnengine.client.api.local.alliance.LocalAllianceExecutorSet;
 import com.turnengine.client.api.local.allianceforum.LocalAllianceForumExecutorSet;
 import com.turnengine.client.api.local.error.LocalErrorExecutorSet;
 import com.turnengine.client.api.local.faction.LocalFactionExecutorSet;
+import com.turnengine.client.api.local.game.LocalGameExecutorSet;
 import com.turnengine.client.api.local.group.LocalGroupExecutorSet;
 import com.turnengine.client.api.local.location.LocalLocationExecutorSet;
 import com.turnengine.client.api.local.message.LocalMessageExecutorSet;
@@ -58,6 +59,7 @@ public class BeanExecutorSetFactory implements IBeanExecutorSetFactory {
 		register(LocalConcept.ALLIANCE_FORUM, new LocalAllianceForumExecutorSet(localLocator));
 		register(LocalConcept.ERROR, new LocalErrorExecutorSet(localLocator));
 		register(LocalConcept.FACTION, new LocalFactionExecutorSet(localLocator));
+		register(LocalConcept.GAME, new LocalGameExecutorSet(localLocator));
 		register(LocalConcept.GROUP, new LocalGroupExecutorSet(localLocator));
 		register(LocalConcept.LOCATION, new LocalLocationExecutorSet(localLocator));
 		register(LocalConcept.MESSAGE, new LocalMessageExecutorSet(localLocator));
