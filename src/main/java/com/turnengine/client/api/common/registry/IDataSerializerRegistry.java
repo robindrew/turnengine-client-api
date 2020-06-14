@@ -1,6 +1,6 @@
 package com.turnengine.client.api.common.registry;
 
-import com.robindrew.codegenerator.api.serializer.data.IDataSerializer;
+import com.robindrew.common.io.data.IDataSerializer;
 
 public interface IDataSerializerRegistry {
 

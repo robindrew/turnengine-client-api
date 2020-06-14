@@ -1,11 +1,11 @@
 package com.turnengine.client.api.global.image;
 
-import com.robindrew.codegenerator.api.serializer.data.IDataReader;
-import com.robindrew.codegenerator.api.serializer.data.IDataWriter;
-import com.robindrew.codegenerator.api.serializer.data.serializer.ObjectSerializer;
-import com.robindrew.codegenerator.api.serializer.data.serializer.array.ByteArraySerializer;
-import com.robindrew.codegenerator.api.serializer.data.serializer.lang.EnumSerializer;
 import com.robindrew.common.image.ImageFormat;
+import com.robindrew.common.io.data.IDataReader;
+import com.robindrew.common.io.data.IDataWriter;
+import com.robindrew.common.io.data.serializer.ObjectSerializer;
+import com.robindrew.common.io.data.serializer.array.ByteArraySerializer;
+import com.robindrew.common.io.data.serializer.lang.EnumSerializer;
 import java.io.IOException;
 
 public class ImageDataSerializer extends ObjectSerializer<IImage> {

@@ -1,8 +1,8 @@
 package com.turnengine.client.api.local.unit;
 
-import com.robindrew.codegenerator.api.serializer.data.IDataReader;
-import com.robindrew.codegenerator.api.serializer.data.IDataWriter;
-import com.robindrew.codegenerator.api.serializer.data.serializer.ObjectSerializer;
+import com.robindrew.common.io.data.IDataReader;
+import com.robindrew.common.io.data.IDataWriter;
+import com.robindrew.common.io.data.serializer.ObjectSerializer;
 import java.io.IOException;
 
 public class GetUnitsReturnTypeDataSerializer extends ObjectSerializer<IGetUnits> {

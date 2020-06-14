@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.robindrew.codegenerator.api.executable.bean.IExecutableBean;
-import com.robindrew.codegenerator.api.serializer.data.IDataReader;
-import com.robindrew.codegenerator.api.serializer.data.IDataSerializer;
-import com.robindrew.codegenerator.api.serializer.data.IDataWriter;
+import com.robindrew.common.io.data.IDataReader;
+import com.robindrew.common.io.data.IDataSerializer;
+import com.robindrew.common.io.data.IDataWriter;
 import com.robindrew.common.util.Check;
 import com.robindrew.common.util.Java;
 

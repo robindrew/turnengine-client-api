@@ -1,10 +1,10 @@
 package com.turnengine.client.api.local.message;
 
-import com.robindrew.codegenerator.api.serializer.data.IDataReader;
-import com.robindrew.codegenerator.api.serializer.data.IDataWriter;
-import com.robindrew.codegenerator.api.serializer.data.serializer.ObjectSerializer;
-import com.robindrew.codegenerator.api.serializer.data.serializer.lang.EnumSerializer;
-import com.robindrew.codegenerator.api.serializer.data.serializer.lang.StringSerializer;
+import com.robindrew.common.io.data.IDataReader;
+import com.robindrew.common.io.data.IDataWriter;
+import com.robindrew.common.io.data.serializer.ObjectSerializer;
+import com.robindrew.common.io.data.serializer.lang.EnumSerializer;
+import com.robindrew.common.io.data.serializer.lang.StringSerializer;
 import com.turnengine.client.api.local.player.IPlayerInfo;
 import com.turnengine.client.api.local.player.PlayerInfoDataSerializer;
 import java.io.IOException;

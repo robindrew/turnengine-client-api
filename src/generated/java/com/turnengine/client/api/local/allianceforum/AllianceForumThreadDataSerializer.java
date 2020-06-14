@@ -1,10 +1,10 @@
 package com.turnengine.client.api.local.allianceforum;
 
-import com.robindrew.codegenerator.api.serializer.data.IDataReader;
-import com.robindrew.codegenerator.api.serializer.data.IDataWriter;
-import com.robindrew.codegenerator.api.serializer.data.serializer.ObjectSerializer;
-import com.robindrew.codegenerator.api.serializer.data.serializer.collection.ListSerializer;
-import com.robindrew.codegenerator.api.serializer.data.serializer.lang.StringSerializer;
+import com.robindrew.common.io.data.IDataReader;
+import com.robindrew.common.io.data.IDataWriter;
+import com.robindrew.common.io.data.serializer.ObjectSerializer;
+import com.robindrew.common.io.data.serializer.collection.ListSerializer;
+import com.robindrew.common.io.data.serializer.lang.StringSerializer;
 import java.io.IOException;
 import java.util.List;
 

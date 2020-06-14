@@ -3,9 +3,9 @@ package com.turnengine.client.api.common.registry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-import com.robindrew.codegenerator.api.serializer.data.IDataSerializer;
 import com.robindrew.codegenerator.api.serializer.json.IJsonSerializer;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlSerializer;
+import com.robindrew.common.io.data.IDataSerializer;
 import com.robindrew.common.lang.clazz.Classes;
 
 @SuppressWarnings("unchecked")

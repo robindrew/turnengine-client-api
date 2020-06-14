@@ -1,11 +1,11 @@
 package com.turnengine.client.api.local.player;
 
-import com.robindrew.codegenerator.api.serializer.data.IDataReader;
-import com.robindrew.codegenerator.api.serializer.data.IDataWriter;
-import com.robindrew.codegenerator.api.serializer.data.serializer.ObjectSerializer;
-import com.robindrew.codegenerator.api.serializer.data.serializer.collection.ListSerializer;
-import com.robindrew.codegenerator.api.serializer.data.serializer.lang.EnumSerializer;
-import com.robindrew.codegenerator.api.serializer.data.serializer.lang.StringSerializer;
+import com.robindrew.common.io.data.IDataReader;
+import com.robindrew.common.io.data.IDataWriter;
+import com.robindrew.common.io.data.serializer.ObjectSerializer;
+import com.robindrew.common.io.data.serializer.collection.ListSerializer;
+import com.robindrew.common.io.data.serializer.lang.EnumSerializer;
+import com.robindrew.common.io.data.serializer.lang.StringSerializer;
 import com.turnengine.client.api.local.alliance.AllianceMemberType;
 import com.turnengine.client.api.local.score.GroupScoreDataSerializer;
 import com.turnengine.client.api.local.score.IGroupScore;
