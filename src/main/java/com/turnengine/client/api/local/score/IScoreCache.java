@@ -9,6 +9,8 @@ import com.turnengine.client.api.local.unit.IUnit;
 
 public interface IScoreCache {
 
+	boolean isEmpty();
+	
 	void addScore(IUnitScore score);
 
 	void addScores(Collection<IUnitScore> scores);

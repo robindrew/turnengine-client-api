@@ -13,9 +13,10 @@ public class UnitCountListSerializer implements IUnitCountListSerializer {
 	@Override
 	public byte[] serialize(List<IUnitCount> list) {
 		try {
-			ByteArrayDataWriter writer = new ByteArrayDataWriter();
-			writer.writeObjectCollection(list, false, false, new UnitCountDataSerializer());
-			return writer.toByteArray();
+			try (ByteArrayDataWriter writer = new ByteArrayDataWriter()) {
+				writer.writeObjectCollection(list, false, false, new UnitCountDataSerializer());
+				return writer.toByteArray();
+			}
 		} catch (IOException e) {
 			throw Java.propagate(e);
 		}

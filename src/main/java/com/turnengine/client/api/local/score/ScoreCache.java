@@ -14,7 +14,7 @@ import com.turnengine.client.api.local.unit.IUnit;
 
 public class ScoreCache implements IScoreCache {
 
-	/** For efficiency we use the lightling fast (and small) index maps. */
+	/** For efficiency we use the lightning fast (and small) index maps. */
 	private final Set<Integer> groupIdSet = new CopyOnWriteArraySet<Integer>();
 	private final IIndexMap<IIndexMap<IUnitScore>> groupToUnitToScoreMap = new ArrayIndexMap<IIndexMap<IUnitScore>>();
 
@@ -82,6 +82,11 @@ public class ScoreCache implements IScoreCache {
 	@Override
 	public Set<Integer> getScoreGroups() {
 		return new HashSet<Integer>(groupIdSet);
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return groupIdSet.isEmpty();
 	}
 
 }
