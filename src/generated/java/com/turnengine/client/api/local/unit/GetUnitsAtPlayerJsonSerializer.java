@@ -34,7 +34,6 @@ public class GetUnitsAtPlayerJsonSerializer implements IJsonSerializer<IGetUnits
 		writer.openObject();
 		writer.writeLong(object.getLoginId());
 		writer.writeInt(object.getInstanceId());
-		writer.writeInt(object.getGroupId());
 		writer.closeObject();
 	}
 }

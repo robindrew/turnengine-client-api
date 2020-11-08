@@ -6,15 +6,15 @@ import com.robindrew.codegenerator.api.serializer.json.IJsonWriter;
 import com.robindrew.codegenerator.api.serializer.json.serializer.collection.ListSerializer;
 import java.util.List;
 
-public class GetAllUnitsAtPlayerReturnTypeJsonSerializer implements IJsonSerializer<List<IUnitCount>> {
+public class GetUnitsAtPlayerByGroupIdReturnTypeJsonSerializer implements IJsonSerializer<List<IUnitCount>> {
 
 	private String name;
 
-	public GetAllUnitsAtPlayerReturnTypeJsonSerializer() {
-		this("GetAllUnitsAtPlayerReturnType");
+	public GetUnitsAtPlayerByGroupIdReturnTypeJsonSerializer() {
+		this("GetUnitsAtPlayerByGroupIdReturnType");
 	}
 
-	public GetAllUnitsAtPlayerReturnTypeJsonSerializer(String name) {
+	public GetUnitsAtPlayerByGroupIdReturnTypeJsonSerializer(String name) {
 		this.name = name;
 	}
 

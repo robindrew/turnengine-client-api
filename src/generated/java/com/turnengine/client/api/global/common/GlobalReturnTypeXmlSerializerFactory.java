@@ -582,14 +582,14 @@ import com.turnengine.client.api.local.turn.SetTurnsEnabled;
 import com.turnengine.client.api.local.turn.SetTurnsEnabledReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.unit.AddUnit;
 import com.turnengine.client.api.local.unit.AddUnitReturnTypeXmlSerializer;
-import com.turnengine.client.api.local.unit.GetAllUnitsAtPlayer;
-import com.turnengine.client.api.local.unit.GetAllUnitsAtPlayerReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnitById;
 import com.turnengine.client.api.local.unit.GetUnitByIdReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnitByName;
 import com.turnengine.client.api.local.unit.GetUnitByNameReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnits;
 import com.turnengine.client.api.local.unit.GetUnitsAtPlayer;
+import com.turnengine.client.api.local.unit.GetUnitsAtPlayerByGroupId;
+import com.turnengine.client.api.local.unit.GetUnitsAtPlayerByGroupIdReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnitsAtPlayerReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnitsByFactionId;
 import com.turnengine.client.api.local.unit.GetUnitsByFactionIdReturnTypeXmlSerializer;
@@ -1360,8 +1360,8 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put(GetUnitsByFactionName.SERIALIZATION_ID, GetUnitsByFactionNameReturnTypeXmlSerializer.class);
 		objectMap.put(GetUnitsByGroupId.SERIALIZATION_ID, GetUnitsByGroupIdReturnTypeXmlSerializer.class);
 		objectMap.put(GetUnitsByGroupName.SERIALIZATION_ID, GetUnitsByGroupNameReturnTypeXmlSerializer.class);
-		objectMap.put(GetAllUnitsAtPlayer.SERIALIZATION_ID, GetAllUnitsAtPlayerReturnTypeXmlSerializer.class);
 		objectMap.put(GetUnitsAtPlayer.SERIALIZATION_ID, GetUnitsAtPlayerReturnTypeXmlSerializer.class);
+		objectMap.put(GetUnitsAtPlayerByGroupId.SERIALIZATION_ID, GetUnitsAtPlayerByGroupIdReturnTypeXmlSerializer.class);
 
 		// Mappings by name
 		objectMap.put("AddUnit", AddUnitReturnTypeXmlSerializer.class);
@@ -1372,8 +1372,8 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("GetUnitsByFactionName", GetUnitsByFactionNameReturnTypeXmlSerializer.class);
 		objectMap.put("GetUnitsByGroupId", GetUnitsByGroupIdReturnTypeXmlSerializer.class);
 		objectMap.put("GetUnitsByGroupName", GetUnitsByGroupNameReturnTypeXmlSerializer.class);
-		objectMap.put("GetAllUnitsAtPlayer", GetAllUnitsAtPlayerReturnTypeXmlSerializer.class);
 		objectMap.put("GetUnitsAtPlayer", GetUnitsAtPlayerReturnTypeXmlSerializer.class);
+		objectMap.put("GetUnitsAtPlayerByGroupId", GetUnitsAtPlayerByGroupIdReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(AddUpkeep.SERIALIZATION_ID, AddUpkeepReturnTypeXmlSerializer.class);

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGetUnitsAtPlayer extends IExecutableBean<List<IUnitCount>>, ILocalLoggedInBean<List<IUnitCount>>, Comparable<IGetUnitsAtPlayer> {
 
-	int SERIALIZATION_ID = 3910;
+	int SERIALIZATION_ID = 3909;
 
 	/**
 	 * Returns the serialization id.
@@ -27,12 +27,6 @@ public interface IGetUnitsAtPlayer extends IExecutableBean<List<IUnitCount>>, IL
 	int getInstanceId();
 
 	/**
-	 * Getter for the groupId field.
-	 * @return the value of the groupId field.
-	 */
-	int getGroupId();
-
-	/**
 	 * Setter for the loginId field.
 	 * @param loginId the loginId value to set.
 	 */
@@ -43,10 +37,4 @@ public interface IGetUnitsAtPlayer extends IExecutableBean<List<IUnitCount>>, IL
 	 * @param instanceId the instanceId value to set.
 	 */
 	void setInstanceId(int instanceId);
-
-	/**
-	 * Setter for the groupId field.
-	 * @param groupId the groupId value to set.
-	 */
-	void setGroupId(int groupId);
 }

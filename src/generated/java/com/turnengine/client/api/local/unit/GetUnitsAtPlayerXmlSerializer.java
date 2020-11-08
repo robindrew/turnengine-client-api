@@ -29,11 +29,10 @@ public class GetUnitsAtPlayerXmlSerializer implements IXmlSerializer<IGetUnitsAt
 		reader.startElement(getName());
 		long param1 = reader.readLong("loginId");
 		int param2 = reader.readInt("instanceId");
-		int param3 = reader.readInt("groupId");
 		reader.endElement(getName());
 
 		// Create the bean
-		return new GetUnitsAtPlayer(param1, param2, param3);
+		return new GetUnitsAtPlayer(param1, param2);
 	}
 
 	@Override
@@ -41,7 +40,6 @@ public class GetUnitsAtPlayerXmlSerializer implements IXmlSerializer<IGetUnitsAt
 		writer.startElement(getName());
 		writer.writeLong("loginId", object.getLoginId());
 		writer.writeInt("instanceId", object.getInstanceId());
-		writer.writeInt("groupId", object.getGroupId());
 		writer.endElement(getName());
 	}
 }

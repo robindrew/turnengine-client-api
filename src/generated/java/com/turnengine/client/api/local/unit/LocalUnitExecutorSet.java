@@ -71,14 +71,14 @@ public class LocalUnitExecutorSet implements ILocalUnitExecutorSet {
 	}
 
 	@Override
-	public List<IUnitCount> getAllUnitsAtPlayer(long loginId, int instanceId) {
-		GetAllUnitsAtPlayer bean = new GetAllUnitsAtPlayer(loginId, instanceId);
+	public List<IUnitCount> getUnitsAtPlayer(long loginId, int instanceId) {
+		GetUnitsAtPlayer bean = new GetUnitsAtPlayer(loginId, instanceId);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
 
 	@Override
-	public List<IUnitCount> getUnitsAtPlayer(long loginId, int instanceId, int groupId) {
-		GetUnitsAtPlayer bean = new GetUnitsAtPlayer(loginId, instanceId, groupId);
+	public List<IUnitCount> getUnitsAtPlayerByGroupId(long loginId, int instanceId, int groupId) {
+		GetUnitsAtPlayerByGroupId bean = new GetUnitsAtPlayerByGroupId(loginId, instanceId, groupId);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
 }

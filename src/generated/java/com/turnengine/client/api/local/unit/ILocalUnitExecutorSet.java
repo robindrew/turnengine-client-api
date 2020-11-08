@@ -22,7 +22,7 @@ public interface ILocalUnitExecutorSet extends IBeanExecutorSet, ILocalBeanExecu
 
 	List<IUnit> getUnitsByGroupName(long loginId, int instanceId, String name);
 
-	List<IUnitCount> getAllUnitsAtPlayer(long loginId, int instanceId);
+	List<IUnitCount> getUnitsAtPlayer(long loginId, int instanceId);
 
-	List<IUnitCount> getUnitsAtPlayer(long loginId, int instanceId, int groupId);
+	List<IUnitCount> getUnitsAtPlayerByGroupId(long loginId, int instanceId, int groupId);
 }

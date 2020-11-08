@@ -6,15 +6,15 @@ import com.robindrew.codegenerator.api.serializer.xml.IXmlWriter;
 import com.robindrew.codegenerator.api.serializer.xml.serializer.collection.ListSerializer;
 import java.util.List;
 
-public class GetAllUnitsAtPlayerReturnTypeXmlSerializer implements IXmlSerializer<List<IUnitCount>> {
+public class GetUnitsAtPlayerByGroupIdReturnTypeXmlSerializer implements IXmlSerializer<List<IUnitCount>> {
 
 	private String name;
 
-	public GetAllUnitsAtPlayerReturnTypeXmlSerializer() {
-		this("GetAllUnitsAtPlayerReturnType");
+	public GetUnitsAtPlayerByGroupIdReturnTypeXmlSerializer() {
+		this("GetUnitsAtPlayerByGroupIdReturnType");
 	}
 
-	public GetAllUnitsAtPlayerReturnTypeXmlSerializer(String name) {
+	public GetUnitsAtPlayerByGroupIdReturnTypeXmlSerializer(String name) {
 		this.name = name;
 	}
 

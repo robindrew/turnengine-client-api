@@ -19,14 +19,12 @@ public class GetUnitsAtPlayerReturnTypeDataSerializer extends ObjectSerializer<I
 	public IGetUnitsAtPlayer readValue(IDataReader reader) throws IOException {
 		long param1 = reader.readLong();
 		int param2 = reader.readInt();
-		int param3 = reader.readInt();
-		return new GetUnitsAtPlayer(param1, param2, param3);
+		return new GetUnitsAtPlayer(param1, param2);
 	}
 
 	@Override
 	public void writeValue(IDataWriter writer, IGetUnitsAtPlayer object) throws IOException {
 		writer.writeLong(object.getLoginId());
 		writer.writeInt(object.getInstanceId());
-		writer.writeInt(object.getGroupId());
 	}
 }

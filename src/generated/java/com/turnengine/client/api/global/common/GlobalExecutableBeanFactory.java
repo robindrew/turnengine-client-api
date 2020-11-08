@@ -292,11 +292,11 @@ import com.turnengine.client.api.local.turn.SetTurnIntervalTime;
 import com.turnengine.client.api.local.turn.SetTurnStartTime;
 import com.turnengine.client.api.local.turn.SetTurnsEnabled;
 import com.turnengine.client.api.local.unit.AddUnit;
-import com.turnengine.client.api.local.unit.GetAllUnitsAtPlayer;
 import com.turnengine.client.api.local.unit.GetUnitById;
 import com.turnengine.client.api.local.unit.GetUnitByName;
 import com.turnengine.client.api.local.unit.GetUnits;
 import com.turnengine.client.api.local.unit.GetUnitsAtPlayer;
+import com.turnengine.client.api.local.unit.GetUnitsAtPlayerByGroupId;
 import com.turnengine.client.api.local.unit.GetUnitsByFactionId;
 import com.turnengine.client.api.local.unit.GetUnitsByFactionName;
 import com.turnengine.client.api.local.unit.GetUnitsByGroupId;
@@ -1056,8 +1056,8 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put(GetUnitsByFactionName.SERIALIZATION_ID, GetUnitsByFactionName.class);
 		objectMap.put(GetUnitsByGroupId.SERIALIZATION_ID, GetUnitsByGroupId.class);
 		objectMap.put(GetUnitsByGroupName.SERIALIZATION_ID, GetUnitsByGroupName.class);
-		objectMap.put(GetAllUnitsAtPlayer.SERIALIZATION_ID, GetAllUnitsAtPlayer.class);
 		objectMap.put(GetUnitsAtPlayer.SERIALIZATION_ID, GetUnitsAtPlayer.class);
+		objectMap.put(GetUnitsAtPlayerByGroupId.SERIALIZATION_ID, GetUnitsAtPlayerByGroupId.class);
 
 		// Mappings by name
 		objectMap.put("AddUnit", AddUnit.class);
@@ -1068,8 +1068,8 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("GetUnitsByFactionName", GetUnitsByFactionName.class);
 		objectMap.put("GetUnitsByGroupId", GetUnitsByGroupId.class);
 		objectMap.put("GetUnitsByGroupName", GetUnitsByGroupName.class);
-		objectMap.put("GetAllUnitsAtPlayer", GetAllUnitsAtPlayer.class);
 		objectMap.put("GetUnitsAtPlayer", GetUnitsAtPlayer.class);
+		objectMap.put("GetUnitsAtPlayerByGroupId", GetUnitsAtPlayerByGroupId.class);
 
 		// Mappings by id
 		objectMap.put(AddUpkeep.SERIALIZATION_ID, AddUpkeep.class);

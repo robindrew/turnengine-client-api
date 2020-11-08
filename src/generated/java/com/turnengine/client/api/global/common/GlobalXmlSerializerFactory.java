@@ -758,14 +758,14 @@ import com.turnengine.client.api.local.turn.TurnSummaryXmlSerializer;
 import com.turnengine.client.api.local.turn.TurnXmlSerializer;
 import com.turnengine.client.api.local.unit.AddUnit;
 import com.turnengine.client.api.local.unit.AddUnitXmlSerializer;
-import com.turnengine.client.api.local.unit.GetAllUnitsAtPlayer;
-import com.turnengine.client.api.local.unit.GetAllUnitsAtPlayerXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnitById;
 import com.turnengine.client.api.local.unit.GetUnitByIdXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnitByName;
 import com.turnengine.client.api.local.unit.GetUnitByNameXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnits;
 import com.turnengine.client.api.local.unit.GetUnitsAtPlayer;
+import com.turnengine.client.api.local.unit.GetUnitsAtPlayerByGroupId;
+import com.turnengine.client.api.local.unit.GetUnitsAtPlayerByGroupIdXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnitsAtPlayerXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnitsByFactionId;
 import com.turnengine.client.api.local.unit.GetUnitsByFactionIdXmlSerializer;
@@ -1752,8 +1752,8 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put(GetUnitsByFactionName.SERIALIZATION_ID, GetUnitsByFactionNameXmlSerializer.class);
 		objectMap.put(GetUnitsByGroupId.SERIALIZATION_ID, GetUnitsByGroupIdXmlSerializer.class);
 		objectMap.put(GetUnitsByGroupName.SERIALIZATION_ID, GetUnitsByGroupNameXmlSerializer.class);
-		objectMap.put(GetAllUnitsAtPlayer.SERIALIZATION_ID, GetAllUnitsAtPlayerXmlSerializer.class);
 		objectMap.put(GetUnitsAtPlayer.SERIALIZATION_ID, GetUnitsAtPlayerXmlSerializer.class);
+		objectMap.put(GetUnitsAtPlayerByGroupId.SERIALIZATION_ID, GetUnitsAtPlayerByGroupIdXmlSerializer.class);
 
 		// Mappings by name
 		objectMap.put("Unit", UnitXmlSerializer.class);
@@ -1768,8 +1768,8 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put("GetUnitsByFactionName", GetUnitsByFactionNameXmlSerializer.class);
 		objectMap.put("GetUnitsByGroupId", GetUnitsByGroupIdXmlSerializer.class);
 		objectMap.put("GetUnitsByGroupName", GetUnitsByGroupNameXmlSerializer.class);
-		objectMap.put("GetAllUnitsAtPlayer", GetAllUnitsAtPlayerXmlSerializer.class);
 		objectMap.put("GetUnitsAtPlayer", GetUnitsAtPlayerXmlSerializer.class);
+		objectMap.put("GetUnitsAtPlayerByGroupId", GetUnitsAtPlayerByGroupIdXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(Upkeep.SERIALIZATION_ID, UpkeepXmlSerializer.class);

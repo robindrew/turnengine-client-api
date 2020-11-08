@@ -4,15 +4,15 @@ import com.robindrew.codegenerator.api.serializer.json.IJsonReader;
 import com.robindrew.codegenerator.api.serializer.json.IJsonSerializer;
 import com.robindrew.codegenerator.api.serializer.json.IJsonWriter;
 
-public class GetAllUnitsAtPlayerJsonSerializer implements IJsonSerializer<IGetAllUnitsAtPlayer> {
+public class GetUnitsAtPlayerByGroupIdJsonSerializer implements IJsonSerializer<IGetUnitsAtPlayerByGroupId> {
 
 	private String name;
 
-	public GetAllUnitsAtPlayerJsonSerializer() {
-		this("GetAllUnitsAtPlayer");
+	public GetUnitsAtPlayerByGroupIdJsonSerializer() {
+		this("GetUnitsAtPlayerByGroupId");
 	}
 
-	public GetAllUnitsAtPlayerJsonSerializer(String name) {
+	public GetUnitsAtPlayerByGroupIdJsonSerializer(String name) {
 		this.name = name;
 	}
 
@@ -25,15 +25,16 @@ public class GetAllUnitsAtPlayerJsonSerializer implements IJsonSerializer<IGetAl
 	}
 
 	@Override
-	public IGetAllUnitsAtPlayer readObject(IJsonReader reader) {
+	public IGetUnitsAtPlayerByGroupId readObject(IJsonReader reader) {
 		throw new UnsupportedOperationException("readObject");
 	}
 
 	@Override
-	public void writeObject(IJsonWriter writer, IGetAllUnitsAtPlayer object) {
+	public void writeObject(IJsonWriter writer, IGetUnitsAtPlayerByGroupId object) {
 		writer.openObject();
 		writer.writeLong(object.getLoginId());
 		writer.writeInt(object.getInstanceId());
+		writer.writeInt(object.getGroupId());
 		writer.closeObject();
 	}
 }
