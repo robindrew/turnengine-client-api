@@ -108,8 +108,8 @@ public class SetSetupBeanList implements ISetSetupBeanList {
 		if (xml.length() < 5) {
 			throw new IllegalArgumentException("xml too short, minimum of 5 characters, value: '" + xml + "'");
 		}
-		if (xml.length() > 100000) {
-			throw new IllegalArgumentException("xml too long, maximum of 100000 characters, value: '" + xml + "'");
+		if (xml.length() > 10000000) {
+			throw new IllegalArgumentException("xml too long, maximum of 10000000 characters, value: '" + xml + "'");
 		}
 		this.xml = xml;
 	}
