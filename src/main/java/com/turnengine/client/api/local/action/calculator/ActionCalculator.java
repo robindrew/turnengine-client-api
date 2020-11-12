@@ -128,7 +128,10 @@ public class ActionCalculator extends Calculator implements IActionCalculator {
 		if (plugin != null) {
 			return plugin.startAction(action);
 		}
-		return new ActionStatus(amount, null, null);
+
+		ActionStatus status = new ActionStatus();
+		status.setAmount(amount);
+		return status;
 	}
 
 	@Override
