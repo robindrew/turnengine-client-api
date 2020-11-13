@@ -18,4 +18,9 @@ public interface IUnitListAdaptor {
 	 */
 	List<IUnitCount> adapt(IUnitList list);
 
+	/**
+	 * Adapts units from the unit list to a count list.
+	 */
+	List<IUnitCount> adapt(IUnitList list, UnitType type);
+
 }

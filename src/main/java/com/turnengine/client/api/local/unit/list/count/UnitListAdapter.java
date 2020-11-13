@@ -6,6 +6,7 @@ import java.util.List;
 import com.turnengine.client.api.local.unit.IUnit;
 import com.turnengine.client.api.local.unit.IUnitCache;
 import com.turnengine.client.api.local.unit.IUnitCount;
+import com.turnengine.client.api.local.unit.IUnitIdContainer;
 import com.turnengine.client.api.local.unit.UnitCount;
 import com.turnengine.client.api.local.unit.UnitNode;
 import com.turnengine.client.api.local.unit.UnitType;
@@ -71,8 +72,14 @@ public class UnitListAdapter implements IUnitListAdaptor {
 
 	@Override
 	public List<IUnitCount> adapt(IUnitList list) {
+		return adapt(list, null);
+	}
+
+	@Override
+	public List<IUnitCount> adapt(IUnitList list, UnitType type) {
 		List<IUnitCount> countList = new ArrayList<IUnitCount>();
 		for (IParentUnit parent : list.getParents()) {
+			checkType(parent, type);
 			if (parent.getAmount() == 0) {
 				continue;
 			}
@@ -82,11 +89,21 @@ public class UnitListAdapter implements IUnitListAdaptor {
 			// Single parent
 			if (parent.hasChildren()) {
 				for (IChildUnit child : parent.getChildren()) {
+					checkType(child, type);
 					countList.add(new UnitCount(child.getUnitId(), child.getAmount()));
 				}
 			}
 		}
 
 		return countList;
+	}
+
+	private void checkType(IUnitIdContainer unitId, UnitType type) {
+		if (type != null) {
+			IUnit unit = unitCache.getById(unitId.getUnitId());
+			if (!unit.getType().equals(type)) {
+				throw new IllegalArgumentException("Expected: " + type + ", for unit " + unit);
+			}
+		}
 	}
 }
