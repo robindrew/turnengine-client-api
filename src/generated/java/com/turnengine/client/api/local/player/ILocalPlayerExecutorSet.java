@@ -7,6 +7,7 @@ import com.turnengine.client.api.global.image.IImage;
 import com.turnengine.client.api.global.user.IUserAdminInfo;
 import com.turnengine.client.api.local.score.IGroupScore;
 import com.turnengine.client.api.local.score.ITurnScore;
+import com.turnengine.client.api.local.unit.IUnitCount;
 import java.util.List;
 
 public interface ILocalPlayerExecutorSet extends IBeanExecutorSet, ILocalBeanExecutorSet {
@@ -68,4 +69,8 @@ public interface ILocalPlayerExecutorSet extends IBeanExecutorSet, ILocalBeanExe
 	Boolean setPlayerAvatar(long loginId, int instanceId, byte[] image);
 
 	IImage getPlayerAvatar(long loginId, int instanceId, int playerId, int width, int height, boolean fill);
+
+	List<IUnitCount> getUnitsAtPlayer(long loginId, int instanceId);
+
+	List<IUnitCount> getUnitsAtPlayerByGroupId(long loginId, int instanceId, int groupId);
 }

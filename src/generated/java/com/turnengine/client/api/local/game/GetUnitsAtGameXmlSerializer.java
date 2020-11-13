@@ -4,15 +4,15 @@ import com.robindrew.codegenerator.api.serializer.xml.IXmlReader;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlSerializer;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlWriter;
 
-public class AddGameUnitsXmlSerializer implements IXmlSerializer<IAddGameUnits> {
+public class GetUnitsAtGameXmlSerializer implements IXmlSerializer<IGetUnitsAtGame> {
 
 	private String name;
 
-	public AddGameUnitsXmlSerializer() {
-		this("AddGameUnits");
+	public GetUnitsAtGameXmlSerializer() {
+		this("GetUnitsAtGame");
 	}
 
-	public AddGameUnitsXmlSerializer(String name) {
+	public GetUnitsAtGameXmlSerializer(String name) {
 		this.name = name;
 	}
 
@@ -25,25 +25,21 @@ public class AddGameUnitsXmlSerializer implements IXmlSerializer<IAddGameUnits> 
 	}
 
 	@Override
-	public IAddGameUnits readObject(IXmlReader reader) {
+	public IGetUnitsAtGame readObject(IXmlReader reader) {
 		reader.startElement(getName());
 		long param1 = reader.readLong("loginId");
 		int param2 = reader.readInt("instanceId");
-		int param3 = reader.readInt("unitId");
-		long param4 = reader.readLong("amount");
 		reader.endElement(getName());
 
 		// Create the bean
-		return new AddGameUnits(param1, param2, param3, param4);
+		return new GetUnitsAtGame(param1, param2);
 	}
 
 	@Override
-	public void writeObject(IXmlWriter writer, IAddGameUnits object) {
+	public void writeObject(IXmlWriter writer, IGetUnitsAtGame object) {
 		writer.startElement(getName());
 		writer.writeLong("loginId", object.getLoginId());
 		writer.writeInt("instanceId", object.getInstanceId());
-		writer.writeInt("unitId", object.getUnitId());
-		writer.writeLong("amount", object.getAmount());
 		writer.endElement(getName());
 	}
 }

@@ -1,4 +1,4 @@
-package com.turnengine.client.api.local.unit;
+package com.turnengine.client.api.local.player;
 
 import com.robindrew.codegenerator.api.serializer.xml.IXmlReader;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlSerializer;

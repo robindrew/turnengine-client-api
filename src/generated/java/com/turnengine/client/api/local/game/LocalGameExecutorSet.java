@@ -2,6 +2,8 @@ package com.turnengine.client.api.local.game;
 
 import com.robindrew.codegenerator.api.executable.executor.IBeanExecutorLocator;
 import com.turnengine.client.api.global.game.GameStatus;
+import com.turnengine.client.api.local.unit.IUnitCount;
+import java.util.List;
 
 public class LocalGameExecutorSet implements ILocalGameExecutorSet {
 
@@ -53,14 +55,14 @@ public class LocalGameExecutorSet implements ILocalGameExecutorSet {
 	}
 
 	@Override
-	public Boolean addGameUnits(long loginId, int instanceId, int unitId, long amount) {
-		AddGameUnits bean = new AddGameUnits(loginId, instanceId, unitId, amount);
+	public Boolean addUnitsAtGame(long loginId, int instanceId, int unitId, long amount) {
+		AddUnitsAtGame bean = new AddUnitsAtGame(loginId, instanceId, unitId, amount);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
 
 	@Override
-	public IGameUnits getGameUnits(long loginId, int instanceId) {
-		GetGameUnits bean = new GetGameUnits(loginId, instanceId);
+	public List<IUnitCount> getUnitsAtGame(long loginId, int instanceId) {
+		GetUnitsAtGame bean = new GetUnitsAtGame(loginId, instanceId);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
 }

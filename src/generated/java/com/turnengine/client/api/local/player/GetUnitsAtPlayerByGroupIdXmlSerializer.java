@@ -1,18 +1,18 @@
-package com.turnengine.client.api.local.game;
+package com.turnengine.client.api.local.player;
 
 import com.robindrew.codegenerator.api.serializer.xml.IXmlReader;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlSerializer;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlWriter;
 
-public class GetGameUnitsXmlSerializer implements IXmlSerializer<IGetGameUnits> {
+public class GetUnitsAtPlayerByGroupIdXmlSerializer implements IXmlSerializer<IGetUnitsAtPlayerByGroupId> {
 
 	private String name;
 
-	public GetGameUnitsXmlSerializer() {
-		this("GetGameUnits");
+	public GetUnitsAtPlayerByGroupIdXmlSerializer() {
+		this("GetUnitsAtPlayerByGroupId");
 	}
 
-	public GetGameUnitsXmlSerializer(String name) {
+	public GetUnitsAtPlayerByGroupIdXmlSerializer(String name) {
 		this.name = name;
 	}
 
@@ -25,21 +25,23 @@ public class GetGameUnitsXmlSerializer implements IXmlSerializer<IGetGameUnits> 
 	}
 
 	@Override
-	public IGetGameUnits readObject(IXmlReader reader) {
+	public IGetUnitsAtPlayerByGroupId readObject(IXmlReader reader) {
 		reader.startElement(getName());
 		long param1 = reader.readLong("loginId");
 		int param2 = reader.readInt("instanceId");
+		int param3 = reader.readInt("groupId");
 		reader.endElement(getName());
 
 		// Create the bean
-		return new GetGameUnits(param1, param2);
+		return new GetUnitsAtPlayerByGroupId(param1, param2, param3);
 	}
 
 	@Override
-	public void writeObject(IXmlWriter writer, IGetGameUnits object) {
+	public void writeObject(IXmlWriter writer, IGetUnitsAtPlayerByGroupId object) {
 		writer.startElement(getName());
 		writer.writeLong("loginId", object.getLoginId());
 		writer.writeInt("instanceId", object.getInstanceId());
+		writer.writeInt("groupId", object.getGroupId());
 		writer.endElement(getName());
 	}
 }

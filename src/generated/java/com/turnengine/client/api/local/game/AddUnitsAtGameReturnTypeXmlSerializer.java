@@ -5,15 +5,15 @@ import com.robindrew.codegenerator.api.serializer.xml.IXmlSerializer;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlWriter;
 import com.robindrew.codegenerator.api.serializer.xml.serializer.lang.BooleanSerializer;
 
-public class AddGameUnitsReturnTypeXmlSerializer implements IXmlSerializer<Boolean> {
+public class AddUnitsAtGameReturnTypeXmlSerializer implements IXmlSerializer<Boolean> {
 
 	private String name;
 
-	public AddGameUnitsReturnTypeXmlSerializer() {
-		this("AddGameUnitsReturnType");
+	public AddUnitsAtGameReturnTypeXmlSerializer() {
+		this("AddUnitsAtGameReturnType");
 	}
 
-	public AddGameUnitsReturnTypeXmlSerializer(String name) {
+	public AddUnitsAtGameReturnTypeXmlSerializer(String name) {
 		this.name = name;
 	}
 

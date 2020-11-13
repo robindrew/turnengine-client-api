@@ -4,6 +4,8 @@ public enum StorageType {
 
 	/** The ANY constant. */
 	ANY,
+	/** The GAME constant. */
+	GAME,
 	/** The PLAYER constant. */
 	PLAYER,
 	/** The LOCATION constant. */

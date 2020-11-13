@@ -1,12 +1,13 @@
-package com.turnengine.client.api.local.unit;
+package com.turnengine.client.api.local.player;
 
 import com.robindrew.codegenerator.api.executable.bean.IExecutableBean;
 import com.turnengine.client.api.common.command.ILocalLoggedInBean;
+import com.turnengine.client.api.local.unit.IUnitCount;
 import java.util.List;
 
 public interface IGetUnitsAtPlayer extends IExecutableBean<List<IUnitCount>>, ILocalLoggedInBean<List<IUnitCount>>, Comparable<IGetUnitsAtPlayer> {
 
-	int SERIALIZATION_ID = 3909;
+	int SERIALIZATION_ID = 3130;
 
 	/**
 	 * Returns the serialization id.

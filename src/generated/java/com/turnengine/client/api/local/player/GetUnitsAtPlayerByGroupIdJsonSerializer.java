@@ -1,18 +1,18 @@
-package com.turnengine.client.api.local.unit;
+package com.turnengine.client.api.local.player;
 
 import com.robindrew.codegenerator.api.serializer.json.IJsonReader;
 import com.robindrew.codegenerator.api.serializer.json.IJsonSerializer;
 import com.robindrew.codegenerator.api.serializer.json.IJsonWriter;
 
-public class GetUnitsAtPlayerJsonSerializer implements IJsonSerializer<IGetUnitsAtPlayer> {
+public class GetUnitsAtPlayerByGroupIdJsonSerializer implements IJsonSerializer<IGetUnitsAtPlayerByGroupId> {
 
 	private String name;
 
-	public GetUnitsAtPlayerJsonSerializer() {
-		this("GetUnitsAtPlayer");
+	public GetUnitsAtPlayerByGroupIdJsonSerializer() {
+		this("GetUnitsAtPlayerByGroupId");
 	}
 
-	public GetUnitsAtPlayerJsonSerializer(String name) {
+	public GetUnitsAtPlayerByGroupIdJsonSerializer(String name) {
 		this.name = name;
 	}
 
@@ -25,15 +25,16 @@ public class GetUnitsAtPlayerJsonSerializer implements IJsonSerializer<IGetUnits
 	}
 
 	@Override
-	public IGetUnitsAtPlayer readObject(IJsonReader reader) {
+	public IGetUnitsAtPlayerByGroupId readObject(IJsonReader reader) {
 		throw new UnsupportedOperationException("readObject");
 	}
 
 	@Override
-	public void writeObject(IJsonWriter writer, IGetUnitsAtPlayer object) {
+	public void writeObject(IJsonWriter writer, IGetUnitsAtPlayerByGroupId object) {
 		writer.openObject();
 		writer.writeLong(object.getLoginId());
 		writer.writeInt(object.getInstanceId());
+		writer.writeInt(object.getGroupId());
 		writer.closeObject();
 	}
 }

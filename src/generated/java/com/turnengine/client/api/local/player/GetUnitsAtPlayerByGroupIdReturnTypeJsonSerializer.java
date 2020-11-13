@@ -1,20 +1,22 @@
-package com.turnengine.client.api.local.unit;
+package com.turnengine.client.api.local.player;
 
 import com.robindrew.codegenerator.api.serializer.json.IJsonReader;
 import com.robindrew.codegenerator.api.serializer.json.IJsonSerializer;
 import com.robindrew.codegenerator.api.serializer.json.IJsonWriter;
 import com.robindrew.codegenerator.api.serializer.json.serializer.collection.ListSerializer;
+import com.turnengine.client.api.local.unit.IUnitCount;
+import com.turnengine.client.api.local.unit.UnitCountJsonSerializer;
 import java.util.List;
 
-public class GetUnitsAtPlayerReturnTypeJsonSerializer implements IJsonSerializer<List<IUnitCount>> {
+public class GetUnitsAtPlayerByGroupIdReturnTypeJsonSerializer implements IJsonSerializer<List<IUnitCount>> {
 
 	private String name;
 
-	public GetUnitsAtPlayerReturnTypeJsonSerializer() {
-		this("GetUnitsAtPlayerReturnType");
+	public GetUnitsAtPlayerByGroupIdReturnTypeJsonSerializer() {
+		this("GetUnitsAtPlayerByGroupIdReturnType");
 	}
 
-	public GetUnitsAtPlayerReturnTypeJsonSerializer(String name) {
+	public GetUnitsAtPlayerByGroupIdReturnTypeJsonSerializer(String name) {
 		this.name = name;
 	}
 

@@ -4,15 +4,15 @@ import com.robindrew.codegenerator.api.serializer.json.IJsonReader;
 import com.robindrew.codegenerator.api.serializer.json.IJsonSerializer;
 import com.robindrew.codegenerator.api.serializer.json.IJsonWriter;
 
-public class GetGameUnitsJsonSerializer implements IJsonSerializer<IGetGameUnits> {
+public class AddUnitsAtGameJsonSerializer implements IJsonSerializer<IAddUnitsAtGame> {
 
 	private String name;
 
-	public GetGameUnitsJsonSerializer() {
-		this("GetGameUnits");
+	public AddUnitsAtGameJsonSerializer() {
+		this("AddUnitsAtGame");
 	}
 
-	public GetGameUnitsJsonSerializer(String name) {
+	public AddUnitsAtGameJsonSerializer(String name) {
 		this.name = name;
 	}
 
@@ -25,15 +25,17 @@ public class GetGameUnitsJsonSerializer implements IJsonSerializer<IGetGameUnits
 	}
 
 	@Override
-	public IGetGameUnits readObject(IJsonReader reader) {
+	public IAddUnitsAtGame readObject(IJsonReader reader) {
 		throw new UnsupportedOperationException("readObject");
 	}
 
 	@Override
-	public void writeObject(IJsonWriter writer, IGetGameUnits object) {
+	public void writeObject(IJsonWriter writer, IAddUnitsAtGame object) {
 		writer.openObject();
 		writer.writeLong(object.getLoginId());
 		writer.writeInt(object.getInstanceId());
+		writer.writeInt(object.getUnitId());
+		writer.writeLong(object.getAmount());
 		writer.closeObject();
 	}
 }

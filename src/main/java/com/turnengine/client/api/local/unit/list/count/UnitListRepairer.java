@@ -31,7 +31,7 @@ public class UnitListRepairer implements IUnitListRepairer {
 
 	@Override
 	public IUnitList repairList(IUnitList list) {
-		IUnitListAdaptor adaptor = new UnitListAdaptor(units);
+		IUnitListAdaptor adaptor = new UnitListAdapter(units);
 		List<IUnitCount> countList = adaptor.adapt(list);
 		return repairList(countList, list.getUnitType());
 	}

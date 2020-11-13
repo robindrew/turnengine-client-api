@@ -1,18 +1,18 @@
-package com.turnengine.client.api.local.game;
+package com.turnengine.client.api.local.player;
 
 import com.robindrew.codegenerator.api.serializer.json.IJsonReader;
 import com.robindrew.codegenerator.api.serializer.json.IJsonSerializer;
 import com.robindrew.codegenerator.api.serializer.json.IJsonWriter;
 
-public class AddGameUnitsJsonSerializer implements IJsonSerializer<IAddGameUnits> {
+public class GetUnitsAtPlayerJsonSerializer implements IJsonSerializer<IGetUnitsAtPlayer> {
 
 	private String name;
 
-	public AddGameUnitsJsonSerializer() {
-		this("AddGameUnits");
+	public GetUnitsAtPlayerJsonSerializer() {
+		this("GetUnitsAtPlayer");
 	}
 
-	public AddGameUnitsJsonSerializer(String name) {
+	public GetUnitsAtPlayerJsonSerializer(String name) {
 		this.name = name;
 	}
 
@@ -25,17 +25,15 @@ public class AddGameUnitsJsonSerializer implements IJsonSerializer<IAddGameUnits
 	}
 
 	@Override
-	public IAddGameUnits readObject(IJsonReader reader) {
+	public IGetUnitsAtPlayer readObject(IJsonReader reader) {
 		throw new UnsupportedOperationException("readObject");
 	}
 
 	@Override
-	public void writeObject(IJsonWriter writer, IAddGameUnits object) {
+	public void writeObject(IJsonWriter writer, IGetUnitsAtPlayer object) {
 		writer.openObject();
 		writer.writeLong(object.getLoginId());
 		writer.writeInt(object.getInstanceId());
-		writer.writeInt(object.getUnitId());
-		writer.writeLong(object.getAmount());
 		writer.closeObject();
 	}
 }

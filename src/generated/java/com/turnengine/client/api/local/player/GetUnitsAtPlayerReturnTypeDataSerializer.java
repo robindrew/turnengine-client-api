@@ -1,4 +1,4 @@
-package com.turnengine.client.api.local.unit;
+package com.turnengine.client.api.local.player;
 
 import com.robindrew.common.io.data.IDataReader;
 import com.robindrew.common.io.data.IDataWriter;

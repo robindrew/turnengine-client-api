@@ -69,16 +69,4 @@ public class LocalUnitExecutorSet implements ILocalUnitExecutorSet {
 		GetUnitsByGroupName bean = new GetUnitsByGroupName(loginId, instanceId, name);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
-
-	@Override
-	public List<IUnitCount> getUnitsAtPlayer(long loginId, int instanceId) {
-		GetUnitsAtPlayer bean = new GetUnitsAtPlayer(loginId, instanceId);
-		return getLocator().locateExecutor(bean).executeBean(bean);
-	}
-
-	@Override
-	public List<IUnitCount> getUnitsAtPlayerByGroupId(long loginId, int instanceId, int groupId) {
-		GetUnitsAtPlayerByGroupId bean = new GetUnitsAtPlayerByGroupId(loginId, instanceId, groupId);
-		return getLocator().locateExecutor(bean).executeBean(bean);
-	}
 }

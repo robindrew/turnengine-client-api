@@ -1,4 +1,4 @@
-package com.turnengine.client.api.local.game;
+package com.turnengine.client.api.local.player;
 
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -6,7 +6,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class GetGameUnits implements IGetGameUnits {
+public class GetUnitsAtPlayer implements IGetUnitsAtPlayer {
 
 	/** The loginId field. */
 	private long loginId = 0l;
@@ -16,13 +16,13 @@ public class GetGameUnits implements IGetGameUnits {
 	/**
 	 * The empty constructor.
 	 */
-	public GetGameUnits() {
+	public GetUnitsAtPlayer() {
 	}
 
 	/**
 	 * The fields constructor.
 	 */
-	public GetGameUnits(long loginId, int instanceId) {
+	public GetUnitsAtPlayer(long loginId, int instanceId) {
 		setLoginId(loginId);
 		setInstanceId(instanceId);
 	}
@@ -30,7 +30,7 @@ public class GetGameUnits implements IGetGameUnits {
 	/**
 	 * The clone constructor.
 	 */
-	public GetGameUnits(IGetGameUnits clone) {
+	public GetUnitsAtPlayer(IGetUnitsAtPlayer clone) {
 		setLoginId(clone.getLoginId());
 		setInstanceId(clone.getInstanceId());
 	}
@@ -109,7 +109,7 @@ public class GetGameUnits implements IGetGameUnits {
 		}
 
 		// Compare fields
-		IGetGameUnits that = (IGetGameUnits) object;
+		IGetUnitsAtPlayer that = (IGetUnitsAtPlayer) object;
 		EqualsBuilder builder = new EqualsBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
@@ -125,7 +125,7 @@ public class GetGameUnits implements IGetGameUnits {
 	}
 
 	@Override
-	public int compareTo(IGetGameUnits that) {
+	public int compareTo(IGetUnitsAtPlayer that) {
 		CompareToBuilder builder = new CompareToBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());

@@ -13,7 +13,7 @@ public class UnitListBinaryAdaptor implements IUnitListSerializer {
 	private final IUnitListAdaptor adaptor;
 
 	public UnitListBinaryAdaptor(IUnitCache unitCache) {
-		this(new UnitListAdaptor(unitCache));
+		this(new UnitListAdapter(unitCache));
 	}
 
 	public UnitListBinaryAdaptor(IUnitListAdaptor adaptor) {

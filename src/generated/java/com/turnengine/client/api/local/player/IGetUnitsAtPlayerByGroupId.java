@@ -1,11 +1,13 @@
-package com.turnengine.client.api.local.game;
+package com.turnengine.client.api.local.player;
 
 import com.robindrew.codegenerator.api.executable.bean.IExecutableBean;
 import com.turnengine.client.api.common.command.ILocalLoggedInBean;
+import com.turnengine.client.api.local.unit.IUnitCount;
+import java.util.List;
 
-public interface IGetGameUnits extends IExecutableBean<IGameUnits>, ILocalLoggedInBean<IGameUnits>, Comparable<IGetGameUnits> {
+public interface IGetUnitsAtPlayerByGroupId extends IExecutableBean<List<IUnitCount>>, ILocalLoggedInBean<List<IUnitCount>>, Comparable<IGetUnitsAtPlayerByGroupId> {
 
-	int SERIALIZATION_ID = 2607;
+	int SERIALIZATION_ID = 3131;
 
 	/**
 	 * Returns the serialization id.
@@ -26,6 +28,12 @@ public interface IGetGameUnits extends IExecutableBean<IGameUnits>, ILocalLogged
 	int getInstanceId();
 
 	/**
+	 * Getter for the groupId field.
+	 * @return the value of the groupId field.
+	 */
+	int getGroupId();
+
+	/**
 	 * Setter for the loginId field.
 	 * @param loginId the loginId value to set.
 	 */
@@ -36,4 +44,10 @@ public interface IGetGameUnits extends IExecutableBean<IGameUnits>, ILocalLogged
 	 * @param instanceId the instanceId value to set.
 	 */
 	void setInstanceId(int instanceId);
+
+	/**
+	 * Setter for the groupId field.
+	 * @param groupId the groupId value to set.
+	 */
+	void setGroupId(int groupId);
 }

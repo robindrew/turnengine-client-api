@@ -15,7 +15,7 @@ import com.turnengine.client.api.local.unit.IUnitCount;
 import com.turnengine.client.api.local.unit.UnitType;
 import com.turnengine.client.api.local.unit.list.IUnitList;
 import com.turnengine.client.api.local.unit.list.count.IUnitListAdaptor;
-import com.turnengine.client.api.local.unit.list.count.UnitListAdaptor;
+import com.turnengine.client.api.local.unit.list.count.UnitListAdapter;
 
 public class UnitListSetBuilder implements IUnitListSetBuilder {
 
@@ -26,7 +26,7 @@ public class UnitListSetBuilder implements IUnitListSetBuilder {
 	private IUnitList mobileUnits = null;
 
 	public UnitListSetBuilder(IUnitCache cache) {
-		this.adaptor = new UnitListAdaptor(cache);
+		this.adaptor = new UnitListAdapter(cache);
 	}
 
 	@Override

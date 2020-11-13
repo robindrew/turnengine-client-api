@@ -3,7 +3,7 @@ package com.turnengine.client.api.local.game;
 import com.robindrew.codegenerator.api.executable.bean.IExecutableBean;
 import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
-public interface IAddGameUnits extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IAddGameUnits> {
+public interface IAddUnitsAtGame extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IAddUnitsAtGame> {
 
 	int SERIALIZATION_ID = 2606;
 

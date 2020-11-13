@@ -3,6 +3,8 @@ package com.turnengine.client.api.local.game;
 import com.robindrew.codegenerator.api.executable.executor.IBeanExecutorSet;
 import com.turnengine.client.api.common.command.ILocalBeanExecutorSet;
 import com.turnengine.client.api.global.game.GameStatus;
+import com.turnengine.client.api.local.unit.IUnitCount;
+import java.util.List;
 
 public interface ILocalGameExecutorSet extends IBeanExecutorSet, ILocalBeanExecutorSet {
 
@@ -16,7 +18,7 @@ public interface ILocalGameExecutorSet extends IBeanExecutorSet, ILocalBeanExecu
 
 	GameStatus getGameStatus(long loginId, int instanceId);
 
-	Boolean addGameUnits(long loginId, int instanceId, int unitId, long amount);
+	Boolean addUnitsAtGame(long loginId, int instanceId, int unitId, long amount);
 
-	IGameUnits getGameUnits(long loginId, int instanceId);
+	List<IUnitCount> getUnitsAtGame(long loginId, int instanceId);
 }

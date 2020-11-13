@@ -1,4 +1,4 @@
-package com.turnengine.client.api.local.unit;
+package com.turnengine.client.api.local.game;
 
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -6,37 +6,41 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class GetUnitsAtPlayerByGroupId implements IGetUnitsAtPlayerByGroupId {
+public class AddUnitsAtGame implements IAddUnitsAtGame {
 
 	/** The loginId field. */
 	private long loginId = 0l;
 	/** The instanceId field. */
 	private int instanceId = 0;
-	/** The groupId field. */
-	private int groupId = 0;
+	/** The unitId field. */
+	private int unitId = 0;
+	/** The amount field. */
+	private long amount = 0l;
 
 	/**
 	 * The empty constructor.
 	 */
-	public GetUnitsAtPlayerByGroupId() {
+	public AddUnitsAtGame() {
 	}
 
 	/**
 	 * The fields constructor.
 	 */
-	public GetUnitsAtPlayerByGroupId(long loginId, int instanceId, int groupId) {
+	public AddUnitsAtGame(long loginId, int instanceId, int unitId, long amount) {
 		setLoginId(loginId);
 		setInstanceId(instanceId);
-		setGroupId(groupId);
+		setUnitId(unitId);
+		setAmount(amount);
 	}
 
 	/**
 	 * The clone constructor.
 	 */
-	public GetUnitsAtPlayerByGroupId(IGetUnitsAtPlayerByGroupId clone) {
+	public AddUnitsAtGame(IAddUnitsAtGame clone) {
 		setLoginId(clone.getLoginId());
 		setInstanceId(clone.getInstanceId());
-		setGroupId(clone.getGroupId());
+		setUnitId(clone.getUnitId());
+		setAmount(clone.getAmount());
 	}
 
 	/**
@@ -67,12 +71,21 @@ public class GetUnitsAtPlayerByGroupId implements IGetUnitsAtPlayerByGroupId {
 	}
 
 	/**
-	 * Getter for the groupId field.
-	 * @return the value of the groupId field.
+	 * Getter for the unitId field.
+	 * @return the value of the unitId field.
 	 */
 	@Override
-	public int getGroupId() {
-		return groupId;
+	public int getUnitId() {
+		return unitId;
+	}
+
+	/**
+	 * Getter for the amount field.
+	 * @return the value of the amount field.
+	 */
+	@Override
+	public long getAmount() {
+		return amount;
 	}
 
 	/**
@@ -97,15 +110,24 @@ public class GetUnitsAtPlayerByGroupId implements IGetUnitsAtPlayerByGroupId {
 	}
 
 	/**
-	 * Setter for the groupId field.
-	 * @param groupId the groupId value to set.
+	 * Setter for the unitId field.
+	 * @param unitId the unitId value to set.
 	 */
 	@Override
-	public void setGroupId(int groupId) {
-		if (groupId < -1) {
-			throw new IllegalArgumentException("groupId too small, minimum of -1, value: '" + groupId + "'");
+	public void setUnitId(int unitId) {
+		if (unitId < -1) {
+			throw new IllegalArgumentException("unitId too small, minimum of -1, value: '" + unitId + "'");
 		}
-		this.groupId = groupId;
+		this.unitId = unitId;
+	}
+
+	/**
+	 * Setter for the amount field.
+	 * @param amount the amount value to set.
+	 */
+	@Override
+	public void setAmount(long amount) {
+		this.amount = amount;
 	}
 
 	@Override
@@ -113,7 +135,8 @@ public class GetUnitsAtPlayerByGroupId implements IGetUnitsAtPlayerByGroupId {
 		HashCodeBuilder builder = new HashCodeBuilder();
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getGroupId());
+		builder.append(getUnitId());
+		builder.append(getAmount());
 		return builder.toHashCode();
 	}
 
@@ -135,11 +158,12 @@ public class GetUnitsAtPlayerByGroupId implements IGetUnitsAtPlayerByGroupId {
 		}
 
 		// Compare fields
-		IGetUnitsAtPlayerByGroupId that = (IGetUnitsAtPlayerByGroupId) object;
+		IAddUnitsAtGame that = (IAddUnitsAtGame) object;
 		EqualsBuilder builder = new EqualsBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getGroupId(), that.getGroupId());
+		builder.append(this.getUnitId(), that.getUnitId());
+		builder.append(this.getAmount(), that.getAmount());
 		return builder.isEquals();
 	}
 
@@ -148,16 +172,18 @@ public class GetUnitsAtPlayerByGroupId implements IGetUnitsAtPlayerByGroupId {
 		ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE);
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getGroupId());
+		builder.append(getUnitId());
+		builder.append(getAmount());
 		return builder.toString();
 	}
 
 	@Override
-	public int compareTo(IGetUnitsAtPlayerByGroupId that) {
+	public int compareTo(IAddUnitsAtGame that) {
 		CompareToBuilder builder = new CompareToBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getGroupId(), that.getGroupId());
+		builder.append(this.getUnitId(), that.getUnitId());
+		builder.append(this.getAmount(), that.getAmount());
 		return builder.toComparison();
 	}
 }

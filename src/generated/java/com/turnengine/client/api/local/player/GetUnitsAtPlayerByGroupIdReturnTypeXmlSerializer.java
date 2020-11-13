@@ -1,20 +1,22 @@
-package com.turnengine.client.api.local.unit;
+package com.turnengine.client.api.local.player;
 
 import com.robindrew.codegenerator.api.serializer.xml.IXmlReader;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlSerializer;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlWriter;
 import com.robindrew.codegenerator.api.serializer.xml.serializer.collection.ListSerializer;
+import com.turnengine.client.api.local.unit.IUnitCount;
+import com.turnengine.client.api.local.unit.UnitCountXmlSerializer;
 import java.util.List;
 
-public class GetUnitsAtPlayerReturnTypeXmlSerializer implements IXmlSerializer<List<IUnitCount>> {
+public class GetUnitsAtPlayerByGroupIdReturnTypeXmlSerializer implements IXmlSerializer<List<IUnitCount>> {
 
 	private String name;
 
-	public GetUnitsAtPlayerReturnTypeXmlSerializer() {
-		this("GetUnitsAtPlayerReturnType");
+	public GetUnitsAtPlayerByGroupIdReturnTypeXmlSerializer() {
+		this("GetUnitsAtPlayerByGroupIdReturnType");
 	}
 
-	public GetUnitsAtPlayerReturnTypeXmlSerializer(String name) {
+	public GetUnitsAtPlayerByGroupIdReturnTypeXmlSerializer(String name) {
 		this.name = name;
 	}
 

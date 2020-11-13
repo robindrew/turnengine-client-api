@@ -5,27 +5,27 @@ import com.robindrew.common.io.data.IDataWriter;
 import com.robindrew.common.io.data.serializer.ObjectSerializer;
 import java.io.IOException;
 
-public class AddGameUnitsReturnTypeDataSerializer extends ObjectSerializer<IAddGameUnits> {
+public class AddUnitsAtGameReturnTypeDataSerializer extends ObjectSerializer<IAddUnitsAtGame> {
 
-	public AddGameUnitsReturnTypeDataSerializer() {
+	public AddUnitsAtGameReturnTypeDataSerializer() {
 		super(false);
 	}
 
-	public AddGameUnitsReturnTypeDataSerializer(boolean nullable) {
+	public AddUnitsAtGameReturnTypeDataSerializer(boolean nullable) {
 		super(nullable);
 	}
 
 	@Override
-	public IAddGameUnits readValue(IDataReader reader) throws IOException {
+	public IAddUnitsAtGame readValue(IDataReader reader) throws IOException {
 		long param1 = reader.readLong();
 		int param2 = reader.readInt();
 		int param3 = reader.readInt();
 		long param4 = reader.readLong();
-		return new AddGameUnits(param1, param2, param3, param4);
+		return new AddUnitsAtGame(param1, param2, param3, param4);
 	}
 
 	@Override
-	public void writeValue(IDataWriter writer, IAddGameUnits object) throws IOException {
+	public void writeValue(IDataWriter writer, IAddUnitsAtGame object) throws IOException {
 		writer.writeLong(object.getLoginId());
 		writer.writeInt(object.getInstanceId());
 		writer.writeInt(object.getUnitId());

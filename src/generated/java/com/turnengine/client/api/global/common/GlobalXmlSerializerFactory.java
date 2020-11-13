@@ -378,14 +378,14 @@ import com.turnengine.client.api.local.faction.GetFactionByName;
 import com.turnengine.client.api.local.faction.GetFactionByNameXmlSerializer;
 import com.turnengine.client.api.local.faction.GetFactions;
 import com.turnengine.client.api.local.faction.GetFactionsXmlSerializer;
-import com.turnengine.client.api.local.game.AddGameUnits;
-import com.turnengine.client.api.local.game.AddGameUnitsXmlSerializer;
+import com.turnengine.client.api.local.game.AddUnitsAtGame;
+import com.turnengine.client.api.local.game.AddUnitsAtGameXmlSerializer;
 import com.turnengine.client.api.local.game.GameUnits;
 import com.turnengine.client.api.local.game.GameUnitsXmlSerializer;
 import com.turnengine.client.api.local.game.GetGameStatus;
 import com.turnengine.client.api.local.game.GetGameStatusXmlSerializer;
-import com.turnengine.client.api.local.game.GetGameUnits;
-import com.turnengine.client.api.local.game.GetGameUnitsXmlSerializer;
+import com.turnengine.client.api.local.game.GetUnitsAtGame;
+import com.turnengine.client.api.local.game.GetUnitsAtGameXmlSerializer;
 import com.turnengine.client.api.local.game.ResetGame;
 import com.turnengine.client.api.local.game.ResetGameXmlSerializer;
 import com.turnengine.client.api.local.game.SetGameInstance;
@@ -590,6 +590,10 @@ import com.turnengine.client.api.local.player.GetPlayerSignupPluginXmlSerializer
 import com.turnengine.client.api.local.player.GetPlayerSignupsEnabled;
 import com.turnengine.client.api.local.player.GetPlayerSignupsEnabledXmlSerializer;
 import com.turnengine.client.api.local.player.GetPlayerXmlSerializer;
+import com.turnengine.client.api.local.player.GetUnitsAtPlayer;
+import com.turnengine.client.api.local.player.GetUnitsAtPlayerByGroupId;
+import com.turnengine.client.api.local.player.GetUnitsAtPlayerByGroupIdXmlSerializer;
+import com.turnengine.client.api.local.player.GetUnitsAtPlayerXmlSerializer;
 import com.turnengine.client.api.local.player.GetUserAdminInfoByPlayer;
 import com.turnengine.client.api.local.player.GetUserAdminInfoByPlayerXmlSerializer;
 import com.turnengine.client.api.local.player.IsPlayerSignedUp;
@@ -763,10 +767,6 @@ import com.turnengine.client.api.local.unit.GetUnitByIdXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnitByName;
 import com.turnengine.client.api.local.unit.GetUnitByNameXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnits;
-import com.turnengine.client.api.local.unit.GetUnitsAtPlayer;
-import com.turnengine.client.api.local.unit.GetUnitsAtPlayerByGroupId;
-import com.turnengine.client.api.local.unit.GetUnitsAtPlayerByGroupIdXmlSerializer;
-import com.turnengine.client.api.local.unit.GetUnitsAtPlayerXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnitsByFactionId;
 import com.turnengine.client.api.local.unit.GetUnitsByFactionIdXmlSerializer;
 import com.turnengine.client.api.local.unit.GetUnitsByFactionName;
@@ -1320,8 +1320,8 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put(ResetGame.SERIALIZATION_ID, ResetGameXmlSerializer.class);
 		objectMap.put(ShutdownGame.SERIALIZATION_ID, ShutdownGameXmlSerializer.class);
 		objectMap.put(GetGameStatus.SERIALIZATION_ID, GetGameStatusXmlSerializer.class);
-		objectMap.put(AddGameUnits.SERIALIZATION_ID, AddGameUnitsXmlSerializer.class);
-		objectMap.put(GetGameUnits.SERIALIZATION_ID, GetGameUnitsXmlSerializer.class);
+		objectMap.put(AddUnitsAtGame.SERIALIZATION_ID, AddUnitsAtGameXmlSerializer.class);
+		objectMap.put(GetUnitsAtGame.SERIALIZATION_ID, GetUnitsAtGameXmlSerializer.class);
 
 		// Mappings by name
 		objectMap.put("GameUnits", GameUnitsXmlSerializer.class);
@@ -1330,8 +1330,8 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put("ResetGame", ResetGameXmlSerializer.class);
 		objectMap.put("ShutdownGame", ShutdownGameXmlSerializer.class);
 		objectMap.put("GetGameStatus", GetGameStatusXmlSerializer.class);
-		objectMap.put("AddGameUnits", AddGameUnitsXmlSerializer.class);
-		objectMap.put("GetGameUnits", GetGameUnitsXmlSerializer.class);
+		objectMap.put("AddUnitsAtGame", AddUnitsAtGameXmlSerializer.class);
+		objectMap.put("GetUnitsAtGame", GetUnitsAtGameXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(Group.SERIALIZATION_ID, GroupXmlSerializer.class);
@@ -1541,6 +1541,8 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put(GetUserAdminInfoByPlayer.SERIALIZATION_ID, GetUserAdminInfoByPlayerXmlSerializer.class);
 		objectMap.put(SetPlayerAvatar.SERIALIZATION_ID, SetPlayerAvatarXmlSerializer.class);
 		objectMap.put(GetPlayerAvatar.SERIALIZATION_ID, GetPlayerAvatarXmlSerializer.class);
+		objectMap.put(GetUnitsAtPlayer.SERIALIZATION_ID, GetUnitsAtPlayerXmlSerializer.class);
+		objectMap.put(GetUnitsAtPlayerByGroupId.SERIALIZATION_ID, GetUnitsAtPlayerByGroupIdXmlSerializer.class);
 
 		// Mappings by name
 		objectMap.put("Player", PlayerXmlSerializer.class);
@@ -1576,6 +1578,8 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put("GetUserAdminInfoByPlayer", GetUserAdminInfoByPlayerXmlSerializer.class);
 		objectMap.put("SetPlayerAvatar", SetPlayerAvatarXmlSerializer.class);
 		objectMap.put("GetPlayerAvatar", GetPlayerAvatarXmlSerializer.class);
+		objectMap.put("GetUnitsAtPlayer", GetUnitsAtPlayerXmlSerializer.class);
+		objectMap.put("GetUnitsAtPlayerByGroupId", GetUnitsAtPlayerByGroupIdXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(SetLocalProperty.SERIALIZATION_ID, SetLocalPropertyXmlSerializer.class);
@@ -1752,8 +1756,6 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put(GetUnitsByFactionName.SERIALIZATION_ID, GetUnitsByFactionNameXmlSerializer.class);
 		objectMap.put(GetUnitsByGroupId.SERIALIZATION_ID, GetUnitsByGroupIdXmlSerializer.class);
 		objectMap.put(GetUnitsByGroupName.SERIALIZATION_ID, GetUnitsByGroupNameXmlSerializer.class);
-		objectMap.put(GetUnitsAtPlayer.SERIALIZATION_ID, GetUnitsAtPlayerXmlSerializer.class);
-		objectMap.put(GetUnitsAtPlayerByGroupId.SERIALIZATION_ID, GetUnitsAtPlayerByGroupIdXmlSerializer.class);
 
 		// Mappings by name
 		objectMap.put("Unit", UnitXmlSerializer.class);
@@ -1768,8 +1770,6 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put("GetUnitsByFactionName", GetUnitsByFactionNameXmlSerializer.class);
 		objectMap.put("GetUnitsByGroupId", GetUnitsByGroupIdXmlSerializer.class);
 		objectMap.put("GetUnitsByGroupName", GetUnitsByGroupNameXmlSerializer.class);
-		objectMap.put("GetUnitsAtPlayer", GetUnitsAtPlayerXmlSerializer.class);
-		objectMap.put("GetUnitsAtPlayerByGroupId", GetUnitsAtPlayerByGroupIdXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(Upkeep.SERIALIZATION_ID, UpkeepXmlSerializer.class);

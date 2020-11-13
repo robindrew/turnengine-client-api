@@ -17,11 +17,11 @@ import com.turnengine.client.api.local.unit.list.IUnitList;
 import com.turnengine.client.api.local.unit.list.SingleParentUnit;
 import com.turnengine.client.api.local.unit.list.UnitList;
 
-public class UnitListAdaptor implements IUnitListAdaptor {
+public class UnitListAdapter implements IUnitListAdaptor {
 
 	private final IUnitCache unitCache;
 
-	public UnitListAdaptor(IUnitCache unitCache) {
+	public UnitListAdapter(IUnitCache unitCache) {
 		if (unitCache == null) {
 			throw new NullPointerException("unitCache");
 		}

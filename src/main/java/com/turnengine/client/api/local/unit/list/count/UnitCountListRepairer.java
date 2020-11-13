@@ -23,7 +23,7 @@ public class UnitCountListRepairer implements IUnitCountListRepairer {
 	private final IUnitListRepairer repairer;
 
 	public UnitCountListRepairer(IUnitCache cache, IStorageCalculator calculator) {
-		this.adaptor = new UnitListAdaptor(cache);
+		this.adaptor = new UnitListAdapter(cache);
 		this.splitter = new UnitCountListSplitter(cache);
 		this.repairer = new UnitListRepairer(cache, calculator);
 	}

@@ -21,8 +21,4 @@ public interface ILocalUnitExecutorSet extends IBeanExecutorSet, ILocalBeanExecu
 	List<IUnit> getUnitsByGroupId(long loginId, int instanceId, int id);
 
 	List<IUnit> getUnitsByGroupName(long loginId, int instanceId, String name);
-
-	List<IUnitCount> getUnitsAtPlayer(long loginId, int instanceId);
-
-	List<IUnitCount> getUnitsAtPlayerByGroupId(long loginId, int instanceId, int groupId);
 }

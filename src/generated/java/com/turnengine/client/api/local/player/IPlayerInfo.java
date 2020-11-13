@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface IPlayerInfo extends IBean, INamedIdentity, Comparable<IPlayerInfo> {
 
-	int SERIALIZATION_ID = 3131;
+	int SERIALIZATION_ID = 3133;
 
 	/**
 	 * Returns the serialization id.

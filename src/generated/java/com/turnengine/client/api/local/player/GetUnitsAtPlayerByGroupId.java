@@ -1,4 +1,4 @@
-package com.turnengine.client.api.local.unit;
+package com.turnengine.client.api.local.player;
 
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -6,33 +6,37 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class GetUnitsAtPlayer implements IGetUnitsAtPlayer {
+public class GetUnitsAtPlayerByGroupId implements IGetUnitsAtPlayerByGroupId {
 
 	/** The loginId field. */
 	private long loginId = 0l;
 	/** The instanceId field. */
 	private int instanceId = 0;
+	/** The groupId field. */
+	private int groupId = 0;
 
 	/**
 	 * The empty constructor.
 	 */
-	public GetUnitsAtPlayer() {
+	public GetUnitsAtPlayerByGroupId() {
 	}
 
 	/**
 	 * The fields constructor.
 	 */
-	public GetUnitsAtPlayer(long loginId, int instanceId) {
+	public GetUnitsAtPlayerByGroupId(long loginId, int instanceId, int groupId) {
 		setLoginId(loginId);
 		setInstanceId(instanceId);
+		setGroupId(groupId);
 	}
 
 	/**
 	 * The clone constructor.
 	 */
-	public GetUnitsAtPlayer(IGetUnitsAtPlayer clone) {
+	public GetUnitsAtPlayerByGroupId(IGetUnitsAtPlayerByGroupId clone) {
 		setLoginId(clone.getLoginId());
 		setInstanceId(clone.getInstanceId());
+		setGroupId(clone.getGroupId());
 	}
 
 	/**
@@ -63,6 +67,15 @@ public class GetUnitsAtPlayer implements IGetUnitsAtPlayer {
 	}
 
 	/**
+	 * Getter for the groupId field.
+	 * @return the value of the groupId field.
+	 */
+	@Override
+	public int getGroupId() {
+		return groupId;
+	}
+
+	/**
 	 * Setter for the loginId field.
 	 * @param loginId the loginId value to set.
 	 */
@@ -83,11 +96,24 @@ public class GetUnitsAtPlayer implements IGetUnitsAtPlayer {
 		this.instanceId = instanceId;
 	}
 
+	/**
+	 * Setter for the groupId field.
+	 * @param groupId the groupId value to set.
+	 */
+	@Override
+	public void setGroupId(int groupId) {
+		if (groupId < -1) {
+			throw new IllegalArgumentException("groupId too small, minimum of -1, value: '" + groupId + "'");
+		}
+		this.groupId = groupId;
+	}
+
 	@Override
 	public int hashCode() {
 		HashCodeBuilder builder = new HashCodeBuilder();
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
+		builder.append(getGroupId());
 		return builder.toHashCode();
 	}
 
@@ -109,10 +135,11 @@ public class GetUnitsAtPlayer implements IGetUnitsAtPlayer {
 		}
 
 		// Compare fields
-		IGetUnitsAtPlayer that = (IGetUnitsAtPlayer) object;
+		IGetUnitsAtPlayerByGroupId that = (IGetUnitsAtPlayerByGroupId) object;
 		EqualsBuilder builder = new EqualsBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
+		builder.append(this.getGroupId(), that.getGroupId());
 		return builder.isEquals();
 	}
 
@@ -121,14 +148,16 @@ public class GetUnitsAtPlayer implements IGetUnitsAtPlayer {
 		ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE);
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
+		builder.append(getGroupId());
 		return builder.toString();
 	}
 
 	@Override
-	public int compareTo(IGetUnitsAtPlayer that) {
+	public int compareTo(IGetUnitsAtPlayerByGroupId that) {
 		CompareToBuilder builder = new CompareToBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
+		builder.append(this.getGroupId(), that.getGroupId());
 		return builder.toComparison();
 	}
 }

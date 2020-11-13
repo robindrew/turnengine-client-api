@@ -6,6 +6,7 @@ import com.turnengine.client.api.global.image.IImage;
 import com.turnengine.client.api.global.user.IUserAdminInfo;
 import com.turnengine.client.api.local.score.IGroupScore;
 import com.turnengine.client.api.local.score.ITurnScore;
+import com.turnengine.client.api.local.unit.IUnitCount;
 import java.util.List;
 
 public class LocalPlayerExecutorSet implements ILocalPlayerExecutorSet {
@@ -198,6 +199,18 @@ public class LocalPlayerExecutorSet implements ILocalPlayerExecutorSet {
 	@Override
 	public IImage getPlayerAvatar(long loginId, int instanceId, int playerId, int width, int height, boolean fill) {
 		GetPlayerAvatar bean = new GetPlayerAvatar(loginId, instanceId, playerId, width, height, fill);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
+
+	@Override
+	public List<IUnitCount> getUnitsAtPlayer(long loginId, int instanceId) {
+		GetUnitsAtPlayer bean = new GetUnitsAtPlayer(loginId, instanceId);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
+
+	@Override
+	public List<IUnitCount> getUnitsAtPlayerByGroupId(long loginId, int instanceId, int groupId) {
+		GetUnitsAtPlayerByGroupId bean = new GetUnitsAtPlayerByGroupId(loginId, instanceId, groupId);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
 }

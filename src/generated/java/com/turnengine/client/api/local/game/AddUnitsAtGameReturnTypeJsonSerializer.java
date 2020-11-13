@@ -5,15 +5,15 @@ import com.robindrew.codegenerator.api.serializer.json.IJsonSerializer;
 import com.robindrew.codegenerator.api.serializer.json.IJsonWriter;
 import com.robindrew.codegenerator.api.serializer.json.serializer.lang.BooleanSerializer;
 
-public class AddGameUnitsReturnTypeJsonSerializer implements IJsonSerializer<Boolean> {
+public class AddUnitsAtGameReturnTypeJsonSerializer implements IJsonSerializer<Boolean> {
 
 	private String name;
 
-	public AddGameUnitsReturnTypeJsonSerializer() {
-		this("AddGameUnitsReturnType");
+	public AddUnitsAtGameReturnTypeJsonSerializer() {
+		this("AddUnitsAtGameReturnType");
 	}
 
-	public AddGameUnitsReturnTypeJsonSerializer(String name) {
+	public AddUnitsAtGameReturnTypeJsonSerializer(String name) {
 		this.name = name;
 	}
 

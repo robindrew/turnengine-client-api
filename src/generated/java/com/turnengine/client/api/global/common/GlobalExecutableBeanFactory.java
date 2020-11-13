@@ -153,9 +153,9 @@ import com.turnengine.client.api.local.faction.AddFaction;
 import com.turnengine.client.api.local.faction.GetFactionById;
 import com.turnengine.client.api.local.faction.GetFactionByName;
 import com.turnengine.client.api.local.faction.GetFactions;
-import com.turnengine.client.api.local.game.AddGameUnits;
+import com.turnengine.client.api.local.game.AddUnitsAtGame;
 import com.turnengine.client.api.local.game.GetGameStatus;
-import com.turnengine.client.api.local.game.GetGameUnits;
+import com.turnengine.client.api.local.game.GetUnitsAtGame;
 import com.turnengine.client.api.local.game.ResetGame;
 import com.turnengine.client.api.local.game.SetGameInstance;
 import com.turnengine.client.api.local.game.ShutdownGame;
@@ -241,6 +241,8 @@ import com.turnengine.client.api.local.player.GetPlayerScores;
 import com.turnengine.client.api.local.player.GetPlayerSetupInfo;
 import com.turnengine.client.api.local.player.GetPlayerSignupPlugin;
 import com.turnengine.client.api.local.player.GetPlayerSignupsEnabled;
+import com.turnengine.client.api.local.player.GetUnitsAtPlayer;
+import com.turnengine.client.api.local.player.GetUnitsAtPlayerByGroupId;
 import com.turnengine.client.api.local.player.GetUserAdminInfoByPlayer;
 import com.turnengine.client.api.local.player.IsPlayerSignedUp;
 import com.turnengine.client.api.local.player.RenamePlayer;
@@ -295,8 +297,6 @@ import com.turnengine.client.api.local.unit.AddUnit;
 import com.turnengine.client.api.local.unit.GetUnitById;
 import com.turnengine.client.api.local.unit.GetUnitByName;
 import com.turnengine.client.api.local.unit.GetUnits;
-import com.turnengine.client.api.local.unit.GetUnitsAtPlayer;
-import com.turnengine.client.api.local.unit.GetUnitsAtPlayerByGroupId;
 import com.turnengine.client.api.local.unit.GetUnitsByFactionId;
 import com.turnengine.client.api.local.unit.GetUnitsByFactionName;
 import com.turnengine.client.api.local.unit.GetUnitsByGroupId;
@@ -729,8 +729,8 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put(ResetGame.SERIALIZATION_ID, ResetGame.class);
 		objectMap.put(ShutdownGame.SERIALIZATION_ID, ShutdownGame.class);
 		objectMap.put(GetGameStatus.SERIALIZATION_ID, GetGameStatus.class);
-		objectMap.put(AddGameUnits.SERIALIZATION_ID, AddGameUnits.class);
-		objectMap.put(GetGameUnits.SERIALIZATION_ID, GetGameUnits.class);
+		objectMap.put(AddUnitsAtGame.SERIALIZATION_ID, AddUnitsAtGame.class);
+		objectMap.put(GetUnitsAtGame.SERIALIZATION_ID, GetUnitsAtGame.class);
 
 		// Mappings by name
 		objectMap.put("SetGameInstance", SetGameInstance.class);
@@ -738,8 +738,8 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("ResetGame", ResetGame.class);
 		objectMap.put("ShutdownGame", ShutdownGame.class);
 		objectMap.put("GetGameStatus", GetGameStatus.class);
-		objectMap.put("AddGameUnits", AddGameUnits.class);
-		objectMap.put("GetGameUnits", GetGameUnits.class);
+		objectMap.put("AddUnitsAtGame", AddUnitsAtGame.class);
+		objectMap.put("GetUnitsAtGame", GetUnitsAtGame.class);
 
 		// Mappings by id
 		objectMap.put(AddParentGroup.SERIALIZATION_ID, AddParentGroup.class);
@@ -911,6 +911,8 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put(GetUserAdminInfoByPlayer.SERIALIZATION_ID, GetUserAdminInfoByPlayer.class);
 		objectMap.put(SetPlayerAvatar.SERIALIZATION_ID, SetPlayerAvatar.class);
 		objectMap.put(GetPlayerAvatar.SERIALIZATION_ID, GetPlayerAvatar.class);
+		objectMap.put(GetUnitsAtPlayer.SERIALIZATION_ID, GetUnitsAtPlayer.class);
+		objectMap.put(GetUnitsAtPlayerByGroupId.SERIALIZATION_ID, GetUnitsAtPlayerByGroupId.class);
 
 		// Mappings by name
 		objectMap.put("SignupPlayer", SignupPlayer.class);
@@ -942,6 +944,8 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("GetUserAdminInfoByPlayer", GetUserAdminInfoByPlayer.class);
 		objectMap.put("SetPlayerAvatar", SetPlayerAvatar.class);
 		objectMap.put("GetPlayerAvatar", GetPlayerAvatar.class);
+		objectMap.put("GetUnitsAtPlayer", GetUnitsAtPlayer.class);
+		objectMap.put("GetUnitsAtPlayerByGroupId", GetUnitsAtPlayerByGroupId.class);
 
 		// Mappings by id
 		objectMap.put(SetLocalProperty.SERIALIZATION_ID, SetLocalProperty.class);
@@ -1056,8 +1060,6 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put(GetUnitsByFactionName.SERIALIZATION_ID, GetUnitsByFactionName.class);
 		objectMap.put(GetUnitsByGroupId.SERIALIZATION_ID, GetUnitsByGroupId.class);
 		objectMap.put(GetUnitsByGroupName.SERIALIZATION_ID, GetUnitsByGroupName.class);
-		objectMap.put(GetUnitsAtPlayer.SERIALIZATION_ID, GetUnitsAtPlayer.class);
-		objectMap.put(GetUnitsAtPlayerByGroupId.SERIALIZATION_ID, GetUnitsAtPlayerByGroupId.class);
 
 		// Mappings by name
 		objectMap.put("AddUnit", AddUnit.class);
@@ -1068,8 +1070,6 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("GetUnitsByFactionName", GetUnitsByFactionName.class);
 		objectMap.put("GetUnitsByGroupId", GetUnitsByGroupId.class);
 		objectMap.put("GetUnitsByGroupName", GetUnitsByGroupName.class);
-		objectMap.put("GetUnitsAtPlayer", GetUnitsAtPlayer.class);
-		objectMap.put("GetUnitsAtPlayerByGroupId", GetUnitsAtPlayerByGroupId.class);
 
 		// Mappings by id
 		objectMap.put(AddUpkeep.SERIALIZATION_ID, AddUpkeep.class);
