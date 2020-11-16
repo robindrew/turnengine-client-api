@@ -61,4 +61,6 @@ public interface ILocalMobileExecutorSet extends IBeanExecutorSet, ILocalBeanExe
 	Boolean setMobileMove(long loginId, int instanceId, int mobileId, int originId, int destinationId, int turns);
 
 	int[] getMobileIdsForPlayer(long loginId, int instanceId, int playerId);
+
+	List<IUnitCount> getUnitsAtMobile(long loginId, int instanceId, int mobileId);
 }

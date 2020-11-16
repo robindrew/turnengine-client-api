@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface IMobile extends IBean, INamedIdentity, Comparable<IMobile> {
 
-	int SERIALIZATION_ID = 3028;
+	int SERIALIZATION_ID = 3029;
 
 	/**
 	 * Returns the serialization id.

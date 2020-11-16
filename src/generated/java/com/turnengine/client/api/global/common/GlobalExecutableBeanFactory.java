@@ -182,6 +182,7 @@ import com.turnengine.client.api.local.location.GetLocationPropertyList;
 import com.turnengine.client.api.local.location.GetLocationSetupInfo;
 import com.turnengine.client.api.local.location.GetLocationSignupsEnabled;
 import com.turnengine.client.api.local.location.GetLocationsEnabled;
+import com.turnengine.client.api.local.location.GetUnitsAtLocation;
 import com.turnengine.client.api.local.location.RenameLocation;
 import com.turnengine.client.api.local.location.SetLocationCoordinatePlugin;
 import com.turnengine.client.api.local.location.SetLocationGenerationPlugin;
@@ -208,6 +209,7 @@ import com.turnengine.client.api.local.mobile.GetMobilePropertyList;
 import com.turnengine.client.api.local.mobile.GetMobileQueueList;
 import com.turnengine.client.api.local.mobile.GetMobileSetupInfo;
 import com.turnengine.client.api.local.mobile.GetMobilesEnabled;
+import com.turnengine.client.api.local.mobile.GetUnitsAtMobile;
 import com.turnengine.client.api.local.mobile.ListMobilesAtLocation;
 import com.turnengine.client.api.local.mobile.MoveMobile;
 import com.turnengine.client.api.local.mobile.MoveMobileToCoordinates;
@@ -780,6 +782,7 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put(GetLocationPropertyList.SERIALIZATION_ID, GetLocationPropertyList.class);
 		objectMap.put(GetLocationIdsForPlayer.SERIALIZATION_ID, GetLocationIdsForPlayer.class);
 		objectMap.put(CheckRenameLocation.SERIALIZATION_ID, CheckRenameLocation.class);
+		objectMap.put(GetUnitsAtLocation.SERIALIZATION_ID, GetUnitsAtLocation.class);
 
 		// Mappings by name
 		objectMap.put("SetLocationGenerationPlugin", SetLocationGenerationPlugin.class);
@@ -804,6 +807,7 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("GetLocationPropertyList", GetLocationPropertyList.class);
 		objectMap.put("GetLocationIdsForPlayer", GetLocationIdsForPlayer.class);
 		objectMap.put("CheckRenameLocation", CheckRenameLocation.class);
+		objectMap.put("GetUnitsAtLocation", GetUnitsAtLocation.class);
 
 		// Mappings by id
 		objectMap.put(SendMail.SERIALIZATION_ID, SendMail.class);
@@ -851,6 +855,7 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put(SetMobileWait.SERIALIZATION_ID, SetMobileWait.class);
 		objectMap.put(SetMobileMove.SERIALIZATION_ID, SetMobileMove.class);
 		objectMap.put(GetMobileIdsForPlayer.SERIALIZATION_ID, GetMobileIdsForPlayer.class);
+		objectMap.put(GetUnitsAtMobile.SERIALIZATION_ID, GetUnitsAtMobile.class);
 
 		// Mappings by name
 		objectMap.put("CreateMobileAtLocation", CreateMobileAtLocation.class);
@@ -880,6 +885,7 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("SetMobileWait", SetMobileWait.class);
 		objectMap.put("SetMobileMove", SetMobileMove.class);
 		objectMap.put("GetMobileIdsForPlayer", GetMobileIdsForPlayer.class);
+		objectMap.put("GetUnitsAtMobile", GetUnitsAtMobile.class);
 
 		// Mappings by id
 		objectMap.put(SignupPlayer.SERIALIZATION_ID, SignupPlayer.class);

@@ -362,6 +362,8 @@ import com.turnengine.client.api.local.location.GetLocationSignupsEnabled;
 import com.turnengine.client.api.local.location.GetLocationSignupsEnabledReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.location.GetLocationsEnabled;
 import com.turnengine.client.api.local.location.GetLocationsEnabledReturnTypeXmlSerializer;
+import com.turnengine.client.api.local.location.GetUnitsAtLocation;
+import com.turnengine.client.api.local.location.GetUnitsAtLocationReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.location.RenameLocation;
 import com.turnengine.client.api.local.location.RenameLocationReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.location.SetLocationCoordinatePlugin;
@@ -414,6 +416,8 @@ import com.turnengine.client.api.local.mobile.GetMobileSetupInfo;
 import com.turnengine.client.api.local.mobile.GetMobileSetupInfoReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.mobile.GetMobilesEnabled;
 import com.turnengine.client.api.local.mobile.GetMobilesEnabledReturnTypeXmlSerializer;
+import com.turnengine.client.api.local.mobile.GetUnitsAtMobile;
+import com.turnengine.client.api.local.mobile.GetUnitsAtMobileReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.mobile.ListMobilesAtLocation;
 import com.turnengine.client.api.local.mobile.ListMobilesAtLocationReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.mobile.MoveMobile;
@@ -1084,6 +1088,7 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put(GetLocationPropertyList.SERIALIZATION_ID, GetLocationPropertyListReturnTypeXmlSerializer.class);
 		objectMap.put(GetLocationIdsForPlayer.SERIALIZATION_ID, GetLocationIdsForPlayerReturnTypeXmlSerializer.class);
 		objectMap.put(CheckRenameLocation.SERIALIZATION_ID, CheckRenameLocationReturnTypeXmlSerializer.class);
+		objectMap.put(GetUnitsAtLocation.SERIALIZATION_ID, GetUnitsAtLocationReturnTypeXmlSerializer.class);
 
 		// Mappings by name
 		objectMap.put("SetLocationGenerationPlugin", SetLocationGenerationPluginReturnTypeXmlSerializer.class);
@@ -1108,6 +1113,7 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("GetLocationPropertyList", GetLocationPropertyListReturnTypeXmlSerializer.class);
 		objectMap.put("GetLocationIdsForPlayer", GetLocationIdsForPlayerReturnTypeXmlSerializer.class);
 		objectMap.put("CheckRenameLocation", CheckRenameLocationReturnTypeXmlSerializer.class);
+		objectMap.put("GetUnitsAtLocation", GetUnitsAtLocationReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(SendMail.SERIALIZATION_ID, SendMailReturnTypeXmlSerializer.class);
@@ -1155,6 +1161,7 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put(SetMobileWait.SERIALIZATION_ID, SetMobileWaitReturnTypeXmlSerializer.class);
 		objectMap.put(SetMobileMove.SERIALIZATION_ID, SetMobileMoveReturnTypeXmlSerializer.class);
 		objectMap.put(GetMobileIdsForPlayer.SERIALIZATION_ID, GetMobileIdsForPlayerReturnTypeXmlSerializer.class);
+		objectMap.put(GetUnitsAtMobile.SERIALIZATION_ID, GetUnitsAtMobileReturnTypeXmlSerializer.class);
 
 		// Mappings by name
 		objectMap.put("CreateMobileAtLocation", CreateMobileAtLocationReturnTypeXmlSerializer.class);
@@ -1184,6 +1191,7 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("SetMobileWait", SetMobileWaitReturnTypeXmlSerializer.class);
 		objectMap.put("SetMobileMove", SetMobileMoveReturnTypeXmlSerializer.class);
 		objectMap.put("GetMobileIdsForPlayer", GetMobileIdsForPlayerReturnTypeXmlSerializer.class);
+		objectMap.put("GetUnitsAtMobile", GetUnitsAtMobileReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(SignupPlayer.SERIALIZATION_ID, SignupPlayerReturnTypeXmlSerializer.class);

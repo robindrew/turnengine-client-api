@@ -185,4 +185,10 @@ public class LocalMobileExecutorSet implements ILocalMobileExecutorSet {
 		GetMobileIdsForPlayer bean = new GetMobileIdsForPlayer(loginId, instanceId, playerId);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
+
+	@Override
+	public List<IUnitCount> getUnitsAtMobile(long loginId, int instanceId, int mobileId) {
+		GetUnitsAtMobile bean = new GetUnitsAtMobile(loginId, instanceId, mobileId);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
 }

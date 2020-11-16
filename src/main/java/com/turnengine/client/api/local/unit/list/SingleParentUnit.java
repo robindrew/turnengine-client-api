@@ -2,8 +2,6 @@ package com.turnengine.client.api.local.unit.list;
 
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.Map;
-import java.util.TreeMap;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -12,10 +10,13 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import com.turnengine.client.api.local.unit.IUnit;
 import com.turnengine.client.api.local.unit.UnitNode;
 
+import gnu.trove.map.TIntObjectMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
+
 public class SingleParentUnit implements IParentUnit, Comparable<IParentUnit> {
 
 	private final int unitId;
-	private final Map<Integer, IChildUnit> unitIdToChildMap = new TreeMap<Integer, IChildUnit>();
+	private final TIntObjectMap<IChildUnit> unitIdToChildMap = new TIntObjectHashMap<IChildUnit>();
 
 	public SingleParentUnit(int unitId) {
 		if (unitId < 0) {
@@ -79,7 +80,7 @@ public class SingleParentUnit implements IParentUnit, Comparable<IParentUnit> {
 
 	@Override
 	public Collection<IChildUnit> getChildren() {
-		return unitIdToChildMap.values();
+		return unitIdToChildMap.valueCollection();
 	}
 
 	@Override

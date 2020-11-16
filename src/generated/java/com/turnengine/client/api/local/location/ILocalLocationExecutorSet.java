@@ -3,6 +3,7 @@ package com.turnengine.client.api.local.location;
 import com.robindrew.codegenerator.api.executable.executor.IBeanExecutorSet;
 import com.turnengine.client.api.common.command.ILocalBeanExecutorSet;
 import com.turnengine.client.api.common.plugin.IPluginDetails;
+import com.turnengine.client.api.local.unit.IUnitCount;
 import java.util.List;
 
 public interface ILocalLocationExecutorSet extends IBeanExecutorSet, ILocalBeanExecutorSet {
@@ -50,4 +51,6 @@ public interface ILocalLocationExecutorSet extends IBeanExecutorSet, ILocalBeanE
 	int[] getLocationIdsForPlayer(long loginId, int instanceId, int playerId);
 
 	Boolean checkRenameLocation(long loginId, int instanceId, int locationId, String name);
+
+	List<IUnitCount> getUnitsAtLocation(long loginId, int instanceId, int locationId);
 }

@@ -2,6 +2,7 @@ package com.turnengine.client.api.local.location;
 
 import com.robindrew.codegenerator.api.executable.executor.IBeanExecutorLocator;
 import com.turnengine.client.api.common.plugin.IPluginDetails;
+import com.turnengine.client.api.local.unit.IUnitCount;
 import java.util.List;
 
 public class LocalLocationExecutorSet implements ILocalLocationExecutorSet {
@@ -152,6 +153,12 @@ public class LocalLocationExecutorSet implements ILocalLocationExecutorSet {
 	@Override
 	public Boolean checkRenameLocation(long loginId, int instanceId, int locationId, String name) {
 		CheckRenameLocation bean = new CheckRenameLocation(loginId, instanceId, locationId, name);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
+
+	@Override
+	public List<IUnitCount> getUnitsAtLocation(long loginId, int instanceId, int locationId) {
+		GetUnitsAtLocation bean = new GetUnitsAtLocation(loginId, instanceId, locationId);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
 }
