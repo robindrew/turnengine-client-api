@@ -2,6 +2,9 @@ package com.turnengine.client.api.local.upkeep.calculator;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.turnengine.client.api.local.calculator.Calculator;
 import com.turnengine.client.api.local.creation.ICreationCondition;
 import com.turnengine.client.api.local.creation.calculator.CreationCalculator;
@@ -19,6 +22,8 @@ import com.turnengine.client.api.local.upkeep.IUpkeepDefinition;
 import com.turnengine.client.api.local.upkeep.data.IUpkeepData;
 
 public class UpkeepCalculator extends Calculator implements IUpkeepCalculator {
+
+	private static final Logger log = LoggerFactory.getLogger(UpkeepCalculator.class);
 
 	private final ICreationCalculator creation;
 
@@ -49,6 +54,8 @@ public class UpkeepCalculator extends Calculator implements IUpkeepCalculator {
 			if (amount > limit && limit > 0) {
 				amount = limit;
 			}
+
+			log.debug("Applying upkeep for {}", unit.getName());
 
 			ICreationData data = set.toCreation(definition, amount);
 			applyUpkeep(data);
