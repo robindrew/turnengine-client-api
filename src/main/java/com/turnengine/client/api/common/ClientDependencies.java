@@ -37,9 +37,9 @@ import com.turnengine.client.api.local.unit.IUnitCache;
 import com.turnengine.client.api.local.upkeep.ILocalUpkeepExecutorSet;
 import com.turnengine.client.api.local.upkeep.IUpkeepCache;
 
-public class Dependencies {
+public class ClientDependencies {
 
-	public static void setDependencies(IStaticCacheSet cacheSet) {
+	public void setCacheDependencies(IStaticCacheSet cacheSet) {
 		setDependency(IActionCache.class, cacheSet.getActionCache());
 		setDependency(IFactionCache.class, cacheSet.getFactionCache());
 		setDependency(IGroupCache.class, cacheSet.getGroupCache());
@@ -50,7 +50,7 @@ public class Dependencies {
 		setDependency(IStaticCacheSet.class, cacheSet);
 	}
 
-	public static void setDependencies(ILocalBeanExecutorSetLookup lookup) {
+	public void setLocalLookupDependencies(ILocalBeanExecutorSetLookup lookup) {
 		setDependency(ILocalFactionExecutorSet.class, lookup.getFactionSet());
 		setDependency(ILocalLocationExecutorSet.class, lookup.getLocationSet());
 		setDependency(ILocalMobileExecutorSet.class, lookup.getMobileSet());
@@ -70,7 +70,7 @@ public class Dependencies {
 		setDependency(ILocalBeanExecutorSetLookup.class, lookup);
 	}
 
-	public static void setDependencies(IGlobalBeanExecutorSetLookup lookup) {
+	public void setGlobalLookupDependencies(IGlobalBeanExecutorSetLookup lookup) {
 		setDependency(IGlobalAdminExecutorSet.class, lookup.getAdminSet());
 		setDependency(IGlobalAnnouncementExecutorSet.class, lookup.getAnnouncementSet());
 		setDependency(IGlobalCommonExecutorSet.class, lookup.getCommonSet());
