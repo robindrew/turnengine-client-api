@@ -59,4 +59,10 @@ public interface ILocalActionExecutorSet extends IBeanExecutorSet, ILocalBeanExe
 	Boolean cancelActionAtPlayer(long loginId, int instanceId, int actionId, long amount);
 
 	Boolean cancelActionAtLocation(long loginId, int instanceId, int locationId, int actionId, long amount);
+
+	Boolean addMoveRegion(long loginId, int instanceId, String name, int from, int to);
+
+	IActionStatus startActionMovement(long loginId, int instanceId, int mobileId, int locationId, boolean addToQueue);
+
+	List<IActionQueued> listActionsQueuedAtMobile(long loginId, int instanceId, int mobileId);
 }

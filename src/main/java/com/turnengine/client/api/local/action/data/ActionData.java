@@ -11,7 +11,7 @@ import com.turnengine.client.api.local.action.IActionDefinition;
 import com.turnengine.client.api.local.creation.ICreationCondition;
 import com.turnengine.client.api.local.creation.data.ICreationData;
 import com.turnengine.client.api.local.creation.data.ICreationUnitListSet;
-import com.turnengine.client.api.local.player.IPlayerData;
+import com.turnengine.client.api.local.player.IPlayerCreationData;
 import com.turnengine.client.api.local.unit.IUnit;
 import com.turnengine.client.api.local.unit.IUnitCache;
 
@@ -27,7 +27,7 @@ public class ActionData implements IActionData {
 	private ICreationUnitListSet source = null;
 	private ICreationUnitListSet target = null;
 
-	public ActionData(IPlayerData player, IActionDefinition definition, long amount, boolean turnUpdating) {
+	public ActionData(IPlayerCreationData player, IActionDefinition definition, long amount, boolean turnUpdating) {
 		this.playerId = player.getId();
 		this.allianceId = player.getAllianceId();
 		this.factionId = player.getFactionId();

@@ -31,5 +31,15 @@ public enum CreationConditionType {
 	/** The ADD_RANDOM constant. */
 	ADD_RANDOM,
 	/** The REMOVE_RANDOM constant. */
-	REMOVE_RANDOM;
+	REMOVE_RANDOM,
+	/** The MOVE_REGION constant. */
+	MOVE_REGION,
+	/** The START_MOVEMENT constant. */
+	START_MOVEMENT,
+	/** The FINISH_MOVEMENT constant. */
+	FINISH_MOVEMENT,
+	/** The START_WAITING constant. */
+	START_WAITING,
+	/** The FINISH_WAITING constant. */
+	FINISH_WAITING;
 }

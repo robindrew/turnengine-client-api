@@ -1,5 +1,6 @@
 package com.turnengine.client.api.local.mobile;
 
+import com.turnengine.client.api.local.action.IActionExecuting;
 import com.turnengine.client.api.local.location.ILocationInfo;
 import com.turnengine.client.api.local.player.IPlayerInfo;
 import com.turnengine.client.api.local.unit.IUnitCount;
@@ -28,6 +29,14 @@ public class Mobile implements IMobile {
 	private int waitTurns = 0;
 	/** The unitList field. */
 	private List<IUnitCount> unitList = null;
+	/** The actionExecutingList field. */
+	private List<IActionExecuting> actionExecutingList = null;
+	/** The upkeepList field. */
+	private List<IUnitCount> upkeepList = null;
+	/** The previousId field. */
+	private int previousId = 0;
+	/** The nextId field. */
+	private int nextId = 0;
 
 	/**
 	 * The empty constructor.
@@ -38,7 +47,7 @@ public class Mobile implements IMobile {
 	/**
 	 * The fields constructor.
 	 */
-	public Mobile(int id, String name, IPlayerInfo player, ILocationInfo origin, ILocationInfo destination, int moveTurns, int waitTurns, List<IUnitCount> unitList) {
+	public Mobile(int id, String name, IPlayerInfo player, ILocationInfo origin, ILocationInfo destination, int moveTurns, int waitTurns, List<IUnitCount> unitList, List<IActionExecuting> actionExecutingList, List<IUnitCount> upkeepList, int previousId, int nextId) {
 		setId(id);
 		setName(name);
 		setPlayer(player);
@@ -47,6 +56,10 @@ public class Mobile implements IMobile {
 		setMoveTurns(moveTurns);
 		setWaitTurns(waitTurns);
 		setUnitList(unitList);
+		setActionExecutingList(actionExecutingList);
+		setUpkeepList(upkeepList);
+		setPreviousId(previousId);
+		setNextId(nextId);
 	}
 
 	/**
@@ -61,6 +74,10 @@ public class Mobile implements IMobile {
 		setMoveTurns(clone.getMoveTurns());
 		setWaitTurns(clone.getWaitTurns());
 		setUnitList(clone.getUnitList());
+		setActionExecutingList(clone.getActionExecutingList());
+		setUpkeepList(clone.getUpkeepList());
+		setPreviousId(clone.getPreviousId());
+		setNextId(clone.getNextId());
 	}
 
 	/**
@@ -142,6 +159,42 @@ public class Mobile implements IMobile {
 	@Override
 	public List<IUnitCount> getUnitList() {
 		return unitList;
+	}
+
+	/**
+	 * Getter for the actionExecutingList field.
+	 * @return the value of the actionExecutingList field.
+	 */
+	@Override
+	public List<IActionExecuting> getActionExecutingList() {
+		return actionExecutingList;
+	}
+
+	/**
+	 * Getter for the upkeepList field.
+	 * @return the value of the upkeepList field.
+	 */
+	@Override
+	public List<IUnitCount> getUpkeepList() {
+		return upkeepList;
+	}
+
+	/**
+	 * Getter for the previousId field.
+	 * @return the value of the previousId field.
+	 */
+	@Override
+	public int getPreviousId() {
+		return previousId;
+	}
+
+	/**
+	 * Getter for the nextId field.
+	 * @return the value of the nextId field.
+	 */
+	@Override
+	public int getNextId() {
+		return nextId;
 	}
 
 	/**
@@ -234,6 +287,48 @@ public class Mobile implements IMobile {
 		this.unitList = unitList;
 	}
 
+	/**
+	 * Setter for the actionExecutingList field.
+	 * @param actionExecutingList the actionExecutingList value to set.
+	 */
+	@Override
+	public void setActionExecutingList(List<IActionExecuting> actionExecutingList) {
+		this.actionExecutingList = actionExecutingList;
+	}
+
+	/**
+	 * Setter for the upkeepList field.
+	 * @param upkeepList the upkeepList value to set.
+	 */
+	@Override
+	public void setUpkeepList(List<IUnitCount> upkeepList) {
+		this.upkeepList = upkeepList;
+	}
+
+	/**
+	 * Setter for the previousId field.
+	 * @param previousId the previousId value to set.
+	 */
+	@Override
+	public void setPreviousId(int previousId) {
+		if (previousId < -1) {
+			throw new IllegalArgumentException("previousId too small, minimum of -1, value: '" + previousId + "'");
+		}
+		this.previousId = previousId;
+	}
+
+	/**
+	 * Setter for the nextId field.
+	 * @param nextId the nextId value to set.
+	 */
+	@Override
+	public void setNextId(int nextId) {
+		if (nextId < -1) {
+			throw new IllegalArgumentException("nextId too small, minimum of -1, value: '" + nextId + "'");
+		}
+		this.nextId = nextId;
+	}
+
 	@Override
 	public int hashCode() {
 		HashCodeBuilder builder = new HashCodeBuilder();
@@ -245,6 +340,10 @@ public class Mobile implements IMobile {
 		builder.append(getMoveTurns());
 		builder.append(getWaitTurns());
 		builder.append(getUnitList());
+		builder.append(getActionExecutingList());
+		builder.append(getUpkeepList());
+		builder.append(getPreviousId());
+		builder.append(getNextId());
 		return builder.toHashCode();
 	}
 
@@ -276,6 +375,10 @@ public class Mobile implements IMobile {
 		builder.append(this.getMoveTurns(), that.getMoveTurns());
 		builder.append(this.getWaitTurns(), that.getWaitTurns());
 		builder.append(this.getUnitList(), that.getUnitList());
+		builder.append(this.getActionExecutingList(), that.getActionExecutingList());
+		builder.append(this.getUpkeepList(), that.getUpkeepList());
+		builder.append(this.getPreviousId(), that.getPreviousId());
+		builder.append(this.getNextId(), that.getNextId());
 		return builder.isEquals();
 	}
 
@@ -290,6 +393,10 @@ public class Mobile implements IMobile {
 		builder.append(getMoveTurns());
 		builder.append(getWaitTurns());
 		builder.append(getUnitList());
+		builder.append(getActionExecutingList());
+		builder.append(getUpkeepList());
+		builder.append(getPreviousId());
+		builder.append(getNextId());
 		return builder.toString();
 	}
 
@@ -304,6 +411,10 @@ public class Mobile implements IMobile {
 		builder.append(this.getMoveTurns(), that.getMoveTurns());
 		builder.append(this.getWaitTurns(), that.getWaitTurns());
 		builder.append(this.getUnitList(), that.getUnitList());
+		builder.append(this.getActionExecutingList(), that.getActionExecutingList());
+		builder.append(this.getUpkeepList(), that.getUpkeepList());
+		builder.append(this.getPreviousId(), that.getPreviousId());
+		builder.append(this.getNextId(), that.getNextId());
 		return builder.toComparison();
 	}
 }

@@ -2,6 +2,7 @@ package com.turnengine.client.api.local.mobile;
 
 import com.robindrew.codegenerator.api.bean.IBean;
 import com.robindrew.codegenerator.api.identity.INamedIdentity;
+import com.turnengine.client.api.local.action.IActionExecuting;
 import com.turnengine.client.api.local.location.ILocationInfo;
 import com.turnengine.client.api.local.player.IPlayerInfo;
 import com.turnengine.client.api.local.unit.IUnitCount;
@@ -66,6 +67,30 @@ public interface IMobile extends IBean, INamedIdentity, Comparable<IMobile> {
 	List<IUnitCount> getUnitList();
 
 	/**
+	 * Getter for the actionExecutingList field.
+	 * @return the value of the actionExecutingList field.
+	 */
+	List<IActionExecuting> getActionExecutingList();
+
+	/**
+	 * Getter for the upkeepList field.
+	 * @return the value of the upkeepList field.
+	 */
+	List<IUnitCount> getUpkeepList();
+
+	/**
+	 * Getter for the previousId field.
+	 * @return the value of the previousId field.
+	 */
+	int getPreviousId();
+
+	/**
+	 * Getter for the nextId field.
+	 * @return the value of the nextId field.
+	 */
+	int getNextId();
+
+	/**
 	 * Setter for the id field.
 	 * @param id the id value to set.
 	 */
@@ -112,4 +137,28 @@ public interface IMobile extends IBean, INamedIdentity, Comparable<IMobile> {
 	 * @param unitList the unitList value to set.
 	 */
 	void setUnitList(List<IUnitCount> unitList);
+
+	/**
+	 * Setter for the actionExecutingList field.
+	 * @param actionExecutingList the actionExecutingList value to set.
+	 */
+	void setActionExecutingList(List<IActionExecuting> actionExecutingList);
+
+	/**
+	 * Setter for the upkeepList field.
+	 * @param upkeepList the upkeepList value to set.
+	 */
+	void setUpkeepList(List<IUnitCount> upkeepList);
+
+	/**
+	 * Setter for the previousId field.
+	 * @param previousId the previousId value to set.
+	 */
+	void setPreviousId(int previousId);
+
+	/**
+	 * Setter for the nextId field.
+	 * @param nextId the nextId value to set.
+	 */
+	void setNextId(int nextId);
 }

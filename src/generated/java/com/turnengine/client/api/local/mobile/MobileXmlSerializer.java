@@ -5,6 +5,8 @@ import com.robindrew.codegenerator.api.serializer.xml.IXmlSerializer;
 import com.robindrew.codegenerator.api.serializer.xml.IXmlWriter;
 import com.robindrew.codegenerator.api.serializer.xml.serializer.collection.ListSerializer;
 import com.robindrew.codegenerator.api.serializer.xml.serializer.lang.StringSerializer;
+import com.turnengine.client.api.local.action.ActionExecutingXmlSerializer;
+import com.turnengine.client.api.local.action.IActionExecuting;
 import com.turnengine.client.api.local.location.ILocationInfo;
 import com.turnengine.client.api.local.location.LocationInfoXmlSerializer;
 import com.turnengine.client.api.local.player.IPlayerInfo;
@@ -44,10 +46,14 @@ public class MobileXmlSerializer implements IXmlSerializer<IMobile> {
 		int param6 = reader.readInt("moveTurns");
 		int param7 = reader.readInt("waitTurns");
 		List<IUnitCount> param8 = reader.readObject(new ListSerializer<IUnitCount>("unitList", new UnitCountXmlSerializer("element")));
+		List<IActionExecuting> param9 = reader.readObject(new ListSerializer<IActionExecuting>("actionExecutingList", new ActionExecutingXmlSerializer("element")));
+		List<IUnitCount> param10 = reader.readObject(new ListSerializer<IUnitCount>("upkeepList", new UnitCountXmlSerializer("element")));
+		int param11 = reader.readInt("previousId");
+		int param12 = reader.readInt("nextId");
 		reader.endElement(getName());
 
 		// Create the bean
-		return new Mobile(param1, param2, param3, param4, param5, param6, param7, param8);
+		return new Mobile(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12);
 	}
 
 	@Override
@@ -61,6 +67,10 @@ public class MobileXmlSerializer implements IXmlSerializer<IMobile> {
 		writer.writeInt("moveTurns", object.getMoveTurns());
 		writer.writeInt("waitTurns", object.getWaitTurns());
 		writer.writeObject(object.getUnitList(), new ListSerializer<IUnitCount>("unitList", new UnitCountXmlSerializer("element")));
+		writer.writeObject(object.getActionExecutingList(), new ListSerializer<IActionExecuting>("actionExecutingList", new ActionExecutingXmlSerializer("element")));
+		writer.writeObject(object.getUpkeepList(), new ListSerializer<IUnitCount>("upkeepList", new UnitCountXmlSerializer("element")));
+		writer.writeInt("previousId", object.getPreviousId());
+		writer.writeInt("nextId", object.getNextId());
 		writer.endElement(getName());
 	}
 }

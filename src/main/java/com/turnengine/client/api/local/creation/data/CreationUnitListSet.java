@@ -1,6 +1,6 @@
 package com.turnengine.client.api.local.creation.data;
 
-import com.turnengine.client.api.local.player.IPlayerData;
+import com.turnengine.client.api.local.player.IPlayerCreationData;
 import com.turnengine.client.api.local.unit.UnitType;
 import com.turnengine.client.api.local.unit.list.IUnitList;
 import com.turnengine.client.api.local.unit.list.set.IUnitListSet;
@@ -86,7 +86,7 @@ public class CreationUnitListSet implements ICreationUnitListSet {
 		this.factionId = factionId;
 	}
 
-	public void setLocationIds(IPlayerData player, int locationId) {
+	public void setLocationIds(IPlayerCreationData player, int locationId) {
 		setLocationIds(player.getId(), player.getAllianceId(), player.getFactionId(), locationId);
 	}
 
@@ -114,7 +114,7 @@ public class CreationUnitListSet implements ICreationUnitListSet {
 		this.factionId = factionId;
 	}
 
-	public void setMobileIds(IPlayerData player, int mobileId) {
+	public void setMobileIds(IPlayerCreationData player, int mobileId) {
 		setMobileIds(player.getId(), player.getAllianceId(), player.getFactionId(), mobileId);
 	}
 

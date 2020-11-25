@@ -5,6 +5,8 @@ import com.robindrew.common.io.data.IDataWriter;
 import com.robindrew.common.io.data.serializer.ObjectSerializer;
 import com.robindrew.common.io.data.serializer.collection.ListSerializer;
 import com.robindrew.common.io.data.serializer.lang.StringSerializer;
+import com.turnengine.client.api.local.action.ActionExecutingDataSerializer;
+import com.turnengine.client.api.local.action.IActionExecuting;
 import com.turnengine.client.api.local.location.ILocationInfo;
 import com.turnengine.client.api.local.location.LocationInfoDataSerializer;
 import com.turnengine.client.api.local.player.IPlayerInfo;
@@ -34,7 +36,11 @@ public class MobileDataSerializer extends ObjectSerializer<IMobile> {
 		int param6 = reader.readInt();
 		int param7 = reader.readInt();
 		List<IUnitCount> param8 = reader.readObject(new ListSerializer<IUnitCount>(new UnitCountDataSerializer(false), false));
-		return new Mobile(param1, param2, param3, param4, param5, param6, param7, param8);
+		List<IActionExecuting> param9 = reader.readObject(new ListSerializer<IActionExecuting>(new ActionExecutingDataSerializer(false), false));
+		List<IUnitCount> param10 = reader.readObject(new ListSerializer<IUnitCount>(new UnitCountDataSerializer(false), false));
+		int param11 = reader.readInt();
+		int param12 = reader.readInt();
+		return new Mobile(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12);
 	}
 
 	@Override
@@ -47,5 +53,9 @@ public class MobileDataSerializer extends ObjectSerializer<IMobile> {
 		writer.writeInt(object.getMoveTurns());
 		writer.writeInt(object.getWaitTurns());
 		writer.writeObject(object.getUnitList(), new ListSerializer<IUnitCount>(new UnitCountDataSerializer(false), false));
+		writer.writeObject(object.getActionExecutingList(), new ListSerializer<IActionExecuting>(new ActionExecutingDataSerializer(false), false));
+		writer.writeObject(object.getUpkeepList(), new ListSerializer<IUnitCount>(new UnitCountDataSerializer(false), false));
+		writer.writeInt(object.getPreviousId());
+		writer.writeInt(object.getNextId());
 	}
 }

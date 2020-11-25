@@ -27,5 +27,7 @@ public interface IActionDefinition {
 	void addCondition(IActionCondition condition);
 
 	boolean isInstant();
+	
+	boolean isMovement();
 
 }

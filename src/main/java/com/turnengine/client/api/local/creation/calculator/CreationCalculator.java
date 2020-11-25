@@ -14,15 +14,18 @@ import com.turnengine.client.api.local.creation.calculator.condition.AddFraction
 import com.turnengine.client.api.local.creation.calculator.condition.AddPercentCalculator;
 import com.turnengine.client.api.local.creation.calculator.condition.AddRandomCalculator;
 import com.turnengine.client.api.local.creation.calculator.condition.ExistsCalculator;
+import com.turnengine.client.api.local.creation.calculator.condition.FinishMovementCalculator;
 import com.turnengine.client.api.local.creation.calculator.condition.IConditionCalculator;
 import com.turnengine.client.api.local.creation.calculator.condition.MaximumUpkeepCalculator;
 import com.turnengine.client.api.local.creation.calculator.condition.MinimumUpkeepCalculator;
 import com.turnengine.client.api.local.creation.calculator.condition.MinimumUpkeepRemoveCalculator;
+import com.turnengine.client.api.local.creation.calculator.condition.MoveRegionCalculator;
 import com.turnengine.client.api.local.creation.calculator.condition.NotExistsCalculator;
 import com.turnengine.client.api.local.creation.calculator.condition.OwnLocationCalculator;
 import com.turnengine.client.api.local.creation.calculator.condition.RemoveCalculator;
 import com.turnengine.client.api.local.creation.calculator.condition.RemoveFractionCalculator;
 import com.turnengine.client.api.local.creation.calculator.condition.SameLocationCalculator;
+import com.turnengine.client.api.local.creation.calculator.condition.StartMovementCalculator;
 import com.turnengine.client.api.local.creation.data.ICreationData;
 import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
 
@@ -43,6 +46,9 @@ public class CreationCalculator extends Calculator implements ICreationCalculato
 	private final IConditionCalculator ownLocation;
 	private final IConditionCalculator sameLocation;
 	private final IConditionCalculator minimumUpkeepRemove;
+	private final IConditionCalculator moveRegion;
+	private final IConditionCalculator startMovement;
+	private final IConditionCalculator finishMovement;
 
 	public CreationCalculator(IStaticCacheSet set) {
 		super(set);
@@ -59,6 +65,9 @@ public class CreationCalculator extends Calculator implements ICreationCalculato
 		this.ownLocation = new OwnLocationCalculator(set);
 		this.sameLocation = new SameLocationCalculator(set);
 		this.minimumUpkeepRemove = new MinimumUpkeepRemoveCalculator(set);
+		this.moveRegion = new MoveRegionCalculator(set);
+		this.startMovement = new StartMovementCalculator(set);
+		this.finishMovement = new FinishMovementCalculator(set);
 	}
 
 	@Override
@@ -90,6 +99,12 @@ public class CreationCalculator extends Calculator implements ICreationCalculato
 				return ownLocation;
 			case MINIMUM_UPKEEP_REMOVE:
 				return minimumUpkeepRemove;
+			case MOVE_REGION:
+				return moveRegion;
+			case START_MOVEMENT:
+				return startMovement;
+			case FINISH_MOVEMENT:
+				return finishMovement;
 			default:
 				throw new IllegalArgumentException("type not supported: " + type);
 		}

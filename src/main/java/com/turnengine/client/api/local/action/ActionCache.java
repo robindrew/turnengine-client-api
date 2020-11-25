@@ -70,6 +70,7 @@ public class ActionCache implements IActionCache {
 	@Override
 	public void addCondition(IActionCondition condition) {
 		IActionDefinition definition = getDefinition(condition.getId());
+		// TODO: Sanity checks
 		definition.addCondition(condition);
 	}
 

@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IActionStatus extends IBean, Comparable<IActionStatus> {
 
-	int SERIALIZATION_ID = 2032;
+	int SERIALIZATION_ID = 2035;
 
 	/**
 	 * Returns the serialization id.

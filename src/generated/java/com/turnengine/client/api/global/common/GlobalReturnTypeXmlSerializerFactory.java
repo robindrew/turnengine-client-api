@@ -168,6 +168,8 @@ import com.turnengine.client.api.local.action.AddActionPluginReturnTypeXmlSerial
 import com.turnengine.client.api.local.action.AddActionReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.action.AddActionTarget;
 import com.turnengine.client.api.local.action.AddActionTargetReturnTypeXmlSerializer;
+import com.turnengine.client.api.local.action.AddMoveRegion;
+import com.turnengine.client.api.local.action.AddMoveRegionReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.action.CancelActionAtLocation;
 import com.turnengine.client.api.local.action.CancelActionAtLocationReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.action.CancelActionAtPlayer;
@@ -200,6 +202,8 @@ import com.turnengine.client.api.local.action.ListActionsExecutingAtPlayer;
 import com.turnengine.client.api.local.action.ListActionsExecutingAtPlayerReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.action.ListActionsQueuedAtLocation;
 import com.turnengine.client.api.local.action.ListActionsQueuedAtLocationReturnTypeXmlSerializer;
+import com.turnengine.client.api.local.action.ListActionsQueuedAtMobile;
+import com.turnengine.client.api.local.action.ListActionsQueuedAtMobileReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.action.ListActionsQueuedAtPlayer;
 import com.turnengine.client.api.local.action.ListActionsQueuedAtPlayerReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.action.StartActionAtLocation;
@@ -210,6 +214,8 @@ import com.turnengine.client.api.local.action.StartActionAtMobileToLocation;
 import com.turnengine.client.api.local.action.StartActionAtMobileToLocationReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.action.StartActionAtPlayer;
 import com.turnengine.client.api.local.action.StartActionAtPlayerReturnTypeXmlSerializer;
+import com.turnengine.client.api.local.action.StartActionMovement;
+import com.turnengine.client.api.local.action.StartActionMovementReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.alliance.DisbandAlliance;
 import com.turnengine.client.api.local.alliance.DisbandAllianceReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.alliance.FormAlliance;
@@ -889,6 +895,9 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put(GetActionPlugin.SERIALIZATION_ID, GetActionPluginReturnTypeXmlSerializer.class);
 		objectMap.put(CancelActionAtPlayer.SERIALIZATION_ID, CancelActionAtPlayerReturnTypeXmlSerializer.class);
 		objectMap.put(CancelActionAtLocation.SERIALIZATION_ID, CancelActionAtLocationReturnTypeXmlSerializer.class);
+		objectMap.put(AddMoveRegion.SERIALIZATION_ID, AddMoveRegionReturnTypeXmlSerializer.class);
+		objectMap.put(StartActionMovement.SERIALIZATION_ID, StartActionMovementReturnTypeXmlSerializer.class);
+		objectMap.put(ListActionsQueuedAtMobile.SERIALIZATION_ID, ListActionsQueuedAtMobileReturnTypeXmlSerializer.class);
 
 		// Mappings by name
 		objectMap.put("AddAction", AddActionReturnTypeXmlSerializer.class);
@@ -916,6 +925,9 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put("GetActionPlugin", GetActionPluginReturnTypeXmlSerializer.class);
 		objectMap.put("CancelActionAtPlayer", CancelActionAtPlayerReturnTypeXmlSerializer.class);
 		objectMap.put("CancelActionAtLocation", CancelActionAtLocationReturnTypeXmlSerializer.class);
+		objectMap.put("AddMoveRegion", AddMoveRegionReturnTypeXmlSerializer.class);
+		objectMap.put("StartActionMovement", StartActionMovementReturnTypeXmlSerializer.class);
+		objectMap.put("ListActionsQueuedAtMobile", ListActionsQueuedAtMobileReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(GetAllianceCount.SERIALIZATION_ID, GetAllianceCountReturnTypeXmlSerializer.class);

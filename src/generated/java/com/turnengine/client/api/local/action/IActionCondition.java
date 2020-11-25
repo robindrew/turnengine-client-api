@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.creation.ICreationCondition;
 
 public interface IActionCondition extends IBean, ICreationCondition, Comparable<IActionCondition> {
 
-	int SERIALIZATION_ID = 2028;
+	int SERIALIZATION_ID = 2031;
 
 	/**
 	 * Returns the serialization id.

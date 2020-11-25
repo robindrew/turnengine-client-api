@@ -85,6 +85,7 @@ import com.turnengine.client.api.local.action.AddAction;
 import com.turnengine.client.api.local.action.AddActionCondition;
 import com.turnengine.client.api.local.action.AddActionPlugin;
 import com.turnengine.client.api.local.action.AddActionTarget;
+import com.turnengine.client.api.local.action.AddMoveRegion;
 import com.turnengine.client.api.local.action.CancelActionAtLocation;
 import com.turnengine.client.api.local.action.CancelActionAtPlayer;
 import com.turnengine.client.api.local.action.ClearActionQueuedAtLocation;
@@ -101,11 +102,13 @@ import com.turnengine.client.api.local.action.ListActionsAvailableAtPlayer;
 import com.turnengine.client.api.local.action.ListActionsExecutingAtLocation;
 import com.turnengine.client.api.local.action.ListActionsExecutingAtPlayer;
 import com.turnengine.client.api.local.action.ListActionsQueuedAtLocation;
+import com.turnengine.client.api.local.action.ListActionsQueuedAtMobile;
 import com.turnengine.client.api.local.action.ListActionsQueuedAtPlayer;
 import com.turnengine.client.api.local.action.StartActionAtLocation;
 import com.turnengine.client.api.local.action.StartActionAtLocationToLocation;
 import com.turnengine.client.api.local.action.StartActionAtMobileToLocation;
 import com.turnengine.client.api.local.action.StartActionAtPlayer;
+import com.turnengine.client.api.local.action.StartActionMovement;
 import com.turnengine.client.api.local.alliance.DisbandAlliance;
 import com.turnengine.client.api.local.alliance.FormAlliance;
 import com.turnengine.client.api.local.alliance.GetAlliance;
@@ -583,6 +586,9 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put(GetActionPlugin.SERIALIZATION_ID, GetActionPlugin.class);
 		objectMap.put(CancelActionAtPlayer.SERIALIZATION_ID, CancelActionAtPlayer.class);
 		objectMap.put(CancelActionAtLocation.SERIALIZATION_ID, CancelActionAtLocation.class);
+		objectMap.put(AddMoveRegion.SERIALIZATION_ID, AddMoveRegion.class);
+		objectMap.put(StartActionMovement.SERIALIZATION_ID, StartActionMovement.class);
+		objectMap.put(ListActionsQueuedAtMobile.SERIALIZATION_ID, ListActionsQueuedAtMobile.class);
 
 		// Mappings by name
 		objectMap.put("AddAction", AddAction.class);
@@ -610,6 +616,9 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("GetActionPlugin", GetActionPlugin.class);
 		objectMap.put("CancelActionAtPlayer", CancelActionAtPlayer.class);
 		objectMap.put("CancelActionAtLocation", CancelActionAtLocation.class);
+		objectMap.put("AddMoveRegion", AddMoveRegion.class);
+		objectMap.put("StartActionMovement", StartActionMovement.class);
+		objectMap.put("ListActionsQueuedAtMobile", ListActionsQueuedAtMobile.class);
 
 		// Mappings by id
 		objectMap.put(GetAllianceCount.SERIALIZATION_ID, GetAllianceCount.class);

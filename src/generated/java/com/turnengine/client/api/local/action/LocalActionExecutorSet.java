@@ -175,4 +175,22 @@ public class LocalActionExecutorSet implements ILocalActionExecutorSet {
 		CancelActionAtLocation bean = new CancelActionAtLocation(loginId, instanceId, locationId, actionId, amount);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
+
+	@Override
+	public Boolean addMoveRegion(long loginId, int instanceId, String name, int from, int to) {
+		AddMoveRegion bean = new AddMoveRegion(loginId, instanceId, name, from, to);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
+
+	@Override
+	public IActionStatus startActionMovement(long loginId, int instanceId, int mobileId, int locationId, boolean addToQueue) {
+		StartActionMovement bean = new StartActionMovement(loginId, instanceId, mobileId, locationId, addToQueue);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
+
+	@Override
+	public List<IActionQueued> listActionsQueuedAtMobile(long loginId, int instanceId, int mobileId) {
+		ListActionsQueuedAtMobile bean = new ListActionsQueuedAtMobile(loginId, instanceId, mobileId);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
 }

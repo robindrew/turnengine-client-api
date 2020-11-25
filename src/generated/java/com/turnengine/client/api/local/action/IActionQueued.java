@@ -5,7 +5,7 @@ import com.turnengine.client.api.local.unit.UnitType;
 
 public interface IActionQueued extends IBean, Comparable<IActionQueued> {
 
-	int SERIALIZATION_ID = 2029;
+	int SERIALIZATION_ID = 2032;
 
 	/**
 	 * Returns the serialization id.
