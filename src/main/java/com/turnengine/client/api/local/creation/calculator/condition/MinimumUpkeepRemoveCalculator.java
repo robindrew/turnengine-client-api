@@ -3,16 +3,13 @@ package com.turnengine.client.api.local.creation.calculator.condition;
 import static com.robindrew.common.dependency.DependencyFactory.getDependency;
 
 import com.turnengine.client.api.local.creation.ICreationCondition;
-import com.turnengine.client.api.local.creation.data.CreationUnitListSet;
 import com.turnengine.client.api.local.creation.data.ICreationData;
-import com.turnengine.client.api.local.creation.data.ICreationUnitListSet;
+import com.turnengine.client.api.local.creation.data.ICreationTargetData;
 import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
 import com.turnengine.client.api.local.storage.calculator.IStorageCalculator;
 import com.turnengine.client.api.local.unit.IUnit;
-import com.turnengine.client.api.local.unit.UnitType;
 import com.turnengine.client.api.local.unit.list.IUnitList;
 import com.turnengine.client.api.local.unit.list.count.IUnitCountList;
-import com.turnengine.client.api.local.unit.list.set.IUnitListSet;
 import com.turnengine.client.api.local.upkeep.calculator.IUpkeepCalculator;
 import com.turnengine.client.api.local.upkeep.data.IUpkeepData;
 import com.turnengine.client.api.local.upkeep.data.UpkeepData;
@@ -31,12 +28,13 @@ public class MinimumUpkeepRemoveCalculator extends ConditionCalculator {
 
 	@Override
 	public long count(ICreationCondition condition, ICreationData action, boolean optional) {
-		ICreationUnitListSet set = new CreationUnitListSet(action.getUnitListSet());
+		ICreationTargetData set = action.getData().copy();
 
 		// If there are no units to remove, fail
 		IUnit unitToRemove = getUnit(condition.getConditionId2());
 		IStorageCalculator storage = getDependency(IStorageCalculator.class);
-		long amountCanRemove = storage.getAmountCanRemove(getUnitList(set, unitToRemove), unitToRemove);
+		IUnitList list = set.getListSet().getUnitList(unitToRemove.getType());
+		long amountCanRemove = storage.getAmountCanRemove(list, unitToRemove);
 		if (amountCanRemove == 0) {
 			return 0;
 		}
@@ -51,33 +49,18 @@ public class MinimumUpkeepRemoveCalculator extends ConditionCalculator {
 		return amount - amountCanRemove;
 	}
 
-	private boolean removeUnit(IUnit unit, ICreationCondition condition, ICreationData action, IStorageCalculator storage, ICreationUnitListSet set) {
-		IUnitList list = getUnitList(set, unit);
+	private boolean removeUnit(IUnit unit, ICreationCondition condition, ICreationData data, IStorageCalculator storage, ICreationTargetData set) {
+		IUnitList list = set.getListSet().getUnitList(unit.getType());
 		storage.removeAmount(list, unit, 1);
 
 		IUpkeepCalculator calculator = getDependency(IUpkeepCalculator.class);
-		IUpkeepData upkeep = new UpkeepData(action.getPlayerId(), set, action.isTurnUpdating());
+		IUpkeepData upkeep = new UpkeepData(data.getPlayerId(), set, data.isTurnUpdating());
 		IUnitCountList output = calculator.getOutput(upkeep, true);
 
 		// Check updated output
 		long updatedOutput = output.getAmount(condition.getConditionId1());
 		long minimumOutput = condition.getConditionAmount1();
 		return minimumOutput <= updatedOutput;
-	}
-
-	private IUnitList getUnitList(ICreationUnitListSet set, IUnit unit) {
-		IUnitListSet listSet = set.getListSet();
-		UnitType type = unit.getType();
-		switch (type) {
-			case PLAYER:
-				return listSet.getPlayerUnitList();
-			case LOCATION:
-				return listSet.getLocationUnitList();
-			case MOBILE:
-				return listSet.getMobileUnitList();
-			default:
-				throw new IllegalStateException("Unit type: " + type);
-		}
 	}
 
 	@Override

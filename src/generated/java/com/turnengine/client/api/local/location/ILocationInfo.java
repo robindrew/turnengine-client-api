@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.player.IPlayerInfo;
 
 public interface ILocationInfo extends IBean, INamedIdentity, Comparable<ILocationInfo> {
 
-	int SERIALIZATION_ID = 2827;
+	int SERIALIZATION_ID = 2828;
 
 	/**
 	 * Returns the serialization id.

@@ -2,15 +2,10 @@ package com.turnengine.client.api.local.action.data;
 
 import static com.robindrew.common.dependency.DependencyFactory.getDependency;
 
-import java.util.List;
-
-import com.turnengine.client.api.local.action.ActionConditionExecute;
 import com.turnengine.client.api.local.action.ActionTargetType;
 import com.turnengine.client.api.local.action.IAction;
 import com.turnengine.client.api.local.action.IActionDefinition;
-import com.turnengine.client.api.local.creation.ICreationCondition;
-import com.turnengine.client.api.local.creation.data.ICreationData;
-import com.turnengine.client.api.local.creation.data.ICreationUnitListSet;
+import com.turnengine.client.api.local.creation.data.ICreationTargetData;
 import com.turnengine.client.api.local.player.IPlayerCreationData;
 import com.turnengine.client.api.local.unit.IUnit;
 import com.turnengine.client.api.local.unit.IUnitCache;
@@ -24,8 +19,8 @@ public class ActionData implements IActionData {
 	private final boolean turnUpdating;
 
 	private long amount;
-	private ICreationUnitListSet source = null;
-	private ICreationUnitListSet target = null;
+	private ICreationTargetData source = null;
+	private ICreationTargetData target = null;
 
 	public ActionData(IPlayerCreationData player, IActionDefinition definition, long amount, boolean turnUpdating) {
 		this.playerId = player.getId();
@@ -105,7 +100,7 @@ public class ActionData implements IActionData {
 	}
 
 	@Override
-	public ICreationUnitListSet getSource() {
+	public ICreationTargetData getSource() {
 		if (source == null) {
 			throw new IllegalArgumentException("source not set");
 		}
@@ -113,7 +108,7 @@ public class ActionData implements IActionData {
 	}
 
 	@Override
-	public ICreationUnitListSet getTarget() {
+	public ICreationTargetData getTarget() {
 		if (target == null && hasTarget()) {
 			throw new IllegalArgumentException("target not set");
 		}
@@ -121,7 +116,7 @@ public class ActionData implements IActionData {
 	}
 
 	@Override
-	public void setSource(ICreationUnitListSet source) {
+	public void setSource(ICreationTargetData source) {
 		if (source == null) {
 			throw new NullPointerException("source");
 		}
@@ -133,7 +128,7 @@ public class ActionData implements IActionData {
 	}
 
 	@Override
-	public void setTarget(ICreationUnitListSet target) {
+	public void setTarget(ICreationTargetData target) {
 		if (target == null) {
 			throw new NullPointerException("target");
 		}
@@ -163,7 +158,7 @@ public class ActionData implements IActionData {
 	}
 
 	@Override
-	public ICreationUnitListSet getTarget(ActionTargetType type) {
+	public ICreationTargetData getTargetData(ActionTargetType type) {
 		switch (type) {
 			case SOURCE:
 				return source;
@@ -172,13 +167,6 @@ public class ActionData implements IActionData {
 			default:
 				throw new IllegalArgumentException("type not supported: " + type);
 		}
-	}
-
-	@Override
-	public ICreationData toCreation(ActionTargetType type, ActionConditionExecute execute) {
-		ICreationUnitListSet set = getTarget(type);
-		List<? extends ICreationCondition> conditions = getDefinition().getConditions(type, execute);
-		return new ActionCreationData(getPlayerId(), getDefinition(), getAmount(), set, conditions, isTurnUpdating());
 	}
 
 	@Override

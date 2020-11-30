@@ -31,7 +31,7 @@ public class MaximumUpkeepCalculator extends ConditionCalculator {
 		// IUnitListSet listSet = action.getUnitListSet().getListSet();
 
 		IUpkeepCalculator calculator = getDependency(IUpkeepCalculator.class);
-		IUpkeepData upkeep = new UpkeepData(action.getPlayerId(), action.getUnitListSet(), action.isTurnUpdating());
+		IUpkeepData upkeep = new UpkeepData(action.getPlayerId(), action.getData(), action.isTurnUpdating());
 		IUnitCountList output = calculator.getOutput(upkeep);
 
 		// Check current output

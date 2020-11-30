@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IGeneratedLocation extends IBean, Comparable<IGeneratedLocation> {
 
-	int SERIALIZATION_ID = 2811;
+	int SERIALIZATION_ID = 2827;
 
 	/**
 	 * Returns the serialization id.

@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IPlayerSetupInfo extends IBean, Comparable<IPlayerSetupInfo> {
 
-	int SERIALIZATION_ID = 3134;
+	int SERIALIZATION_ID = 3135;
 
 	/**
 	 * Returns the serialization id.

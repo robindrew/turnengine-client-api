@@ -5,7 +5,7 @@ import static com.robindrew.common.dependency.DependencyFactory.getDependency;
 import com.turnengine.client.api.local.creation.ICreationCondition;
 import com.turnengine.client.api.local.creation.ICreationHelper;
 import com.turnengine.client.api.local.creation.data.ICreationData;
-import com.turnengine.client.api.local.creation.data.ICreationUnitListSet;
+import com.turnengine.client.api.local.creation.data.ICreationTargetData;
 import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
 import com.turnengine.client.api.local.unit.UnitType;
 import com.turnengine.client.api.local.unit.list.count.IUnitCountList;
@@ -18,7 +18,7 @@ public class OwnLocationCalculator extends ConditionCalculator {
 
 	@Override
 	public long apply(ICreationCondition condition, ICreationData data, boolean optional, long apply) {
-		ICreationUnitListSet set = data.getUnitListSet();
+		ICreationTargetData set = data.getData();
 		if (!set.getType().equals(UnitType.LOCATION)) {
 			throw new IllegalArgumentException("set type should be location: " + set.getType());
 		}
@@ -39,7 +39,7 @@ public class OwnLocationCalculator extends ConditionCalculator {
 			return Long.MAX_VALUE;
 		}
 
-		ICreationUnitListSet set = data.getUnitListSet();
+		ICreationTargetData set = data.getData();
 		if (!set.getType().equals(UnitType.LOCATION)) {
 			throw new IllegalArgumentException("set type should be location: " + set.getType());
 		}

@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IMobileProperty extends IBean, Comparable<IMobileProperty> {
 
-	int SERIALIZATION_ID = 3032;
+	int SERIALIZATION_ID = 3033;
 
 	/**
 	 * Returns the serialization id.

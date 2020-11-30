@@ -7,7 +7,7 @@ import com.turnengine.client.api.local.score.IGroupScore;
 import com.turnengine.client.api.local.unit.IUnitCount;
 import java.util.List;
 
-public interface IPlayer extends IBean, INamedIdentity, IPlayerCreationData, Comparable<IPlayer> {
+public interface IPlayer extends IBean, INamedIdentity, Comparable<IPlayer> {
 
 	int SERIALIZATION_ID = 3132;
 

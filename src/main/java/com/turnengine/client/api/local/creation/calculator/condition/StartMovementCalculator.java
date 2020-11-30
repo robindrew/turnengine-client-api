@@ -2,6 +2,8 @@ package com.turnengine.client.api.local.creation.calculator.condition;
 
 import com.turnengine.client.api.local.creation.ICreationCondition;
 import com.turnengine.client.api.local.creation.data.ICreationData;
+import com.turnengine.client.api.local.creation.data.ICreationTargetData;
+import com.turnengine.client.api.local.mobile.IMobileCreationData;
 import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
 import com.turnengine.client.api.local.unit.list.count.IUnitCountList;
 
@@ -12,14 +14,29 @@ public class StartMovementCalculator extends ConditionCalculator {
 	}
 
 	@Override
-	public long apply(ICreationCondition condition, ICreationData action, boolean optional, long apply) {
-		// Nothing to do ...
+	public long apply(ICreationCondition condition, ICreationData data, boolean optional, long apply) {
+
+		// Is mobile moving?
+		ICreationTargetData target = data.getData();
+		IMobileCreationData mobile = target.getMobile();
+		if (mobile.getMoveTurns() > 0) {
+			return 0;
+		}
+
+		// Ok start moving!
+		mobile.setMoveTurns(data.getTurns());
+
 		return apply;
 	}
 
 	@Override
-	public long count(ICreationCondition condition, ICreationData action, boolean optional) {
-		// TODO: Check mobile is not already moving ....
+	public long count(ICreationCondition condition, ICreationData data, boolean optional) {
+		ICreationTargetData target = data.getData();
+		IMobileCreationData mobile = target.getMobile();
+		if (mobile.getMoveTurns() > 0) {
+			return 0;
+		}
+
 		return Long.MAX_VALUE;
 	}
 
@@ -29,7 +46,13 @@ public class StartMovementCalculator extends ConditionCalculator {
 	}
 
 	@Override
-	public long undo(ICreationCondition condition, ICreationData action, boolean optional, long amountToUndo) {
+	public long undo(ICreationCondition condition, ICreationData data, boolean optional, long amountToUndo) {
+
+		// Stop moving please!
+		ICreationTargetData target = data.getData();
+		IMobileCreationData mobile = target.getMobile();
+		mobile.setMoveTurns(data.getTurns());
+
 		return amountToUndo;
 	}
 

@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface IMobileSetupInfo extends IBean, Comparable<IMobileSetupInfo> {
 
-	int SERIALIZATION_ID = 3031;
+	int SERIALIZATION_ID = 3032;
 
 	/**
 	 * Returns the serialization id.

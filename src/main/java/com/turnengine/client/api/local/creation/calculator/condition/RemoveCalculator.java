@@ -16,7 +16,7 @@ public class RemoveCalculator extends ConditionCalculator {
 
 	@Override
 	public long apply(ICreationCondition condition, ICreationData data, boolean optional, long apply) {
-		IUnitListSet listSet = data.getUnitListSet().getListSet();
+		IUnitListSet listSet = data.getData().getListSet();
 
 		IUnit unit = getUnit(condition.getConditionId1());
 		IUnitList list = listSet.getUnitList(unit.getType());
@@ -44,7 +44,7 @@ public class RemoveCalculator extends ConditionCalculator {
 			return Long.MAX_VALUE;
 		}
 
-		IUnitListSet listSet = data.getUnitListSet().getListSet();
+		IUnitListSet listSet = data.getData().getListSet();
 
 		IUnit unit = getUnit(condition.getConditionId1());
 		IUnitList list = listSet.getUnitList(unit.getType());

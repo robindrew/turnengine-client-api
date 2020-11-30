@@ -17,7 +17,13 @@ public interface ICreationData {
 
 	long getAmount();
 
-	ICreationUnitListSet getUnitListSet();
+	int getTurns();
+
+	ICreationTargetData getData();
+
+	ICreationTargetData getSourceData();
+
+	ICreationTargetData getTargetData();
 
 	List<? extends ICreationCondition> getConditions();
 

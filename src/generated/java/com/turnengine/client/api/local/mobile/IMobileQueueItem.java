@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IMobileQueueItem extends IBean, Comparable<IMobileQueueItem> {
 
-	int SERIALIZATION_ID = 3033;
+	int SERIALIZATION_ID = 3034;
 
 	/**
 	 * Returns the serialization id.

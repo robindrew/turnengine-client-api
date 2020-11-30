@@ -163,7 +163,6 @@ public class CreationCalculator extends Calculator implements ICreationCalculato
 		}
 
 		// When applying conditions, we expect no failures, that they already counted!
-		// ICreationUnitListSet target = data.getUnitListSet();
 		for (ICreationCondition condition : conditions) {
 			IConditionCalculator calculator = getCalculator(condition.getConditionType());
 

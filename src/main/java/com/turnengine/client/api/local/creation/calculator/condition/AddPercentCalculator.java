@@ -18,7 +18,7 @@ public class AddPercentCalculator extends ConditionCalculator {
 	@Override
 	public long apply(ICreationCondition condition, ICreationData data, boolean optional, long apply) {
 		StorageType type = getStorageType(data);
-		IUnitListSet listSet = data.getUnitListSet().getListSet();
+		IUnitListSet listSet = data.getData().getListSet();
 
 		IUnit unit1 = getUnit(condition.getConditionId1());
 		IUnitList list1 = listSet.getUnitList(unit1.getType());
@@ -92,7 +92,7 @@ public class AddPercentCalculator extends ConditionCalculator {
 		}
 
 		StorageType type = getStorageType(data);
-		IUnitListSet listSet = data.getUnitListSet().getListSet();
+		IUnitListSet listSet = data.getData().getListSet();
 
 		IUnit unit1 = getUnit(condition.getConditionId1());
 		IUnitList list1 = listSet.getUnitList(unit1.getType());
@@ -142,7 +142,7 @@ public class AddPercentCalculator extends ConditionCalculator {
 
 	@Override
 	public void getOutput(ICreationCondition condition, ICreationData data, long amountToApply, IUnitCountList output) {
-		IUnitListSet listSet = data.getUnitListSet().getListSet();
+		IUnitListSet listSet = data.getData().getListSet();
 
 		IUnit unit1 = getUnit(condition.getConditionId1());
 		// IUnitList list1 = listSet.getUnitList(unit1.getType());

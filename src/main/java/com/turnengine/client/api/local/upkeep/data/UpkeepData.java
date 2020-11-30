@@ -1,7 +1,7 @@
 package com.turnengine.client.api.local.upkeep.data;
 
 import com.turnengine.client.api.local.creation.data.ICreationData;
-import com.turnengine.client.api.local.creation.data.ICreationUnitListSet;
+import com.turnengine.client.api.local.creation.data.ICreationTargetData;
 import com.turnengine.client.api.local.unit.UnitType;
 import com.turnengine.client.api.local.unit.list.IUnitList;
 import com.turnengine.client.api.local.unit.list.set.IUnitListSet;
@@ -10,10 +10,10 @@ import com.turnengine.client.api.local.upkeep.IUpkeepDefinition;
 public class UpkeepData implements IUpkeepData {
 
 	private final int playerId;
-	private final ICreationUnitListSet set;
+	private final ICreationTargetData set;
 	private final boolean turnUpdating;
 
-	public UpkeepData(int playerId, ICreationUnitListSet set, boolean turnUpdating) {
+	public UpkeepData(int playerId, ICreationTargetData set, boolean turnUpdating) {
 		this.playerId = playerId;
 		this.set = set;
 		this.turnUpdating = turnUpdating;
@@ -45,7 +45,7 @@ public class UpkeepData implements IUpkeepData {
 	}
 
 	@Override
-	public ICreationUnitListSet getUnitListSet() {
+	public ICreationTargetData getUnitListSet() {
 		return set;
 	}
 

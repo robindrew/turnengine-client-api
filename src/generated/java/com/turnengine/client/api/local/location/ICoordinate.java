@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ICoordinate extends IBean, Comparable<ICoordinate> {
 
-	int SERIALIZATION_ID = 2804;
+	int SERIALIZATION_ID = 2811;
 
 	/**
 	 * Returns the serialization id.

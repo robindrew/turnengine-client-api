@@ -8,7 +8,7 @@ import com.turnengine.client.api.local.action.IAction;
 import com.turnengine.client.api.local.action.IActionDefinition;
 import com.turnengine.client.api.local.creation.ICreationCondition;
 import com.turnengine.client.api.local.creation.data.ICreationData;
-import com.turnengine.client.api.local.creation.data.ICreationUnitListSet;
+import com.turnengine.client.api.local.creation.data.ICreationTargetData;
 import com.turnengine.client.api.local.unit.IUnit;
 import com.turnengine.client.api.local.unit.IUnitCache;
 
@@ -16,16 +16,18 @@ public class ActionCreationData implements ICreationData {
 
 	private final int playerId;
 	private final IActionDefinition definition;
-	private final ICreationUnitListSet set;
+	private final ICreationTargetData data;
+	private final ICreationTargetData sourceData;
+	private final ICreationTargetData targetData;
 	private final long amount;
 	private final List<? extends ICreationCondition> conditions;
 	private final boolean turnUpdating;
 
-	public ActionCreationData(int playerId, IActionDefinition definition, long amount, ICreationUnitListSet set, List<? extends ICreationCondition> conditions, boolean turnUpdating) {
+	public ActionCreationData(int playerId, IActionDefinition definition, long amount, ICreationTargetData data, ICreationTargetData sourceData, ICreationTargetData targetData, List<? extends ICreationCondition> conditions, boolean turnUpdating) {
 		if (amount < 1) {
 			throw new IllegalArgumentException("amount=" + amount);
 		}
-		if (set == null) {
+		if (data == null) {
 			throw new NullPointerException("set");
 		}
 		if (definition == null) {
@@ -36,10 +38,17 @@ public class ActionCreationData implements ICreationData {
 		}
 		this.playerId = playerId;
 		this.definition = definition;
-		this.set = set;
+		this.data = data;
 		this.amount = amount;
 		this.conditions = conditions;
 		this.turnUpdating = turnUpdating;
+		this.sourceData = sourceData;
+		this.targetData = targetData;
+	}
+
+	@Override
+	public int getTurns() {
+		return definition.getAction().getTurns();
 	}
 
 	@Override
@@ -77,13 +86,13 @@ public class ActionCreationData implements ICreationData {
 	}
 
 	@Override
-	public ICreationUnitListSet getUnitListSet() {
-		return set;
+	public ICreationTargetData getData() {
+		return data;
 	}
 
 	@Override
 	public String toString() {
-		return getUnit().getName() + " x " + getAmount() + " @ " + set;
+		return getUnit().getName() + " x " + getAmount() + " @ " + data;
 	}
 
 	@Override
@@ -94,6 +103,16 @@ public class ActionCreationData implements ICreationData {
 	@Override
 	public boolean isTurnUpdating() {
 		return turnUpdating;
+	}
+
+	@Override
+	public ICreationTargetData getSourceData() {
+		return sourceData;
+	}
+
+	@Override
+	public ICreationTargetData getTargetData() {
+		return targetData;
 	}
 
 }

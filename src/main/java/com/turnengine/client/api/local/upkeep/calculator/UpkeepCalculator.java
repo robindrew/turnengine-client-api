@@ -33,8 +33,8 @@ public class UpkeepCalculator extends Calculator implements IUpkeepCalculator {
 	}
 
 	@Override
-	public void applyUpkeep(IUpkeepData set) {
-		IUnitList unitList = set.getUpkeepUnitList();
+	public void applyUpkeep(IUpkeepData upkeepData) {
+		IUnitList unitList = upkeepData.getUpkeepUnitList();
 
 		// Upkeep is applied by each unit type in order
 		IUnitCache units = getCacheSet().getUnitCache();
@@ -57,7 +57,7 @@ public class UpkeepCalculator extends Calculator implements IUpkeepCalculator {
 
 			log.debug("Applying upkeep for {}", unit.getName());
 
-			ICreationData data = set.toCreation(definition, amount);
+			ICreationData data = upkeepData.toCreation(definition, amount);
 			applyUpkeep(data);
 		}
 	}
@@ -75,9 +75,9 @@ public class UpkeepCalculator extends Calculator implements IUpkeepCalculator {
 	}
 
 	@Override
-	public IUnitCountList getOutput(IUpkeepData set, boolean allowNegativeAmounts) {
+	public IUnitCountList getOutput(IUpkeepData upkeepData, boolean allowNegativeAmounts) {
 		IUnitCountList output = new UnitCountList();
-		IUnitList unitList = set.getUpkeepUnitList();
+		IUnitList unitList = upkeepData.getUpkeepUnitList();
 
 		// Upkeep is applied by each unit type in order
 		IUnitCache units = getCacheSet().getUnitCache();
@@ -98,7 +98,7 @@ public class UpkeepCalculator extends Calculator implements IUpkeepCalculator {
 				amount = limit;
 			}
 
-			ICreationData data = set.toCreation(definition, amount);
+			ICreationData data = upkeepData.toCreation(definition, amount);
 			getOutput(data, output);
 		}
 

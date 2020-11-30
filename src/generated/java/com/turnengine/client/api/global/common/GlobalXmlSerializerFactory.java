@@ -457,6 +457,8 @@ import com.turnengine.client.api.local.location.GridInfo;
 import com.turnengine.client.api.local.location.GridInfoXmlSerializer;
 import com.turnengine.client.api.local.location.GridXmlSerializer;
 import com.turnengine.client.api.local.location.Location;
+import com.turnengine.client.api.local.location.LocationCreationData;
+import com.turnengine.client.api.local.location.LocationCreationDataXmlSerializer;
 import com.turnengine.client.api.local.location.LocationInfo;
 import com.turnengine.client.api.local.location.LocationInfoXmlSerializer;
 import com.turnengine.client.api.local.location.LocationProperty;
@@ -527,6 +529,8 @@ import com.turnengine.client.api.local.mobile.GetUnitsAtMobileXmlSerializer;
 import com.turnengine.client.api.local.mobile.ListMobilesAtLocation;
 import com.turnengine.client.api.local.mobile.ListMobilesAtLocationXmlSerializer;
 import com.turnengine.client.api.local.mobile.Mobile;
+import com.turnengine.client.api.local.mobile.MobileCreationData;
+import com.turnengine.client.api.local.mobile.MobileCreationDataXmlSerializer;
 import com.turnengine.client.api.local.mobile.MobileInfo;
 import com.turnengine.client.api.local.mobile.MobileInfoXmlSerializer;
 import com.turnengine.client.api.local.mobile.MobileProperty;
@@ -609,6 +613,8 @@ import com.turnengine.client.api.local.player.GetUserAdminInfoByPlayerXmlSeriali
 import com.turnengine.client.api.local.player.IsPlayerSignedUp;
 import com.turnengine.client.api.local.player.IsPlayerSignedUpXmlSerializer;
 import com.turnengine.client.api.local.player.Player;
+import com.turnengine.client.api.local.player.PlayerCreationData;
+import com.turnengine.client.api.local.player.PlayerCreationDataXmlSerializer;
 import com.turnengine.client.api.local.player.PlayerInfo;
 import com.turnengine.client.api.local.player.PlayerInfoXmlSerializer;
 import com.turnengine.client.api.local.player.PlayerProperty;
@@ -1369,6 +1375,7 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 
 		// Mappings by id
 		objectMap.put(Location.SERIALIZATION_ID, LocationXmlSerializer.class);
+		objectMap.put(LocationCreationData.SERIALIZATION_ID, LocationCreationDataXmlSerializer.class);
 		objectMap.put(Coordinate.SERIALIZATION_ID, CoordinateXmlSerializer.class);
 		objectMap.put(GeneratedLocation.SERIALIZATION_ID, GeneratedLocationXmlSerializer.class);
 		objectMap.put(LocationInfo.SERIALIZATION_ID, LocationInfoXmlSerializer.class);
@@ -1402,6 +1409,7 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 
 		// Mappings by name
 		objectMap.put("Location", LocationXmlSerializer.class);
+		objectMap.put("LocationCreationData", LocationCreationDataXmlSerializer.class);
 		objectMap.put("Coordinate", CoordinateXmlSerializer.class);
 		objectMap.put("GeneratedLocation", GeneratedLocationXmlSerializer.class);
 		objectMap.put("LocationInfo", LocationInfoXmlSerializer.class);
@@ -1459,6 +1467,7 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 
 		// Mappings by id
 		objectMap.put(Mobile.SERIALIZATION_ID, MobileXmlSerializer.class);
+		objectMap.put(MobileCreationData.SERIALIZATION_ID, MobileCreationDataXmlSerializer.class);
 		objectMap.put(MobileInfo.SERIALIZATION_ID, MobileInfoXmlSerializer.class);
 		objectMap.put(MobileSetupInfo.SERIALIZATION_ID, MobileSetupInfoXmlSerializer.class);
 		objectMap.put(MobileProperty.SERIALIZATION_ID, MobilePropertyXmlSerializer.class);
@@ -1494,6 +1503,7 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 
 		// Mappings by name
 		objectMap.put("Mobile", MobileXmlSerializer.class);
+		objectMap.put("MobileCreationData", MobileCreationDataXmlSerializer.class);
 		objectMap.put("MobileInfo", MobileInfoXmlSerializer.class);
 		objectMap.put("MobileSetupInfo", MobileSetupInfoXmlSerializer.class);
 		objectMap.put("MobileProperty", MobilePropertyXmlSerializer.class);
@@ -1529,6 +1539,7 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 
 		// Mappings by id
 		objectMap.put(Player.SERIALIZATION_ID, PlayerXmlSerializer.class);
+		objectMap.put(PlayerCreationData.SERIALIZATION_ID, PlayerCreationDataXmlSerializer.class);
 		objectMap.put(PlayerInfo.SERIALIZATION_ID, PlayerInfoXmlSerializer.class);
 		objectMap.put(PlayerSetupInfo.SERIALIZATION_ID, PlayerSetupInfoXmlSerializer.class);
 		objectMap.put(PlayerProperty.SERIALIZATION_ID, PlayerPropertyXmlSerializer.class);
@@ -1566,6 +1577,7 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 
 		// Mappings by name
 		objectMap.put("Player", PlayerXmlSerializer.class);
+		objectMap.put("PlayerCreationData", PlayerCreationDataXmlSerializer.class);
 		objectMap.put("PlayerInfo", PlayerInfoXmlSerializer.class);
 		objectMap.put("PlayerSetupInfo", PlayerSetupInfoXmlSerializer.class);
 		objectMap.put("PlayerProperty", PlayerPropertyXmlSerializer.class);

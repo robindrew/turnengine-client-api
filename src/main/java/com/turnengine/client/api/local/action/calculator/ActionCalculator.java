@@ -5,17 +5,22 @@ import static com.turnengine.client.api.local.action.ActionConditionExecute.STAR
 import static com.turnengine.client.api.local.action.ActionTargetType.SOURCE;
 import static com.turnengine.client.api.local.action.ActionTargetType.TARGET;
 
+import java.util.List;
+
+import com.turnengine.client.api.local.action.ActionConditionExecute;
 import com.turnengine.client.api.local.action.ActionStatus;
 import com.turnengine.client.api.local.action.ActionTargetType;
-import com.turnengine.client.api.local.action.IActionDefinition;
 import com.turnengine.client.api.local.action.IActionStatus;
+import com.turnengine.client.api.local.action.data.ActionCreationData;
 import com.turnengine.client.api.local.action.data.IActionData;
 import com.turnengine.client.api.local.action.plugin.IActionPlugin;
 import com.turnengine.client.api.local.action.plugin.IActionPluginManager;
 import com.turnengine.client.api.local.calculator.Calculator;
+import com.turnengine.client.api.local.creation.ICreationCondition;
 import com.turnengine.client.api.local.creation.calculator.CreationCalculator;
 import com.turnengine.client.api.local.creation.calculator.ICreationCalculator;
 import com.turnengine.client.api.local.creation.data.ICreationData;
+import com.turnengine.client.api.local.creation.data.ICreationTargetData;
 import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
 import com.turnengine.client.api.local.storage.calculator.IStorageCalculator;
 import com.turnengine.client.api.local.storage.calculator.StorageCalculator;
@@ -66,39 +71,25 @@ public class ActionCalculator extends Calculator implements IActionCalculator {
 			return 0;
 		}
 
+		// Limit
+		int limit = action.getDefinition().getAction().getLimit();
+
 		// Calculate amount from source
-		long amount = countConditions(SOURCE, action);
+		ICreationData source = getData(SOURCE, START, action);
+		long amount = creation.countCreation(source, limit);
 		if (amount == 0) {
 			return 0;
 		}
 
 		// If there is a target, calculate amount from target and filter
 		if (action.hasTarget()) {
-			long targetAmount = countConditions(TARGET, action);
+			ICreationData target = getData(TARGET, START, action);
+			long targetAmount = creation.countCreation(target, limit);
 			if (amount > targetAmount) {
 				amount = targetAmount;
 			}
 		}
 		return amount;
-	}
-
-	private long countConditions(ActionTargetType type, IActionData action) {
-		// ICreationUnitListSet target = action.getTarget(type);
-
-		// Get starting conditions, unless the action is instant
-		IActionDefinition definition = action.getDefinition();
-		// final List<IActionCondition> conditions;
-		// if (definition.isInstant()) {
-		// conditions = definition.getConditions(type);
-		// } else {
-		// conditions = definition.getConditions(type, START);
-		// }
-
-		// IUnitListSet listSet = target.getListSet();
-		int limit = definition.getAction().getLimit();
-
-		ICreationData data = action.toCreation(type, START);
-		return creation.countCreation(data, limit);
 	}
 
 	@Override
@@ -115,13 +106,13 @@ public class ActionCalculator extends Calculator implements IActionCalculator {
 		IActionPlugin plugin = plugins.getPlugin(action.getAction());
 
 		// Execute at source
-		ICreationData data = action.toCreation(SOURCE, START);
-		creation.applyCreation(data, action.getAmount(), false);
+		ICreationData source = getData(SOURCE, START, action);
+		creation.applyCreation(source, action.getAmount(), false);
 
 		// Execute at target
 		if (action.hasTarget()) {
-			data = action.toCreation(TARGET, START);
-			creation.applyCreation(data, action.getAmount(), false);
+			ICreationData target = getData(TARGET, START, action);
+			creation.applyCreation(target, action.getAmount(), false);
 		}
 
 		// Run the plugin (after creation)
@@ -148,13 +139,13 @@ public class ActionCalculator extends Calculator implements IActionCalculator {
 		IActionPlugin plugin = plugins.getPlugin(action.getAction());
 
 		// Execute at source
-		ICreationData data = action.toCreation(SOURCE, FINISH);
-		creation.applyCreation(data, action.getAmount(), true);
+		ICreationData source = getData(SOURCE, FINISH, action);
+		creation.applyCreation(source, action.getAmount(), true);
 
 		// Execute at target
 		if (action.hasTarget()) {
-			data = action.toCreation(TARGET, FINISH);
-			creation.applyCreation(data, action.getAmount(), true);
+			ICreationData target = getData(TARGET, FINISH, action);
+			creation.applyCreation(target, action.getAmount(), true);
 		}
 
 		// Run the plugin (after creation)
@@ -177,19 +168,29 @@ public class ActionCalculator extends Calculator implements IActionCalculator {
 		IActionPlugin plugin = plugins.getPlugin(action.getAction());
 
 		// Execute at source
-		ICreationData data = action.toCreation(SOURCE, START);
-		creation.undoCreation(data, action.getAmount(), true);
+		ICreationData source = getData(SOURCE, START, action);
+		creation.undoCreation(source, action.getAmount(), true);
 
 		// Execute at target
 		if (action.hasTarget()) {
-			data = action.toCreation(TARGET, START);
-			creation.undoCreation(data, action.getAmount(), true);
+			ICreationData target = getData(TARGET, START, action);
+			creation.undoCreation(target, action.getAmount(), true);
 		}
 
 		// Run the plugin (after creation)
 		if (plugin != null) {
 			plugin.cancelAction(action);
 		}
+	}
+
+	public ICreationData getData(ActionTargetType type, ActionConditionExecute execute, IActionData action) {
+
+		ICreationTargetData sourceData = action.getTargetData(SOURCE);
+		ICreationTargetData targetData = action.getTargetData(TARGET);
+		ICreationTargetData data = type.equals(SOURCE) ? sourceData : targetData;
+
+		List<? extends ICreationCondition> conditions = action.getDefinition().getConditions(type, execute);
+		return new ActionCreationData(action.getPlayerId(), action.getDefinition(), action.getAmount(), data, sourceData, targetData, conditions, action.isTurnUpdating());
 	}
 
 }

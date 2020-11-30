@@ -26,7 +26,7 @@ public class ExistsCalculator extends ConditionCalculator {
 			return Long.MAX_VALUE;
 		}
 
-		IUnitListSet listSet = data.getUnitListSet().getListSet();
+		IUnitListSet listSet = data.getData().getListSet();
 
 		IUnit unit = getUnit(condition.getConditionId1());
 		IUnitList list = listSet.getUnitList(unit.getType());

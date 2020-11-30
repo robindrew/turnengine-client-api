@@ -19,7 +19,7 @@ public class AddRandomCalculator extends ConditionCalculator {
 	@Override
 	public long apply(ICreationCondition condition, ICreationData data, boolean optional, long apply) {
 		StorageType type = getStorageType(data);
-		IUnitListSet listSet = data.getUnitListSet().getListSet();
+		IUnitListSet listSet = data.getData().getListSet();
 
 		IUnit unit = getUnit(condition.getConditionId1());
 		IUnitList list = listSet.getUnitList(unit.getType());
@@ -53,7 +53,7 @@ public class AddRandomCalculator extends ConditionCalculator {
 		}
 
 		StorageType type = getStorageType(data);
-		IUnitListSet listSet = data.getUnitListSet().getListSet();
+		IUnitListSet listSet = data.getData().getListSet();
 
 		IUnit unit = getUnit(condition.getConditionId1());
 		IUnitList list = listSet.getUnitList(unit.getType());

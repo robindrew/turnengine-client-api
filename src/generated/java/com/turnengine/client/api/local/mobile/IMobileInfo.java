@@ -6,7 +6,7 @@ import com.turnengine.client.api.local.player.IPlayerInfo;
 
 public interface IMobileInfo extends IBean, INamedIdentity, Comparable<IMobileInfo> {
 
-	int SERIALIZATION_ID = 3030;
+	int SERIALIZATION_ID = 3031;
 
 	/**
 	 * Returns the serialization id.

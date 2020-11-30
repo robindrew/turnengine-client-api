@@ -27,7 +27,7 @@ public abstract class ConditionCalculator extends Calculator implements IConditi
 	}
 
 	protected StorageType getStorageType(ICreationData data) {
-		UnitType type = data.getUnitListSet().getType();
+		UnitType type = data.getData().getType();
 		switch (type) {
 			case LOCATION:
 				return StorageType.LOCATION;

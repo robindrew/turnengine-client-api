@@ -4,7 +4,7 @@ import com.turnengine.client.api.local.action.ActionTargetType;
 import com.turnengine.client.api.local.action.IActionDefinition;
 import com.turnengine.client.api.local.action.IActionTarget;
 import com.turnengine.client.api.local.action.data.IActionData;
-import com.turnengine.client.api.local.creation.data.ICreationUnitListSet;
+import com.turnengine.client.api.local.creation.data.ICreationTargetData;
 import com.turnengine.client.api.local.unit.UnitRelation;
 
 public class TargetValidator {
@@ -28,7 +28,7 @@ public class TargetValidator {
 		return true;
 	}
 
-	private boolean validateTarget(IActionData data, IActionDefinition definition, ActionTargetType type, IActionTarget target, ICreationUnitListSet listSet) {
+	private boolean validateTarget(IActionData data, IActionDefinition definition, ActionTargetType type, IActionTarget target, ICreationTargetData listSet) {
 		if (target == null) {
 			throw new IllegalArgumentException("action requires " + type + ": " + definition);
 		}
@@ -38,7 +38,7 @@ public class TargetValidator {
 		return validateRelation(data, target, listSet);
 	}
 
-	private boolean validateRelation(IActionData data, IActionTarget target, ICreationUnitListSet listSet) {
+	private boolean validateRelation(IActionData data, IActionTarget target, ICreationTargetData listSet) {
 		UnitRelation relation = target.getRelation();
 		switch (relation) {
 			case ANY:
@@ -66,29 +66,29 @@ public class TargetValidator {
 		}
 	}
 
-	private boolean isNeutral(ICreationUnitListSet listSet) {
+	private boolean isNeutral(ICreationTargetData listSet) {
 		return listSet.getPlayerId() == -1;
 	}
 
-	private boolean isOwned(IActionData data, ICreationUnitListSet listSet) {
+	private boolean isOwned(IActionData data, ICreationTargetData listSet) {
 		if (listSet.getPlayerId() == -1) {
 			return false;
 		}
 		return data.getPlayerId() == listSet.getPlayerId();
 	}
 
-	private boolean isFaction(IActionData data, ICreationUnitListSet listSet) {
-		return data.getFactionId() == listSet.getFactionId();
+	private boolean isFaction(IActionData data, ICreationTargetData listSet) {
+		return data.getFactionId() == listSet.getPlayer().getFactionId();
 	}
 
-	private boolean isAllied(IActionData data, ICreationUnitListSet listSet) {
-		if (listSet.getAllianceId() == -1) {
+	private boolean isAllied(IActionData data, ICreationTargetData listSet) {
+		if (listSet.getPlayer().getAllianceId() == -1) {
 			return false;
 		}
-		return data.getAllianceId() == listSet.getAllianceId();
+		return data.getAllianceId() == listSet.getPlayer().getAllianceId();
 	}
 
-	private boolean isHostile(IActionData data, ICreationUnitListSet listSet) {
+	private boolean isHostile(IActionData data, ICreationTargetData listSet) {
 		return !isAllied(data, listSet) && !isNeutral(listSet);
 	}
 

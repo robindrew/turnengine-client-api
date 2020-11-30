@@ -2,6 +2,8 @@ package com.turnengine.client.api.local.creation.calculator.condition;
 
 import com.turnengine.client.api.local.creation.ICreationCondition;
 import com.turnengine.client.api.local.creation.data.ICreationData;
+import com.turnengine.client.api.local.creation.data.ICreationTargetData;
+import com.turnengine.client.api.local.mobile.IMobileCreationData;
 import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
 import com.turnengine.client.api.local.unit.list.count.IUnitCountList;
 
@@ -12,13 +14,17 @@ public class FinishMovementCalculator extends ConditionCalculator {
 	}
 
 	@Override
-	public long apply(ICreationCondition condition, ICreationData action, boolean optional, long apply) {
-		// Nothing to do ...
+	public long apply(ICreationCondition condition, ICreationData data, boolean optional, long apply) {
+
+		// Stop moving please!
+		ICreationTargetData target = data.getData();
+		IMobileCreationData mobile = target.getMobile();
+		mobile.setMoveTurns(0);
 		return apply;
 	}
 
 	@Override
-	public long count(ICreationCondition condition, ICreationData action, boolean optional) {
+	public long count(ICreationCondition condition, ICreationData data, boolean optional) {
 		// Nothing to do ...
 		return Long.MAX_VALUE;
 	}
@@ -29,7 +35,8 @@ public class FinishMovementCalculator extends ConditionCalculator {
 	}
 
 	@Override
-	public long undo(ICreationCondition condition, ICreationData action, boolean optional, long amountToUndo) {
+	public long undo(ICreationCondition condition, ICreationData data, boolean optional, long amountToUndo) {
+		// Nothing to do ...
 		return amountToUndo;
 	}
 
