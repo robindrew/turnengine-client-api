@@ -31,6 +31,18 @@ public interface IMobileCreationData extends IBean, Comparable<IMobileCreationDa
 	int getPlayerId();
 
 	/**
+	 * Getter for the originId field.
+	 * @return the value of the originId field.
+	 */
+	int getOriginId();
+
+	/**
+	 * Getter for the destinationId field.
+	 * @return the value of the destinationId field.
+	 */
+	int getDestinationId();
+
+	/**
 	 * Getter for the moveTurns field.
 	 * @return the value of the moveTurns field.
 	 */
@@ -59,6 +71,18 @@ public interface IMobileCreationData extends IBean, Comparable<IMobileCreationDa
 	 * @param playerId the playerId value to set.
 	 */
 	void setPlayerId(int playerId);
+
+	/**
+	 * Setter for the originId field.
+	 * @param originId the originId value to set.
+	 */
+	void setOriginId(int originId);
+
+	/**
+	 * Setter for the destinationId field.
+	 * @param destinationId the destinationId value to set.
+	 */
+	void setDestinationId(int destinationId);
 
 	/**
 	 * Setter for the moveTurns field.

@@ -23,7 +23,9 @@ public class MobileCreationDataDataSerializer extends ObjectSerializer<IMobileCr
 		int param3 = reader.readInt();
 		int param4 = reader.readInt();
 		int param5 = reader.readInt();
-		return new MobileCreationData(param1, param2, param3, param4, param5);
+		int param6 = reader.readInt();
+		int param7 = reader.readInt();
+		return new MobileCreationData(param1, param2, param3, param4, param5, param6, param7);
 	}
 
 	@Override
@@ -31,6 +33,8 @@ public class MobileCreationDataDataSerializer extends ObjectSerializer<IMobileCr
 		writer.writeInt(object.getId());
 		writer.writeObject(object.getName(), new StringSerializer(false));
 		writer.writeInt(object.getPlayerId());
+		writer.writeInt(object.getOriginId());
+		writer.writeInt(object.getDestinationId());
 		writer.writeInt(object.getMoveTurns());
 		writer.writeInt(object.getWaitTurns());
 	}

@@ -20,6 +20,7 @@ public class FinishMovementCalculator extends ConditionCalculator {
 		ICreationTargetData target = data.getData();
 		IMobileCreationData mobile = target.getMobile();
 		mobile.setMoveTurns(0);
+		mobile.setOriginId(mobile.getDestinationId());
 		return apply;
 	}
 

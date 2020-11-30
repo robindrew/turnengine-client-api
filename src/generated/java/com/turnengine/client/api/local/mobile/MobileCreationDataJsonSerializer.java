@@ -36,6 +36,8 @@ public class MobileCreationDataJsonSerializer implements IJsonSerializer<IMobile
 		writer.writeInt(object.getId());
 		writer.writeObject(object.getName(), new StringSerializer());
 		writer.writeInt(object.getPlayerId());
+		writer.writeInt(object.getOriginId());
+		writer.writeInt(object.getDestinationId());
 		writer.writeInt(object.getMoveTurns());
 		writer.writeInt(object.getWaitTurns());
 		writer.closeObject();

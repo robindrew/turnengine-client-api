@@ -14,6 +14,10 @@ public class MobileCreationData implements IMobileCreationData {
 	private String name = null;
 	/** The playerId field. */
 	private int playerId = 0;
+	/** The originId field. */
+	private int originId = 0;
+	/** The destinationId field. */
+	private int destinationId = 0;
 	/** The moveTurns field. */
 	private int moveTurns = 0;
 	/** The waitTurns field. */
@@ -28,10 +32,12 @@ public class MobileCreationData implements IMobileCreationData {
 	/**
 	 * The fields constructor.
 	 */
-	public MobileCreationData(int id, String name, int playerId, int moveTurns, int waitTurns) {
+	public MobileCreationData(int id, String name, int playerId, int originId, int destinationId, int moveTurns, int waitTurns) {
 		setId(id);
 		setName(name);
 		setPlayerId(playerId);
+		setOriginId(originId);
+		setDestinationId(destinationId);
 		setMoveTurns(moveTurns);
 		setWaitTurns(waitTurns);
 	}
@@ -43,6 +49,8 @@ public class MobileCreationData implements IMobileCreationData {
 		setId(clone.getId());
 		setName(clone.getName());
 		setPlayerId(clone.getPlayerId());
+		setOriginId(clone.getOriginId());
+		setDestinationId(clone.getDestinationId());
 		setMoveTurns(clone.getMoveTurns());
 		setWaitTurns(clone.getWaitTurns());
 	}
@@ -81,6 +89,24 @@ public class MobileCreationData implements IMobileCreationData {
 	@Override
 	public int getPlayerId() {
 		return playerId;
+	}
+
+	/**
+	 * Getter for the originId field.
+	 * @return the value of the originId field.
+	 */
+	@Override
+	public int getOriginId() {
+		return originId;
+	}
+
+	/**
+	 * Getter for the destinationId field.
+	 * @return the value of the destinationId field.
+	 */
+	@Override
+	public int getDestinationId() {
+		return destinationId;
 	}
 
 	/**
@@ -144,6 +170,30 @@ public class MobileCreationData implements IMobileCreationData {
 	}
 
 	/**
+	 * Setter for the originId field.
+	 * @param originId the originId value to set.
+	 */
+	@Override
+	public void setOriginId(int originId) {
+		if (originId < -1) {
+			throw new IllegalArgumentException("originId too small, minimum of -1, value: '" + originId + "'");
+		}
+		this.originId = originId;
+	}
+
+	/**
+	 * Setter for the destinationId field.
+	 * @param destinationId the destinationId value to set.
+	 */
+	@Override
+	public void setDestinationId(int destinationId) {
+		if (destinationId < -1) {
+			throw new IllegalArgumentException("destinationId too small, minimum of -1, value: '" + destinationId + "'");
+		}
+		this.destinationId = destinationId;
+	}
+
+	/**
 	 * Setter for the moveTurns field.
 	 * @param moveTurns the moveTurns value to set.
 	 */
@@ -173,6 +223,8 @@ public class MobileCreationData implements IMobileCreationData {
 		builder.append(getId());
 		builder.append(getName());
 		builder.append(getPlayerId());
+		builder.append(getOriginId());
+		builder.append(getDestinationId());
 		builder.append(getMoveTurns());
 		builder.append(getWaitTurns());
 		return builder.toHashCode();
@@ -201,6 +253,8 @@ public class MobileCreationData implements IMobileCreationData {
 		builder.append(this.getId(), that.getId());
 		builder.append(this.getName(), that.getName());
 		builder.append(this.getPlayerId(), that.getPlayerId());
+		builder.append(this.getOriginId(), that.getOriginId());
+		builder.append(this.getDestinationId(), that.getDestinationId());
 		builder.append(this.getMoveTurns(), that.getMoveTurns());
 		builder.append(this.getWaitTurns(), that.getWaitTurns());
 		return builder.isEquals();
@@ -212,6 +266,8 @@ public class MobileCreationData implements IMobileCreationData {
 		builder.append(getId());
 		builder.append(getName());
 		builder.append(getPlayerId());
+		builder.append(getOriginId());
+		builder.append(getDestinationId());
 		builder.append(getMoveTurns());
 		builder.append(getWaitTurns());
 		return builder.toString();
@@ -223,6 +279,8 @@ public class MobileCreationData implements IMobileCreationData {
 		builder.append(this.getId(), that.getId());
 		builder.append(this.getName(), that.getName());
 		builder.append(this.getPlayerId(), that.getPlayerId());
+		builder.append(this.getOriginId(), that.getOriginId());
+		builder.append(this.getDestinationId(), that.getDestinationId());
 		builder.append(this.getMoveTurns(), that.getMoveTurns());
 		builder.append(this.getWaitTurns(), that.getWaitTurns());
 		return builder.toComparison();

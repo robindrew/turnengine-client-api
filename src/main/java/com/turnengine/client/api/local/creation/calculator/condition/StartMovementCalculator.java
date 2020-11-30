@@ -23,9 +23,12 @@ public class StartMovementCalculator extends ConditionCalculator {
 			return 0;
 		}
 
-		// Ok start moving!
-		mobile.setMoveTurns(data.getTurns());
+		// Where is the mobile moving?
+		int destinationId = data.getTargetData().getLocationId();
 
+		// Now start moving!
+		mobile.setMoveTurns(data.getTurns());
+		mobile.setDestinationId(destinationId);
 		return apply;
 	}
 

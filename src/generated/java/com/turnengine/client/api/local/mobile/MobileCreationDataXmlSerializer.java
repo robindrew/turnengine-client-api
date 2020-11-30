@@ -31,12 +31,14 @@ public class MobileCreationDataXmlSerializer implements IXmlSerializer<IMobileCr
 		int param1 = reader.readInt("id");
 		String param2 = reader.readObject(new StringSerializer("name"));
 		int param3 = reader.readInt("playerId");
-		int param4 = reader.readInt("moveTurns");
-		int param5 = reader.readInt("waitTurns");
+		int param4 = reader.readInt("originId");
+		int param5 = reader.readInt("destinationId");
+		int param6 = reader.readInt("moveTurns");
+		int param7 = reader.readInt("waitTurns");
 		reader.endElement(getName());
 
 		// Create the bean
-		return new MobileCreationData(param1, param2, param3, param4, param5);
+		return new MobileCreationData(param1, param2, param3, param4, param5, param6, param7);
 	}
 
 	@Override
@@ -45,6 +47,8 @@ public class MobileCreationDataXmlSerializer implements IXmlSerializer<IMobileCr
 		writer.writeInt("id", object.getId());
 		writer.writeObject(object.getName(), new StringSerializer("name"));
 		writer.writeInt("playerId", object.getPlayerId());
+		writer.writeInt("originId", object.getOriginId());
+		writer.writeInt("destinationId", object.getDestinationId());
 		writer.writeInt("moveTurns", object.getMoveTurns());
 		writer.writeInt("waitTurns", object.getWaitTurns());
 		writer.endElement(getName());
