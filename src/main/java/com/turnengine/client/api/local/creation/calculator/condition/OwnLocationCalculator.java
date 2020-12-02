@@ -7,7 +7,6 @@ import com.turnengine.client.api.local.creation.ICreationHelper;
 import com.turnengine.client.api.local.creation.data.ICreationData;
 import com.turnengine.client.api.local.creation.data.ICreationTargetData;
 import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
-import com.turnengine.client.api.local.unit.UnitType;
 import com.turnengine.client.api.local.unit.list.count.IUnitCountList;
 
 public class OwnLocationCalculator extends ConditionCalculator {
@@ -19,8 +18,8 @@ public class OwnLocationCalculator extends ConditionCalculator {
 	@Override
 	public long apply(ICreationCondition condition, ICreationData data, boolean optional, long apply) {
 		ICreationTargetData set = data.getData();
-		if (!set.getType().equals(UnitType.LOCATION)) {
-			throw new IllegalArgumentException("set type should be location: " + set.getType());
+		if (!set.isLocation()) {
+			throw new IllegalArgumentException("Creation target must be a location");
 		}
 
 		// Own that location!
@@ -40,8 +39,8 @@ public class OwnLocationCalculator extends ConditionCalculator {
 		}
 
 		ICreationTargetData set = data.getData();
-		if (!set.getType().equals(UnitType.LOCATION)) {
-			throw new IllegalArgumentException("set type should be location: " + set.getType());
+		if (!set.isLocation()) {
+			throw new IllegalArgumentException("Target must be a location");
 		}
 
 		// Can only work if the location has no player id (not owned!)

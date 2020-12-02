@@ -10,12 +10,12 @@ import com.turnengine.client.api.local.upkeep.IUpkeepDefinition;
 public class UpkeepData implements IUpkeepData {
 
 	private final int playerId;
-	private final ICreationTargetData set;
+	private final ICreationTargetData data;
 	private final boolean turnUpdating;
 
-	public UpkeepData(int playerId, ICreationTargetData set, boolean turnUpdating) {
+	public UpkeepData(int playerId, ICreationTargetData data, boolean turnUpdating) {
 		this.playerId = playerId;
-		this.set = set;
+		this.data = data;
 		this.turnUpdating = turnUpdating;
 	}
 
@@ -26,14 +26,15 @@ public class UpkeepData implements IUpkeepData {
 
 	@Override
 	public IUnitList getUpkeepUnitList() {
-		IUnitListSet listSet = set.getListSet();
-		UnitType type = listSet.getUnitType();
+		IUnitListSet unitLists = data.getListSet();
+		UnitType type = unitLists.getUnitType();
 		switch (type) {
 			case PLAYER:
-				return listSet.getPlayerUnitList();
+				return unitLists.getPlayerUnitList();
 			case LOCATION:
+				// Location units do not have upkeep applied to them
 			case MOBILE:
-				return listSet.getMobileUnitList();
+				return unitLists.getMobileUnitList();
 			default:
 				throw new IllegalStateException("Type not supported: " + type);
 		}
@@ -41,12 +42,12 @@ public class UpkeepData implements IUpkeepData {
 
 	@Override
 	public ICreationData toCreation(IUpkeepDefinition definition, long amount) {
-		return new UpkeepCreationData(getPlayerId(), definition, amount, set, isTurnUpdating());
+		return new UpkeepCreationData(getPlayerId(), definition, amount, data, isTurnUpdating());
 	}
 
 	@Override
 	public ICreationTargetData getUnitListSet() {
-		return set;
+		return data;
 	}
 
 	@Override

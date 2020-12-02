@@ -14,6 +14,12 @@ public interface ICreationTargetData {
 
 	IUnitListSet getListSet();
 
+	boolean isPlayer();
+
+	boolean isLocation();
+
+	boolean isMobile();
+
 	int getPlayerId();
 
 	int getLocationId();
@@ -31,4 +37,5 @@ public interface ICreationTargetData {
 	boolean isModified();
 
 	void update();
+
 }

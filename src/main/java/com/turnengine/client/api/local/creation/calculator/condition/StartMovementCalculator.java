@@ -15,6 +15,7 @@ public class StartMovementCalculator extends ConditionCalculator {
 
 	@Override
 	public long apply(ICreationCondition condition, ICreationData data, boolean optional, long apply) {
+		checkData(data);
 
 		// Is mobile moving?
 		ICreationTargetData target = data.getData();
@@ -32,8 +33,21 @@ public class StartMovementCalculator extends ConditionCalculator {
 		return apply;
 	}
 
+	private void checkData(ICreationData data) {
+
+		// Movement is only ever from a mobile to a location
+		if (!data.getSourceData().isMobile()) {
+			throw new IllegalStateException("Creation source must be a mobile");
+		}
+		if (!data.getTargetData().isLocation()) {
+			throw new IllegalStateException("Creation target must be a location");
+		}
+	}
+
 	@Override
 	public long count(ICreationCondition condition, ICreationData data, boolean optional) {
+		checkData(data);
+
 		ICreationTargetData target = data.getData();
 		IMobileCreationData mobile = target.getMobile();
 		if (mobile.getMoveTurns() > 0) {
