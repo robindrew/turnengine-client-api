@@ -1492,6 +1492,10 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		// Mappings by id
 
 		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
 	}
 
 	@Override

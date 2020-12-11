@@ -16,4 +16,9 @@ public class Calculator implements ICalculator {
 		return cacheSet;
 	}
 
+	@Override
+	public String toString() {
+		return getClass().getSimpleName();
+	}
+
 }

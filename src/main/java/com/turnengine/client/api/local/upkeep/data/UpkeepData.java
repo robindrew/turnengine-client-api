@@ -9,6 +9,10 @@ import com.turnengine.client.api.local.upkeep.IUpkeepDefinition;
 
 public class UpkeepData implements IUpkeepData {
 
+	public static UpkeepData forGame(ICreationTargetData data, boolean turnUpdating) {
+		return new UpkeepData(-1, data, turnUpdating);
+	}
+
 	private final int playerId;
 	private final ICreationTargetData data;
 	private final boolean turnUpdating;
@@ -29,6 +33,8 @@ public class UpkeepData implements IUpkeepData {
 		IUnitListSet unitLists = data.getListSet();
 		UnitType type = unitLists.getUnitType();
 		switch (type) {
+			case GAME:
+				return unitLists.getGameUnitList();
 			case PLAYER:
 				return unitLists.getPlayerUnitList();
 			case LOCATION:

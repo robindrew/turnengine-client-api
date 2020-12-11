@@ -1,11 +1,11 @@
-package com.turnengine.client.api.local.game;
+package com.turnengine.client.api.local.command;
 
 import com.robindrew.codegenerator.api.executable.bean.IExecutableBean;
 import com.turnengine.client.api.common.command.ILocalLoggedInBean;
 
-public interface IAddUnitsAtGame extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IAddUnitsAtGame> {
+public interface IExecuteLocalBeanList extends IExecutableBean<Boolean>, ILocalLoggedInBean<Boolean>, Comparable<IExecuteLocalBeanList> {
 
-	int SERIALIZATION_ID = 2606;
+	int SERIALIZATION_ID = 101;
 
 	/**
 	 * Returns the serialization id.
@@ -26,16 +26,10 @@ public interface IAddUnitsAtGame extends IExecutableBean<Boolean>, ILocalLoggedI
 	int getInstanceId();
 
 	/**
-	 * Getter for the name field.
-	 * @return the value of the name field.
+	 * Getter for the xml field.
+	 * @return the value of the xml field.
 	 */
-	String getName();
-
-	/**
-	 * Getter for the amount field.
-	 * @return the value of the amount field.
-	 */
-	long getAmount();
+	String getXml();
 
 	/**
 	 * Setter for the loginId field.
@@ -50,14 +44,8 @@ public interface IAddUnitsAtGame extends IExecutableBean<Boolean>, ILocalLoggedI
 	void setInstanceId(int instanceId);
 
 	/**
-	 * Setter for the name field.
-	 * @param name the name value to set.
+	 * Setter for the xml field.
+	 * @param xml the xml value to set.
 	 */
-	void setName(String name);
-
-	/**
-	 * Setter for the amount field.
-	 * @param amount the amount value to set.
-	 */
-	void setAmount(long amount);
+	void setXml(String xml);
 }

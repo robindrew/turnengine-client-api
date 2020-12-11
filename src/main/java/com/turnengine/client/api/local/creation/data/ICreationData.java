@@ -7,6 +7,8 @@ import com.turnengine.client.api.local.unit.IUnit;
 
 public interface ICreationData {
 
+	boolean isGame();
+	
 	int getPlayerId();
 
 	int getId();

@@ -55,8 +55,8 @@ public class LocalGameExecutorSet implements ILocalGameExecutorSet {
 	}
 
 	@Override
-	public Boolean addUnitsAtGame(long loginId, int instanceId, int unitId, long amount) {
-		AddUnitsAtGame bean = new AddUnitsAtGame(loginId, instanceId, unitId, amount);
+	public Boolean addUnitsAtGame(long loginId, int instanceId, String name, long amount) {
+		AddUnitsAtGame bean = new AddUnitsAtGame(loginId, instanceId, name, amount);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
 

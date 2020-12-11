@@ -37,10 +37,10 @@ public class StartMovementCalculator extends ConditionCalculator {
 
 		// Movement is only ever from a mobile to a location
 		if (!data.getSourceData().isMobile()) {
-			throw new IllegalStateException("Creation source must be a mobile");
+			throw new IllegalStateException("Creation source for " + this + " must be a mobile");
 		}
 		if (!data.getTargetData().isLocation()) {
-			throw new IllegalStateException("Creation target must be a location");
+			throw new IllegalStateException("Creation target for " + this + " must be a location");
 		}
 	}
 

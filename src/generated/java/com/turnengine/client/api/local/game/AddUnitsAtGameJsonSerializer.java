@@ -3,6 +3,7 @@ package com.turnengine.client.api.local.game;
 import com.robindrew.codegenerator.api.serializer.json.IJsonReader;
 import com.robindrew.codegenerator.api.serializer.json.IJsonSerializer;
 import com.robindrew.codegenerator.api.serializer.json.IJsonWriter;
+import com.robindrew.codegenerator.api.serializer.json.serializer.lang.StringSerializer;
 
 public class AddUnitsAtGameJsonSerializer implements IJsonSerializer<IAddUnitsAtGame> {
 
@@ -34,7 +35,7 @@ public class AddUnitsAtGameJsonSerializer implements IJsonSerializer<IAddUnitsAt
 		writer.openObject();
 		writer.writeLong(object.getLoginId());
 		writer.writeInt(object.getInstanceId());
-		writer.writeInt(object.getUnitId());
+		writer.writeObject(object.getName(), new StringSerializer());
 		writer.writeLong(object.getAmount());
 		writer.closeObject();
 	}

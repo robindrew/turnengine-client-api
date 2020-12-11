@@ -14,6 +14,8 @@ public interface ICreationTargetData {
 
 	IUnitListSet getListSet();
 
+	boolean isGame();
+
 	boolean isPlayer();
 
 	boolean isLocation();

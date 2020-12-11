@@ -1,4 +1,4 @@
-package com.turnengine.client.api.local.game;
+package com.turnengine.client.api.local.command;
 
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -6,41 +6,37 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class AddUnitsAtGame implements IAddUnitsAtGame {
+public class ExecuteLocalBeanList implements IExecuteLocalBeanList {
 
 	/** The loginId field. */
 	private long loginId = 0l;
 	/** The instanceId field. */
 	private int instanceId = 0;
-	/** The name field. */
-	private String name = null;
-	/** The amount field. */
-	private long amount = 0l;
+	/** The xml field. */
+	private String xml = null;
 
 	/**
 	 * The empty constructor.
 	 */
-	public AddUnitsAtGame() {
+	public ExecuteLocalBeanList() {
 	}
 
 	/**
 	 * The fields constructor.
 	 */
-	public AddUnitsAtGame(long loginId, int instanceId, String name, long amount) {
+	public ExecuteLocalBeanList(long loginId, int instanceId, String xml) {
 		setLoginId(loginId);
 		setInstanceId(instanceId);
-		setName(name);
-		setAmount(amount);
+		setXml(xml);
 	}
 
 	/**
 	 * The clone constructor.
 	 */
-	public AddUnitsAtGame(IAddUnitsAtGame clone) {
+	public ExecuteLocalBeanList(IExecuteLocalBeanList clone) {
 		setLoginId(clone.getLoginId());
 		setInstanceId(clone.getInstanceId());
-		setName(clone.getName());
-		setAmount(clone.getAmount());
+		setXml(clone.getXml());
 	}
 
 	/**
@@ -71,21 +67,12 @@ public class AddUnitsAtGame implements IAddUnitsAtGame {
 	}
 
 	/**
-	 * Getter for the name field.
-	 * @return the value of the name field.
+	 * Getter for the xml field.
+	 * @return the value of the xml field.
 	 */
 	@Override
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * Getter for the amount field.
-	 * @return the value of the amount field.
-	 */
-	@Override
-	public long getAmount() {
-		return amount;
+	public String getXml() {
+		return xml;
 	}
 
 	/**
@@ -110,30 +97,21 @@ public class AddUnitsAtGame implements IAddUnitsAtGame {
 	}
 
 	/**
-	 * Setter for the name field.
-	 * @param name the name value to set.
+	 * Setter for the xml field.
+	 * @param xml the xml value to set.
 	 */
 	@Override
-	public void setName(String name) {
-		if (name == null) {
-			throw new NullPointerException("name");
+	public void setXml(String xml) {
+		if (xml == null) {
+			throw new NullPointerException("xml");
 		}
-		if (name.length() < 1) {
-			throw new IllegalArgumentException("name too short, minimum of 1 characters, value: '" + name + "'");
+		if (xml.length() < 5) {
+			throw new IllegalArgumentException("xml too short, minimum of 5 characters, value: '" + xml + "'");
 		}
-		if (name.length() > 200) {
-			throw new IllegalArgumentException("name too long, maximum of 200 characters, value: '" + name + "'");
+		if (xml.length() > 10000000) {
+			throw new IllegalArgumentException("xml too long, maximum of 10000000 characters, value: '" + xml + "'");
 		}
-		this.name = name;
-	}
-
-	/**
-	 * Setter for the amount field.
-	 * @param amount the amount value to set.
-	 */
-	@Override
-	public void setAmount(long amount) {
-		this.amount = amount;
+		this.xml = xml;
 	}
 
 	@Override
@@ -141,8 +119,7 @@ public class AddUnitsAtGame implements IAddUnitsAtGame {
 		HashCodeBuilder builder = new HashCodeBuilder();
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getName());
-		builder.append(getAmount());
+		builder.append(getXml());
 		return builder.toHashCode();
 	}
 
@@ -164,12 +141,11 @@ public class AddUnitsAtGame implements IAddUnitsAtGame {
 		}
 
 		// Compare fields
-		IAddUnitsAtGame that = (IAddUnitsAtGame) object;
+		IExecuteLocalBeanList that = (IExecuteLocalBeanList) object;
 		EqualsBuilder builder = new EqualsBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getName(), that.getName());
-		builder.append(this.getAmount(), that.getAmount());
+		builder.append(this.getXml(), that.getXml());
 		return builder.isEquals();
 	}
 
@@ -178,18 +154,16 @@ public class AddUnitsAtGame implements IAddUnitsAtGame {
 		ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE);
 		builder.append(getLoginId());
 		builder.append(getInstanceId());
-		builder.append(getName());
-		builder.append(getAmount());
+		builder.append(getXml());
 		return builder.toString();
 	}
 
 	@Override
-	public int compareTo(IAddUnitsAtGame that) {
+	public int compareTo(IExecuteLocalBeanList that) {
 		CompareToBuilder builder = new CompareToBuilder();
 		builder.append(this.getLoginId(), that.getLoginId());
 		builder.append(this.getInstanceId(), that.getInstanceId());
-		builder.append(this.getName(), that.getName());
-		builder.append(this.getAmount(), that.getAmount());
+		builder.append(this.getXml(), that.getXml());
 		return builder.toComparison();
 	}
 }

@@ -313,6 +313,8 @@ public class StorageCalculator extends Calculator implements IStorageCalculator 
 		switch (type) {
 			case ANY:
 				return true;
+			case GAME:
+				return storageType.equals(StorageType.GAME);
 			case PLAYER:
 				return storageType.equals(StorageType.PLAYER);
 			case LOCATION:

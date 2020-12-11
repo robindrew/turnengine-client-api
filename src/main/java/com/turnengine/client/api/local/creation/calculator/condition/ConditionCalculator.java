@@ -29,6 +29,8 @@ public abstract class ConditionCalculator extends Calculator implements IConditi
 	protected StorageType getStorageType(ICreationData data) {
 		UnitType type = data.getData().getType();
 		switch (type) {
+			case GAME:
+				return StorageType.GAME;
 			case LOCATION:
 				return StorageType.LOCATION;
 			case MOBILE:

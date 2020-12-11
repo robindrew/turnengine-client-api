@@ -150,6 +150,7 @@ import com.turnengine.client.api.local.allianceforum.SetAllianceForumFlag;
 import com.turnengine.client.api.local.allianceforum.SetAllianceForumOrder;
 import com.turnengine.client.api.local.allianceforum.SetAlliancePostFlag;
 import com.turnengine.client.api.local.allianceforum.SetAllianceThreadFlag;
+import com.turnengine.client.api.local.command.ExecuteLocalBeanList;
 import com.turnengine.client.api.local.error.GetLocalTrace;
 import com.turnengine.client.api.local.error.GetLocalTraceList;
 import com.turnengine.client.api.local.faction.AddFaction;
@@ -1099,6 +1100,12 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("GetUpkeepList", GetUpkeepList.class);
 		objectMap.put("GetUpkeepConditionList", GetUpkeepConditionList.class);
 		objectMap.put("GetUpkeepAtLocation", GetUpkeepAtLocation.class);
+
+		// Mappings by id
+		objectMap.put(ExecuteLocalBeanList.SERIALIZATION_ID, ExecuteLocalBeanList.class);
+
+		// Mappings by name
+		objectMap.put("ExecuteLocalBeanList", ExecuteLocalBeanList.class);
 
 		// Mappings by id
 

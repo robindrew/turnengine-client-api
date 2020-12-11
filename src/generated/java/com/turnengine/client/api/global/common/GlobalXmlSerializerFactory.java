@@ -1904,6 +1904,10 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		// Mappings by id
 
 		// Mappings by name
+
+		// Mappings by id
+
+		// Mappings by name
 	}
 
 	@Override

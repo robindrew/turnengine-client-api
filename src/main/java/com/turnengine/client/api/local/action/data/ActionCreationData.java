@@ -47,6 +47,11 @@ public class ActionCreationData implements ICreationData {
 	}
 
 	@Override
+	public boolean isGame() {
+		return playerId == -1;
+	}
+
+	@Override
 	public int getTurns() {
 		return definition.getAction().getTurns();
 	}

@@ -21,7 +21,7 @@ public class UpkeepCreationData implements ICreationData {
 	private final boolean turnUpdating;
 
 	public UpkeepCreationData(int playerId, IUpkeepDefinition definition, long amount, ICreationTargetData targetData, boolean turnUpdating) {
-		if (playerId < 0) {
+		if (playerId < -1) {
 			throw new IllegalArgumentException("playerId=" + playerId);
 		}
 		if (amount < 1) {
@@ -38,6 +38,11 @@ public class UpkeepCreationData implements ICreationData {
 		this.targetData = targetData;
 		this.amount = amount;
 		this.turnUpdating = turnUpdating;
+	}
+
+	@Override
+	public boolean isGame() {
+		return playerId == -1;
 	}
 
 	@Override

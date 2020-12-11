@@ -18,7 +18,7 @@ public interface ILocalGameExecutorSet extends IBeanExecutorSet, ILocalBeanExecu
 
 	GameStatus getGameStatus(long loginId, int instanceId);
 
-	Boolean addUnitsAtGame(long loginId, int instanceId, int unitId, long amount);
+	Boolean addUnitsAtGame(long loginId, int instanceId, String name, long amount);
 
 	List<IUnitCount> getUnitsAtGame(long loginId, int instanceId);
 }
