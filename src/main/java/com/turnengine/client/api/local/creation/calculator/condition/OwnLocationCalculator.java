@@ -2,6 +2,9 @@ package com.turnengine.client.api.local.creation.calculator.condition;
 
 import static com.robindrew.common.dependency.DependencyFactory.getDependency;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.turnengine.client.api.local.creation.ICreationCondition;
 import com.turnengine.client.api.local.creation.ICreationHelper;
 import com.turnengine.client.api.local.creation.data.ICreationData;
@@ -10,6 +13,8 @@ import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
 import com.turnengine.client.api.local.unit.list.count.IUnitCountList;
 
 public class OwnLocationCalculator extends ConditionCalculator {
+
+	private static final Logger log = LoggerFactory.getLogger(OwnLocationCalculator.class);
 
 	public OwnLocationCalculator(IStaticCacheSet set) {
 		super(set);
@@ -27,6 +32,7 @@ public class OwnLocationCalculator extends ConditionCalculator {
 		int playerId = data.getPlayerId();
 		int locationId = set.getLocationId();
 		helper.setLocationOwner(playerId, locationId);
+		log.info("Player #{} now owns Location #{}", playerId, locationId);
 
 		// Done
 		return apply;

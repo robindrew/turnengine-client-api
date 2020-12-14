@@ -2,28 +2,42 @@ package com.turnengine.client.api.local.identity;
 
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.LinkedHashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
+import com.google.common.collect.ImmutableSet;
 import com.robindrew.codegenerator.api.identity.INamedIdentity;
 import com.robindrew.common.collect.indexmap.ArrayIndexMap;
 import com.robindrew.common.collect.indexmap.IIndexMap;
 
 public class NamedIdentityCache<N extends INamedIdentity> implements INamedIdentityCache<N> {
 
-	private IIndexMap<N> idToIdentityMap = new ArrayIndexMap<N>();
+	private final String cacheName;
+	private final IIndexMap<N> idToIdentityMap = new ArrayIndexMap<N>();
+	private final Map<String, N> nameToIdentityMap = new LinkedHashMap<>();
 
-	public NamedIdentityCache() {
+	public NamedIdentityCache(String cacheName) {
+		if (cacheName.isEmpty()) {
+			throw new IllegalArgumentException("cacheName is empty");
+		}
+		this.cacheName = cacheName;
 	}
 
-	public NamedIdentityCache(Collection<? extends N> identities) {
+	public NamedIdentityCache(String cacheName, Collection<? extends N> identities) {
+		this(cacheName);
 		addAll(identities);
+	}
+
+	public String getCacheName() {
+		return cacheName;
 	}
 
 	@Override
 	public void clear() {
 		idToIdentityMap.clear();
+		nameToIdentityMap.clear();
 	}
 
 	@Override
@@ -33,7 +47,11 @@ public class NamedIdentityCache<N extends INamedIdentity> implements INamedIdent
 
 	@Override
 	public boolean add(N identity) {
-		return idToIdentityMap.putIfAbsent(identity.getId(), identity);
+		if (idToIdentityMap.putIfAbsent(identity.getId(), identity)) {
+			nameToIdentityMap.put(identity.getName(), identity);
+			return true;
+		}
+		return false;
 	}
 
 	@Override
@@ -50,31 +68,25 @@ public class NamedIdentityCache<N extends INamedIdentity> implements INamedIdent
 
 	@Override
 	public boolean containsByName(String name) {
-		for (N identity : idToIdentityMap.values()) {
-			if (identity.getName().equals(name)) {
-				return true;
-			}
-		}
-		return false;
+		return nameToIdentityMap.containsKey(name);
 	}
 
 	@Override
 	public N getById(int id) {
 		N identity = idToIdentityMap.get(id);
 		if (identity == null) {
-			throw new IllegalArgumentException("element does not exist with id=" + id + " in " + idToIdentityMap);
+			throw new IllegalArgumentException(getCacheName() + " does not exist with id=" + id + " in cache: " + idToIdentityMap);
 		}
 		return identity;
 	}
 
 	@Override
 	public N getByName(String name) {
-		for (N identity : idToIdentityMap.values()) {
-			if (identity.getName().equals(name)) {
-				return identity;
-			}
+		N identity = nameToIdentityMap.get(name);
+		if (identity == null) {
+			throw new IllegalArgumentException(getCacheName() + " does not exist with name: '" + name + "' in cache: " + idToIdentityMap);
 		}
-		throw new IllegalArgumentException("element does not exist with name: " + name + " in " + idToIdentityMap);
+		return identity;
 	}
 
 	@Override
@@ -99,11 +111,7 @@ public class NamedIdentityCache<N extends INamedIdentity> implements INamedIdent
 
 	@Override
 	public Set<String> getNameSet() {
-		Set<String> names = new LinkedHashSet<>();
-		for (N named : getAll()) {
-			names.add(named.getName());
-		}
-		return names;
+		return ImmutableSet.copyOf(nameToIdentityMap.keySet());
 	}
 
 }

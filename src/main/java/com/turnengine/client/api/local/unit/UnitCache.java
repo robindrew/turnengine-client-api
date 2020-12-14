@@ -15,10 +15,11 @@ public class UnitCache extends NamedIdentityCache<IUnit> implements IUnitCache {
 	private final IIndexMap<IUnit> idToUnitMap = new ArrayIndexMap<IUnit>();
 
 	public UnitCache() {
+		super("Unit");
 	}
 
 	public UnitCache(Collection<IUnit> units) {
-		super(units);
+		super("Unit", units);
 	}
 
 	@Override

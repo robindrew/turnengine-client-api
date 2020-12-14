@@ -318,7 +318,7 @@ public class StorageCalculator extends Calculator implements IStorageCalculator 
 			case PLAYER:
 				return storageType.equals(StorageType.PLAYER);
 			case LOCATION:
-				return storageType.equals(StorageType.LOCATION);
+				return storageType.equals(StorageType.LOCATION) || storageType.equals(StorageType.MOBILE);
 			case MOBILE:
 				return storageType.equals(StorageType.MOBILE);
 			default:

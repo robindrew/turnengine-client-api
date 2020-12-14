@@ -8,6 +8,8 @@ import com.turnengine.client.api.local.staticcache.IStaticCache;
 
 public interface INamedIdentityCache<N extends INamedIdentity> extends IStaticCache<N> {
 
+	String getCacheName();
+
 	boolean add(N identity);
 
 	void addAll(Collection<? extends N> identities);

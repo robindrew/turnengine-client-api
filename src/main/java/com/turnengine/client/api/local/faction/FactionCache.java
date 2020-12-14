@@ -9,10 +9,11 @@ import com.turnengine.client.api.local.identity.NamedIdentityCache;
 public class FactionCache extends NamedIdentityCache<IFaction> implements IFactionCache {
 
 	public FactionCache() {
+		super("Faction");
 	}
 
 	public FactionCache(Collection<IFaction> factions) {
-		addAll(factions);
+		super("Faction", factions);
 	}
 
 	@Override

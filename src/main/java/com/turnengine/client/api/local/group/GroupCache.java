@@ -10,10 +10,11 @@ import com.turnengine.client.api.local.identity.NamedIdentityCache;
 public class GroupCache extends NamedIdentityCache<IGroup> implements IGroupCache {
 
 	public GroupCache() {
+		super("Group");
 	}
 
 	public GroupCache(Collection<? extends IGroup> groups) {
-		addAll(groups);
+		super("Group", groups);
 	}
 
 	@Override
