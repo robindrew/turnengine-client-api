@@ -16,6 +16,7 @@ import com.turnengine.client.api.local.location.LocationErrorCode;
 import com.turnengine.client.api.local.message.MessageErrorCode;
 import com.turnengine.client.api.local.mobile.MobileErrorCode;
 import com.turnengine.client.api.local.player.PlayerErrorCode;
+import com.turnengine.client.api.local.setup.SetupErrorCode;
 import com.turnengine.client.api.local.storage.StorageErrorCode;
 import com.turnengine.client.api.local.turn.TurnErrorCode;
 import com.turnengine.client.api.local.unit.UnitErrorCode;
@@ -37,6 +38,7 @@ public class ErrorCodeRegistry {
 		register(MessageErrorCode.class);
 		register(MobileErrorCode.class);
 		register(PlayerErrorCode.class);
+		register(SetupErrorCode.class);
 		register(StorageErrorCode.class);
 		register(TurnErrorCode.class);
 		register(UnitErrorCode.class);

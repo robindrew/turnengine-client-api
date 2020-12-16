@@ -8,6 +8,8 @@ public enum LocalConcept implements ILocalConcept {
 	ALLIANCE(ConceptType.LOCAL),
 	/** The ALLIANCE_FORUM constant. */
 	ALLIANCE_FORUM(ConceptType.LOCAL),
+	/** The COMMAND constant. */
+	COMMAND(ConceptType.LOCAL),
 	/** The ERROR constant. */
 	ERROR(ConceptType.LOCAL),
 	/** The FACTION constant. */
