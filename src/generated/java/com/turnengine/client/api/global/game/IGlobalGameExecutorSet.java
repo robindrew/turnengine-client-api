@@ -51,4 +51,6 @@ public interface IGlobalGameExecutorSet extends IBeanExecutorSet, IGlobalBeanExe
 	Boolean setGameInstanceProperty(long loginId, int instanceId, String key, String value);
 
 	List<IGameInstanceProperty> getGameInstancePropertyList(int instanceId);
+
+	IGameDefinition getGameDefinitionByHostPort(String name, int port);
 }

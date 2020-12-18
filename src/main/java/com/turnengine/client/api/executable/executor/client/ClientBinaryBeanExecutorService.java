@@ -12,6 +12,9 @@ import com.robindrew.common.util.Check;
 import com.robindrew.common.util.Java;
 import com.turnengine.client.api.executable.executor.type.IContentTypeSerializer;
 
+/**
+ * A client service which executes a list of beans, proving a map of responses.
+ */
 public class ClientBinaryBeanExecutorService extends BatchBeanExecutorService {
 
 	private final Supplier<IBinaryExecutor> connections;

@@ -25,6 +25,7 @@ import com.turnengine.client.api.global.forum.SetThreadFlag;
 import com.turnengine.client.api.global.game.GetGameById;
 import com.turnengine.client.api.global.game.GetGameByName;
 import com.turnengine.client.api.global.game.GetGameDefinition;
+import com.turnengine.client.api.global.game.GetGameDefinitionByHostPort;
 import com.turnengine.client.api.global.game.GetGameDefinitions;
 import com.turnengine.client.api.global.game.GetGameDefinitionsByGameName;
 import com.turnengine.client.api.global.game.GetGameHostById;
@@ -455,6 +456,7 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put(GetGameDefinitionsByGameName.SERIALIZATION_ID, GetGameDefinitionsByGameName.class);
 		objectMap.put(SetGameInstanceProperty.SERIALIZATION_ID, SetGameInstanceProperty.class);
 		objectMap.put(GetGameInstancePropertyList.SERIALIZATION_ID, GetGameInstancePropertyList.class);
+		objectMap.put(GetGameDefinitionByHostPort.SERIALIZATION_ID, GetGameDefinitionByHostPort.class);
 
 		// Mappings by name
 		objectMap.put("NewGame", NewGame.class);
@@ -480,6 +482,7 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put("GetGameDefinitionsByGameName", GetGameDefinitionsByGameName.class);
 		objectMap.put("SetGameInstanceProperty", SetGameInstanceProperty.class);
 		objectMap.put("GetGameInstancePropertyList", GetGameInstancePropertyList.class);
+		objectMap.put("GetGameDefinitionByHostPort", GetGameDefinitionByHostPort.class);
 
 		// Mappings by id
 		objectMap.put(NewTranslation.SERIALIZATION_ID, NewTranslation.class);

@@ -16,6 +16,9 @@ import com.robindrew.common.util.Check;
 import com.turnengine.client.api.executable.executor.HttpContentType;
 import com.turnengine.client.api.executable.executor.type.SerializedContentType;
 
+/**
+ * A {@link IBinaryExecutor} which uses HTTP to communicate with the server.
+ */
 public class HttpClientBinaryExecutor implements IBinaryExecutor {
 
 	private static final Logger log = LoggerFactory.getLogger(HttpClientBinaryExecutor.class);

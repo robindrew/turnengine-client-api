@@ -1,22 +1,16 @@
 package com.turnengine.client.api.global.game;
 
-import com.robindrew.codegenerator.api.bean.IBean;
+import com.robindrew.codegenerator.api.executable.bean.IExecutableBean;
 
-public interface IGameHost extends IBean, Comparable<IGameHost> {
+public interface IGetGameDefinitionByHostPort extends IExecutableBean<IGameDefinition>, Comparable<IGetGameDefinitionByHostPort> {
 
-	int SERIALIZATION_ID = 1529;
+	int SERIALIZATION_ID = 1528;
 
 	/**
 	 * Returns the serialization id.
 	 * @return the serialization id.
 	 */
 	int getSerializationId();
-
-	/**
-	 * Getter for the id field.
-	 * @return the value of the id field.
-	 */
-	int getId();
 
 	/**
 	 * Getter for the name field.
@@ -29,12 +23,6 @@ public interface IGameHost extends IBean, Comparable<IGameHost> {
 	 * @return the value of the port field.
 	 */
 	int getPort();
-
-	/**
-	 * Setter for the id field.
-	 * @param id the id value to set.
-	 */
-	void setId(int id);
 
 	/**
 	 * Setter for the name field.

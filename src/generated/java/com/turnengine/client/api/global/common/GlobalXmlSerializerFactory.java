@@ -75,6 +75,8 @@ import com.turnengine.client.api.global.game.GetGameByIdXmlSerializer;
 import com.turnengine.client.api.global.game.GetGameByName;
 import com.turnengine.client.api.global.game.GetGameByNameXmlSerializer;
 import com.turnengine.client.api.global.game.GetGameDefinition;
+import com.turnengine.client.api.global.game.GetGameDefinitionByHostPort;
+import com.turnengine.client.api.global.game.GetGameDefinitionByHostPortXmlSerializer;
 import com.turnengine.client.api.global.game.GetGameDefinitionXmlSerializer;
 import com.turnengine.client.api.global.game.GetGameDefinitions;
 import com.turnengine.client.api.global.game.GetGameDefinitionsByGameName;
@@ -1005,6 +1007,7 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put(GetGameDefinitionsByGameName.SERIALIZATION_ID, GetGameDefinitionsByGameNameXmlSerializer.class);
 		objectMap.put(SetGameInstanceProperty.SERIALIZATION_ID, SetGameInstancePropertyXmlSerializer.class);
 		objectMap.put(GetGameInstancePropertyList.SERIALIZATION_ID, GetGameInstancePropertyListXmlSerializer.class);
+		objectMap.put(GetGameDefinitionByHostPort.SERIALIZATION_ID, GetGameDefinitionByHostPortXmlSerializer.class);
 
 		// Mappings by name
 		objectMap.put("Game", GameXmlSerializer.class);
@@ -1036,6 +1039,7 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put("GetGameDefinitionsByGameName", GetGameDefinitionsByGameNameXmlSerializer.class);
 		objectMap.put("SetGameInstanceProperty", SetGameInstancePropertyXmlSerializer.class);
 		objectMap.put("GetGameInstancePropertyList", GetGameInstancePropertyListXmlSerializer.class);
+		objectMap.put("GetGameDefinitionByHostPort", GetGameDefinitionByHostPortXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(Translation.SERIALIZATION_ID, TranslationXmlSerializer.class);

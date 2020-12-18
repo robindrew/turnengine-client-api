@@ -24,6 +24,9 @@ import com.turnengine.client.api.serializer.xml.BeanRequestXmlSerializer;
 import com.turnengine.client.api.serializer.xml.BeanResponseListXmlSerializer;
 import com.turnengine.client.api.serializer.xml.BeanResponseXmlSerializer;
 
+/**
+ * A XML serializer for reading and writing {@link IExecutableBean} and {@link IExecutableBeanResponse}.
+ */
 public class XmlContentTypeSerializer implements IContentTypeSerializer {
 
 	private final IXmlSerializer<List<IExecutableBean<?>>> beanListSerializer;

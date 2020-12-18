@@ -159,4 +159,10 @@ public class GlobalGameExecutorSet implements IGlobalGameExecutorSet {
 		GetGameInstancePropertyList bean = new GetGameInstancePropertyList(instanceId);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
+
+	@Override
+	public IGameDefinition getGameDefinitionByHostPort(String name, int port) {
+		GetGameDefinitionByHostPort bean = new GetGameDefinitionByHostPort(name, port);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
 }
