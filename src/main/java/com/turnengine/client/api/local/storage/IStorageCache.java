@@ -12,9 +12,9 @@ public interface IStorageCache extends IStaticCache<IStorage> {
 
 	void addGroup(IStorageGroup group);
 
-	void addItems(Collection<IStorageItem> children);
+	void addItems(Collection<IStorageItem> itemren);
 
-	void addItem(IStorageItem child);
+	void addItem(IStorageItem item);
 
 	List<IStorageGroup> getGroups();
 
@@ -28,7 +28,7 @@ public interface IStorageCache extends IStaticCache<IStorage> {
 
 	IStorage getStorage(int unitId);
 
-	IStorageDefinition getStorageByChild(int parentUnitId, int childUnitId);
+	IStorageDefinition getStorageByItem(int parentUnitId, int itemUnitId);
 
-	IStorageDefinition getStorageByChild(IUnit parentUnit, IUnit childUnit);
+	IStorageDefinition getStorageByItem(IUnit parentUnit, IUnit itemUnit);
 }

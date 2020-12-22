@@ -6,7 +6,6 @@ import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
 import com.turnengine.client.api.local.storage.StorageType;
 import com.turnengine.client.api.local.storage.calculator.IStorageCalculator;
 import com.turnengine.client.api.local.storage.calculator.StorageCalculator;
-import com.turnengine.client.api.local.unit.IUnit;
 import com.turnengine.client.api.local.unit.UnitType;
 
 public abstract class ConditionCalculator extends Calculator implements IConditionCalculator {
@@ -16,10 +15,6 @@ public abstract class ConditionCalculator extends Calculator implements IConditi
 	protected ConditionCalculator(IStaticCacheSet set) {
 		super(set);
 		this.storage = new StorageCalculator(set);
-	}
-
-	protected IUnit getUnit(int unitId) {
-		return getCacheSet().getUnitCache().getById(unitId);
 	}
 
 	protected IStorageCalculator getStorage() {

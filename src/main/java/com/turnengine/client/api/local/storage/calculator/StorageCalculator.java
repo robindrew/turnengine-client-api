@@ -31,11 +31,7 @@ public class StorageCalculator extends Calculator implements IStorageCalculator 
 
 	private IStorageDefinition getStorage(IParentUnit parent, int childUnitId) {
 		IStorageCache cache = getCacheSet().getStorageCache();
-		return cache.getStorageByChild(parent.getUnitId(), childUnitId);
-	}
-
-	private IUnit getUnit(int unitId) {
-		return getCacheSet().getUnitCache().getById(unitId);
+		return cache.getStorageByItem(parent.getUnitId(), childUnitId);
 	}
 
 	private boolean isParent(IUnit unit) {

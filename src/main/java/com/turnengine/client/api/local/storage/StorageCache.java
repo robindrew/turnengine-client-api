@@ -105,7 +105,7 @@ public class StorageCache implements IStorageCache {
 	}
 
 	@Override
-	public IStorageDefinition getStorageByChild(int parentUnitId, int childUnitId) {
+	public IStorageDefinition getStorageByItem(int parentUnitId, int childUnitId) {
 		IStorage storage = getStorage(parentUnitId);
 		if (storage == null) {
 			return null;
@@ -114,8 +114,8 @@ public class StorageCache implements IStorageCache {
 	}
 
 	@Override
-	public IStorageDefinition getStorageByChild(IUnit parentUnit, IUnit childUnit) {
-		return getStorageByChild(parentUnit.getId(), childUnit.getId());
+	public IStorageDefinition getStorageByItem(IUnit parentUnit, IUnit childUnit) {
+		return getStorageByItem(parentUnit.getId(), childUnit.getId());
 	}
 
 	@Override

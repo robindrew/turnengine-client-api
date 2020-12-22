@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import com.turnengine.client.api.local.faction.IFaction;
@@ -31,6 +32,11 @@ public class StorageCalculatorTest extends TurnEngineClientTest {
 	private IUnit child1 = addChildUnit("Child1");
 	private IUnit child2 = addChildUnit("Child2");
 
+	@Before
+	public void before() {
+		setDependencies();
+	}
+	
 	@Test
 	public void storeUnits() {
 		IStorageCalculator storage = getStorageCalculator();
