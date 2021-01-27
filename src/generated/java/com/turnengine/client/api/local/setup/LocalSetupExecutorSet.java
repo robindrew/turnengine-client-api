@@ -44,4 +44,10 @@ public class LocalSetupExecutorSet implements ILocalSetupExecutorSet {
 		ClearSetup bean = new ClearSetup(loginId, instanceId);
 		return getLocator().locateExecutor(bean).executeBean(bean);
 	}
+
+	@Override
+	public Boolean setSetupBeanListDirectory(long loginId, int instanceId, String directory, String filenames) {
+		SetSetupBeanListDirectory bean = new SetSetupBeanListDirectory(loginId, instanceId, directory, filenames);
+		return getLocator().locateExecutor(bean).executeBean(bean);
+	}
 }

@@ -4,7 +4,7 @@ import com.robindrew.codegenerator.api.bean.IBean;
 
 public interface ISetupSetUnitScore extends IBean, Comparable<ISetupSetUnitScore> {
 
-	int SERIALIZATION_ID = 3412;
+	int SERIALIZATION_ID = 3413;
 
 	/**
 	 * Returns the serialization id.

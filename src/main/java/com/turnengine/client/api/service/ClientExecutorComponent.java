@@ -20,9 +20,13 @@ import com.turnengine.client.api.executable.executor.client.IHttpClientBinaryExe
 import com.turnengine.client.api.executable.executor.type.IContentTypeSerializer;
 import com.turnengine.client.api.executable.executor.type.XmlContentTypeSerializer;
 import com.turnengine.client.api.global.GlobalBeanExecutorSetLookup;
+import com.turnengine.client.api.global.IGlobalBeanExecutorSetLookup;
 import com.turnengine.client.api.global.game.IGameDefinition;
 import com.turnengine.client.api.global.game.IGlobalGameExecutorSet;
+import com.turnengine.client.api.local.ILocalBeanExecutorSetLookup;
 import com.turnengine.client.api.local.LocalBeanExecutorSetLookup;
+import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
+import com.turnengine.client.api.local.staticcache.StaticCacheSetBuilder;
 
 public class ClientExecutorComponent extends AbstractIdleComponent {
 
@@ -46,12 +50,19 @@ public class ClientExecutorComponent extends AbstractIdleComponent {
 
 		// Register bean executors
 		ClientDependencies dependencies = new ClientDependencies();
-		dependencies.setLocalLookupDependencies(new LocalBeanExecutorSetLookup(locator));
-		dependencies.setGlobalLookupDependencies(new GlobalBeanExecutorSetLookup(locator));
+		ILocalBeanExecutorSetLookup localLookup = new LocalBeanExecutorSetLookup(locator);
+		IGlobalBeanExecutorSetLookup globalLookup = new GlobalBeanExecutorSetLookup(locator);
+		dependencies.setLocalLookupDependencies(localLookup);
+		dependencies.setGlobalLookupDependencies(globalLookup);
 
 		// Lookup the game definition
 		IGameDefinition definition = getDependency(IGlobalGameExecutorSet.class).getGameDefinitionByHostPort(serverHost.getHost(), serverHost.getPort());
 		setDependency(IGameDefinition.class, definition);
+
+		// Lookup the static cache set
+		StaticCacheSetBuilder builder = new StaticCacheSetBuilder(0, definition.getInstance().getId(), localLookup);
+		IStaticCacheSet cacheSet = builder.get();
+		setDependency(IStaticCacheSet.class, cacheSet);
 
 		log.info("Game: {}", definition.getGame().getName());
 		log.info("Version: {}", definition.getVersion().getName());

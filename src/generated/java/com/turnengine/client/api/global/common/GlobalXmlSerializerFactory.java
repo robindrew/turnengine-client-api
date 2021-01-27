@@ -681,6 +681,8 @@ import com.turnengine.client.api.local.setup.ClearSetupXmlSerializer;
 import com.turnengine.client.api.local.setup.GetSetupBeanList;
 import com.turnengine.client.api.local.setup.GetSetupBeanListXmlSerializer;
 import com.turnengine.client.api.local.setup.SetSetupBeanList;
+import com.turnengine.client.api.local.setup.SetSetupBeanListDirectory;
+import com.turnengine.client.api.local.setup.SetSetupBeanListDirectoryXmlSerializer;
 import com.turnengine.client.api.local.setup.SetSetupBeanListFile;
 import com.turnengine.client.api.local.setup.SetSetupBeanListFileXmlSerializer;
 import com.turnengine.client.api.local.setup.SetSetupBeanListXmlSerializer;
@@ -1681,6 +1683,7 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put(SetSetupBeanListFile.SERIALIZATION_ID, SetSetupBeanListFileXmlSerializer.class);
 		objectMap.put(GetSetupBeanList.SERIALIZATION_ID, GetSetupBeanListXmlSerializer.class);
 		objectMap.put(ClearSetup.SERIALIZATION_ID, ClearSetupXmlSerializer.class);
+		objectMap.put(SetSetupBeanListDirectory.SERIALIZATION_ID, SetSetupBeanListDirectoryXmlSerializer.class);
 
 		// Mappings by name
 		objectMap.put("SetupRoot", SetupRootXmlSerializer.class);
@@ -1702,6 +1705,7 @@ public class GlobalXmlSerializerFactory implements IObjectFactory<IXmlSerializer
 		objectMap.put("SetSetupBeanListFile", SetSetupBeanListFileXmlSerializer.class);
 		objectMap.put("GetSetupBeanList", GetSetupBeanListXmlSerializer.class);
 		objectMap.put("ClearSetup", ClearSetupXmlSerializer.class);
+		objectMap.put("SetSetupBeanListDirectory", SetSetupBeanListDirectoryXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(StorageGroup.SERIALIZATION_ID, StorageGroupXmlSerializer.class);

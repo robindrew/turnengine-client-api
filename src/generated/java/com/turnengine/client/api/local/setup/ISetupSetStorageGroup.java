@@ -5,7 +5,7 @@ import com.turnengine.client.api.local.storage.StorageType;
 
 public interface ISetupSetStorageGroup extends IBean, Comparable<ISetupSetStorageGroup> {
 
-	int SERIALIZATION_ID = 3410;
+	int SERIALIZATION_ID = 3411;
 
 	/**
 	 * Returns the serialization id.

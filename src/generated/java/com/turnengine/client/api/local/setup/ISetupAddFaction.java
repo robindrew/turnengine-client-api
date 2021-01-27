@@ -5,7 +5,7 @@ import com.turnengine.client.api.local.faction.FactionUnited;
 
 public interface ISetupAddFaction extends IBean, Comparable<ISetupAddFaction> {
 
-	int SERIALIZATION_ID = 3406;
+	int SERIALIZATION_ID = 3407;
 
 	/**
 	 * Returns the serialization id.

@@ -1,7 +1,5 @@
 package com.turnengine.client.api.local.storage;
 
-import static com.robindrew.common.dependency.DependencyFactory.getDependency;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -10,27 +8,25 @@ import java.util.Set;
 import com.google.common.collect.Maps;
 import com.robindrew.common.text.Strings;
 import com.turnengine.client.api.local.unit.IUnit;
-import com.turnengine.client.api.local.unit.IUnitCache;
-import com.turnengine.client.api.local.unit.UnitType;
 
 public class StorageDefinition implements IStorageDefinition {
 
-	private static boolean checkType(StorageType storageType, UnitType unitType) {
-		switch (storageType) {
-			case ANY:
-				return true;
-			case GAME:
-				return unitType.equals(UnitType.GAME);
-			case PLAYER:
-				return unitType.equals(UnitType.PLAYER);
-			case LOCATION:
-				return unitType.equals(UnitType.LOCATION) || unitType.equals(UnitType.MOBILE);
-			case MOBILE:
-				return unitType.equals(UnitType.MOBILE);
-			default:
-				throw new IllegalArgumentException("Storage type not supported: " + storageType);
-		}
-	}
+	// private static boolean checkType(StorageType storageType, UnitType unitType) {
+	// switch (storageType) {
+	// case ANY:
+	// return true;
+	// case GAME:
+	// return unitType.equals(UnitType.GAME);
+	// case PLAYER:
+	// return unitType.equals(UnitType.PLAYER);
+	// case LOCATION:
+	// return unitType.equals(UnitType.LOCATION) || unitType.equals(UnitType.MOBILE);
+	// case MOBILE:
+	// return unitType.equals(UnitType.MOBILE);
+	// default:
+	// throw new IllegalArgumentException("Storage type not supported: " + storageType);
+	// }
+	// }
 
 	private final IStorageGroup group;
 	private final Map<Integer, IStorageItem> unitToItemMap = Maps.newConcurrentMap();
@@ -76,12 +72,12 @@ public class StorageDefinition implements IStorageDefinition {
 			throw new IllegalArgumentException("item already exists, item=" + item + ", group=" + group);
 		}
 
-		// Special check for type equality
-		IUnitCache cache = getDependency(IUnitCache.class);
-		IUnit child = cache.getById(item.getChild());
-		if (!checkType(group.getType(), child.getType())) {
-			throw new IllegalArgumentException("group type=" + group.getType() + ", item type=" + child.getType());
-		}
+		// Special check for type equality (MOVE THIS TO A VALIDATE METHOD?)
+		// IUnitCache cache = getDependency(IUnitCache.class);
+		// IUnit child = cache.getById(item.getChild());
+		// if (!checkType(group.getType(), child.getType())) {
+		// throw new IllegalArgumentException("group type=" + group.getType() + ", item type=" + child.getType());
+		// }
 
 		unitToItemMap.put(item.getChild(), item);
 	}

@@ -12,7 +12,7 @@ public interface IStorageCache extends IStaticCache<IStorage> {
 
 	void addGroup(IStorageGroup group);
 
-	void addItems(Collection<IStorageItem> itemren);
+	void addItems(Collection<IStorageItem> items);
 
 	void addItem(IStorageItem item);
 

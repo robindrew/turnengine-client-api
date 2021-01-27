@@ -12,4 +12,6 @@ public interface ILocalSetupExecutorSet extends IBeanExecutorSet, ILocalBeanExec
 	String getSetupBeanList(long loginId, int instanceId);
 
 	Boolean clearSetup(long loginId, int instanceId);
+
+	Boolean setSetupBeanListDirectory(long loginId, int instanceId, String directory, String filenames);
 }

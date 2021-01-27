@@ -545,6 +545,8 @@ import com.turnengine.client.api.local.setup.ClearSetupReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.setup.GetSetupBeanList;
 import com.turnengine.client.api.local.setup.GetSetupBeanListReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.setup.SetSetupBeanList;
+import com.turnengine.client.api.local.setup.SetSetupBeanListDirectory;
+import com.turnengine.client.api.local.setup.SetSetupBeanListDirectoryReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.setup.SetSetupBeanListFile;
 import com.turnengine.client.api.local.setup.SetSetupBeanListFileReturnTypeXmlSerializer;
 import com.turnengine.client.api.local.setup.SetSetupBeanListReturnTypeXmlSerializer;
@@ -1312,12 +1314,14 @@ public class GlobalReturnTypeXmlSerializerFactory implements IObjectFactory<IXml
 		objectMap.put(SetSetupBeanListFile.SERIALIZATION_ID, SetSetupBeanListFileReturnTypeXmlSerializer.class);
 		objectMap.put(GetSetupBeanList.SERIALIZATION_ID, GetSetupBeanListReturnTypeXmlSerializer.class);
 		objectMap.put(ClearSetup.SERIALIZATION_ID, ClearSetupReturnTypeXmlSerializer.class);
+		objectMap.put(SetSetupBeanListDirectory.SERIALIZATION_ID, SetSetupBeanListDirectoryReturnTypeXmlSerializer.class);
 
 		// Mappings by name
 		objectMap.put("SetSetupBeanList", SetSetupBeanListReturnTypeXmlSerializer.class);
 		objectMap.put("SetSetupBeanListFile", SetSetupBeanListFileReturnTypeXmlSerializer.class);
 		objectMap.put("GetSetupBeanList", GetSetupBeanListReturnTypeXmlSerializer.class);
 		objectMap.put("ClearSetup", ClearSetupReturnTypeXmlSerializer.class);
+		objectMap.put("SetSetupBeanListDirectory", SetSetupBeanListDirectoryReturnTypeXmlSerializer.class);
 
 		// Mappings by id
 		objectMap.put(SetStorageGroup.SERIALIZATION_ID, SetStorageGroupReturnTypeXmlSerializer.class);

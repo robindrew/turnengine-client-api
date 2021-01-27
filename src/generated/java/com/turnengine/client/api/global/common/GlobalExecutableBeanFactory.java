@@ -275,6 +275,7 @@ import com.turnengine.client.api.local.score.SetUnitScore;
 import com.turnengine.client.api.local.setup.ClearSetup;
 import com.turnengine.client.api.local.setup.GetSetupBeanList;
 import com.turnengine.client.api.local.setup.SetSetupBeanList;
+import com.turnengine.client.api.local.setup.SetSetupBeanListDirectory;
 import com.turnengine.client.api.local.setup.SetSetupBeanListFile;
 import com.turnengine.client.api.local.storage.GetStorageGroups;
 import com.turnengine.client.api.local.storage.GetStorageItems;
@@ -1003,12 +1004,14 @@ public class GlobalExecutableBeanFactory implements IObjectFactory<IExecutableBe
 		objectMap.put(SetSetupBeanListFile.SERIALIZATION_ID, SetSetupBeanListFile.class);
 		objectMap.put(GetSetupBeanList.SERIALIZATION_ID, GetSetupBeanList.class);
 		objectMap.put(ClearSetup.SERIALIZATION_ID, ClearSetup.class);
+		objectMap.put(SetSetupBeanListDirectory.SERIALIZATION_ID, SetSetupBeanListDirectory.class);
 
 		// Mappings by name
 		objectMap.put("SetSetupBeanList", SetSetupBeanList.class);
 		objectMap.put("SetSetupBeanListFile", SetSetupBeanListFile.class);
 		objectMap.put("GetSetupBeanList", GetSetupBeanList.class);
 		objectMap.put("ClearSetup", ClearSetup.class);
+		objectMap.put("SetSetupBeanListDirectory", SetSetupBeanListDirectory.class);
 
 		// Mappings by id
 		objectMap.put(SetStorageGroup.SERIALIZATION_ID, SetStorageGroup.class);
