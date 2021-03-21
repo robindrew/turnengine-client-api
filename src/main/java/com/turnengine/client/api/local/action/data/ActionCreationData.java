@@ -120,4 +120,12 @@ public class ActionCreationData implements ICreationData {
 		return targetData;
 	}
 
+	@Override
+	public ActionCreationData copy() {
+		ICreationTargetData data = (this.data == null) ? null : this.data.copy();
+		ICreationTargetData sourceData = (this.sourceData == null) ? null : this.sourceData.copy();
+		ICreationTargetData targetData = (this.targetData == null) ? null : this.targetData.copy();
+		return new ActionCreationData(playerId, definition, amount, data, sourceData, targetData, conditions, turnUpdating);
+	}
+
 }

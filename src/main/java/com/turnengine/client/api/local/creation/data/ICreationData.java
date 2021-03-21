@@ -30,4 +30,6 @@ public interface ICreationData {
 	List<? extends ICreationCondition> getConditions();
 
 	boolean isTurnUpdating();
+
+	ICreationData copy();
 }

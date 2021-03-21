@@ -116,4 +116,10 @@ public class UpkeepCreationData implements ICreationData {
 		return targetData;
 	}
 
+	@Override
+	public UpkeepCreationData copy() {
+		ICreationTargetData targetData = (this.targetData == null) ? null : this.targetData.copy();
+		return new UpkeepCreationData(playerId, definition, amount, targetData, turnUpdating);
+	}
+
 }

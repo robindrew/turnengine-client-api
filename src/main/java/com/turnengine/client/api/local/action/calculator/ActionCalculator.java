@@ -71,22 +71,39 @@ public class ActionCalculator extends Calculator implements IActionCalculator {
 			return 0;
 		}
 
-		// Limit
-		int limit = action.getDefinition().getAction().getLimit();
-
-		// Calculate amount from source
-		ICreationData source = getData(SOURCE, START, action);
-		long amount = creation.countCreation(source, limit);
+		// Check the conditions at the source
+		long amount = count(SOURCE, action);
 		if (amount == 0) {
 			return 0;
 		}
 
-		// If there is a target, calculate amount from target and filter
+		// Check the conditions at the target
 		if (action.hasTarget()) {
-			ICreationData target = getData(TARGET, START, action);
-			long targetAmount = creation.countCreation(target, limit);
+			long targetAmount = count(TARGET, action);
 			if (amount > targetAmount) {
 				amount = targetAmount;
+			}
+		}
+		return amount;
+	}
+
+	private long count(ActionTargetType type, IActionData actionData) {
+		int limit = actionData.getDefinition().getAction().getLimit();
+		int turns = actionData.getDefinition().getAction().getTurns();
+
+		// Check the starting conditions ...
+		ICreationData creationData = getData(type, START, actionData);
+		long amount = creation.countCreation(creationData, limit);
+		if (amount == 0) {
+			return amount;
+		}
+
+		// If action is instant, check the finishing conditions too ...
+		if (turns == 0) {
+			creationData = getData(type, FINISH, actionData);
+			long finishAmount = creation.countCreation(creationData, limit);
+			if (amount > finishAmount) {
+				amount = finishAmount;
 			}
 		}
 		return amount;

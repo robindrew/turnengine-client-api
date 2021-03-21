@@ -1,7 +1,11 @@
 package com.turnengine.client.api.local.creation.calculator;
 
+import static com.robindrew.common.dependency.DependencyFactory.getDependency;
+import static org.apache.commons.lang3.builder.ToStringStyle.SHORT_PREFIX_STYLE;
+
 import java.util.List;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,6 +32,7 @@ import com.turnengine.client.api.local.creation.calculator.condition.SameLocatio
 import com.turnengine.client.api.local.creation.calculator.condition.StartMovementCalculator;
 import com.turnengine.client.api.local.creation.data.ICreationData;
 import com.turnengine.client.api.local.staticcache.IStaticCacheSet;
+import com.turnengine.client.api.local.unit.IUnitCache;
 
 public class CreationCalculator extends Calculator implements ICreationCalculator {
 
@@ -112,6 +117,7 @@ public class CreationCalculator extends Calculator implements ICreationCalculato
 
 	@Override
 	public long countCreation(ICreationData data, long limit) {
+
 		List<? extends ICreationCondition> conditions = data.getConditions();
 		if (conditions.isEmpty()) {
 			if (limit < 1) {
@@ -126,11 +132,20 @@ public class CreationCalculator extends Calculator implements ICreationCalculato
 		}
 
 		// Count how many times the conditions can be satisfied
+		if (!conditions.isEmpty()) {
+			if (log.isDebugEnabled()) {
+				log.debug("Counting creation for {}", data.getUnit().getName());
+			}
+		}
+
 		long totalCount = -1;
 		for (ICreationCondition condition : conditions) {
 			IConditionCalculator calculator = getCalculator(condition.getConditionType());
 			boolean optional = condition.getOptional();
 			long count = calculator.count(condition, data, optional);
+			if (log.isDebugEnabled()) {
+				log.debug("{} x {}", toString(condition), count);
+			}
 			if (count == 0) {
 				return 0;
 			}
@@ -150,6 +165,29 @@ public class CreationCalculator extends Calculator implements ICreationCalculato
 			log.warn("Reached Long.MAX_VALUE against conditions with no limit: " + conditions);
 		}
 		return totalCount;
+	}
+
+	private String toString(ICreationCondition condition) {
+		ToStringBuilder builder = new ToStringBuilder(condition, SHORT_PREFIX_STYLE);
+		builder.append("type", condition.getConditionType());
+		if (condition.getConditionId1() >= 0) {
+			builder.append("unit1", getUnitName(condition.getConditionId1()));
+			builder.append("count1", condition.getConditionAmount1());
+		}
+		if (condition.getConditionId2() >= 0) {
+			builder.append("unit2", getUnitName(condition.getConditionId2()));
+			builder.append("count2", condition.getConditionAmount2());
+		}
+		if (condition.getConditionId3() >= 0) {
+			builder.append("unit3", getUnitName(condition.getConditionId3()));
+			builder.append("count3", condition.getConditionAmount3());
+		}
+		return builder.toString();
+	}
+
+	private static String getUnitName(int unitId) {
+		IUnitCache units = getDependency(IUnitCache.class);
+		return units.getById(unitId).getName();
 	}
 
 	@Override
@@ -185,7 +223,6 @@ public class CreationCalculator extends Calculator implements ICreationCalculato
 		conditions = Lists.reverse(conditions);
 
 		// When applying conditions, we expect no failures, that they already counted!
-		// ICreationUnitListSet target = data.getUnitListSet();
 		for (ICreationCondition condition : conditions) {
 			IConditionCalculator calculator = getCalculator(condition.getConditionType());
 
