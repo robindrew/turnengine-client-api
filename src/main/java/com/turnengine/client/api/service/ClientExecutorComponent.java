@@ -39,6 +39,8 @@ public class ClientExecutorComponent extends AbstractIdleComponent {
 
 		// Setup communication with the game server
 		IHostPort serverHost = new HostPortParser().parse(gameServeHost.get());
+		log.info("[Game Server] {}", serverHost);
+
 		IHttpClientBinaryExecutorSupplier connections = new HttpClientBinaryExecutorSupplier(serverHost);
 		IContentTypeSerializer serializer = new XmlContentTypeSerializer();
 		IBeanExecutorService executorService = new ClientBinaryBeanExecutorService(connections, serializer);
