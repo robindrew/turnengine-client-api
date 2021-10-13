@@ -2,6 +2,7 @@ package com.turnengine.client.api.service;
 
 import static com.robindrew.common.dependency.DependencyFactory.getDependency;
 import static com.robindrew.common.dependency.DependencyFactory.setDependency;
+import static com.robindrew.common.util.Java.propagate;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +22,7 @@ import com.turnengine.client.api.executable.executor.type.IContentTypeSerializer
 import com.turnengine.client.api.executable.executor.type.XmlContentTypeSerializer;
 import com.turnengine.client.api.global.GlobalBeanExecutorSetLookup;
 import com.turnengine.client.api.global.IGlobalBeanExecutorSetLookup;
+import com.turnengine.client.api.global.common.IGlobalCommonExecutorSet;
 import com.turnengine.client.api.global.game.IGameDefinition;
 import com.turnengine.client.api.global.game.IGlobalGameExecutorSet;
 import com.turnengine.client.api.local.ILocalBeanExecutorSetLookup;
@@ -57,6 +59,9 @@ public class ClientExecutorComponent extends AbstractIdleComponent {
 		dependencies.setLocalLookupDependencies(localLookup);
 		dependencies.setGlobalLookupDependencies(globalLookup);
 
+		// Check the server is alive!
+		checkGameServerAvailable(serverHost);
+
 		// Lookup the game definition
 		IGameDefinition definition = getDependency(IGlobalGameExecutorSet.class).getGameDefinitionByHostPort(serverHost.getHost(), serverHost.getPort());
 		setDependency(IGameDefinition.class, definition);
@@ -69,6 +74,20 @@ public class ClientExecutorComponent extends AbstractIdleComponent {
 		log.info("Game: {}", definition.getGame().getName());
 		log.info("Version: {}", definition.getVersion().getName());
 		log.info("Instance: {}", definition.getInstance().getName());
+	}
+
+	private void checkGameServerAvailable(IHostPort serverHost) {
+		Exception exception = null;
+		for (int i = 0; i < 3; i++) {
+			try {
+				getDependency(IGlobalCommonExecutorSet.class).ping();
+				return;
+			} catch (Exception e) {
+				log.warn("[Ping] Failed to ping game server ({})", serverHost);
+				exception = e;
+			}
+		}
+		propagate(exception);
 	}
 
 	@Override
